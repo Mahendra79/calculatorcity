@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Average Calculator ? Mean, Median, Mode and Range | CalcHub</title>
+  <meta name="description" content="Free average calculator for mean, median, mode and range. Enter up to 50 values to get a complete statistical summary with a live bar chart online fast.">
+  <link rel="canonical" href="https://yourdomain.com/maths/average-calculator.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/calculator.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Average Calculator","url":"https://yourdomain.com/maths/average-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ CalcHub</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
+  <main id="main" class="page-container two-col-layout" role="main">
+    <article class="calc-main">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>Average Calculator</span></nav>
+      <h1>Average Calculator (Mean, Median, Mode, Range)</h1>
+      <p>The average calculator computes four key statistical measures — mean, median, mode, and range — from any set of numbers you enter. These four measures tell different stories about a dataset: the mean shows the central tendency, the median resists outlier influence, the mode reveals the most common value, and the range shows how spread out the data is. Students, teachers, and analysts use them daily.</p>
+
+      <section class="calc-widget">
+        <div id="number-list"></div>
+        <button class="btn btn-secondary" type="button" id="add-number">+ Add Number</button>
+        <button class="calc-btn" type="button" id="calculate-average" style="margin-top:1rem;">Calculate Statistics</button>
+        <div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div></div>
+      </section>
+
+      <section class="content-section">
+        <h2>Data Distribution Chart</h2>
+        <div class="chart-container"><canvas id="average-chart"></canvas></div>
+        <p class="result-label">The blue bars show your values. The orange line shows the mean, making outliers and unusually high or low values easier to spot.</p>
+      </section>
+
+      <div class="ad-slot">Ad slot</div>
+
+      <section class="content-section">
+        <h2>How to Use the Average Calculator</h2>
+        <ol class="how-to-steps">
+          <li>Enter each number in its own row. The calculator starts with five sample test scores, but you can replace them with marks, sales numbers, temperatures, survey scores, or any numeric dataset.</li>
+          <li>Use the + Add Number button when your dataset has more than five values. You can enter up to fifty values, which is enough for most classroom and everyday statistical summaries.</li>
+          <li>Use the remove button beside a row to delete a value that should not be included. The calculator keeps at least two rows so median and range remain meaningful.</li>
+          <li>Click Calculate Statistics. The result cards show mean, median, mode, range, count, and sum separately so you can interpret the dataset from several angles.</li>
+          <li>Look at the bar chart after calculating. A mean line far away from most bars suggests an outlier, and a wide spread between bars explains why the range is large.</li>
+        </ol>
+      </section>
+
+      <section class="content-section">
+        <h2>Mean, Median, Mode and Range Formulas</h2>
+        <div class="formula-box">Mean = sum of values / number of values<br>Median = middle value after sorting<br>Mode = value or values that appear most often<br>Range = maximum value - minimum value</div>
+        <p>The mean is the arithmetic average. Add every value, then divide by the number of values. It uses the whole dataset, so every number affects the result. The median is found by sorting values from smallest to largest. If the count is odd, the median is the center value. If the count is even, it is the average of the two center values. The mode is the most frequent value. A dataset may have no mode, one mode, or multiple modes when several values tie for highest frequency. The range is the difference between the largest and smallest value. Range does not describe the center of the data; it describes spread. These four measures work best together because one number alone can hide important information about shape, clustering, repetition, or outliers.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Worked Example</h2>
+        <div class="example-box"><p>Dataset: 72, 85, 91, 68, 79, 85. First find the sum: 72 + 85 + 91 + 68 + 79 + 85 = 480. There are 6 scores, so the mean is 480 ÷ 6 = 80. Sort the values: 68, 72, 79, 85, 85, 91. Because there are six values, the median is the average of the third and fourth values: (79 + 85) ÷ 2 = 82. The mode is 85 because it appears twice and all other scores appear once. The range is 91 - 68 = 23. This tells us the class average is 80, the middle score is slightly higher at 82, and the scores span 23 marks.</p></div>
+      </section>
+
+      <section class="content-section">
+        <h2>When to Use Each Measure</h2>
+        <table class="reference-table">
+          <thead><tr><th>Situation</th><th>Best Measure</th><th>Reason</th></tr></thead>
+          <tbody>
+            <tr><td>Balanced test scores</td><td>Mean</td><td>All scores are reasonably close together.</td></tr>
+            <tr><td>House prices in a city</td><td>Median</td><td>Luxury homes can pull the mean upward.</td></tr>
+            <tr><td>Most common shoe size</td><td>Mode</td><td>The repeated value matters more than the center.</td></tr>
+            <tr><td>Temperature variation</td><td>Range</td><td>Shows the gap between hottest and coldest readings.</td></tr>
+            <tr><td>Salary comparison</td><td>Median</td><td>Very high executive salaries distort the mean.</td></tr>
+            <tr><td>Production defects per day</td><td>Mean</td><td>Useful for process averages over time.</td></tr>
+            <tr><td>Survey rating from 1 to 5</td><td>Mode</td><td>Shows the most selected rating.</td></tr>
+            <tr><td>Sports performance consistency</td><td>Range</td><td>A smaller range means more consistent performance.</td></tr>
+            <tr><td>Small dataset with an outlier</td><td>Median</td><td>Median is less affected by a single extreme value.</td></tr>
+            <tr><td>Budget forecasting</td><td>Mean and median</td><td>Both together show expected cost and typical cost.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="ad-slot">Ad slot</div>
+
+      <section class="content-section">
+        <h2>Average Calculator FAQ</h2>
+        <div class="faq-item"><h3 class="faq-question">What is the difference between mean and average</h3><div class="faq-answer"><p>In everyday language, average usually means the arithmetic mean: add all values and divide by how many values there are. In statistics, “average” is a broader informal word that can refer to several measures of central tendency, including mean, median, and mode. If someone asks for the average score on a test, they usually mean the mean. If a report says the average income is median income, it is using median because income data often has large outliers. This calculator shows all main averages so the choice is explicit.</p></div></div>
+        <div class="faq-item"><h3 class="faq-question">When is median better than mean</h3><div class="faq-answer"><p>Median is better when the dataset contains outliers or is heavily skewed. For example, if five homes sell for ₹40 lakh, ₹42 lakh, ₹45 lakh, ₹47 lakh, and ₹5 crore, the mean becomes much higher than what most homes cost. The median remains the middle value and better represents a typical sale. Median is also useful for salaries, property prices, waiting times, and response times because one unusually high or low value can distort the mean. Use the chart to spot this situation visually.</p></div></div>
+        <div class="faq-item"><h3 class="faq-question">What if there are two modes</h3><div class="faq-answer"><p>A dataset can have more than one mode. If two values appear equally often and more often than every other value, the dataset is called bimodal. If three or more values tie for highest frequency, it is multimodal. For example, 2, 2, 3, 4, 4, 5 has two modes: 2 and 4. If every value appears only once, many teachers and statisticians say there is no mode. This calculator follows that convention and displays “No mode” when all entered values are unique.</p></div></div>
+        <div class="faq-item"><h3 class="faq-question">What does range tell us</h3><div class="faq-answer"><p>Range tells us how spread out a dataset is by subtracting the smallest value from the largest value. It is simple and easy to understand, but it uses only two values. That means it can be strongly affected by one extreme number. If test scores are 78, 80, 81, 82, and 100, the range is 22 because of the 100, even though most scores are close together. Range is best used as a quick spread check, not as a full description of variation.</p></div></div>
+        <div class="faq-item"><h3 class="faq-question">How are averages used in real life</h3><div class="faq-answer"><p>Averages are used whenever many values need to be summarized. Teachers use them for class scores, businesses use them for sales and customer ratings, doctors use them to review repeated measurements, and sports analysts use them to compare performance. Mean gives an overall balance point, median shows a typical middle value, mode shows the most common value, and range shows spread. Looking at all four prevents common mistakes, such as trusting a mean that is distorted by one unusually large or unusually small observation.</p></div></div>
+      </section>
+    </article>
+    <aside class="calc-sidebar"><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage Calculator</a></li><li><a href="../maths/fraction-calculator.html">Fraction Calculator</a></li><li><a href="../maths/ratio-calculator.html">Ratio Calculator</a></li><li><a href="../maths/probability-calculator.html">Probability Calculator</a></li><li><a href="../science-other/grade-calculator.html">Grade Calculator</a></li></ul></div><div class="ad-slot">Ad slot</div></aside>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-grid"><section><h3>Math Calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage</a></li><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../maths/square-root-calculator.html">Square Root</a></li></ul></section><section><h3>Finance Calculators</h3><ul><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li><li><a href="../finance/tip-calculator.html">Tip</a></li></ul></section><section><h3>Health Calculators</h3><ul><li><a href="../health-fitness/bmi-calculator.html">BMI</a></li><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li><li><a href="../health-fitness/protein-intake-calculator.html">Protein Intake</a></li></ul></section><section><h3>India Calculators</h3><ul><li><a href="../india/gst-calculator.html">GST</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/simple-interest-calculator.html">Simple Interest</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li></ul></section></div><div class="footer-bottom"><span>© 2026 CalcHub. All calculations run locally in your browser.</span><span>Free online calculators for everyday use.</span></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    (function() {
+      const list = document.getElementById('number-list');
+      let chart;
+      function renumberRows() {
+        document.querySelectorAll('.average-row label').forEach((label, index) => {
+          label.textContent = `Data value ${index + 1}`;
+        });
+      }
+      function row(value) {
+        const div = document.createElement('div');
+        div.className = 'result-grid average-row';
+        div.style.gridTemplateColumns = '1fr auto';
+        div.innerHTML = `<div class="calc-input-group"><label>Data value</label><input class="num-input" type="number" value="${value}" aria-label="Data value"></div><button class="btn btn-secondary remove-row" type="button">× Remove</button>`;
+        div.querySelector('.remove-row').addEventListener('click', () => {
+          if (document.querySelectorAll('.average-row').length > 2) {
+            div.remove();
+            renumberRows();
+            calculate();
+          }
+        });
+        div.querySelector('.num-input').addEventListener('input', calculate);
+        return div;
+      }
+      [72, 85, 91, 68, 79].forEach(v => list.appendChild(row(v)));
+      renumberRows();
+      document.getElementById('add-number').addEventListener('click', () => {
+        if (document.querySelectorAll('.num-input').length < 50) {
+          list.appendChild(row(0));
+          renumberRows();
+          calculate();
+        }
+      });
+      function mode(values) {
+        const counts = new Map();
+        values.forEach(v => counts.set(v, (counts.get(v) || 0) + 1));
+        const max = Math.max(...counts.values());
+        if (max === 1) return 'No mode';
+        return [...counts.entries()].filter(([, c]) => c === max).map(([v]) => v).join(', ');
+      }
+      function modeValues(values) {
+        const counts = new Map();
+        values.forEach(v => counts.set(v, (counts.get(v) || 0) + 1));
+        const max = Math.max(...counts.values());
+        return max === 1 ? [] : [...counts.entries()].filter(([, c]) => c === max).map(([v]) => v);
+      }
+      function calculate() {
+        const values = [...document.querySelectorAll('.num-input')].map(i => Number(i.value)).filter(Number.isFinite);
+        if (!values.length) return;
+        const sum = values.reduce((a, b) => a + b, 0);
+        const sorted = [...values].sort((a, b) => a - b);
+        const mean = sum / values.length;
+        const median = sorted.length % 2 ? sorted[(sorted.length - 1) / 2] : (sorted[sorted.length / 2 - 1] + sorted[sorted.length / 2]) / 2;
+        const range = Math.max(...values) - Math.min(...values);
+        document.getElementById('result-grid').innerHTML = `
+          <div class="result-card"><span class="result-value">${mean.toFixed(2)}</span><span class="result-label">Mean</span></div>
+          <div class="result-card"><span class="result-value">${median.toFixed(2)}</span><span class="result-label">Median</span></div>
+          <div class="result-card"><span class="result-value">${mode(values)}</span><span class="result-label">Mode</span></div>
+          <div class="result-card"><span class="result-value">${range.toFixed(2)}</span><span class="result-label">Range</span></div>
+          <div class="result-card"><span class="result-value">${values.length}</span><span class="result-label">Count</span></div>
+          <div class="result-card"><span class="result-value">${sum.toFixed(2)}</span><span class="result-label">Sum</span></div>`;
+        document.getElementById('calc-result').classList.add('show');
+        const modes = modeValues(values);
+        if (chart) chart.destroy();
+        chart = new Chart(document.getElementById('average-chart'), {
+          type: 'bar',
+          data: {
+            labels: values.map((_, i) => `#${i + 1}`),
+            datasets: [
+              { type: 'bar', label: 'Value', data: values, backgroundColor: values.map(v => modes.includes(v) ? '#f97316' : '#2563eb') },
+              { type: 'line', label: 'Mean', data: values.map(() => mean), borderColor: '#dc2626', borderWidth: 2, borderDash: [6, 4], pointRadius: 0 }
+            ]
+          },
+          options: { responsive: true, maintainAspectRatio: false }
+        });
+      }
+      document.getElementById('calculate-average').addEventListener('click', calculate);
+      calculate();
+    })();
+  </script>
+</body>
+</html>

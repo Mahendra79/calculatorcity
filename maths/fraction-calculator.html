@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fraction Calculator ? Add and Simplify with Steps | CalcHub</title>
+  <meta name="description" content="Free fraction calculator to add, subtract, multiply and divide fractions with step-by-step working, lowest-term simplification, mixed numbers and decimals.">
+  <link rel="canonical" href="https://yourdomain.com/maths/fraction-calculator.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/calculator.css">
+  <style>
+    @media (max-width: 520px) {
+      .fraction-grid { grid-template-columns: 1fr !important; }
+      #op-symbol { justify-content: center; padding: 0.25rem !important; }
+    }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Fraction Calculator","url":"https://yourdomain.com/maths/fraction-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ CalcHub</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
+
+  <main id="main" class="page-container two-col-layout" role="main">
+    <article class="calc-main">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>Fraction Calculator</span></nav>
+      <h1>Fraction Calculator</h1>
+      <p>A fraction calculator simplifies one of the most common pain points in arithmetic — performing operations on fractions with different denominators. Whether you are adding cooking measurements, solving algebra problems, or splitting quantities, this tool handles the full calculation instantly. It shows the result as a fraction, simplifies it to lowest terms, and converts to decimal so you can cross-check your answer easily.</p>
+
+      <section class="calc-widget">
+        <div class="calc-tabs">
+          <button class="calc-tab active" type="button" data-op="add">Add</button>
+          <button class="calc-tab" type="button" data-op="sub">Subtract</button>
+          <button class="calc-tab" type="button" data-op="mul">Multiply</button>
+          <button class="calc-tab" type="button" data-op="div">Divide</button>
+        </div>
+        <div class="result-grid fraction-grid" style="grid-template-columns:1fr auto 1fr;">
+          <div>
+            <div class="calc-input-group"><label for="n1">Numerator 1</label><input type="number" id="n1" value="3" min="-999" max="999"></div>
+            <hr style="border-color:var(--border); margin:.5rem 0;">
+            <div class="calc-input-group"><label for="d1">Denominator 1</label><input type="number" id="d1" value="4" min="-999" max="999"></div>
+          </div>
+          <span style="font-size:2rem; display:flex; align-items:center; padding:1rem;" id="op-symbol">+</span>
+          <div>
+            <div class="calc-input-group"><label for="n2">Numerator 2</label><input type="number" id="n2" value="2" min="-999" max="999"></div>
+            <hr style="border-color:var(--border); margin:.5rem 0;">
+            <div class="calc-input-group"><label for="d2">Denominator 2</label><input type="number" id="d2" value="3" min="-999" max="999"></div>
+          </div>
+        </div>
+        <button class="calc-btn" id="calc-btn" type="button">Calculate</button>
+        <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
+        <div class="formula-box" id="steps" style="margin-top:1rem; display:none;"></div>
+      </section>
+
+      <section class="content-section" aria-labelledby="fraction-visual-heading">
+        <h2 id="fraction-visual-heading">Fraction Bar Visual</h2>
+        <div class="formula-box">
+          <svg viewBox="0 0 640 190" style="width:100%;height:auto" role="img" aria-label="Two colored bars showing the two entered fractions">
+            <text x="20" y="24" font-size="16" fill="#0f172a">Fraction 1</text>
+            <rect x="20" y="40" width="560" height="28" rx="8" fill="#dbeafe"></rect>
+            <rect id="bar1" x="20" y="40" width="420" height="28" rx="8" fill="#2563eb"></rect>
+            <text id="bar1-label" x="590" y="60" font-size="14" fill="#0f172a">3/4</text>
+            <text x="20" y="104" font-size="16" fill="#0f172a">Fraction 2</text>
+            <rect x="20" y="120" width="560" height="28" rx="8" fill="#dcfce7"></rect>
+            <rect id="bar2" x="20" y="120" width="373" height="28" rx="8" fill="#16a34a"></rect>
+            <text id="bar2-label" x="590" y="140" font-size="14" fill="#0f172a">2/3</text>
+          </svg>
+        </div>
+      </section>
+
+      <div class="ad-slot">Ad slot</div>
+
+      <section class="content-section">
+        <h2>How to Use the Fraction Calculator</h2>
+        <ol class="how-to-steps">
+          <li>Select the operation tab — Add, Subtract, Multiply, or Divide — at the top of the calculator. The operator symbol between the fractions updates automatically, so you can confirm the selected operation before entering values.</li>
+          <li>Enter the numerator and denominator for the first fraction on the left. The numerator is the top number, and the denominator is the bottom number. Negative numerators are allowed for values such as -3/4.</li>
+          <li>Enter the numerator and denominator for the second fraction on the right. Denominators cannot be zero because division by zero is undefined in arithmetic.</li>
+          <li>Click Calculate, or edit any field to update automatically. The result appears as an unsimplified fraction, simplified fraction, decimal, and mixed number when applicable.</li>
+          <li>Read the step-by-step working box below the result. It shows the LCM method for addition and subtraction, direct multiplication for products, and the reciprocal rule for division.</li>
+        </ol>
+      </section>
+
+      <section class="content-section">
+        <h2>Fraction Formulas</h2>
+        <div class="formula-box">Addition: a/b + c/d = (ad + bc) / bd<br>Subtraction: a/b - c/d = (ad - bc) / bd<br>Multiplication: a/b x c/d = ac / bd<br>Division: a/b ÷ c/d = a/b x d/c = ad / bc</div>
+        <p>Addition and subtraction require the fractions to describe pieces of the same size. That is why the calculator first finds a common denominator, usually the least common multiple of the two denominators. After converting both fractions to equivalent fractions with that denominator, only the numerators are added or subtracted. Multiplication is more direct: multiply the numerators together and multiply the denominators together. Division uses the reciprocal of the second fraction, meaning the second fraction is flipped before multiplication. After any operation, the result should be simplified. Simplification divides the numerator and denominator by their greatest common divisor, or GCD. The GCD is the largest whole number that divides both values exactly. This page uses the Euclidean algorithm for that step, repeatedly taking remainders until the remainder is zero.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Worked Example</h2>
+        <div class="example-box">
+          <p>Problem: 3/4 + 2/3. Step 1: find the least common multiple of 4 and 3. The LCM is 12. Step 2: convert 3/4 to twelfths by multiplying top and bottom by 3, giving 9/12. Step 3: convert 2/3 to twelfths by multiplying top and bottom by 4, giving 8/12. Step 4: add the numerators: 9 + 8 = 17, so the result is 17/12. Step 5: simplify. GCD(17, 12) is 1, so the fraction is already in lowest terms. Step 6: convert to a mixed number: 1 and 5/12. Step 7: convert to decimal: 17 ÷ 12 = 1.416667. Answer: 3/4 + 2/3 = 17/12 = 1 5/12.</p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Common Fraction Reference Table</h2>
+        <table class="reference-table">
+          <thead><tr><th>Fraction</th><th>Simplified</th><th>Decimal</th><th>Percentage</th></tr></thead>
+          <tbody>
+            <tr><td>2/4</td><td>1/2</td><td>0.5</td><td>50%</td></tr>
+            <tr><td>3/6</td><td>1/2</td><td>0.5</td><td>50%</td></tr>
+            <tr><td>4/8</td><td>1/2</td><td>0.5</td><td>50%</td></tr>
+            <tr><td>2/6</td><td>1/3</td><td>0.333</td><td>33.33%</td></tr>
+            <tr><td>3/4</td><td>3/4</td><td>0.75</td><td>75%</td></tr>
+            <tr><td>4/6</td><td>2/3</td><td>0.667</td><td>66.67%</td></tr>
+            <tr><td>5/10</td><td>1/2</td><td>0.5</td><td>50%</td></tr>
+            <tr><td>6/9</td><td>2/3</td><td>0.667</td><td>66.67%</td></tr>
+            <tr><td>3/12</td><td>1/4</td><td>0.25</td><td>25%</td></tr>
+            <tr><td>8/12</td><td>2/3</td><td>0.667</td><td>66.67%</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="ad-slot">Ad slot</div>
+
+      <section class="content-section">
+        <h2>Fraction Calculator FAQ</h2>
+        <div class="faq-item"><h3 class="faq-question">What is a fraction</h3><div class="faq-answer"><p>A fraction represents part of a whole or a ratio between two quantities. The top number is the numerator, which tells how many parts are being considered. The bottom number is the denominator, which tells how many equal parts make up the whole. For example, 3/4 means three parts out of four equal parts. A proper fraction has a numerator smaller than the denominator, such as 2/5. An improper fraction has a numerator equal to or larger than the denominator, such as 7/4. A mixed number combines a whole number and a fraction, such as 1 3/4.</p></div></div>
+        <div class="faq-item"><h3 class="faq-question">How do you add fractions with different denominators</h3><div class="faq-answer"><p>To add fractions with different denominators, first find a common denominator. The most efficient common denominator is usually the least common multiple of the two denominators. Convert each fraction to an equivalent fraction using that denominator, then add only the numerators. For example, to add 1/4 and 1/6, the LCM of 4 and 6 is 12. Convert 1/4 to 3/12 and 1/6 to 2/12. Then add 3 + 2 to get 5/12. The denominator stays 12 because the parts are now the same size.</p></div></div>
+        <div class="faq-item"><h3 class="faq-question">What is a simplified or reduced fraction</h3><div class="faq-answer"><p>A simplified fraction is a fraction written in lowest terms. That means the numerator and denominator have no common factor greater than 1. For example, 12/18 can be reduced because both numbers are divisible by 6. Dividing 12 and 18 by 6 gives 2/3, which is the simplified form. Simplifying does not change the value of the fraction; it only writes the same value more clearly. This is why school answers, recipe adjustments, and algebra steps usually expect simplified fractions. The calculator uses the greatest common divisor to reduce answers automatically.</p></div></div>
+        <div class="faq-item"><h3 class="faq-question">How do you divide fractions</h3><div class="faq-answer"><p>Dividing fractions uses the reciprocal rule, often remembered as “keep, change, flip.” Keep the first fraction, change division to multiplication, and flip the second fraction. For example, 3/4 ÷ 2/5 becomes 3/4 × 5/2. Then multiply the numerators to get 15 and the denominators to get 8, so the result is 15/8. The reciprocal works because dividing by a fraction asks how many groups of that fractional size fit into the first quantity. Division by a zero numerator is not allowed because it would mean dividing by zero.</p></div></div>
+        <div class="faq-item"><h3 class="faq-question">What is the difference between a proper fraction and an improper fraction</h3><div class="faq-answer"><p>A proper fraction is less than one whole because its numerator is smaller than its denominator. Examples include 1/2, 3/5, and 7/10. An improper fraction is equal to or greater than one because its numerator is at least as large as its denominator. Examples include 5/4, 9/8, and 12/6. Improper fractions are often converted into mixed numbers for readability. For example, 17/12 is the same as 1 5/12. Both forms are mathematically correct, but improper fractions are often easier in algebra while mixed numbers are easier in everyday measurement.</p></div></div>
+      </section>
+    </article>
+
+    <aside class="calc-sidebar">
+      <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage Calculator</a></li><li><a href="../maths/average-calculator.html">Average Calculator</a></li><li><a href="../maths/ratio-calculator.html">Ratio Calculator</a></li><li><a href="../maths/lcm-hcf-calculator.html">LCM and HCF Calculator</a></li><li><a href="../finance/discount-calculator.html">Discount Calculator</a></li></ul></div>
+      <div class="ad-slot">Ad slot</div>
+    </aside>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-grid"><section><h3>Math Calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage</a></li><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../maths/square-root-calculator.html">Square Root</a></li></ul></section><section><h3>Finance Calculators</h3><ul><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li><li><a href="../finance/tip-calculator.html">Tip</a></li></ul></section><section><h3>Health Calculators</h3><ul><li><a href="../health-fitness/bmi-calculator.html">BMI</a></li><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li><li><a href="../health-fitness/protein-intake-calculator.html">Protein Intake</a></li></ul></section><section><h3>India Calculators</h3><ul><li><a href="../india/gst-calculator.html">GST</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/simple-interest-calculator.html">Simple Interest</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li></ul></section></div><div class="footer-bottom"><span>© 2026 CalcHub. All calculations run locally in your browser.</span><span>Free online calculators for everyday use.</span></div></div></footer>
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    (function() {
+      let op = 'add';
+      const tabs = document.querySelectorAll('.calc-tab');
+      const opSymbols = {add:'+', sub:'−', mul:'×', div:'÷'};
+
+      tabs.forEach(t => t.addEventListener('click', () => {
+        tabs.forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        op = t.dataset.op;
+        document.getElementById('op-symbol').textContent = opSymbols[op];
+        calculate();
+      }));
+
+      function gcd(a, b) {
+        a = Math.abs(a); b = Math.abs(b);
+        while (b) { [a, b] = [b, a % b]; }
+        return a || 1;
+      }
+
+      function simplify(n, d) {
+        if (d < 0) { n = -n; d = -d; }
+        const g = gcd(Math.abs(n), Math.abs(d));
+        return [n / g, d / g];
+      }
+
+      function updateBars(n1, d1, n2, d2) {
+        const f1 = d1 ? Math.min(Math.abs(n1 / d1), 1) : 0;
+        const f2 = d2 ? Math.min(Math.abs(n2 / d2), 1) : 0;
+        document.getElementById('bar1').setAttribute('width', String(560 * f1));
+        document.getElementById('bar2').setAttribute('width', String(560 * f2));
+        document.getElementById('bar1-label').textContent = `${n1}/${d1}`;
+        document.getElementById('bar2-label').textContent = `${n2}/${d2}`;
+      }
+
+      function calculate() {
+        const n1 = parseInt(document.getElementById('n1').value, 10);
+        const d1 = parseInt(document.getElementById('d1').value, 10);
+        const n2 = parseInt(document.getElementById('n2').value, 10);
+        const d2 = parseInt(document.getElementById('d2').value, 10);
+        const result = document.getElementById('calc-result');
+        const grid = document.getElementById('result-grid');
+        const steps = document.getElementById('steps');
+
+        if ([n1, d1, n2, d2].some(Number.isNaN)) {
+          grid.innerHTML = '<div class="result-card"><span class="result-value" style="color:var(--danger)">Error</span><span class="result-label">Enter all four numbers</span></div>';
+          result.classList.add('show');
+          return;
+        }
+
+        updateBars(n1, d1, n2, d2);
+
+        if (d1 === 0 || d2 === 0) {
+          grid.innerHTML = '<div class="result-card"><span class="result-value" style="color:var(--danger)">Error</span><span class="result-label">Denominator cannot be zero</span></div>';
+          result.classList.add('show');
+          return;
+        }
+        if (op === 'div' && n2 === 0) {
+          grid.innerHTML = '<div class="result-card"><span class="result-value" style="color:var(--danger)">Error</span><span class="result-label">Cannot divide by zero</span></div>';
+          result.classList.add('show');
+          return;
+        }
+
+        let rn, rd, stepText = '';
+
+        if (op === 'add') {
+          const lcm = Math.abs((d1 * d2) / gcd(d1, d2));
+          rn = n1 * (lcm / d1) + n2 * (lcm / d2);
+          rd = lcm;
+          stepText = `Step 1: LCM of ${d1} and ${d2} = ${lcm}\nStep 2: ${n1}/${d1} = ${n1*(lcm/d1)}/${lcm}\nStep 3: ${n2}/${d2} = ${n2*(lcm/d2)}/${lcm}\nStep 4: ${n1*(lcm/d1)} + ${n2*(lcm/d2)} = ${rn}/${rd}`;
+        } else if (op === 'sub') {
+          const lcm = Math.abs((d1 * d2) / gcd(d1, d2));
+          rn = n1 * (lcm / d1) - n2 * (lcm / d2);
+          rd = lcm;
+          stepText = `Step 1: LCM of ${d1} and ${d2} = ${lcm}\nStep 2: ${n1}/${d1} = ${n1*(lcm/d1)}/${lcm}\nStep 3: ${n2}/${d2} = ${n2*(lcm/d2)}/${lcm}\nStep 4: ${n1*(lcm/d1)} − ${n2*(lcm/d2)} = ${rn}/${rd}`;
+        } else if (op === 'mul') {
+          rn = n1 * n2;
+          rd = d1 * d2;
+          stepText = `Step 1: Multiply numerators: ${n1} × ${n2} = ${rn}\nStep 2: Multiply denominators: ${d1} × ${d2} = ${rd}\nStep 3: Result = ${rn}/${rd}`;
+        } else {
+          rn = n1 * d2;
+          rd = d1 * n2;
+          stepText = `Step 1: Multiply by reciprocal: ${n1}/${d1} × ${d2}/${n2}\nStep 2: Numerator: ${n1} × ${d2} = ${rn}\nStep 3: Denominator: ${d1} × ${n2} = ${rd}\nStep 4: Result = ${rn}/${rd}`;
+        }
+
+        const [sn, sd] = simplify(rn, rd);
+        const decimal = (sn / sd).toFixed(6);
+        const whole = Math.trunc(sn / sd);
+        const remainder = Math.abs(sn % sd);
+        const mixed = Math.abs(sn) >= Math.abs(sd) && remainder !== 0 ? `${whole} and ${remainder}/${Math.abs(sd)}` : null;
+
+        grid.innerHTML = `
+          <div class="result-card"><span class="result-value">${rn}/${rd}</span><span class="result-label">Result (unsimplified)</span></div>
+          <div class="result-card"><span class="result-value">${sn}/${sd}</span><span class="result-label">Simplified form</span></div>
+          <div class="result-card"><span class="result-value">${decimal}</span><span class="result-label">Decimal</span></div>
+          ${mixed ? `<div class="result-card"><span class="result-value">${mixed}</span><span class="result-label">Mixed number</span></div>` : ''}
+        `;
+        result.classList.add('show');
+        steps.style.display = 'block';
+        steps.innerHTML = '<strong>Step-by-step working:</strong><pre style="margin:.5rem 0; white-space:pre-wrap; font-family:monospace;">' + stepText + `\nStep Final: Simplify ${rn}/${rd} → ${sn}/${sd}</pre>`;
+      }
+
+      document.getElementById('calc-btn').addEventListener('click', calculate);
+      document.querySelectorAll('#n1,#d1,#n2,#d2').forEach(i => i.addEventListener('input', calculate));
+      calculate();
+    })();
+  </script>
+</body>
+</html>

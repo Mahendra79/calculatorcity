@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Scientific Calculator ? Trig, Logs and Powers | CalcHub</title>
+  <meta name="description" content="Use a free scientific calculator for trig, inverse trig, logs, roots, powers, factorials, constants, keyboard entry, DEG/RAD mode and saved history now.">
+  <link rel="canonical" href="https://yourdomain.com/maths/scientific-calculator.html"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css"><link rel="stylesheet" href="../assets/css/layout.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/calculator.css">
+  <style>
+    #keys { gap: 0.4rem; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+    #keys .btn { min-width: 0; padding: 0.65rem 0.35rem; }
+    @media (max-width: 520px) {
+      #keys .btn { font-size: 0.85rem; padding: 0.55rem 0.2rem; }
+      #display { font-size: 1.55rem; overflow-wrap: anywhere; }
+    }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Scientific Calculator","url":"https://yourdomain.com/maths/scientific-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ CalcHub</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
+  <main id="main" class="page-container two-col-layout" role="main"><article class="calc-main">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>Scientific Calculator</span></nav><h1>Scientific Calculator</h1>
+    <p>This online scientific calculator provides the full function set of a physical scientific calculator — including trigonometric functions, inverse trig, logarithms, natural log, powers, roots, factorials, and mathematical constants. It supports keyboard input so you can type expressions naturally, stores the last five calculations as history, and includes a Degrees/Radians toggle for trigonometric work. Suitable for students from Class 8 upward through university level mathematics.</p>
+    <section class="calc-widget"><div class="formula-box"><div class="result-label">Expression <span class="badge" id="angle-mode">DEG mode</span></div><div id="expression" style="font-size:1.4rem;min-height:2rem;word-break:break-word;"></div><div class="result-value" id="display">0</div></div><div class="result-grid" style="grid-template-columns:repeat(5,1fr);" id="keys"></div><div class="formula-box" id="history" style="margin-top:1rem;"><strong>History</strong><ol id="history-list"></ol></div></section>
+    <section class="content-section"><h2>Function Groups</h2><p>Trigonometric functions such as sine, cosine, and tangent relate angles to side ratios in right triangles and circular motion. Inverse trigonometric functions reverse those relationships, returning an angle from a ratio. Logarithmic functions answer exponent questions: log tells what power of 10 creates a number, while ln uses the natural base e. Power and root functions cover squaring, arbitrary powers, square roots, cube roots, and reciprocals. Constants π and e are used throughout geometry, calculus, statistics, physics, and engineering. The calculator UI itself is the visual model: expression, result, keys, and history are all visible at once.</p></section>
+    <div class="ad-slot">Ad slot</div>
+    <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Type numbers and operators directly on your keyboard or use the on-screen button grid.</li><li>Choose DEG or RAD before using trigonometric functions. DEG is common in school geometry; RAD is common in calculus.</li><li>Use parentheses around grouped operations to control order, especially for powers, roots, and logarithms.</li><li>Press Enter or the equals button to calculate. Press Escape or C to clear the expression.</li><li>Check the history list after each calculation. It stores the last five expressions so you can compare repeated attempts.</li></ol></section>
+    <section class="content-section"><h2>Scientific Calculator Formulas</h2><div class="formula-box">sin(θ) = opposite / hypotenuse<br>cos(θ) = adjacent / hypotenuse<br>tan(θ) = opposite / adjacent<br>log(x) = base-10 logarithm; ln(x) = natural logarithm</div><p>Scientific calculator functions are built around algebraic, trigonometric, and exponential relationships. The trigonometric functions convert angles into ratios from a right triangle or coordinates on the unit circle. In degree mode, the calculator converts degrees to radians internally because JavaScript Math functions use radians. Logarithms reverse exponentiation: if 10² = 100, then log(100) = 2. Natural logarithm uses e, approximately 2.71828, as its base. Powers multiply a base repeatedly or apply fractional exponent rules for roots. Factorials multiply all positive whole numbers up to n, so 5! = 5 × 4 × 3 × 2 × 1 = 120. These functions let one calculator solve geometry, algebra, growth, decay, probability, and physics expressions.</p></section>
+    <section class="content-section"><h2>Worked Example</h2><div class="example-box"><p>Evaluate sin(30) + √144 in degree mode. First set the calculator to DEG because 30 is intended as degrees. sin(30°) equals 0.5 because a 30-60-90 triangle has opposite side half the hypotenuse. Next calculate √144. Since 12 × 12 = 144, the square root is 12. Add the two results: 0.5 + 12 = 12.5. In the calculator, press sin, type 30, close the parenthesis if needed, press plus, press √, type 144, and press equals. The history records the full expression and the result so the calculation can be checked later.</p></div></section>
+    <section class="content-section"><h2>Input Safety and Order</h2><p>Scientific expressions depend heavily on order of operations. Parentheses are the safest way to make intent clear, especially around negative numbers, powers, logarithms, and trigonometric functions. The calculator maps button presses to JavaScript Math functions, then evaluates the mathematical expression locally. It limits accepted characters to ordinary mathematical syntax and known function names. If a result is unexpected, check three things first: whether the angle mode is correct, whether parentheses are balanced, and whether multiplication signs were entered explicitly. For example, write 2*(3+4), not 2(3+4). Also remember that squaring a negative number needs parentheses: (-3)^2 is 9, while -3^2 is commonly interpreted as -9.</p></section>
+    <section class="content-section"><h2>Common Trig Values</h2><table class="reference-table"><thead><tr><th>Angle</th><th>sin</th><th>cos</th><th>tan</th></tr></thead><tbody><tr><td>0°</td><td>0</td><td>1</td><td>0</td></tr><tr><td>30°</td><td>1/2</td><td>√3/2</td><td>1/√3</td></tr><tr><td>45°</td><td>√2/2</td><td>√2/2</td><td>1</td></tr><tr><td>60°</td><td>√3/2</td><td>1/2</td><td>√3</td></tr><tr><td>90°</td><td>1</td><td>0</td><td>undefined</td></tr><tr><td>180°</td><td>0</td><td>-1</td><td>0</td></tr><tr><td>270°</td><td>-1</td><td>0</td><td>undefined</td></tr><tr><td>360°</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></section>
+    <div class="ad-slot">Ad slot</div>
+    <section class="content-section"><h2>Scientific Calculator FAQ</h2><div class="faq-item"><h3 class="faq-question">What is a scientific calculator</h3><div class="faq-answer"><p>A scientific calculator is a calculator designed for mathematics beyond basic arithmetic. It includes functions for powers, roots, logarithms, trigonometry, inverse trigonometry, constants, factorials, reciprocals, percentages, and parentheses. These functions are needed in algebra, geometry, trigonometry, physics, statistics, engineering, and finance. Unlike a basic calculator, a scientific calculator can evaluate expressions with operation precedence and nested functions. This online version also keeps history and supports keyboard input, making it useful for homework, checking formulas, and quick technical calculations.</p></div></div><div class="faq-item"><h3 class="faq-question">Should I use degrees or radians</h3><div class="faq-answer"><p>Use degrees when your angle is measured in degrees, such as 30°, 45°, or 90°. This is common in school geometry, surveying, navigation, and many everyday angle problems. Use radians when working in calculus, advanced trigonometry, circular motion formulas, or expressions involving π as an angle. JavaScript and most programming languages calculate trig functions in radians internally, so this calculator converts degree inputs when DEG mode is selected. If a trigonometric answer looks wrong, the angle mode is the first setting to check.</p></div></div><div class="faq-item"><h3 class="faq-question">What is the difference between log and ln</h3><div class="faq-answer"><p>Log usually means base-10 logarithm on calculators, while ln means natural logarithm with base e. A logarithm answers the question “what exponent produces this number” Because 10² = 100, log(100) = 2. Because e¹ is e, ln(e) = 1. Base-10 logs are common in scientific notation, pH, decibels, and orders of magnitude. Natural logs are common in calculus, continuous growth, compound interest, radioactive decay, and differential equations. Both are inverse operations for exponential functions, but they use different bases.</p></div></div><div class="faq-item"><h3 class="faq-question">How does factorial work</h3><div class="faq-answer"><p>Factorial, written n!, multiplies every positive whole number from n down to 1. For example, 5! = 5 × 4 × 3 × 2 × 1 = 120. Factorials are used in counting arrangements, combinations, permutations, probability, and series expansions. Factorial is defined for non-negative integers in this calculator. The value grows extremely quickly: 10! is 3,628,800 and 20! is already more than 2 quintillion. Because of that rapid growth, very large factorials may exceed ordinary display ranges.</p></div></div><div class="faq-item"><h3 class="faq-question">Is eval safe in this calculator</h3><div class="faq-answer"><p>This calculator restricts expression input before evaluation by allowing only numbers, operators, parentheses, decimal points, Math constants, and mapped Math functions. It does not accept arbitrary words from the page UI. That said, the calculation runs locally in your browser and is intended for mathematical expressions, not for processing untrusted code. The safest practice is to use the on-screen buttons or normal math keyboard input. The page does not send expressions to a server, and calculation history stays in the current browser session only.</p></div></div></section>
+  </article><aside class="calc-sidebar"><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/square-root-calculator.html">Square Root Calculator</a></li><li><a href="../maths/exponent-calculator.html">Exponent Calculator</a></li><li><a href="../maths/quadratic-equation-solver.html">Quadratic Solver</a></li><li><a href="../maths/probability-calculator.html">Probability Calculator</a></li><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law Calculator</a></li></ul></div><div class="ad-slot">Ad slot</div></aside></main>
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-grid"><section><h3>Math Calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage</a></li><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../maths/square-root-calculator.html">Square Root</a></li></ul></section><section><h3>Finance Calculators</h3><ul><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li><li><a href="../finance/tip-calculator.html">Tip</a></li></ul></section><section><h3>Health Calculators</h3><ul><li><a href="../health-fitness/bmi-calculator.html">BMI</a></li><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li><li><a href="../health-fitness/protein-intake-calculator.html">Protein Intake</a></li></ul></section><section><h3>India Calculators</h3><ul><li><a href="../india/gst-calculator.html">GST</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/simple-interest-calculator.html">Simple Interest</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li></ul></section></div><div class="footer-bottom"><span>© 2026 CalcHub. All calculations run locally in your browser.</span><span>Free online calculators for everyday use.</span></div></div></footer>
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    (function() {
+      let expr = '';
+      let deg = true;
+      let history = [];
+      const display = document.getElementById('display');
+      const expression = document.getElementById('expression');
+      const keys = document.getElementById('keys');
+      const angleMode = document.getElementById('angle-mode');
+      angleMode.textContent = 'DEG mode';
+      const buttons = ['DEG','RAD','(',')','C','sin','cos','tan','π','e','sin⁻¹','cos⁻¹','tan⁻¹','log','ln','x²','xⁿ','√','∛','n!','7','8','9','÷','1/x','4','5','6','×','|x|','1','2','3','−','EXP','0','.','±','+','='];
+
+      buttons.forEach(label => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'btn btn-secondary';
+        button.textContent = label;
+        button.addEventListener('click', () => press(label));
+        keys.appendChild(button);
+      });
+
+      function setExpression(value) {
+        expr = value;
+        expression.textContent = expr;
+      }
+      function factorial(n) {
+        if (!Number.isInteger(n) || n < 0 || n > 170) throw new Error('Invalid factorial');
+        let result = 1;
+        for (let i = 2; i <= n; i++) result *= i;
+        return result;
+      }
+      function press(key) {
+        if (key === 'DEG' || key === 'RAD') {
+          deg = key === 'DEG';
+          angleMode.textContent = deg ? 'DEG mode' : 'RAD mode';
+          angleMode.style.background = deg ? 'var(--primary-light)' : 'var(--bg-tertiary)';
+          return;
+        }
+        if (key === 'C') {
+          setExpression('');
+          display.textContent = '0';
+          return;
+        }
+        if (key === '=') {
+          calculate();
+          return;
+        }
+        const map = {
+          '÷': '/', '×': '*', '−': '-', 'π': 'pi', 'x²': '^2', 'xⁿ': '^', '√': 'sqrt(', '∛': 'cbrt(',
+          'n!': '!', '1/x': '1/(', '|x|': 'abs(', 'EXP': 'e', '±': '-',
+          'sin': 'sin(', 'cos': 'cos(', 'tan': 'tan(', 'sin⁻¹': 'asin(', 'cos⁻¹': 'acos(', 'tan⁻¹': 'atan(',
+          'log': 'log(', 'ln': 'ln('
+        };
+        setExpression(expr + (map[key] || key));
+      }
+      function convertExpression(input) {
+        let e = input.trim();
+        if (!e) return '0';
+        e = e.split(String.fromCharCode(960)).join('pi').split(String.fromCharCode(247)).join('/').split(String.fromCharCode(215)).join('*').split(String.fromCharCode(8722)).join('-').replace(/\^/g, '**');
+        e = e.replace(/(\d+(?:\.\d+)?)!/g, 'factorial($1)');
+        e = e.replace(/\bpi\b/g, 'Math.PI').replace(/\be\b/g, 'Math.E');
+        e = e.replace(/\bsqrt\(/g, 'Math.sqrt(').replace(/\bcbrt\(/g, 'Math.cbrt(').replace(/\babs\(/g, 'Math.abs(');
+        e = e.replace(/\blog\(/g, 'Math.log10(').replace(/\bln\(/g, 'Math.log(');
+        e = e.replace(/\b(sin|cos|tan)\(([^()]*)\)/g, function(_, fn, arg) {
+          return 'Math.' + fn + '(' + (deg ? '(' + arg + ')*Math.PI/180' : arg) + ')';
+        });
+        e = e.replace(/\b(asin|acos|atan)\(([^()]*)\)/g, function(_, fn, arg) {
+          const base = 'Math.' + fn + '(' + arg + ')';
+          return deg ? '(' + base + '*180/Math.PI)' : base;
+        });
+        if (/[^0-9+\-*/().,\sMathPIEfactorillogcnstabqru]/.test(e)) throw new Error('Invalid characters');
+        return e;
+      }
+      function calculate() {
+        try {
+          const converted = convertExpression(expr);
+          const value = Function('factorial', 'return ' + converted)(factorial);
+          if (!Number.isFinite(value)) throw new Error('Result is not finite');
+          const output = Math.abs(value) < 1e-12 ? '0' : Number(value).toPrecision(12).replace(/\.0+$/, '');
+          display.textContent = output;
+          history.unshift((expr || '0') + ' = ' + output);
+          history = history.slice(0, 5);
+          document.getElementById('history-list').innerHTML = history.map(item => '<li>' + item + '</li>').join('');
+        } catch (error) {
+          display.textContent = 'Error';
+        }
+      }
+      document.addEventListener('keydown', event => {
+        if (/^[0-9()+*\/\.\-^]$/.test(event.key)) {
+          setExpression(expr + event.key);
+        } else if (event.key === 'Enter') {
+          event.preventDefault();
+          calculate();
+        } else if (event.key === 'Escape') {
+          press('C');
+        } else if (/^[a-z]$/i.test(event.key)) {
+          setExpression(expr + event.key.toLowerCase());
+        }
+      });
+    })();
+  </script>
+</body></html>

@@ -1,0 +1,10 @@
+{
+  "name": "CalcHub — Free Online Calculators",
+  "short_name": "CalcHub",
+  "description": "80+ free online calculators",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [{"src": "/assets/icons/favicon.ico", "sizes": "any", "type": "image/x-icon"}]
+}

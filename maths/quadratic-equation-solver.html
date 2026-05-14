@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Quadratic Solver ? Roots, Vertex and Graph | CalcHub</title>
+  <meta name="description" content="Solve quadratic equations online with discriminant, real or complex roots, vertex coordinates, axis of symmetry and a live parabola graph with markers.">
+  <link rel="canonical" href="https://yourdomain.com/maths/quadratic-equation-solver.html"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css"><link rel="stylesheet" href="../assets/css/layout.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/calculator.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Quadratic Equation Solver","url":"https://yourdomain.com/maths/quadratic-equation-solver.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">? CalcHub</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>?</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">???? India</a></nav></header>
+  <main id="main" class="page-container two-col-layout" role="main"><article class="calc-main">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>Quadratic Equation Solver</span></nav>
+    <h1>Quadratic Equation Solver</h1>
+    <p>The quadratic equation solver finds the roots of any equation in the form ax&sup2; + bx + c = 0 using the quadratic formula. It shows the discriminant to tell you whether the roots are real and distinct, real and equal, or complex. The parabola is graphed so you can see where the roots fall on the x-axis, and the vertex coordinates show the turning point.</p>
+    <section class="calc-widget"><div class="result-grid"><div class="calc-input-group"><label for="a">a coefficient (x&sup2;)</label><input id="a" type="number" value="1" step="any"></div><div class="calc-input-group"><label for="b">b coefficient (x)</label><input id="b" type="number" value="-5" step="any"></div><div class="calc-input-group"><label for="c">c constant</label><input id="c" type="number" value="6" step="any"></div></div><div class="formula-box">Equation preview: <strong id="equation-preview">x&sup2; - 5x + 6 = 0</strong></div><button class="calc-btn" id="calculate-quadratic" type="button">Solve Quadratic</button><div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div><p id="quad-steps" style="margin-top:1rem;"></p></div></section>
+    <section class="content-section"><h2>Parabola Graph</h2><div class="chart-container"><canvas id="quadratic-chart"></canvas></div></section><div class="ad-slot">Ad slot</div>
+    <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Rewrite your equation in standard form ax&sup2; + bx + c = 0 before entering values.</li><li>Enter the coefficient of x&sup2; as a. This value cannot be zero, because a zero value makes the equation linear rather than quadratic.</li><li>Enter b, the coefficient of x, including a negative sign when the equation subtracts the x term.</li><li>Enter c, the constant term. The equation preview updates as you type so you can catch sign mistakes.</li><li>Click Solve Quadratic and review the discriminant, roots, vertex, and graph. Complex roots appear in a &plusmn; bi form when the parabola does not cross the x-axis.</li></ol></section>
+    <section class="content-section"><h2>Quadratic Formula</h2><div class="formula-box">x = (-b &plusmn; &radic;(b&sup2; - 4ac)) / 2a<br>Discriminant D = b&sup2; - 4ac<br>Vertex x = -b / 2a, y = f(x)</div><p>A quadratic equation has degree two, meaning the highest power of x is x&sup2;. The coefficient a controls the width and direction of the parabola. If a is positive, the parabola opens upward; if a is negative, it opens downward. The coefficient b shifts the axis of symmetry and affects the root positions. The constant c is the y-intercept, where the graph crosses the y-axis. The discriminant D = b&sup2; - 4ac determines the root type. When D is positive, there are two real roots. When D is zero, both roots are equal and the parabola touches the x-axis once. When D is negative, there are two complex roots and no real x-axis crossing. The vertex formula gives the turning point of the parabola.</p></section>
+    <section class="content-section"><h2>Worked Example</h2><div class="example-box"><p>Solve x&sup2; - 5x + 6 = 0. Here a = 1, b = -5, and c = 6. First calculate the discriminant: D = b&sup2; - 4ac = (-5)&sup2; - 4(1)(6) = 25 - 24 = 1. Since D is positive, the equation has two real roots. Substitute into the quadratic formula: x = (5 &plusmn; &radic;1) / 2. This gives x = (5 + 1)/2 = 3 and x = (5 - 1)/2 = 2. The vertex x-coordinate is -b/2a = 5/2 = 2.5. Substituting into the equation gives y = -0.25, so the vertex is (2.5, -0.25).</p></div></section>
+    <section class="content-section"><h2>Reading the Graph</h2><p>The graph helps connect the algebraic solution with the shape of the equation. Real roots are x-values where the curve crosses the x-axis. If the discriminant is zero, the graph touches the x-axis exactly at the vertex and turns around. If the roots are complex, the curve never crosses the x-axis, even though the equation still has valid complex solutions. The vertex marker is useful because it shows the minimum value for an upward-opening parabola or the maximum value for a downward-opening parabola.</p></section>
+    <section class="content-section"><h2>Quadratic Special Cases</h2><table class="reference-table"><thead><tr><th>Case</th><th>Example</th><th>Meaning</th></tr></thead><tbody><tr><td>Two real roots</td><td>x&sup2; - 5x + 6</td><td>D &gt; 0</td></tr><tr><td>Repeated root</td><td>x&sup2; - 4x + 4</td><td>D = 0</td></tr><tr><td>Complex roots</td><td>x&sup2; + 4</td><td>D &lt; 0</td></tr><tr><td>Perfect square trinomial</td><td>x&sup2; + 6x + 9</td><td>(x + 3)&sup2;</td></tr><tr><td>Difference of squares</td><td>x&sup2; - 25</td><td>(x - 5)(x + 5)</td></tr><tr><td>No x term</td><td>x&sup2; - 16</td><td>b = 0</td></tr><tr><td>No constant</td><td>x&sup2; - 3x</td><td>Factor out x</td></tr><tr><td>Opens downward</td><td>-x&sup2; + 4</td><td>a &lt; 0</td></tr></tbody></table></section>
+    <div class="ad-slot">Ad slot</div>
+    <section class="content-section"><h2>Quadratic Solver FAQ</h2><div class="faq-item"><h3 class="faq-question">What is a quadratic equation</h3><div class="faq-answer"><p>A quadratic equation is a polynomial equation whose highest power of the variable is two. Its standard form is ax&sup2; + bx + c = 0, where a, b, and c are constants and a is not zero. The graph of a quadratic is a parabola. Quadratics appear in projectile motion, area problems, revenue models, optimization, geometry, and algebra. Solving a quadratic means finding the x-values where the equation equals zero, which are also the graph's x-intercepts when real roots exist.</p></div></div><div class="faq-item"><h3 class="faq-question">What is the discriminant</h3><div class="faq-answer"><p>The discriminant is the expression b&sup2; - 4ac inside the square root of the quadratic formula. It tells what kind of roots the equation has before the roots are fully calculated. A positive discriminant means two distinct real roots. A zero discriminant means one repeated real root. A negative discriminant means two complex roots because the square root of a negative number is not real. The discriminant is also connected to how the parabola intersects the x-axis.</p></div></div><div class="faq-item"><h3 class="faq-question">What are complex roots</h3><div class="faq-answer"><p>Complex roots occur when the discriminant is negative. In that case, the quadratic formula requires the square root of a negative number, which is written using i, where i&sup2; = -1. Complex roots appear as a pair: p + qi and p - qi. They are not visible as x-axis crossings on a real-number graph, but they are valid algebraic solutions. A parabola with complex roots stays entirely above or below the x-axis, depending on the sign of a and the vertex location.</p></div></div><div class="faq-item"><h3 class="faq-question">What is the vertex of a parabola</h3><div class="faq-answer"><p>The vertex is the turning point of a parabola. If the parabola opens upward, the vertex is the minimum point. If it opens downward, the vertex is the maximum point. The x-coordinate of the vertex is -b/(2a). After finding that value, substitute it into ax&sup2; + bx + c to get the y-coordinate. The vertex is useful in optimization problems, such as finding maximum profit, minimum cost, highest projectile height, or the lowest point of a curve.</p></div></div><div class="faq-item"><h3 class="faq-question">When should I use the quadratic formula</h3><div class="faq-answer"><p>Use the quadratic formula when factoring is difficult, when roots are decimals, or when roots may be complex. Factoring is faster for simple equations such as x&sup2; - 5x + 6 = 0, but it does not always work cleanly. Completing the square is useful for deriving the formula and understanding vertex form, but it can take longer. The quadratic formula works for every quadratic equation with a nonzero a value, making it the most reliable general method.</p></div></div></section>
+  </article><aside class="calc-sidebar"><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/square-root-calculator.html">Square Root Calculator</a></li><li><a href="../maths/exponent-calculator.html">Exponent Calculator</a></li><li><a href="../maths/scientific-calculator.html">Scientific Calculator</a></li><li><a href="../maths/fraction-calculator.html">Fraction Calculator</a></li><li><a href="../science-other/grade-calculator.html">Grade Calculator</a></li></ul></div><div class="ad-slot">Ad slot</div></aside></main>
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-grid"><section><h3>Math Calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage</a></li><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../maths/square-root-calculator.html">Square Root</a></li></ul></section><section><h3>Finance Calculators</h3><ul><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li><li><a href="../finance/tip-calculator.html">Tip</a></li></ul></section><section><h3>Health Calculators</h3><ul><li><a href="../health-fitness/bmi-calculator.html">BMI</a></li><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li><li><a href="../health-fitness/protein-intake-calculator.html">Protein Intake</a></li></ul></section><section><h3>India Calculators</h3><ul><li><a href="../india/gst-calculator.html">GST</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/simple-interest-calculator.html">Simple Interest</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li></ul></section></div><div class="footer-bottom"><span>&copy; 2026 CalcHub. All calculations run locally in your browser.</span><span>Free online calculators for everyday use.</span></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    (function() {
+      let chart;
+      const $ = id => document.getElementById(id);
+      function fmt(n) {
+        return Number(n).toFixed(4).replace(/\.0+$/, '');
+      }
+      function calc() {
+        const a = Number($('a').value);
+        const b = Number($('b').value);
+        const c = Number($('c').value);
+        $('equation-preview').textContent = `${a}x² ${b >= 0 ? '+' : '-'} ${Math.abs(b)}x ${c >= 0 ? '+' : '-'} ${Math.abs(c)} = 0`;
+        if (a === 0) {
+          $('result-grid').innerHTML = '<div class="result-card"><span class="result-value" style="color:var(--danger)">Error</span><span class="result-label">a cannot be zero</span></div>';
+          $('calc-result').classList.add('show');
+          return;
+        }
+        const D = b * b - 4 * a * c;
+        const vx = -b / (2 * a);
+        const vy = a * vx * vx + b * vx + c;
+        let r1;
+        let r2;
+        let realRoots = [];
+        if (D > 0) {
+          const rootOne = (-b + Math.sqrt(D)) / (2 * a);
+          const rootTwo = (-b - Math.sqrt(D)) / (2 * a);
+          realRoots = [rootOne, rootTwo];
+          r1 = fmt(rootOne);
+          r2 = fmt(rootTwo);
+        } else if (D === 0) {
+          const root = -b / (2 * a);
+          realRoots = [root];
+          r1 = r2 = fmt(root);
+        } else {
+          const real = fmt(-b / (2 * a));
+          const imag = fmt(Math.sqrt(-D) / (2 * Math.abs(a)));
+          r1 = `${real} + ${imag}i`;
+          r2 = `${real} - ${imag}i`;
+        }
+        $('result-grid').innerHTML = `<div class="result-card"><span class="result-value">${fmt(D)}</span><span class="result-label">Discriminant</span></div><div class="result-card"><span class="result-value">${r1}</span><span class="result-label">Root 1</span></div><div class="result-card"><span class="result-value">${r2}</span><span class="result-label">Root 2</span></div><div class="result-card"><span class="result-value">(${fmt(vx)}, ${fmt(vy)})</span><span class="result-label">Vertex</span></div>`;
+        $('quad-steps').textContent = `D = ${b}² - 4(${a})(${c}) = ${fmt(D)}. ${D > 0 ? 'Two real roots.' : D === 0 ? 'One repeated root.' : 'Complex roots.'}`;
+        $('calc-result').classList.add('show');
+        const labels = [];
+        const curve = [];
+        const rootPoints = [];
+        const vertexPoints = [];
+        for (let i = 0; i <= 40; i++) {
+          const x = vx - 5 + i * 0.25;
+          labels.push(fmt(x));
+          curve.push(a * x * x + b * x + c);
+          vertexPoints.push(i === 20 ? vy : null);
+          rootPoints.push(realRoots.some(root => Math.abs(root - x) <= 0.125) ? 0 : null);
+        }
+        if (chart) chart.destroy();
+        chart = new Chart($('quadratic-chart'), {
+          type: 'line',
+          data: {
+            labels,
+            datasets: [
+              { label: 'y = ax² + bx + c', data: curve, borderColor: '#2563eb', pointRadius: 0 },
+              { label: 'Roots', data: rootPoints, pointRadius: 6, showLine: false, backgroundColor: '#dc2626', borderColor: '#dc2626' },
+              { label: 'Vertex', data: vertexPoints, pointRadius: 6, showLine: false, backgroundColor: '#16a34a', borderColor: '#16a34a' }
+            ]
+          },
+          options: { responsive: true, maintainAspectRatio: false }
+        });
+      }
+      document.getElementById('calculate-quadratic').addEventListener('click', calc);
+      document.querySelectorAll('#a,#b,#c').forEach(i => i.addEventListener('input', calc));
+      calc();
+    })();
+  </script>
+</body></html>
+

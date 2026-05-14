@@ -1,0 +1,305 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.75rem 1.5rem;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: var(--shadow); }
+.btn-primary:hover { background: var(--primary-dark); color: #fff; box-shadow: var(--shadow-md); }
+.btn-secondary { background: var(--bg); color: var(--text); border-color: var(--border); }
+.btn-secondary:hover { border-color: var(--border-hover); box-shadow: var(--shadow); }
+.btn-india { background: var(--india); color: #fff; box-shadow: var(--shadow); }
+.btn-india:hover { background: #ea580c; color: #fff; box-shadow: var(--shadow-md); }
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+.badge-hot { background: #fee2e2; color: var(--danger); }
+.badge-high { background: #dcfce7; color: var(--success); }
+.badge-med { background: #fef3c7; color: var(--warning); }
+.badge-india { background: var(--india-light); color: var(--india); }
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.category-card {
+  min-height: 180px;
+  border-left: 5px solid var(--primary);
+}
+
+.category-card h3 { margin-bottom: 0.35rem; }
+.category-card p { color: var(--text-secondary); font-size: 0.95rem; }
+.category-card ul { margin-top: 0.75rem; }
+.category-card a { font-weight: 600; }
+.cat-maths { border-left-color: var(--cat-maths); }
+.cat-finance { border-left-color: var(--cat-finance); }
+.cat-unit { border-left-color: var(--cat-unit); }
+.cat-health { border-left-color: var(--cat-health); }
+.cat-datetime { border-left-color: var(--cat-datetime); }
+.cat-science { border-left-color: var(--cat-science); }
+.cat-india { border-left-color: var(--cat-india); }
+
+.calculator-card {
+  display: block;
+  color: var(--text);
+  min-height: 112px;
+}
+
+.calculator-card:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.calculator-card span {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 0.8rem;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1rem 1.15rem;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq-question::after { content: "+"; color: var(--primary); font-weight: 700; }
+.faq-item.open .faq-question::after { content: "-"; }
+
+.faq-answer {
+  display: none;
+  padding: 0 1.15rem 1rem;
+  color: var(--text-secondary);
+}
+
+.faq-answer.open,
+.faq-item.open .faq-answer { display: block; }
+
+.reference-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  display: table;
+}
+
+.reference-table th,
+.reference-table td {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.reference-table th {
+  background: var(--bg-tertiary);
+  font-weight: 700;
+}
+
+.reference-table tr:nth-child(even) td { background: var(--bg-secondary); }
+.reference-table tr:last-child td { border-bottom: 0; }
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.result-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+}
+
+.ad-slot {
+  min-height: 250px;
+  border: 2px dashed var(--border-hover);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  font-size: 0.9rem;
+}
+
+.india-section {
+  background: var(--india-light);
+  border: 1px solid #fed7aa;
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.link-grid a {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  font-weight: 600;
+}
+
+.link-grid a:hover {
+  text-decoration: none;
+  border-color: var(--india);
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.quick-access {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+.quick-access a {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  background: var(--bg);
+}
+
+.quick-access a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.hero {
+  padding: 4rem 0 2rem;
+  background: linear-gradient(180deg, var(--primary-light), var(--bg));
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 7vw, 4.6rem);
+  letter-spacing: 0;
+}
+
+.hero-subtitle {
+  max-width: 760px;
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  margin-top: 1rem;
+}
+
+.hero-search {
+  position: relative;
+  max-width: 680px;
+  margin-top: 1.5rem;
+}
+
+.hero-search .search-input {
+  min-height: 58px;
+  border-radius: var(--radius-xl);
+  font-size: 1.05rem;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.content-section {
+  margin-top: 2rem;
+}
+
+.content-section h2 { margin-bottom: 0.75rem; }
+
+.sidebar-card {
+  margin-bottom: 1rem;
+}
+
+.sidebar-card ul {
+  padding-left: 1.1rem;
+}
+
+@media (max-width: 1023px) {
+  .category-grid,
+  .popular-grid,
+  .feature-grid,
+  .link-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .category-grid,
+  .popular-grid,
+  .feature-grid,
+  .link-grid,
+  .result-grid { grid-template-columns: 1fr; }
+  .india-section { padding: 1.25rem; }
+  .reference-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

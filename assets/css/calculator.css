@@ -96,6 +96,106 @@
 
 .calc-result.show { display: block; }
 
+.india-page {
+  --primary: var(--india);
+  --primary-dark: #ea580c;
+  --primary-light: var(--india-light);
+}
+
+.india-page .calc-widget {
+  border-color: #fed7aa;
+}
+
+.india-page .calc-result {
+  border-color: #fdba74;
+  background: var(--india-light);
+}
+
+.india-page .calc-btn {
+  background: var(--india);
+}
+
+.india-page .calc-btn:hover {
+  background: #ea580c;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.section-label {
+  margin: 1rem 0 0.7rem;
+  color: var(--india);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dual-control {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.result-card.highlight {
+  border-color: #fdba74;
+  background: #fffbeb;
+}
+
+.better-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.45rem;
+  border-radius: 999px;
+  padding: 0.18rem 0.55rem;
+  color: #166534;
+  background: #dcfce7;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.mini-note {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  margin-top: 0.35rem;
+}
+
+.visual-panel {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #fed7aa;
+  border-radius: var(--radius-lg);
+  background: #fffaf5;
+}
+
+.summary-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.summary-list li {
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.svg-slip {
+  width: 100%;
+  min-height: 360px;
+}
+
 .result-value {
   display: block;
   color: var(--primary);
@@ -254,5 +354,8 @@
   .calc-widget { padding: 1.25rem; }
   .calc-tabs,
   .slab-buttons { grid-template-columns: 1fr; }
+  .field-grid,
+  .field-grid.three,
+  .dual-control { grid-template-columns: 1fr; }
   .chart-container { height: 200px; }
 }

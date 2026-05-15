@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INDIA_DIR = ROOT / "india"
-DOMAIN = "https://yourdomain.com"
+DOMAIN = "https://calculatorcity.com"
 
 
 COMMON_JS = r"""
@@ -25,16 +25,38 @@ function formatPlainNumber(n, digits = 2) {
   if (!Number.isFinite(number)) return '0';
   return number.toLocaleString('en-IN', { maximumFractionDigits: digits });
 }
+function getPreferredNumberLocale() {
+  const language = navigator.language || 'en-US';
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+  if (/(^|-)IN\b/i.test(language) || timeZone === 'Asia/Kolkata' || timeZone === 'Asia/Calcutta') return 'en-IN';
+  return language;
+}
+function usesIndianNumberSystem() {
+  return getPreferredNumberLocale() === 'en-IN';
+}
+function parseFormattedNumber(raw) {
+  const cleaned = String(raw || '').replace(/[^\d.-]/g, '');
+  const normalized = cleaned.replace(/(?!^)-/g, '').replace(/^(-?)\./, '$10.').replace(/(\..*)\./g, '$1');
+  const number = Number(normalized);
+  return Number.isFinite(number) ? number : 0;
+}
 function formatShortIndian(n) {
   const number = Number(n) || 0;
   const abs = Math.abs(number);
-  if (abs >= 10000000) return `${formatPlainNumber(number / 10000000, 2)} Cr`;
-  if (abs >= 100000) return `${formatPlainNumber(number / 100000, 2)} L`;
-  return formatPlainNumber(number, 0);
+  if (usesIndianNumberSystem()) {
+    if (abs >= 10000000) return `${formatPlainNumber(number / 10000000, 2)} Cr`;
+    if (abs >= 100000) return `${formatPlainNumber(number / 100000, 2)} L`;
+    return formatPlainNumber(number, 0);
+  }
+  const formatter = new Intl.NumberFormat(getPreferredNumberLocale(), { maximumFractionDigits: 2 });
+  if (abs >= 1000000000) return `${formatter.format(number / 1000000000)} B`;
+  if (abs >= 1000000) return `${formatter.format(number / 1000000)} M`;
+  if (abs >= 1000) return `${formatter.format(number / 1000)} K`;
+  return formatter.format(number);
 }
 function value(id) {
   const el = document.getElementById(id);
-  return el ? Number(el.value) || 0 : 0;
+  return el ? parseFormattedNumber(el.value) : 0;
 }
 function text(id, value) {
   const el = document.getElementById(id);
@@ -53,10 +75,12 @@ function syncRange(rangeId, inputId, callback) {
   if (!range || !input) return;
   range.addEventListener('input', () => {
     input.value = range.value;
+    if (typeof updateRangeInput === 'function') updateRangeInput(range);
     callback();
   });
   input.addEventListener('input', () => {
-    range.value = clamp(input.value, range.min || 0, range.max || input.value);
+    range.value = clamp(value(inputId), range.min || 0, range.max || value(inputId));
+    if (typeof updateRangeInput === 'function') updateRangeInput(range);
     callback();
   });
 }
@@ -166,6 +190,7 @@ def header() -> str:
       <a href="../index.html#unit">Unit</a>
       <a href="../index.html#health">Health</a>
       <a href="../index.html#datetime">Date &amp; Time</a>
+      <a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
     </nav>
     <div class="header-search">
@@ -187,15 +212,69 @@ def header() -> str:
 
 
 def footer() -> str:
-    return """<footer class="site-footer">
+    return """<hr class="footer-separator" aria-hidden="true">
+<footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-grid">
-      <section><h3>Math Calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage</a></li><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../maths/square-root-calculator.html">Square Root</a></li></ul></section>
-      <section><h3>Finance Calculators</h3><ul><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li><li><a href="../finance/inflation-calculator.html">Inflation</a></li></ul></section>
-      <section><h3>Health Calculators</h3><ul><li><a href="../health-fitness/bmi-calculator.html">BMI</a></li><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li><li><a href="../health-fitness/protein-intake-calculator.html">Protein Intake</a></li></ul></section>
-      <section><h3>India Calculators</h3><ul><li><a href="../india/gst-calculator.html">GST</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP</a></li><li><a href="../india/fd-calculator.html">FD</a></li></ul></section>
+    <div class="footer-main">
+      <nav class="footer-categories" aria-labelledby="footer-categories-heading">
+        <h3 id="footer-categories-heading" class="footer-links-label">CATEGORIES</h3>
+        <div class="footer-category-pills">
+        <a href="../index.html#math"><i class="ti ti-math" aria-hidden="true"></i><span>Math Calculators</span></a>
+        <a href="../index.html#finance"><i class="ti ti-coin-rupee" aria-hidden="true"></i><span>Finance Calculators</span></a>
+        <a href="../index.html#unit"><i class="ti ti-ruler" aria-hidden="true"></i><span>Unit Converters</span></a>
+        <a href="../index.html#health"><i class="ti ti-heartbeat" aria-hidden="true"></i><span>Health &amp; Fitness</span></a>
+        <a href="../index.html#datetime"><i class="ti ti-calendar" aria-hidden="true"></i><span>Date &amp; Time</span></a>
+        <a href="../index.html#science"><i class="ti ti-flask" aria-hidden="true"></i><span>Science &amp; Other</span></a>
+        <a href="../index.html#india"><i class="ti ti-map-pin" aria-hidden="true"></i><span>India Calculators</span></a>
+        </div>
+      </nav>
+      <nav class="footer-popular" aria-labelledby="footer-popular-heading">
+        <h3 id="footer-popular-heading" class="footer-links-label">POPULAR CALCULATORS</h3>
+        <div class="footer-popular-links">
+        <a href="../maths/percentage-calculator.html">Percentage</a>
+        <a href="../india/gst-calculator.html">GST</a>
+        <a href="../india/income-tax-calculator.html">Income Tax</a>
+        <a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a>
+        <a href="../india/sip-calculator.html">SIP</a>
+        <a href="../india/fd-calculator.html">FD</a>
+        <a href="../health-fitness/bmi-calculator.html">BMI</a>
+        <a href="../date-time/age-calculator.html">Age</a>
+        <a href="../finance/currency-converter.html">Currency</a>
+        <a href="../india/gold-price-calculator.html">Gold Price</a>
+        <a href="../finance/loan-emi-calculator.html">Loan EMI</a>
+        <a href="../finance/compound-interest-calculator.html">Compound Interest</a>
+        <a href="../india/ctc-salary-calculator.html">CTC Salary</a>
+        <a href="../india/pf-epf-calculator.html">EPF / PF</a>
+        <a href="../india/ppf-calculator.html">PPF</a>
+        <a href="../india/hra-exemption-calculator.html">HRA Exemption</a>
+        <a href="../india/tds-calculator.html">TDS</a>
+        <a href="../finance/discount-calculator.html">Discount</a>
+        <a href="../india/cgpa-to-percentage-calculator.html">CGPA to %</a>
+        <a href="../india/stamp-duty-calculator.html">Stamp Duty</a>
+        </div>
+      </nav>
+      <div class="footer-brand-company">
+        <div class="footer-brand">
+          <span class="footer-brand-name">CalcHub</span>
+          <p class="footer-tagline">Free calculators running locally in your browser.</p>
+          <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
+        </div>
+        <hr class="footer-company-divider" aria-hidden="true">
+        <nav class="footer-company-links" aria-labelledby="footer-company-heading">
+          <h3 id="footer-company-heading" class="footer-links-label">COMPANY</h3>
+        <a href="../company/about-us.html">About Us</a>
+        <a href="../company/blogs.html">Blog</a>
+        <a href="../company/contact-us.html">Contact Us</a>
+        <a href="../company/help.html">Help</a>
+        <a href="../company/privacy-policy.html">Privacy Policy</a>
+        <a href="../company/terms-and-conditions.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 CalcHub. All calculations run locally in your browser.</span><span>Free online calculators for everyday use.</span></div>
+    <div class="footer-bottom">
+      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
+    </div>
   </div>
 </footer>"""
 
@@ -219,7 +298,7 @@ def sidebar(current_file: str) -> str:
     items = "".join(f'<li><a href="../india/{href}">{name}</a></li>' for name, href in links)
     return f"""<aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul>{items}</ul></div>
-  <div class="ad-slot">Ad slot</div>
+  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>"""
 
 
@@ -294,11 +373,11 @@ def render_page(page: dict) -> str:
     <h1>{page["h1"]}</h1>
     <p>{page["intro"]}</p>
     {page["widget"]}
-    <div class="ad-slot">Ad slot</div>
+    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>How to use</h2>{ordered(page["how_to"])}</section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">{page["formula_box"]}</div>{page["formula_text"]}</section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box">{page["example"]}</div></section>
-    <div class="ad-slot">Ad slot</div>
+    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>{page["reference_title"]}</h2>{reference}</section>
     {extra_sections}
     {india_decision_section(page)}

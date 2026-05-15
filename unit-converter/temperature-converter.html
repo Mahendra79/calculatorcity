@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <title>Temperature Converter — Celsius, Fahrenheit, Kelvin | CalcHub</title>
   <meta name="description" content="Convert Celsius, Fahrenheit, Kelvin and Rankine temperatures instantly. Shows all four scales simultaneously. Includes thermometer visual and key temperature references.">
-  <link rel="canonical" href="https://yourdomain.com/unit-converter/temperature-converter.html">
+  <link rel="canonical" href="https://calculatorcity.com/unit-converter/temperature-converter.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -34,7 +35,7 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Temperature Converter","url":"https://yourdomain.com/unit-converter/temperature-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Temperature Converter","url":"https://calculatorcity.com/unit-converter/temperature-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
   </script>
 </head>
 <body>
@@ -43,7 +44,8 @@
     <div class="header-inner">
       <a class="logo" href="../index.html">CalcHub</a>
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a class="nav-india" href="../index.html#india">India</a>
+        <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
+      <a class="nav-india" href="../index.html#india">India</a>
       </nav>
       <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
@@ -71,7 +73,7 @@
         <div class="calc-result show" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
       </section>
       <section class="unit-visual" aria-label="Temperature thermometer"><h2>Thermometer</h2><svg viewBox="0 0 320 420" role="img" aria-label="Thermometer with color temperature zones"><rect x="132" y="38" width="56" height="280" rx="28" fill="#fff" stroke="#cbd5e1" stroke-width="8"/><clipPath id="tube"><rect x="144" y="52" width="32" height="250" rx="16"/></clipPath><g clip-path="url(#tube)"><rect x="144" y="52" width="32" height="42" fill="#dc2626"/><rect x="144" y="94" width="32" height="48" fill="#f97316"/><rect x="144" y="142" width="32" height="44" fill="#facc15"/><rect x="144" y="186" width="32" height="45" fill="#16a34a"/><rect x="144" y="231" width="32" height="45" fill="#06b6d4"/><rect x="144" y="276" width="32" height="26" fill="#2563eb"/><rect id="mercury-empty" x="144" y="52" width="32" height="250" fill="#fff" opacity=".78"/></g><circle cx="160" cy="340" r="46" fill="#dc2626" stroke="#991b1b" stroke-width="6"/><text id="thermo-label" x="160" y="398" text-anchor="middle" font-size="16" font-weight="700">0°C</text><text x="210" y="72" font-size="13">Very hot</text><text x="210" y="124" font-size="13">Hot</text><text x="210" y="170" font-size="13">Warm</text><text x="210" y="214" font-size="13">Comfortable</text><text x="210" y="260" font-size="13">Cold</text><text x="210" y="302" font-size="13">Freezing</text></svg></section>
-      <div class="ad-slot">Ad slot</div>
+      <div class="ad-slot" aria-label="Advertisement"></div>
       <section class="content-section">
         <h2>Key Temperature Reference Points</h2>
         <table class="reference-table"><thead><tr><th>Description</th><th>°C</th><th>°F</th><th>K</th></tr></thead><tbody><tr><td>Absolute zero</td><td>−273.15</td><td>−459.67</td><td>0</td></tr><tr><td>Dry ice (CO₂)</td><td>−78.5</td><td>−109.3</td><td>194.65</td></tr><tr><td>Water freezes</td><td>0</td><td>32</td><td>273.15</td></tr><tr><td>Room temperature</td><td>22</td><td>71.6</td><td>295.15</td></tr><tr><td>Human body</td><td>37</td><td>98.6</td><td>310.15</td></tr><tr><td>Water boils</td><td>100</td><td>212</td><td>373.15</td></tr><tr><td>Oven (baking)</td><td>180</td><td>356</td><td>453.15</td></tr><tr><td>Oven (roasting)</td><td>220</td><td>428</td><td>493.15</td></tr><tr><td>Lead melts</td><td>327</td><td>621</td><td>600.15</td></tr><tr><td>Sun surface</td><td>5500</td><td>9932</td><td>5773</td></tr></tbody></table>
@@ -80,14 +82,78 @@
         <h2>FAQ</h2>
         <div class="faq-item"><h3 class="faq-question">What is the formula to convert Celsius to Fahrenheit?</h3><div class="faq-answer"><p>Multiply Celsius by 9/5, then add 32.</p></div></div><div class="faq-item"><h3 class="faq-question">What is absolute zero and what is Kelvin?</h3><div class="faq-answer"><p>Absolute zero is 0 K, or −273.15°C, where thermal motion is at its theoretical minimum.</p></div></div><div class="faq-item"><h3 class="faq-question">Why do the US and UK use different temperature scales?</h3><div class="faq-answer"><p>The US commonly uses Fahrenheit for weather. The UK uses Celsius for most public weather and scientific contexts, though Fahrenheit may still appear informally.</p></div></div><div class="faq-item"><h3 class="faq-question">What is a normal human body temperature in Celsius and Fahrenheit?</h3><div class="faq-answer"><p>A commonly cited normal body temperature is about 37°C or 98.6°F, though healthy readings vary.</p></div></div><div class="faq-item"><h3 class="faq-question">At what temperature are Celsius and Fahrenheit equal?</h3><div class="faq-answer"><p>Celsius and Fahrenheit are equal at −40 degrees.</p></div></div>
       </section>
-      <div class="ad-slot">Ad slot</div>
+      <div class="ad-slot" aria-label="Advertisement"></div>
     </article>
     <aside class="calc-sidebar">
       <div class="card sidebar-card"><h3>Related converters</h3><ul><li><a href="../unit-converter/length-converter.html">Length</a></li><li><a href="../unit-converter/weight-converter.html">Weight</a></li><li><a href="../unit-converter/temperature-converter.html">Temperature</a></li><li><a href="../unit-converter/area-converter.html">Area</a></li><li><a href="../unit-converter/volume-converter.html">Volume</a></li></ul></div>
-      <div class="ad-slot">Ad slot</div>
+      <div class="ad-slot" aria-label="Advertisement"></div>
     </aside>
   </main>
-  <footer class="site-footer"><div class="footer-inner"><div class="footer-grid"><section><h3>Math Calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage</a></li><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../maths/square-root-calculator.html">Square Root</a></li></ul></section><section><h3>Finance Calculators</h3><ul><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li><li><a href="../finance/tip-calculator.html">Tip</a></li></ul></section><section><h3>Unit Converters</h3><ul><li><a href="../unit-converter/length-converter.html">Length</a></li><li><a href="../unit-converter/weight-converter.html">Weight</a></li><li><a href="../unit-converter/temperature-converter.html">Temperature</a></li><li><a href="../unit-converter/area-converter.html">Area</a></li><li><a href="../unit-converter/volume-converter.html">Volume</a></li></ul></section><section><h3>India Calculators</h3><ul><li><a href="../india/gst-calculator.html">GST</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/sip-calculator.html">SIP</a></li><li><a href="../india/fd-calculator.html">FD</a></li><li><a href="../india/ctc-salary-calculator.html">Salary</a></li></ul></section></div><div class="footer-bottom"><span>© 2026 CalcHub. All calculations run locally in your browser.</span><span>Free online calculators for everyday use.</span></div></div></footer>
+  <hr class="footer-separator" aria-hidden="true">
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-main">
+      <nav class="footer-categories" aria-labelledby="footer-categories-heading">
+        <h3 id="footer-categories-heading" class="footer-links-label">CATEGORIES</h3>
+        <div class="footer-category-pills">
+        <a href="../index.html#math"><i class="ti ti-math" aria-hidden="true"></i><span>Math Calculators</span></a>
+        <a href="../index.html#finance"><i class="ti ti-coin-rupee" aria-hidden="true"></i><span>Finance Calculators</span></a>
+        <a href="../index.html#unit"><i class="ti ti-ruler" aria-hidden="true"></i><span>Unit Converters</span></a>
+        <a href="../index.html#health"><i class="ti ti-heartbeat" aria-hidden="true"></i><span>Health &amp; Fitness</span></a>
+        <a href="../index.html#datetime"><i class="ti ti-calendar" aria-hidden="true"></i><span>Date &amp; Time</span></a>
+        <a href="../index.html#science"><i class="ti ti-flask" aria-hidden="true"></i><span>Science &amp; Other</span></a>
+        <a href="../index.html#india"><i class="ti ti-map-pin" aria-hidden="true"></i><span>India Calculators</span></a>
+        </div>
+      </nav>
+      <nav class="footer-popular" aria-labelledby="footer-popular-heading">
+        <h3 id="footer-popular-heading" class="footer-links-label">POPULAR CALCULATORS</h3>
+        <div class="footer-popular-links">
+        <a href="../maths/percentage-calculator.html">Percentage</a>
+        <a href="../india/gst-calculator.html">GST</a>
+        <a href="../india/income-tax-calculator.html">Income Tax</a>
+        <a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a>
+        <a href="../india/sip-calculator.html">SIP</a>
+        <a href="../india/fd-calculator.html">FD</a>
+        <a href="../health-fitness/bmi-calculator.html">BMI</a>
+        <a href="../date-time/age-calculator.html">Age</a>
+        <a href="../finance/currency-converter.html">Currency</a>
+        <a href="../india/gold-price-calculator.html">Gold Price</a>
+        <a href="../finance/loan-emi-calculator.html">Loan EMI</a>
+        <a href="../finance/compound-interest-calculator.html">Compound Interest</a>
+        <a href="../india/ctc-salary-calculator.html">CTC Salary</a>
+        <a href="../india/pf-epf-calculator.html">EPF / PF</a>
+        <a href="../india/ppf-calculator.html">PPF</a>
+        <a href="../india/hra-exemption-calculator.html">HRA Exemption</a>
+        <a href="../india/tds-calculator.html">TDS</a>
+        <a href="../finance/discount-calculator.html">Discount</a>
+        <a href="../india/cgpa-to-percentage-calculator.html">CGPA to %</a>
+        <a href="../india/stamp-duty-calculator.html">Stamp Duty</a>
+        </div>
+      </nav>
+      <div class="footer-brand-company">
+        <div class="footer-brand">
+          <span class="footer-brand-name">CalcHub</span>
+          <p class="footer-tagline">Free calculators running locally in your browser.</p>
+          <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
+        </div>
+        <hr class="footer-company-divider" aria-hidden="true">
+        <nav class="footer-company-links" aria-labelledby="footer-company-heading">
+          <h3 id="footer-company-heading" class="footer-links-label">COMPANY</h3>
+        <a href="../company/about-us.html">About Us</a>
+        <a href="../company/blogs.html">Blog</a>
+        <a href="../company/contact-us.html">Contact Us</a>
+        <a href="../company/help.html">Help</a>
+        <a href="../company/privacy-policy.html">Privacy Policy</a>
+        <a href="../company/terms-and-conditions.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
+    </div>
+  </div>
+</footer>
   <script src="../assets/js/main.js"></script>
 <script>
 (function() {

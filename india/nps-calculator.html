@@ -5,7 +5,8 @@
   <title>NPS Calculator — National Pension Scheme Returns | CalcHub</title>
   <meta name="description" content="Free NPS calculator India. Calculate National Pension Scheme corpus and monthly pension at retirement. Shows expected annuity and lump sum.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://yourdomain.com/india/nps-calculator.html">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://calculatorcity.com/india/nps-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,8 +14,8 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "NPS Calculator (National Pension Scheme)", "url": "https://yourdomain.com/india/nps-calculator.html", "description": "Free NPS calculator India. Calculate National Pension Scheme corpus and monthly pension at retirement. Shows expected annuity and lump sum.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourdomain.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://yourdomain.com/#india"}, {"@type": "ListItem", "position": 3, "name": "NPS Calculator (National Pension Scheme)", "item": "https://yourdomain.com/india/nps-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "NPS Calculator (National Pension Scheme)", "url": "https://calculatorcity.com/india/nps-calculator.html", "description": "Free NPS calculator India. Calculate National Pension Scheme corpus and monthly pension at retirement. Shows expected annuity and lump sum.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "NPS Calculator (National Pension Scheme)", "item": "https://calculatorcity.com/india/nps-calculator.html"}]}</script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -27,6 +28,7 @@
       <a href="../index.html#unit">Unit</a>
       <a href="../index.html#health">Health</a>
       <a href="../index.html#datetime">Date &amp; Time</a>
+      <a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
     </nav>
     <div class="header-search">
@@ -52,11 +54,11 @@
     <h1>NPS Calculator (National Pension Scheme)</h1>
     <p>The NPS calculator estimates retirement corpus and monthly pension from National Pension System contributions in India. Enter current age, retirement age, monthly contribution, expected return, annuity rate, and annuity purchase percentage to see total corpus, compulsory annuity amount, lump sum withdrawal, and monthly pension. It helps compare NPS with EPF, PPF, and mutual fund SIPs for long-term retirement planning.</p>
     <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="age">Current age</label><input id="age" type="number" value="30"></div><div class="calc-input-group"><label for="retirement">Retirement age</label><input id="retirement" type="number" value="60"></div><div class="calc-input-group"><label for="contribution">Monthly NPS contribution (₹)</label><div class="input-prefix"><span>₹</span><input id="contribution" type="number" value="10000"></div></div><div class="calc-input-group"><label for="return">Expected annual return (%)</label><input id="return" type="number" step="0.1" value="10"></div><div class="calc-input-group"><label for="annuity-rate">Annuity rate (%)</label><input id="annuity-rate" type="number" step="0.1" value="6"></div><div class="calc-input-group"><label for="annuity-percent">Annuity purchase (%)</label><input id="annuity-percent" type="number" value="40"></div></div><button class="calc-btn" id="calculate" type="button">Calculate NPS corpus</button><div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="corpus">₹0.00</span><span class="result-label">Corpus at retirement</span></div><div class="result-card"><span class="result-value" id="annuity">₹0.00</span><span class="result-label">Amount for annuity</span></div><div class="result-card"><span class="result-value" id="lump">₹0.00</span><span class="result-label">Lump sum withdrawal</span></div><div class="result-card"><span class="result-value" id="pension">₹0.00</span><span class="result-label">Monthly pension</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div></div></section>
-    <div class="ad-slot">Ad slot</div>
+    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter current age and planned retirement age.</li><li>Enter monthly NPS contribution.</li><li>Set expected annual return based on asset allocation assumptions.</li><li>Set annuity rate and annuity purchase percentage.</li><li>Calculate retirement corpus, lump sum, annuity purchase amount, and monthly pension.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">NPS corpus = monthly contribution future value<br>Annuity amount = corpus × annuity percentage<br>Monthly pension = annuity amount × annuity rate / 12</div><p>NPS accumulation works like a market-linked monthly investment. Contributions are invested into pension fund schemes based on chosen asset allocation, and returns compound until retirement. The calculator converts annual return to a monthly rate and compounds every monthly contribution to retirement age. It then splits the final corpus into annuity purchase and lump sum withdrawal based on the selected annuity percentage.</p><p>At normal exit, many NPS subscribers must use at least 40% of accumulated corpus to buy an annuity, while the remaining amount can be withdrawn as lump sum subject to prevailing rules. The annuity rate is not guaranteed by NPS during accumulation; it depends on annuity providers and product options at retirement. Pension received from annuity is generally taxable in the year of receipt.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>A 30-year-old investing ₹10,000 per month until age 60 at 10% expected return can build a corpus of about ₹2.28 crore.</p><p>If 40% is used for annuity at 6%, monthly pension is about ₹45,600 and lump sum is about ₹1.37 crore.</p><p><strong>Changing return or annuity rate materially changes the pension estimate.</strong></p></div></section>
-    <div class="ad-slot">Ad slot</div>
+    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>NPS monthly contribution scenarios at 10%</h2><table class="reference-table"><thead><tr><th>Monthly contribution</th><th>20 years</th><th>25 years</th><th>30 years</th><th>35 years</th></tr></thead><tbody><tr><td>₹2,000</td><td>₹15.3L</td><td>₹26.8L</td><td>₹45.6L</td><td>₹75.9L</td></tr><tr><td>₹5,000</td><td>₹38.3L</td><td>₹67.0L</td><td>₹1.14Cr</td><td>₹1.90Cr</td></tr><tr><td>₹10,000</td><td>₹76.6L</td><td>₹1.34Cr</td><td>₹2.28Cr</td><td>₹3.79Cr</td></tr><tr><td>₹15,000</td><td>₹1.15Cr</td><td>₹2.01Cr</td><td>₹3.42Cr</td><td>₹5.69Cr</td></tr><tr><td>₹20,000</td><td>₹1.53Cr</td><td>₹2.68Cr</td><td>₹4.56Cr</td><td>₹7.59Cr</td></tr><tr><td>₹25,000</td><td>₹1.91Cr</td><td>₹3.35Cr</td><td>₹5.70Cr</td><td>₹9.49Cr</td></tr><tr><td>₹30,000</td><td>₹2.30Cr</td><td>₹4.02Cr</td><td>₹6.84Cr</td><td>₹11.38Cr</td></tr><tr><td>₹50,000</td><td>₹3.83Cr</td><td>₹6.70Cr</td><td>₹11.40Cr</td><td>₹18.97Cr</td></tr></tbody></table></section>
     <section class="content-section"><h2>Tier 1 vs Tier 2</h2><p>NPS Tier 1 is the retirement account with tax benefits and withdrawal restrictions. Tier 2 is more flexible and works like an optional investment account, but tax benefits are limited to specified cases. Most retirement planning discussions focus on Tier 1 because of the lock-in and tax structure.</p></section>
 <section class="content-section"><h2>NPS tax benefits</h2><p>Employee contribution may qualify under Section 80CCD within 80C limits, and Section 80CCD(1B) provides an additional old-regime deduction up to ₹50,000. Employer contribution has separate treatment. New-regime rules differ, so verify your regime before assuming tax savings.</p></section>
@@ -75,18 +77,72 @@
   </article>
   <aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
-  <div class="ad-slot">Ad slot</div>
+  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>
 </main>
+<hr class="footer-separator" aria-hidden="true">
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-grid">
-      <section><h3>Math Calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage</a></li><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../maths/square-root-calculator.html">Square Root</a></li></ul></section>
-      <section><h3>Finance Calculators</h3><ul><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li><li><a href="../finance/inflation-calculator.html">Inflation</a></li></ul></section>
-      <section><h3>Health Calculators</h3><ul><li><a href="../health-fitness/bmi-calculator.html">BMI</a></li><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li><li><a href="../health-fitness/protein-intake-calculator.html">Protein Intake</a></li></ul></section>
-      <section><h3>India Calculators</h3><ul><li><a href="../india/gst-calculator.html">GST</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP</a></li><li><a href="../india/fd-calculator.html">FD</a></li></ul></section>
+    <div class="footer-main">
+      <nav class="footer-categories" aria-labelledby="footer-categories-heading">
+        <h3 id="footer-categories-heading" class="footer-links-label">CATEGORIES</h3>
+        <div class="footer-category-pills">
+        <a href="../index.html#math"><i class="ti ti-math" aria-hidden="true"></i><span>Math Calculators</span></a>
+        <a href="../index.html#finance"><i class="ti ti-coin-rupee" aria-hidden="true"></i><span>Finance Calculators</span></a>
+        <a href="../index.html#unit"><i class="ti ti-ruler" aria-hidden="true"></i><span>Unit Converters</span></a>
+        <a href="../index.html#health"><i class="ti ti-heartbeat" aria-hidden="true"></i><span>Health &amp; Fitness</span></a>
+        <a href="../index.html#datetime"><i class="ti ti-calendar" aria-hidden="true"></i><span>Date &amp; Time</span></a>
+        <a href="../index.html#science"><i class="ti ti-flask" aria-hidden="true"></i><span>Science &amp; Other</span></a>
+        <a href="../index.html#india"><i class="ti ti-map-pin" aria-hidden="true"></i><span>India Calculators</span></a>
+        </div>
+      </nav>
+      <nav class="footer-popular" aria-labelledby="footer-popular-heading">
+        <h3 id="footer-popular-heading" class="footer-links-label">POPULAR CALCULATORS</h3>
+        <div class="footer-popular-links">
+        <a href="../maths/percentage-calculator.html">Percentage</a>
+        <a href="../india/gst-calculator.html">GST</a>
+        <a href="../india/income-tax-calculator.html">Income Tax</a>
+        <a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a>
+        <a href="../india/sip-calculator.html">SIP</a>
+        <a href="../india/fd-calculator.html">FD</a>
+        <a href="../health-fitness/bmi-calculator.html">BMI</a>
+        <a href="../date-time/age-calculator.html">Age</a>
+        <a href="../finance/currency-converter.html">Currency</a>
+        <a href="../india/gold-price-calculator.html">Gold Price</a>
+        <a href="../finance/loan-emi-calculator.html">Loan EMI</a>
+        <a href="../finance/compound-interest-calculator.html">Compound Interest</a>
+        <a href="../india/ctc-salary-calculator.html">CTC Salary</a>
+        <a href="../india/pf-epf-calculator.html">EPF / PF</a>
+        <a href="../india/ppf-calculator.html">PPF</a>
+        <a href="../india/hra-exemption-calculator.html">HRA Exemption</a>
+        <a href="../india/tds-calculator.html">TDS</a>
+        <a href="../finance/discount-calculator.html">Discount</a>
+        <a href="../india/cgpa-to-percentage-calculator.html">CGPA to %</a>
+        <a href="../india/stamp-duty-calculator.html">Stamp Duty</a>
+        </div>
+      </nav>
+      <div class="footer-brand-company">
+        <div class="footer-brand">
+          <span class="footer-brand-name">CalcHub</span>
+          <p class="footer-tagline">Free calculators running locally in your browser.</p>
+          <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
+        </div>
+        <hr class="footer-company-divider" aria-hidden="true">
+        <nav class="footer-company-links" aria-labelledby="footer-company-heading">
+          <h3 id="footer-company-heading" class="footer-links-label">COMPANY</h3>
+        <a href="../company/about-us.html">About Us</a>
+        <a href="../company/blogs.html">Blog</a>
+        <a href="../company/contact-us.html">Contact Us</a>
+        <a href="../company/help.html">Help</a>
+        <a href="../company/privacy-policy.html">Privacy Policy</a>
+        <a href="../company/terms-and-conditions.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 CalcHub. All calculations run locally in your browser.</span><span>Free online calculators for everyday use.</span></div>
+    <div class="footer-bottom">
+      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
+    </div>
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -107,16 +163,38 @@ function formatPlainNumber(n, digits = 2) {
   if (!Number.isFinite(number)) return '0';
   return number.toLocaleString('en-IN', { maximumFractionDigits: digits });
 }
+function getPreferredNumberLocale() {
+  const language = navigator.language || 'en-US';
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+  if (/(^|-)IN\b/i.test(language) || timeZone === 'Asia/Kolkata' || timeZone === 'Asia/Calcutta') return 'en-IN';
+  return language;
+}
+function usesIndianNumberSystem() {
+  return getPreferredNumberLocale() === 'en-IN';
+}
+function parseFormattedNumber(raw) {
+  const cleaned = String(raw || '').replace(/[^\d.-]/g, '');
+  const normalized = cleaned.replace(/(?!^)-/g, '').replace(/^(-?)\./, '$10.').replace(/(\..*)\./g, '$1');
+  const number = Number(normalized);
+  return Number.isFinite(number) ? number : 0;
+}
 function formatShortIndian(n) {
   const number = Number(n) || 0;
   const abs = Math.abs(number);
-  if (abs >= 10000000) return `${formatPlainNumber(number / 10000000, 2)} Cr`;
-  if (abs >= 100000) return `${formatPlainNumber(number / 100000, 2)} L`;
-  return formatPlainNumber(number, 0);
+  if (usesIndianNumberSystem()) {
+    if (abs >= 10000000) return `${formatPlainNumber(number / 10000000, 2)} Cr`;
+    if (abs >= 100000) return `${formatPlainNumber(number / 100000, 2)} L`;
+    return formatPlainNumber(number, 0);
+  }
+  const formatter = new Intl.NumberFormat(getPreferredNumberLocale(), { maximumFractionDigits: 2 });
+  if (abs >= 1000000000) return `${formatter.format(number / 1000000000)} B`;
+  if (abs >= 1000000) return `${formatter.format(number / 1000000)} M`;
+  if (abs >= 1000) return `${formatter.format(number / 1000)} K`;
+  return formatter.format(number);
 }
 function value(id) {
   const el = document.getElementById(id);
-  return el ? Number(el.value) || 0 : 0;
+  return el ? parseFormattedNumber(el.value) : 0;
 }
 function text(id, value) {
   const el = document.getElementById(id);
@@ -135,10 +213,12 @@ function syncRange(rangeId, inputId, callback) {
   if (!range || !input) return;
   range.addEventListener('input', () => {
     input.value = range.value;
+    if (typeof updateRangeInput === 'function') updateRangeInput(range);
     callback();
   });
   input.addEventListener('input', () => {
-    range.value = clamp(input.value, range.min || 0, range.max || input.value);
+    range.value = clamp(value(inputId), range.min || 0, range.max || value(inputId));
+    if (typeof updateRangeInput === 'function') updateRangeInput(range);
     callback();
   });
 }

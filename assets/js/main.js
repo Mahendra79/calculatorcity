@@ -499,6 +499,136 @@ function formatCurrency(n, symbol = "$") {
   return `${symbol}${formatIndianNumber(Number(n).toFixed(2))}`;
 }
 
+function getPreferredNumberLocale() {
+  const language = navigator.language || "en-US";
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+  if (/(^|-)IN\b/i.test(language) || timeZone === "Asia/Kolkata" || timeZone === "Asia/Calcutta") {
+    return "en-IN";
+  }
+  return language;
+}
+
+function usesIndianNumberSystem() {
+  return getPreferredNumberLocale() === "en-IN";
+}
+
+function parseFormattedNumber(value) {
+  if (typeof value === "number") return Number.isFinite(value) ? value : 0;
+  const cleaned = String(value || "").replace(/[^\d.-]/g, "");
+  const normalized = cleaned
+    .replace(/(?!^)-/g, "")
+    .replace(/^(-?)\./, "$10.")
+    .replace(/(\..*)\./g, "$1");
+  const number = Number(normalized);
+  return Number.isFinite(number) ? number : 0;
+}
+
+function formatInputNumber(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+  const cleaned = raw.replace(/[^\d.-]/g, "");
+  if (!cleaned || cleaned === "-" || cleaned === ".") return cleaned;
+  const isNegative = cleaned.trim().startsWith("-");
+  const unsigned = cleaned.replace(/-/g, "");
+  const hasDecimal = unsigned.includes(".");
+  const [integerPart, ...decimalParts] = unsigned.split(".");
+  const decimals = decimalParts.join("").replace(/\D/g, "");
+  const integer = integerPart.replace(/\D/g, "") || "0";
+  const formattedInteger = Number(integer).toLocaleString(getPreferredNumberLocale(), { maximumFractionDigits: 0 });
+  return `${isNegative ? "-" : ""}${formattedInteger}${hasDecimal ? `.${decimals}` : ""}`;
+}
+
+function unformatAmountInput(input) {
+  if (!input || input.dataset.amountFormat !== "true") return;
+  const raw = String(input.value || "").trim();
+  if (!raw) return;
+  const cleaned = raw.replace(/[^\d.-]/g, "").replace(/(?!^)-/g, "").replace(/(\..*)\./g, "$1");
+  input.value = cleaned;
+}
+
+function formatAmountInput(input) {
+  if (!input || input.dataset.amountFormat !== "true") return;
+  input.value = formatInputNumber(input.value);
+}
+
+function shouldFormatAmountInput(input) {
+  if (!input || input.dataset.noAmountFormat === "true") return false;
+  if (input.type === "range" || input.type === "checkbox" || input.type === "radio") return false;
+  const group = input.closest(".calc-input-group") || input.parentElement;
+  const label = group ? (group.querySelector("label")?.textContent || "") : "";
+  const prefix = group ? (group.querySelector(".input-prefix span")?.textContent || "") : "";
+  const haystack = `${label} ${prefix} ${input.id || ""}`.toLowerCase();
+  if (/[₹$€£]/.test(prefix) || /[₹$€£]/.test(label)) return true;
+  if (/(rate|percentage|percent|years|months|age|cgpa|grade|height|weight|units|kwh|load|tenure|period|temperature|speed|distance|time|score|ratio)/i.test(label)) {
+    return false;
+  }
+  return /(amount|price|cost|salary|income|principal|loan|payment|rent|investment|contribution|balance|value|fee|tax|tds|deduction|deposit|revenue|expense|sales|profit|commission|insurance|ctc|hra|pf|emi)/i.test(haystack);
+}
+
+function prepareAmountInputsForCalculation() {
+  document.querySelectorAll('input[data-amount-format="true"]').forEach(unformatAmountInput);
+}
+
+function reformatAmountInputs() {
+  document.querySelectorAll('input[data-amount-format="true"]').forEach(formatAmountInput);
+}
+
+function scheduleAmountInputReformat() {
+  window.setTimeout(reformatAmountInputs, 0);
+}
+
+function initAmountInputFormatting() {
+  document.querySelectorAll(".calc-widget input").forEach((input) => {
+    if (!shouldFormatAmountInput(input)) return;
+    input.dataset.amountFormat = "true";
+    input.dataset.originalType = input.type || "text";
+    input.type = "text";
+    input.inputMode = "decimal";
+    input.autocomplete = "off";
+    formatAmountInput(input);
+  });
+}
+
+function updateRangeInput(range) {
+  if (!range || range.type !== "range") return;
+  const min = parseFormattedNumber(range.min);
+  const max = parseFormattedNumber(range.max);
+  const current = parseFormattedNumber(range.value);
+  const denominator = max - min;
+  const progress = denominator > 0 ? ((current - min) / denominator) * 100 : 0;
+  range.style.setProperty("--range-progress", `${Math.min(100, Math.max(0, progress))}%`);
+}
+
+function updateAllRangeInputs() {
+  document.querySelectorAll('.calc-widget input[type="range"]').forEach(updateRangeInput);
+}
+
+function scheduleRangeInputRefresh() {
+  window.setTimeout(updateAllRangeInputs, 0);
+}
+
+function initRangeInputStyling() {
+  updateAllRangeInputs();
+}
+
+document.addEventListener("input", () => {
+  prepareAmountInputsForCalculation();
+  scheduleAmountInputReformat();
+  scheduleRangeInputRefresh();
+}, true);
+
+document.addEventListener("change", () => {
+  prepareAmountInputsForCalculation();
+  scheduleAmountInputReformat();
+  scheduleRangeInputRefresh();
+}, true);
+
+document.addEventListener("click", () => {
+  prepareAmountInputsForCalculation();
+  scheduleAmountInputReformat();
+  scheduleRangeInputRefresh();
+}, true);
+
 function resolveCalculatorUrl(url) {
   if (window.location.protocol !== "file:" || !url.startsWith("/")) return url;
   const currentPath = window.location.pathname.replace(/\\/g, "/");
@@ -579,4 +709,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initSearch();
   initMobileMenu();
   initFAQ();
+  initAmountInputFormatting();
+  initRangeInputStyling();
 });

@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css");
+
 .site-header {
   position: sticky;
   top: 0;
@@ -41,7 +43,7 @@
 .main-nav a { color: var(--text-secondary); }
 .main-nav a:hover { color: var(--primary); text-decoration: none; }
 .main-nav .nav-india { color: var(--india); }
-.main-nav .nav-india::before { content: "🇮🇳 "; }
+.main-nav .nav-india::before { content: "\1F1EE\1F1F3 "; }
 
 .header-search {
   position: relative;
@@ -181,10 +183,17 @@
 .breadcrumb a { color: var(--text-secondary); }
 .breadcrumb span::before { content: "/"; margin-right: 0.4rem; color: var(--text-muted); }
 
+.footer-separator {
+  width: 100%;
+  border: none;
+  border-top: 0.5px solid var(--border);
+  margin: 0 0 1.5rem;
+}
+
 .site-footer {
-  border-top: 1px solid var(--border);
-  background: var(--bg-secondary);
-  padding: 3rem 1rem 1.5rem;
+  background: transparent;
+  border: 0;
+  padding: 0 1rem;
 }
 
 .footer-inner {
@@ -192,37 +201,145 @@
   margin: 0 auto;
 }
 
-.footer-grid {
+.footer-main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 1.2fr 1.5fr 0.9fr;
+  gap: 2.5rem;
+  padding-bottom: 1.5rem;
 }
 
-.footer-grid h3 {
-  font-size: 1rem;
+.footer-brand-name {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.footer-tagline {
+  max-width: 220px;
   margin-bottom: 0.75rem;
-}
-
-.footer-grid ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-grid a {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-local-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.footer-local-badge .ti {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.footer-links-label {
+  margin-bottom: 0.85rem;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.footer-category-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-category-pills a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.footer-category-pills a:hover {
+  background: var(--bg-secondary);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.footer-category-pills .ti {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.footer-popular-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(10, auto);
+  grid-auto-flow: column;
+  column-gap: 1.5rem;
+}
+
+.footer-popular-links a,
+.footer-company-links a {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footer-popular-links a {
+  padding: 4px 0;
+}
+
+.footer-company-links a {
+  margin-bottom: 0.45rem;
+  line-height: 1.45;
+}
+
+.footer-popular-links a:hover,
+.footer-company-links a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.footer-company-divider {
+  border: none;
+  border-top: 0.5px solid var(--border);
+  margin: 1rem 0;
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 1.25rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
+  border-top: 0.5px solid var(--border);
+  padding: 1rem 0 1.5rem;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 12px;
+}
+
+.footer-bottom > span:first-child {
+  white-space: nowrap;
+}
+
+.footer-disclaimer {
+  max-width: 500px;
+  text-align: right;
+  line-height: 1.5;
 }
 
 @media (max-width: 1023px) {
@@ -231,14 +348,26 @@
   .calc-sidebar { position: static; }
 }
 
+@media (max-width: 768px) {
+  .footer-main { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 767px) {
   .main-nav,
   .header-search { display: none; }
   .mobile-menu-btn { display: inline-flex; align-items: center; justify-content: center; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 599px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .footer-bottom > span:first-child {
+    white-space: normal;
+  }
+  .footer-disclaimer {
+    max-width: none;
+    text-align: left;
+  }
 }

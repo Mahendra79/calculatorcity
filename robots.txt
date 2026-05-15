@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://yourdomain.com/sitemap.xml
-Disallow: /assets/
+Sitemap: https://calculatorcity.com/sitemap.xml

@@ -5,7 +5,8 @@
   <title>TDS Calculator India — Tax Deducted at Source | CalcHub</title>
   <meta name="description" content="Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://yourdomain.com/india/tds-calculator.html">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://calculatorcity.com/india/tds-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,8 +14,8 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "TDS Calculator India", "url": "https://yourdomain.com/india/tds-calculator.html", "description": "Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourdomain.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://yourdomain.com/#india"}, {"@type": "ListItem", "position": 3, "name": "TDS Calculator India", "item": "https://yourdomain.com/india/tds-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "TDS Calculator India", "url": "https://calculatorcity.com/india/tds-calculator.html", "description": "Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "TDS Calculator India", "item": "https://calculatorcity.com/india/tds-calculator.html"}]}</script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -27,6 +28,7 @@
       <a href="../index.html#unit">Unit</a>
       <a href="../index.html#health">Health</a>
       <a href="../index.html#datetime">Date &amp; Time</a>
+      <a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
     </nav>
     <div class="header-search">
@@ -52,11 +54,11 @@
     <h1>TDS Calculator India</h1>
     <p>The TDS calculator estimates tax deducted at source in India for salary, rent, professional fees, contractor payments, FD interest, commission, and property purchase. Select payment type, amount, PAN availability, and recipient type where relevant to see TDS rate, section number, TDS amount, and net payment. It includes important thresholds and current rate notes for common FY 2024-25 and later compliance use cases.</p>
     <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="payment-type">Payment type</label><select id="payment-type"><option value="salary">Salary - Section 192</option><option value="rent">Rent above threshold - Section 194IB</option><option value="professional">Professional fees - Section 194J</option><option value="contractor">Contractor payment - Section 194C</option><option value="fd">Interest on FD - Section 194A</option><option value="commission">Commission - Section 194H</option><option value="property">Property purchase - Section 194IA</option></select></div><div class="calc-input-group"><label for="amount">Payment amount (₹)</label><div class="input-prefix"><span>₹</span><input id="amount" type="number" value="100000"></div></div><div class="calc-input-group"><label for="pan">PAN</label><select id="pan"><option value="yes" selected>Available</option><option value="no">Not available</option></select></div><div class="calc-input-group"><label for="recipient">Contractor recipient type</label><select id="recipient"><option value="individual">Individual / HUF</option><option value="company">Company / others</option></select></div></div><button class="calc-btn" id="calculate" type="button">Calculate TDS</button><div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="section">-</span><span class="result-label">Section number</span></div><div class="result-card"><span class="result-value" id="rate">0%</span><span class="result-label">TDS rate used</span></div><div class="result-card highlight"><span class="result-value" id="tds">₹0.00</span><span class="result-label">TDS amount</span></div><div class="result-card"><span class="result-value" id="net">₹0.00</span><span class="result-label">Net payment after TDS</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><p class="mini-note" id="tds-note"></p></div></section>
-    <div class="ad-slot">Ad slot</div>
+    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Select the payment category and Income-tax section.</li><li>Enter gross payment amount in rupees.</li><li>Choose whether valid PAN is available.</li><li>For contractor payments, select individual/HUF or company/other recipient.</li><li>Calculate TDS amount and net payable amount before accounting entry or payment.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">TDS = Payment amount × TDS rate<br>Net payment = Payment amount − TDS<br>No PAN: higher of applicable rate, rate in force, or 20% in many cases</div><p>TDS is deducted at the time of credit or payment depending on the section. Each section has its own rate, threshold, deductor category, and timing rule. For example, professional fees under Section 194J commonly use 10%, contractor payments under Section 194C use 1% for individual/HUF and 2% for others, and property purchase under Section 194IA uses 1% when consideration crosses ₹50,00,000.</p><p>If PAN is not furnished, Section 206AA can require deduction at a higher rate, commonly 20%, subject to section-specific limits. Salary TDS under Section 192 is not a flat rate; it is based on estimated annual tax after deductions and regime selection. This calculator uses simplified current-rate assumptions for planning and should be cross-checked with the Income-tax Act, rules, and latest Finance Act changes before filing returns.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>A company pays professional fees of ₹1,00,000 to a resident consultant with PAN.</p><p>Section 194J TDS at 10% is ₹10,000, so net payment is ₹90,000.</p><p><strong>If PAN is not available, the calculator applies 20% and TDS becomes ₹20,000.</strong></p></div></section>
-    <div class="ad-slot">Ad slot</div>
+    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>Major TDS sections, rates, and thresholds</h2><table class="reference-table"><thead><tr><th>Section</th><th>Payment</th><th>Rate</th><th>Common threshold</th></tr></thead><tbody><tr><td>192</td><td>Salary</td><td>Slab based</td><td>Taxable salary</td></tr><tr><td>194IB</td><td>Rent by individual/HUF</td><td>2% current; 5% before change</td><td>Above ₹50,000/month</td></tr><tr><td>194J</td><td>Professional fees</td><td>10%</td><td>₹50,000/year</td></tr><tr><td>194C</td><td>Contractor</td><td>1% / 2%</td><td>₹30,000 single or ₹1,00,000 aggregate</td></tr><tr><td>194A</td><td>Bank interest</td><td>10%</td><td>₹40,000 non-senior</td></tr><tr><td>194H</td><td>Commission</td><td>5%</td><td>₹15,000/year</td></tr><tr><td>194IA</td><td>Property purchase</td><td>1%</td><td>₹50,00,000</td></tr><tr><td>194M</td><td>Payments by individual/HUF</td><td>2%</td><td>₹50,00,000 aggregate</td></tr></tbody></table></section>
     <section class="content-section"><h2>TDS compliance context</h2><p>Deductors must deposit TDS on time, file TDS returns, and issue certificates such as Form 16, Form 16A, or Form 16B. Deductees should verify credits in Form 26AS and AIS. Mismatched PAN, wrong section, delayed deposit, or incorrect challan details can create credit issues during ITR filing.</p></section>
     <section class="content-section"><h2>Using this result in India</h2>
@@ -74,18 +76,72 @@
   </article>
   <aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
-  <div class="ad-slot">Ad slot</div>
+  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>
 </main>
+<hr class="footer-separator" aria-hidden="true">
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-grid">
-      <section><h3>Math Calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage</a></li><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../maths/square-root-calculator.html">Square Root</a></li></ul></section>
-      <section><h3>Finance Calculators</h3><ul><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li><li><a href="../finance/inflation-calculator.html">Inflation</a></li></ul></section>
-      <section><h3>Health Calculators</h3><ul><li><a href="../health-fitness/bmi-calculator.html">BMI</a></li><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li><li><a href="../health-fitness/protein-intake-calculator.html">Protein Intake</a></li></ul></section>
-      <section><h3>India Calculators</h3><ul><li><a href="../india/gst-calculator.html">GST</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP</a></li><li><a href="../india/fd-calculator.html">FD</a></li></ul></section>
+    <div class="footer-main">
+      <nav class="footer-categories" aria-labelledby="footer-categories-heading">
+        <h3 id="footer-categories-heading" class="footer-links-label">CATEGORIES</h3>
+        <div class="footer-category-pills">
+        <a href="../index.html#math"><i class="ti ti-math" aria-hidden="true"></i><span>Math Calculators</span></a>
+        <a href="../index.html#finance"><i class="ti ti-coin-rupee" aria-hidden="true"></i><span>Finance Calculators</span></a>
+        <a href="../index.html#unit"><i class="ti ti-ruler" aria-hidden="true"></i><span>Unit Converters</span></a>
+        <a href="../index.html#health"><i class="ti ti-heartbeat" aria-hidden="true"></i><span>Health &amp; Fitness</span></a>
+        <a href="../index.html#datetime"><i class="ti ti-calendar" aria-hidden="true"></i><span>Date &amp; Time</span></a>
+        <a href="../index.html#science"><i class="ti ti-flask" aria-hidden="true"></i><span>Science &amp; Other</span></a>
+        <a href="../index.html#india"><i class="ti ti-map-pin" aria-hidden="true"></i><span>India Calculators</span></a>
+        </div>
+      </nav>
+      <nav class="footer-popular" aria-labelledby="footer-popular-heading">
+        <h3 id="footer-popular-heading" class="footer-links-label">POPULAR CALCULATORS</h3>
+        <div class="footer-popular-links">
+        <a href="../maths/percentage-calculator.html">Percentage</a>
+        <a href="../india/gst-calculator.html">GST</a>
+        <a href="../india/income-tax-calculator.html">Income Tax</a>
+        <a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a>
+        <a href="../india/sip-calculator.html">SIP</a>
+        <a href="../india/fd-calculator.html">FD</a>
+        <a href="../health-fitness/bmi-calculator.html">BMI</a>
+        <a href="../date-time/age-calculator.html">Age</a>
+        <a href="../finance/currency-converter.html">Currency</a>
+        <a href="../india/gold-price-calculator.html">Gold Price</a>
+        <a href="../finance/loan-emi-calculator.html">Loan EMI</a>
+        <a href="../finance/compound-interest-calculator.html">Compound Interest</a>
+        <a href="../india/ctc-salary-calculator.html">CTC Salary</a>
+        <a href="../india/pf-epf-calculator.html">EPF / PF</a>
+        <a href="../india/ppf-calculator.html">PPF</a>
+        <a href="../india/hra-exemption-calculator.html">HRA Exemption</a>
+        <a href="../india/tds-calculator.html">TDS</a>
+        <a href="../finance/discount-calculator.html">Discount</a>
+        <a href="../india/cgpa-to-percentage-calculator.html">CGPA to %</a>
+        <a href="../india/stamp-duty-calculator.html">Stamp Duty</a>
+        </div>
+      </nav>
+      <div class="footer-brand-company">
+        <div class="footer-brand">
+          <span class="footer-brand-name">CalcHub</span>
+          <p class="footer-tagline">Free calculators running locally in your browser.</p>
+          <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
+        </div>
+        <hr class="footer-company-divider" aria-hidden="true">
+        <nav class="footer-company-links" aria-labelledby="footer-company-heading">
+          <h3 id="footer-company-heading" class="footer-links-label">COMPANY</h3>
+        <a href="../company/about-us.html">About Us</a>
+        <a href="../company/blogs.html">Blog</a>
+        <a href="../company/contact-us.html">Contact Us</a>
+        <a href="../company/help.html">Help</a>
+        <a href="../company/privacy-policy.html">Privacy Policy</a>
+        <a href="../company/terms-and-conditions.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 CalcHub. All calculations run locally in your browser.</span><span>Free online calculators for everyday use.</span></div>
+    <div class="footer-bottom">
+      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
+    </div>
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -106,16 +162,38 @@ function formatPlainNumber(n, digits = 2) {
   if (!Number.isFinite(number)) return '0';
   return number.toLocaleString('en-IN', { maximumFractionDigits: digits });
 }
+function getPreferredNumberLocale() {
+  const language = navigator.language || 'en-US';
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+  if (/(^|-)IN\b/i.test(language) || timeZone === 'Asia/Kolkata' || timeZone === 'Asia/Calcutta') return 'en-IN';
+  return language;
+}
+function usesIndianNumberSystem() {
+  return getPreferredNumberLocale() === 'en-IN';
+}
+function parseFormattedNumber(raw) {
+  const cleaned = String(raw || '').replace(/[^\d.-]/g, '');
+  const normalized = cleaned.replace(/(?!^)-/g, '').replace(/^(-?)\./, '$10.').replace(/(\..*)\./g, '$1');
+  const number = Number(normalized);
+  return Number.isFinite(number) ? number : 0;
+}
 function formatShortIndian(n) {
   const number = Number(n) || 0;
   const abs = Math.abs(number);
-  if (abs >= 10000000) return `${formatPlainNumber(number / 10000000, 2)} Cr`;
-  if (abs >= 100000) return `${formatPlainNumber(number / 100000, 2)} L`;
-  return formatPlainNumber(number, 0);
+  if (usesIndianNumberSystem()) {
+    if (abs >= 10000000) return `${formatPlainNumber(number / 10000000, 2)} Cr`;
+    if (abs >= 100000) return `${formatPlainNumber(number / 100000, 2)} L`;
+    return formatPlainNumber(number, 0);
+  }
+  const formatter = new Intl.NumberFormat(getPreferredNumberLocale(), { maximumFractionDigits: 2 });
+  if (abs >= 1000000000) return `${formatter.format(number / 1000000000)} B`;
+  if (abs >= 1000000) return `${formatter.format(number / 1000000)} M`;
+  if (abs >= 1000) return `${formatter.format(number / 1000)} K`;
+  return formatter.format(number);
 }
 function value(id) {
   const el = document.getElementById(id);
-  return el ? Number(el.value) || 0 : 0;
+  return el ? parseFormattedNumber(el.value) : 0;
 }
 function text(id, value) {
   const el = document.getElementById(id);
@@ -134,10 +212,12 @@ function syncRange(rangeId, inputId, callback) {
   if (!range || !input) return;
   range.addEventListener('input', () => {
     input.value = range.value;
+    if (typeof updateRangeInput === 'function') updateRangeInput(range);
     callback();
   });
   input.addEventListener('input', () => {
-    range.value = clamp(input.value, range.min || 0, range.max || input.value);
+    range.value = clamp(value(inputId), range.min || 0, range.max || value(inputId));
+    if (typeof updateRangeInput === 'function') updateRangeInput(range);
     callback();
   });
 }

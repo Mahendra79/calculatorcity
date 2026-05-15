@@ -5,7 +5,8 @@
   <title>PPF Calculator — Public Provident Fund Maturity | CalcHub</title>
   <meta name="description" content="Free PPF calculator India. Calculate your Public Provident Fund maturity amount. Shows year-wise balance for 15-year PPF account.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://yourdomain.com/india/ppf-calculator.html">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://calculatorcity.com/india/ppf-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,8 +14,8 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "PPF Calculator (Public Provident Fund)", "url": "https://yourdomain.com/india/ppf-calculator.html", "description": "Free PPF calculator India. Calculate your Public Provident Fund maturity amount. Shows year-wise balance for 15-year PPF account.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourdomain.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://yourdomain.com/#india"}, {"@type": "ListItem", "position": 3, "name": "PPF Calculator (Public Provident Fund)", "item": "https://yourdomain.com/india/ppf-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "PPF Calculator (Public Provident Fund)", "url": "https://calculatorcity.com/india/ppf-calculator.html", "description": "Free PPF calculator India. Calculate your Public Provident Fund maturity amount. Shows year-wise balance for 15-year PPF account.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "PPF Calculator (Public Provident Fund)", "item": "https://calculatorcity.com/india/ppf-calculator.html"}]}</script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -27,6 +28,7 @@
       <a href="../index.html#unit">Unit</a>
       <a href="../index.html#health">Health</a>
       <a href="../index.html#datetime">Date &amp; Time</a>
+      <a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
     </nav>
     <div class="header-search">
@@ -52,11 +54,11 @@
     <h1>PPF Calculator (Public Provident Fund)</h1>
     <p>The PPF calculator estimates maturity value for a 15-year Public Provident Fund account in India. Enter yearly investment, interest rate, and deposit timing to see total deposits, interest earned, maturity amount, and estimated 80C tax saving. The year-wise table shows opening balance, deposit, annual interest, and closing balance so you can understand how a safe government-backed savings account compounds over time.</p>
     <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="investment">Yearly investment amount (₹)</label><div class="input-prefix"><span>₹</span><input id="investment" type="number" min="500" max="150000" value="150000"></div></div><div class="calc-input-group"><label for="rate">PPF interest rate (%)</label><input id="rate" type="number" step="0.1" value="7.1"></div><div class="calc-input-group"><label for="timing">Investment timing</label><select id="timing"><option value="beginning" selected>Beginning of year</option><option value="end">End of year</option></select></div></div><button class="calc-btn" id="calculate" type="button">Calculate PPF maturity</button><div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="maturity">₹0.00</span><span class="result-label">Maturity amount at 15 years</span></div><div class="result-card"><span class="result-value" id="invested">₹0.00</span><span class="result-label">Total invested</span></div><div class="result-card"><span class="result-value" id="interest">₹0.00</span><span class="result-label">Interest earned</span></div><div class="result-card"><span class="result-value" id="tax-saving">₹0.00</span><span class="result-label">80C tax saved at 30%</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><div id="year-table" class="amortization-table"></div></div></section>
-    <div class="ad-slot">Ad slot</div>
+    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter annual deposit between ₹500 and ₹1,50,000.</li><li>Use the current PPF rate or edit it for scenario planning.</li><li>Select whether deposits are made at the beginning or end of each year.</li><li>Calculate maturity value, total deposits, interest, and indicative tax saving.</li><li>Review all 15 yearly rows to understand compounding and lock-in behavior.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">Opening balance + deposit earns annual PPF interest when deposited at year beginning.<br>Closing balance = Opening balance + deposit + interest</div><p>PPF interest is notified by the Government of India and compounded annually. In practical account calculations, monthly balances and deposit dates can matter, but for planning a yearly calculator is easier to understand. If investment timing is set to beginning of year, the annual deposit is added before interest. If timing is end of year, interest is calculated on the opening balance and the deposit is added after interest.</p><p>The account has a 15-year lock-in, but loan and partial withdrawal facilities become available after specified years. PPF follows EEE tax treatment: eligible contribution can qualify for Section 80C under the old regime, interest is tax-free, and maturity proceeds are tax-free. The calculator caps yearly investment at ₹1,50,000 because that is the normal annual deposit ceiling.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>Investing ₹1,50,000 every year for 15 years at 7.1% from the beginning of each year deposits ₹22,50,000.</p><p>The estimated maturity amount is about ₹42,58,000, with interest of about ₹20,08,000.</p><p><strong>At a 30% tax slab, the annual 80C benefit can be worth up to ₹45,000 if the old regime is used.</strong></p></div></section>
-    <div class="ad-slot">Ad slot</div>
+    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>PPF maturity estimates at 7.1%</h2><table class="reference-table"><thead><tr><th>Yearly deposit</th><th>Total deposit</th><th>Approx. maturity</th><th>Interest earned</th></tr></thead><tbody><tr><td>₹500</td><td>₹7,500</td><td>₹14,194</td><td>₹6,694</td></tr><tr><td>₹12,000</td><td>₹1,80,000</td><td>₹3,40,650</td><td>₹1,60,650</td></tr><tr><td>₹24,000</td><td>₹3,60,000</td><td>₹6,81,300</td><td>₹3,21,300</td></tr><tr><td>₹50,000</td><td>₹7,50,000</td><td>₹14,19,375</td><td>₹6,69,375</td></tr><tr><td>₹75,000</td><td>₹11,25,000</td><td>₹21,29,063</td><td>₹10,04,063</td></tr><tr><td>₹1,00,000</td><td>₹15,00,000</td><td>₹28,38,750</td><td>₹13,38,750</td></tr><tr><td>₹1,25,000</td><td>₹18,75,000</td><td>₹35,48,438</td><td>₹16,73,438</td></tr><tr><td>₹1,50,000</td><td>₹22,50,000</td><td>₹42,58,125</td><td>₹20,08,125</td></tr></tbody></table></section>
     <section class="content-section"><h2>PPF rules and withdrawals</h2><p>PPF has a 15-year lock-in. Loans are generally available during the early years and partial withdrawals from later years subject to limits. After maturity, the account can be extended in blocks. This makes PPF useful for conservative long-term goals but unsuitable for emergency money.</p></section>
 <section class="content-section"><h2>PPF vs FD</h2><p>PPF interest is tax-free and government-backed, while FD interest is taxable at slab rates. FDs offer flexible tenures and liquidity but can lose post-tax appeal for higher-bracket taxpayers. PPF has annual contribution limits and lock-in but stronger tax treatment under the old regime.</p></section>
@@ -75,18 +77,72 @@
   </article>
   <aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
-  <div class="ad-slot">Ad slot</div>
+  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>
 </main>
+<hr class="footer-separator" aria-hidden="true">
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-grid">
-      <section><h3>Math Calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage</a></li><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../maths/square-root-calculator.html">Square Root</a></li></ul></section>
-      <section><h3>Finance Calculators</h3><ul><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../finance/loan-emi-calculator.html">Loan EMI</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../finance/roi-calculator.html">ROI</a></li><li><a href="../finance/inflation-calculator.html">Inflation</a></li></ul></section>
-      <section><h3>Health Calculators</h3><ul><li><a href="../health-fitness/bmi-calculator.html">BMI</a></li><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li><li><a href="../health-fitness/protein-intake-calculator.html">Protein Intake</a></li></ul></section>
-      <section><h3>India Calculators</h3><ul><li><a href="../india/gst-calculator.html">GST</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP</a></li><li><a href="../india/fd-calculator.html">FD</a></li></ul></section>
+    <div class="footer-main">
+      <nav class="footer-categories" aria-labelledby="footer-categories-heading">
+        <h3 id="footer-categories-heading" class="footer-links-label">CATEGORIES</h3>
+        <div class="footer-category-pills">
+        <a href="../index.html#math"><i class="ti ti-math" aria-hidden="true"></i><span>Math Calculators</span></a>
+        <a href="../index.html#finance"><i class="ti ti-coin-rupee" aria-hidden="true"></i><span>Finance Calculators</span></a>
+        <a href="../index.html#unit"><i class="ti ti-ruler" aria-hidden="true"></i><span>Unit Converters</span></a>
+        <a href="../index.html#health"><i class="ti ti-heartbeat" aria-hidden="true"></i><span>Health &amp; Fitness</span></a>
+        <a href="../index.html#datetime"><i class="ti ti-calendar" aria-hidden="true"></i><span>Date &amp; Time</span></a>
+        <a href="../index.html#science"><i class="ti ti-flask" aria-hidden="true"></i><span>Science &amp; Other</span></a>
+        <a href="../index.html#india"><i class="ti ti-map-pin" aria-hidden="true"></i><span>India Calculators</span></a>
+        </div>
+      </nav>
+      <nav class="footer-popular" aria-labelledby="footer-popular-heading">
+        <h3 id="footer-popular-heading" class="footer-links-label">POPULAR CALCULATORS</h3>
+        <div class="footer-popular-links">
+        <a href="../maths/percentage-calculator.html">Percentage</a>
+        <a href="../india/gst-calculator.html">GST</a>
+        <a href="../india/income-tax-calculator.html">Income Tax</a>
+        <a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a>
+        <a href="../india/sip-calculator.html">SIP</a>
+        <a href="../india/fd-calculator.html">FD</a>
+        <a href="../health-fitness/bmi-calculator.html">BMI</a>
+        <a href="../date-time/age-calculator.html">Age</a>
+        <a href="../finance/currency-converter.html">Currency</a>
+        <a href="../india/gold-price-calculator.html">Gold Price</a>
+        <a href="../finance/loan-emi-calculator.html">Loan EMI</a>
+        <a href="../finance/compound-interest-calculator.html">Compound Interest</a>
+        <a href="../india/ctc-salary-calculator.html">CTC Salary</a>
+        <a href="../india/pf-epf-calculator.html">EPF / PF</a>
+        <a href="../india/ppf-calculator.html">PPF</a>
+        <a href="../india/hra-exemption-calculator.html">HRA Exemption</a>
+        <a href="../india/tds-calculator.html">TDS</a>
+        <a href="../finance/discount-calculator.html">Discount</a>
+        <a href="../india/cgpa-to-percentage-calculator.html">CGPA to %</a>
+        <a href="../india/stamp-duty-calculator.html">Stamp Duty</a>
+        </div>
+      </nav>
+      <div class="footer-brand-company">
+        <div class="footer-brand">
+          <span class="footer-brand-name">CalcHub</span>
+          <p class="footer-tagline">Free calculators running locally in your browser.</p>
+          <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
+        </div>
+        <hr class="footer-company-divider" aria-hidden="true">
+        <nav class="footer-company-links" aria-labelledby="footer-company-heading">
+          <h3 id="footer-company-heading" class="footer-links-label">COMPANY</h3>
+        <a href="../company/about-us.html">About Us</a>
+        <a href="../company/blogs.html">Blog</a>
+        <a href="../company/contact-us.html">Contact Us</a>
+        <a href="../company/help.html">Help</a>
+        <a href="../company/privacy-policy.html">Privacy Policy</a>
+        <a href="../company/terms-and-conditions.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 CalcHub. All calculations run locally in your browser.</span><span>Free online calculators for everyday use.</span></div>
+    <div class="footer-bottom">
+      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
+    </div>
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -107,16 +163,38 @@ function formatPlainNumber(n, digits = 2) {
   if (!Number.isFinite(number)) return '0';
   return number.toLocaleString('en-IN', { maximumFractionDigits: digits });
 }
+function getPreferredNumberLocale() {
+  const language = navigator.language || 'en-US';
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+  if (/(^|-)IN\b/i.test(language) || timeZone === 'Asia/Kolkata' || timeZone === 'Asia/Calcutta') return 'en-IN';
+  return language;
+}
+function usesIndianNumberSystem() {
+  return getPreferredNumberLocale() === 'en-IN';
+}
+function parseFormattedNumber(raw) {
+  const cleaned = String(raw || '').replace(/[^\d.-]/g, '');
+  const normalized = cleaned.replace(/(?!^)-/g, '').replace(/^(-?)\./, '$10.').replace(/(\..*)\./g, '$1');
+  const number = Number(normalized);
+  return Number.isFinite(number) ? number : 0;
+}
 function formatShortIndian(n) {
   const number = Number(n) || 0;
   const abs = Math.abs(number);
-  if (abs >= 10000000) return `${formatPlainNumber(number / 10000000, 2)} Cr`;
-  if (abs >= 100000) return `${formatPlainNumber(number / 100000, 2)} L`;
-  return formatPlainNumber(number, 0);
+  if (usesIndianNumberSystem()) {
+    if (abs >= 10000000) return `${formatPlainNumber(number / 10000000, 2)} Cr`;
+    if (abs >= 100000) return `${formatPlainNumber(number / 100000, 2)} L`;
+    return formatPlainNumber(number, 0);
+  }
+  const formatter = new Intl.NumberFormat(getPreferredNumberLocale(), { maximumFractionDigits: 2 });
+  if (abs >= 1000000000) return `${formatter.format(number / 1000000000)} B`;
+  if (abs >= 1000000) return `${formatter.format(number / 1000000)} M`;
+  if (abs >= 1000) return `${formatter.format(number / 1000)} K`;
+  return formatter.format(number);
 }
 function value(id) {
   const el = document.getElementById(id);
-  return el ? Number(el.value) || 0 : 0;
+  return el ? parseFormattedNumber(el.value) : 0;
 }
 function text(id, value) {
   const el = document.getElementById(id);
@@ -135,10 +213,12 @@ function syncRange(rangeId, inputId, callback) {
   if (!range || !input) return;
   range.addEventListener('input', () => {
     input.value = range.value;
+    if (typeof updateRangeInput === 'function') updateRangeInput(range);
     callback();
   });
   input.addEventListener('input', () => {
-    range.value = clamp(input.value, range.min || 0, range.max || input.value);
+    range.value = clamp(value(inputId), range.min || 0, range.max || value(inputId));
+    if (typeof updateRangeInput === 'function') updateRangeInput(range);
     callback();
   });
 }

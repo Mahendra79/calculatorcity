@@ -192,6 +192,12 @@ const calculators = [
     "keywords": "andhra pradesh electricity bill calculator india rupee tax investment loan gst salary"
   },
   {
+    "name": "Electricity Bill Calculator India",
+    "url": "/india/electricity/index.html",
+    "category": "India",
+    "keywords": "electricity bill calculator india all states discom tariff slab units kwh power bill"
+  },
+  {
     "name": "Car Loan EMI Calculator",
     "url": "/india/car-loan-emi-calculator.html",
     "category": "India",

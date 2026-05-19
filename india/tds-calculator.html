@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TDS Calculator India — Tax Deducted at Source | CalcHub</title>
+  <title>TDS Calculator India — Tax Deducted at Source | Claculatorcity</title>
   <meta name="description" content="Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.com/india/tds-calculator.html">
+  <link rel="canonical" href="https://claculatorcity.com/india/tds-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "TDS Calculator India", "url": "https://calculatorcity.com/india/tds-calculator.html", "description": "Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "TDS Calculator India", "item": "https://calculatorcity.com/india/tds-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "TDS Calculator India", "url": "https://claculatorcity.com/india/tds-calculator.html", "description": "Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://claculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://claculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "TDS Calculator India", "item": "https://claculatorcity.com/india/tds-calculator.html"}]}</script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ CalcHub</a>
+    <a class="logo" href="../index.html">⌗ Claculatorcity</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,7 +33,7 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input>
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
@@ -54,11 +54,9 @@
     <h1>TDS Calculator India</h1>
     <p>The TDS calculator estimates tax deducted at source in India for salary, rent, professional fees, contractor payments, FD interest, commission, and property purchase. Select payment type, amount, PAN availability, and recipient type where relevant to see TDS rate, section number, TDS amount, and net payment. It includes important thresholds and current rate notes for common FY 2024-25 and later compliance use cases.</p>
     <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="payment-type">Payment type</label><select id="payment-type"><option value="salary">Salary - Section 192</option><option value="rent">Rent above threshold - Section 194IB</option><option value="professional">Professional fees - Section 194J</option><option value="contractor">Contractor payment - Section 194C</option><option value="fd">Interest on FD - Section 194A</option><option value="commission">Commission - Section 194H</option><option value="property">Property purchase - Section 194IA</option></select></div><div class="calc-input-group"><label for="amount">Payment amount (₹)</label><div class="input-prefix"><span>₹</span><input id="amount" type="number" value="100000"></div></div><div class="calc-input-group"><label for="pan">PAN</label><select id="pan"><option value="yes" selected>Available</option><option value="no">Not available</option></select></div><div class="calc-input-group"><label for="recipient">Contractor recipient type</label><select id="recipient"><option value="individual">Individual / HUF</option><option value="company">Company / others</option></select></div></div><button class="calc-btn" id="calculate" type="button">Calculate TDS</button><div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="section">-</span><span class="result-label">Section number</span></div><div class="result-card"><span class="result-value" id="rate">0%</span><span class="result-label">TDS rate used</span></div><div class="result-card highlight"><span class="result-value" id="tds">₹0.00</span><span class="result-label">TDS amount</span></div><div class="result-card"><span class="result-value" id="net">₹0.00</span><span class="result-label">Net payment after TDS</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><p class="mini-note" id="tds-note"></p></div></section>
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Select the payment category and Income-tax section.</li><li>Enter gross payment amount in rupees.</li><li>Choose whether valid PAN is available.</li><li>For contractor payments, select individual/HUF or company/other recipient.</li><li>Calculate TDS amount and net payable amount before accounting entry or payment.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">TDS = Payment amount × TDS rate<br>Net payment = Payment amount − TDS<br>No PAN: higher of applicable rate, rate in force, or 20% in many cases</div><p>TDS is deducted at the time of credit or payment depending on the section. Each section has its own rate, threshold, deductor category, and timing rule. For example, professional fees under Section 194J commonly use 10%, contractor payments under Section 194C use 1% for individual/HUF and 2% for others, and property purchase under Section 194IA uses 1% when consideration crosses ₹50,00,000.</p><p>If PAN is not furnished, Section 206AA can require deduction at a higher rate, commonly 20%, subject to section-specific limits. Salary TDS under Section 192 is not a flat rate; it is based on estimated annual tax after deductions and regime selection. This calculator uses simplified current-rate assumptions for planning and should be cross-checked with the Income-tax Act, rules, and latest Finance Act changes before filing returns.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>A company pays professional fees of ₹1,00,000 to a resident consultant with PAN.</p><p>Section 194J TDS at 10% is ₹10,000, so net payment is ₹90,000.</p><p><strong>If PAN is not available, the calculator applies 20% and TDS becomes ₹20,000.</strong></p></div></section>
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>Major TDS sections, rates, and thresholds</h2><table class="reference-table"><thead><tr><th>Section</th><th>Payment</th><th>Rate</th><th>Common threshold</th></tr></thead><tbody><tr><td>192</td><td>Salary</td><td>Slab based</td><td>Taxable salary</td></tr><tr><td>194IB</td><td>Rent by individual/HUF</td><td>2% current; 5% before change</td><td>Above ₹50,000/month</td></tr><tr><td>194J</td><td>Professional fees</td><td>10%</td><td>₹50,000/year</td></tr><tr><td>194C</td><td>Contractor</td><td>1% / 2%</td><td>₹30,000 single or ₹1,00,000 aggregate</td></tr><tr><td>194A</td><td>Bank interest</td><td>10%</td><td>₹40,000 non-senior</td></tr><tr><td>194H</td><td>Commission</td><td>5%</td><td>₹15,000/year</td></tr><tr><td>194IA</td><td>Property purchase</td><td>1%</td><td>₹50,00,000</td></tr><tr><td>194M</td><td>Payments by individual/HUF</td><td>2%</td><td>₹50,00,000 aggregate</td></tr></tbody></table></section>
     <section class="content-section"><h2>TDS compliance context</h2><p>Deductors must deposit TDS on time, file TDS returns, and issue certificates such as Form 16, Form 16A, or Form 16B. Deductees should verify credits in Form 26AS and AIS. Mismatched PAN, wrong section, delayed deposit, or incorrect challan details can create credit issues during ITR filing.</p></section>
     <section class="content-section"><h2>Using this result in India</h2>
@@ -76,7 +74,6 @@
   </article>
   <aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
-  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>
 </main>
 <hr class="footer-separator" aria-hidden="true">
@@ -122,7 +119,7 @@
       </nav>
       <div class="footer-brand-company">
         <div class="footer-brand">
-          <span class="footer-brand-name">CalcHub</span>
+          <span class="footer-brand-name">Claculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
           <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
@@ -139,7 +136,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span>© 2026 Claculatorcity. All calculations run locally in your browser.</span>
       <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
     </div>
   </div>

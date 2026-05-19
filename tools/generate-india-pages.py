@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INDIA_DIR = ROOT / "india"
-DOMAIN = "https://calculatorcity.com"
+DOMAIN = "https://claculatorcity.com"
 
 
 COMMON_JS = r"""
@@ -183,7 +183,7 @@ def header() -> str:
     return """<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ CalcHub</a>
+    <a class="logo" href="../index.html">⌗ Claculatorcity</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -195,7 +195,7 @@ def header() -> str:
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input>
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
@@ -255,7 +255,7 @@ def footer() -> str:
       </nav>
       <div class="footer-brand-company">
         <div class="footer-brand">
-          <span class="footer-brand-name">CalcHub</span>
+          <span class="footer-brand-name">Claculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
           <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
@@ -272,7 +272,7 @@ def footer() -> str:
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span>© 2026 Claculatorcity. All calculations run locally in your browser.</span>
       <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
     </div>
   </div>
@@ -298,7 +298,6 @@ def sidebar(current_file: str) -> str:
     items = "".join(f'<li><a href="../india/{href}">{name}</a></li>' for name, href in links)
     return f"""<aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul>{items}</ul></div>
-  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>"""
 
 
@@ -373,11 +372,9 @@ def render_page(page: dict) -> str:
     <h1>{page["h1"]}</h1>
     <p>{page["intro"]}</p>
     {page["widget"]}
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>How to use</h2>{ordered(page["how_to"])}</section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">{page["formula_box"]}</div>{page["formula_text"]}</section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box">{page["example"]}</div></section>
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>{page["reference_title"]}</h2>{reference}</section>
     {extra_sections}
     {india_decision_section(page)}
@@ -398,7 +395,7 @@ PAGES: list[dict] = []
 
 PAGES.append({
     "file": "gst-calculator.html",
-    "title": "GST Calculator — Add or Remove GST Online Free | CalcHub",
+    "title": "GST Calculator — Add or Remove GST Online Free | Claculatorcity",
     "meta": "Free GST calculator for India. Add or remove GST at 5%, 12%, 18% or 28% slab. Get CGST, SGST breakdown instantly. No signup needed.",
     "h1": "GST Calculator",
     "intro": "The GST calculator helps Indian businesses, freelancers, and shoppers calculate Goods and Services Tax on invoices, quotations, and retail prices. Enter an amount in rupees, choose a GST slab, and add or remove tax instantly. The result splits CGST and SGST for intra-state transactions, shows the taxable base, and keeps every rupee value in the Indian numbering system used on bills and accounting records.",
@@ -455,7 +452,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "income-tax-calculator.html",
-    "title": "Income Tax Calculator India 2024-25 — New vs Old Regime | CalcHub",
+    "title": "Income Tax Calculator India 2024-25 — New vs Old Regime | Claculatorcity",
     "meta": "Free income tax calculator for India FY 2024-25. Compare new regime vs old regime. Calculate exact tax liability with all deductions. Supports all income slabs.",
     "h1": "Income Tax Calculator India (FY 2024-25)",
     "intro": "This income tax calculator for India estimates FY 2024-25 tax under the new and old regimes for salaried taxpayers. Enter salary, HRA details, deductions, home loan interest, professional tax, and other eligible reductions to compare taxable income side by side. It applies Indian slab logic, 4% health and education cess, rebate rules, and monthly TDS estimates in rupees using Indian number formatting.",
@@ -541,7 +538,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "home-loan-emi-calculator.html",
-    "title": "Home Loan EMI Calculator — Monthly EMI & Total Interest | CalcHub",
+    "title": "Home Loan EMI Calculator — Monthly EMI & Total Interest | Claculatorcity",
     "meta": "Free home loan EMI calculator India. Calculate monthly EMI, total interest, and amortization schedule. Supports all loan amounts and tenures.",
     "h1": "Home Loan EMI Calculator",
     "intro": "The home loan EMI calculator estimates monthly instalments for Indian housing loans, including total interest, total repayment, processing fee, and year-wise balance reduction. Use it for apartment purchases, resale property, plot-plus-construction loans, or balance-transfer comparisons. The calculator supports rupee loan amounts from lakhs to crores, flexible tenures in years or months, and an amortization schedule that shows how principal repayment accelerates over time.",
@@ -599,7 +596,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "sip-calculator.html",
-    "title": "SIP Calculator — Mutual Fund Returns Calculator | CalcHub",
+    "title": "SIP Calculator — Mutual Fund Returns Calculator | Claculatorcity",
     "meta": "Free SIP calculator to estimate mutual fund returns. Calculate wealth growth for monthly SIP investments. Shows invested amount vs estimated returns over time.",
     "h1": "SIP Calculator (Systematic Investment Plan)",
     "intro": "The SIP calculator estimates the future value of monthly mutual fund investments in India. Enter your monthly SIP, expected annual return, and investment period to see invested amount, estimated gain, maturity value, and absolute return. The stacked chart separates your contributions from market returns year by year, making it easier to understand compounding, long-term discipline, and the journey from lakhs to crores.",
@@ -659,7 +656,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "fd-calculator.html",
-    "title": "FD Calculator — Fixed Deposit Maturity Amount | CalcHub",
+    "title": "FD Calculator — Fixed Deposit Maturity Amount | Claculatorcity",
     "meta": "Free FD calculator India. Calculate fixed deposit maturity amount and interest earned. Compare simple and compound interest. Supports quarterly compounding.",
     "h1": "Fixed Deposit (FD) Calculator",
     "intro": "The FD calculator estimates fixed deposit maturity amount, interest earned, post-TDS interest, and effective annual yield for Indian bank deposits. Enter principal, interest rate, tenure, compounding frequency, and TDS preference to compare cumulative and simple-interest outcomes. The chart compares FD growth with an assumed 6% inflation line so you can judge both nominal safety and real purchasing power over the deposit period.",
@@ -717,7 +714,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "ctc-salary-calculator.html",
-    "title": "CTC to In-Hand Salary Calculator India | CalcHub",
+    "title": "CTC to In-Hand Salary Calculator India | Claculatorcity",
     "meta": "Free CTC to in-hand salary calculator India. Convert your annual CTC to monthly take-home salary with complete breakup of PF, HRA, basic, and deductions.",
     "h1": "CTC to In-Hand Salary Calculator",
     "intro": "The CTC to in-hand salary calculator converts an Indian annual compensation package into an estimated monthly take-home salary. Enter annual CTC, city type, rent, professional tax state, voluntary PF, and extra deductions to see a salary slip style breakup. It estimates basic pay, HRA, special allowance, LTA, employee PF, professional tax, income tax TDS, and the final net salary credited to your bank account.",
@@ -781,7 +778,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "pf-epf-calculator.html",
-    "title": "PF Calculator — EPF Maturity Amount Calculator | CalcHub",
+    "title": "PF Calculator — EPF Maturity Amount Calculator | Claculatorcity",
     "meta": "Free EPF/PF calculator India. Calculate your Employee Provident Fund balance at retirement. Shows month-wise contributions and interest accumulated.",
     "h1": "EPF / PF Calculator (Employee Provident Fund)",
     "intro": "The EPF calculator projects your provident fund corpus at retirement using monthly employee contribution, employer EPF contribution, EPS diversion, salary increments, current balance, and declared interest rate. It is built for Indian salaried employees who want to estimate long-term retirement savings in rupees. The year-wise chart shows how fresh contributions and annual compounding can turn monthly PF deductions into a large retirement balance.",
@@ -845,7 +842,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "on-road-price-calculator.html",
-    "title": "On-Road Price Calculator India — Car On-Road Price | CalcHub",
+    "title": "On-Road Price Calculator India — Car On-Road Price | Claculatorcity",
     "meta": "Calculate on-road price of any car in India. Add ex-showroom price, get RTO charges, insurance, TCS and other costs state-wise. Free car price calculator.",
     "h1": "Car On-Road Price Calculator India",
     "intro": "The car on-road price calculator estimates the final amount payable for buying a vehicle in India after adding state registration tax, road tax, insurance, FASTag, handling charges, and TCS on high-value cars. Enter the ex-showroom price, state, fuel type, and vehicle category to build a transparent cost breakup. It is especially useful when comparing dealer quotes across Delhi, Maharashtra, Karnataka, Andhra Pradesh, Telangana, and other states.",
@@ -903,7 +900,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "gratuity-calculator.html",
-    "title": "Gratuity Calculator India — Gratuity Amount Formula | CalcHub",
+    "title": "Gratuity Calculator India — Gratuity Amount Formula | Claculatorcity",
     "meta": "Free gratuity calculator India. Calculate your gratuity amount based on salary and years of service. Follows Payment of Gratuity Act 1972.",
     "h1": "Gratuity Calculator",
     "intro": "The gratuity calculator estimates the lump sum payable to an employee in India based on last drawn basic salary plus dearness allowance and completed years of service. It follows the common Payment of Gratuity Act formula for covered organisations and flags the five-year eligibility rule. The result also shows the private-sector tax-exempt limit and taxable gratuity where the payout crosses the exemption threshold.",
@@ -948,7 +945,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "cgpa-to-percentage-calculator.html",
-    "title": "CGPA to Percentage Calculator — All Universities | CalcHub",
+    "title": "CGPA to Percentage Calculator — All Universities | Claculatorcity",
     "meta": "Convert CGPA to percentage for all Indian universities. Supports CBSE (×9.5), VTU, Anna University, JNTU, Mumbai University and custom multipliers.",
     "h1": "CGPA to Percentage Calculator",
     "intro": "The CGPA to percentage calculator converts Indian board and university grades into percentage using commonly accepted formulas for CBSE, VTU, Anna University, JNTU Hyderabad, Mumbai University, and custom multipliers. It also includes a reverse percentage-to-CGPA tool, letter grade, and class estimate. Use it for resumes, campus placements, government job forms, scholarship applications, and university admission documents where percentage is requested.",
@@ -998,7 +995,7 @@ bindCalculator(calculate);""",
 
 PAGES.append({
     "file": "hra-exemption-calculator.html",
-    "title": "HRA Exemption Calculator — HRA Tax Exemption India | CalcHub",
+    "title": "HRA Exemption Calculator — HRA Tax Exemption India | Claculatorcity",
     "meta": "Free HRA exemption calculator India. Find your House Rent Allowance tax exemption under Section 10(13A). Supports metro and non-metro cities.",
     "h1": "HRA Exemption Calculator (Section 10-13A)",
     "intro": "The HRA exemption calculator estimates tax-free House Rent Allowance for salaried employees in India under Section 10(13A). Enter monthly basic salary plus DA, HRA received, rent paid, and city type to see all three statutory conditions side by side. The calculator identifies the minimum value, annual exemption, and taxable HRA so you can submit accurate rent declarations to your employer.",
@@ -1048,7 +1045,7 @@ bindCalculator(calculate);""",
 PAGES.extend([
 {
     "file": "ppf-calculator.html",
-    "title": "PPF Calculator — Public Provident Fund Maturity | CalcHub",
+    "title": "PPF Calculator — Public Provident Fund Maturity | Claculatorcity",
     "meta": "Free PPF calculator India. Calculate your Public Provident Fund maturity amount. Shows year-wise balance for 15-year PPF account.",
     "h1": "PPF Calculator (Public Provident Fund)",
     "intro": "The PPF calculator estimates maturity value for a 15-year Public Provident Fund account in India. Enter yearly investment, interest rate, and deposit timing to see total deposits, interest earned, maturity amount, and estimated 80C tax saving. The year-wise table shows opening balance, deposit, annual interest, and closing balance so you can understand how a safe government-backed savings account compounds over time.",
@@ -1067,7 +1064,7 @@ PAGES.extend([
 },
 {
     "file": "stamp-duty-calculator.html",
-    "title": "Stamp Duty Calculator India — Property Registration | CalcHub",
+    "title": "Stamp Duty Calculator India — Property Registration | Claculatorcity",
     "meta": "Calculate stamp duty and registration charges for property purchase in India. State-wise rates for all major states including Andhra Pradesh, Telangana, Maharashtra.",
     "h1": "Stamp Duty Calculator India",
     "intro": "The stamp duty calculator estimates property registration cost in India using state-wise stamp duty and registration charge assumptions. Enter property value, state, property type, buyer gender, and new or resale status to calculate stamp duty, registration fee, and total registration outflow. It helps homebuyers compare Andhra Pradesh, Telangana, Maharashtra, Delhi, Karnataka, Tamil Nadu, Gujarat, and other state costs before budgeting the full purchase amount.",
@@ -1086,7 +1083,7 @@ PAGES.extend([
 },
 {
     "file": "car-loan-emi-calculator.html",
-    "title": "Car Loan EMI Calculator India — Auto Loan EMI | CalcHub",
+    "title": "Car Loan EMI Calculator India — Auto Loan EMI | Claculatorcity",
     "meta": "Free car loan EMI calculator India. Calculate monthly car loan EMI with down payment, interest rate and tenure. Get full amortization schedule.",
     "h1": "Car Loan EMI Calculator",
     "intro": "The car loan EMI calculator estimates monthly auto loan payments in India after accounting for down payment, interest rate, and tenure. Enter car price or loan amount, choose down payment as rupees or percentage, and select a tenure from 12 to 84 months. The output shows loan amount, EMI, total interest, total payment, and a year-wise amortization schedule for comparing bank and dealer finance offers.",
@@ -1105,7 +1102,7 @@ PAGES.extend([
 },
 {
     "file": "ap-electricity-bill-calculator.html",
-    "title": "AP Electricity Bill Calculator — APSPDCL & APEPDCL | CalcHub",
+    "title": "AP Electricity Bill Calculator — APSPDCL & APEPDCL | Claculatorcity",
     "meta": "Calculate Andhra Pradesh electricity bill online. Supports APSPDCL and APEPDCL tariff slabs for domestic consumers. Free and accurate AP electricity bill calculator.",
     "h1": "Andhra Pradesh Electricity Bill Calculator",
     "intro": "The AP electricity bill calculator estimates monthly power bills for Andhra Pradesh consumers served by APSPDCL and APEPDCL. Enter discom, category, connected load, units consumed, and fuel adjustment charge to calculate fixed charges, slab-wise energy charges, electricity duty, and total bill. The domestic tariff uses APERC-style telescopic slabs and keeps a clear disclaimer because official tariff orders and FPPCA adjustments can change.",
@@ -1124,7 +1121,7 @@ PAGES.extend([
 },
 {
     "file": "tds-calculator.html",
-    "title": "TDS Calculator India — Tax Deducted at Source | CalcHub",
+    "title": "TDS Calculator India — Tax Deducted at Source | Claculatorcity",
     "meta": "Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.",
     "h1": "TDS Calculator India",
     "intro": "The TDS calculator estimates tax deducted at source in India for salary, rent, professional fees, contractor payments, FD interest, commission, and property purchase. Select payment type, amount, PAN availability, and recipient type where relevant to see TDS rate, section number, TDS amount, and net payment. It includes important thresholds and current rate notes for common FY 2024-25 and later compliance use cases.",
@@ -1143,7 +1140,7 @@ PAGES.extend([
 },
 {
     "file": "nps-calculator.html",
-    "title": "NPS Calculator — National Pension Scheme Returns | CalcHub",
+    "title": "NPS Calculator — National Pension Scheme Returns | Claculatorcity",
     "meta": "Free NPS calculator India. Calculate National Pension Scheme corpus and monthly pension at retirement. Shows expected annuity and lump sum.",
     "h1": "NPS Calculator (National Pension Scheme)",
     "intro": "The NPS calculator estimates retirement corpus and monthly pension from National Pension System contributions in India. Enter current age, retirement age, monthly contribution, expected return, annuity rate, and annuity purchase percentage to see total corpus, compulsory annuity amount, lump sum withdrawal, and monthly pension. It helps compare NPS with EPF, PPF, and mutual fund SIPs for long-term retirement planning.",
@@ -1162,7 +1159,7 @@ PAGES.extend([
 },
 {
     "file": "gold-price-calculator.html",
-    "title": "Gold Price Calculator India — 24K, 22K, 18K Gold Value | CalcHub",
+    "title": "Gold Price Calculator India — 24K, 22K, 18K Gold Value | Claculatorcity",
     "meta": "Calculate gold value in India. Enter weight in grams or tola, select purity (24K, 22K, 18K, 14K). Get gold price with making charges and GST.",
     "h1": "Gold Price Calculator India",
     "intro": "The gold price calculator estimates jewellery value in India using weight, purity, live market rate entered by the user, making charges, and GST. Enter grams or tola, choose 24K, 22K, 18K, or 14K, and add making charge percentage to calculate pure gold value, making charges, GST on gold and making, and total jewellery price. It is useful before visiting jewellers or comparing BIS-hallmarked quotes.",
@@ -1181,7 +1178,7 @@ PAGES.extend([
 },
 {
     "file": "sukanya-samriddhi-calculator.html",
-    "title": "Sukanya Samriddhi Yojana Calculator — SSY Maturity | CalcHub",
+    "title": "Sukanya Samriddhi Yojana Calculator — SSY Maturity | Claculatorcity",
     "meta": "Free Sukanya Samriddhi Yojana calculator. Calculate SSY maturity amount for your daughter. Shows year-wise balance and interest for the full tenure.",
     "h1": "Sukanya Samriddhi Yojana (SSY) Calculator",
     "intro": "The Sukanya Samriddhi Yojana calculator estimates maturity value for a girl child’s SSY account in India. Enter daughter’s age, annual investment, and SSY interest rate to calculate deposit tenure, total amount deposited, interest earned, and maturity amount when the account completes 21 years from opening. The year-wise growth chart helps parents plan education, marriage, and long-term savings with government-backed tax benefits.",
@@ -1200,7 +1197,7 @@ PAGES.extend([
 },
 {
     "file": "advance-tax-calculator.html",
-    "title": "Advance Tax Calculator India — Due Dates & Amounts | CalcHub",
+    "title": "Advance Tax Calculator India — Due Dates & Amounts | Claculatorcity",
     "meta": "Calculate advance tax installments for FY 2024-25. Find quarterly advance tax amounts and due dates. For salaried, self-employed and businesspersons.",
     "h1": "Advance Tax Calculator India",
     "intro": "The advance tax calculator estimates quarterly tax instalments for Indian taxpayers based on estimated yearly income, taxpayer type, TDS already deducted, and tax already paid. It calculates total tax liability, net advance tax payable, due-date percentages for June, September, December, and March, and whether interest risk under Sections 234B or 234C may apply. It is useful for salaried taxpayers with extra income, freelancers, professionals, and businesses.",

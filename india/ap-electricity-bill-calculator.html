@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AP Electricity Bill Calculator — APSPDCL & APEPDCL | CalcHub</title>
+  <title>AP Electricity Bill Calculator — APSPDCL & APEPDCL | Claculatorcity</title>
   <meta name="description" content="Calculate Andhra Pradesh electricity bill online. Supports APSPDCL and APEPDCL tariff slabs for domestic consumers. Free and accurate AP electricity bill calculator.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.com/india/ap-electricity-bill-calculator.html">
+  <link rel="canonical" href="https://claculatorcity.com/india/ap-electricity-bill-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Andhra Pradesh Electricity Bill Calculator", "url": "https://calculatorcity.com/india/ap-electricity-bill-calculator.html", "description": "Calculate Andhra Pradesh electricity bill online. Supports APSPDCL and APEPDCL tariff slabs for domestic consumers. Free and accurate AP electricity bill calculator.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "Andhra Pradesh Electricity Bill Calculator", "item": "https://calculatorcity.com/india/ap-electricity-bill-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Andhra Pradesh Electricity Bill Calculator", "url": "https://claculatorcity.com/india/ap-electricity-bill-calculator.html", "description": "Calculate Andhra Pradesh electricity bill online. Supports APSPDCL and APEPDCL tariff slabs for domestic consumers. Free and accurate AP electricity bill calculator.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://claculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://claculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "Andhra Pradesh Electricity Bill Calculator", "item": "https://claculatorcity.com/india/ap-electricity-bill-calculator.html"}]}</script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ CalcHub</a>
+    <a class="logo" href="../index.html">⌗ Claculatorcity</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,7 +33,7 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input>
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
@@ -54,11 +54,9 @@
     <h1>Andhra Pradesh Electricity Bill Calculator</h1>
     <p>The AP electricity bill calculator estimates monthly power bills for Andhra Pradesh consumers served by APSPDCL and APEPDCL. Enter discom, category, connected load, units consumed, and fuel adjustment charge to calculate fixed charges, slab-wise energy charges, electricity duty, and total bill. The domestic tariff uses APERC-style telescopic slabs and keeps a clear disclaimer because official tariff orders and FPPCA adjustments can change.</p>
     <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="discom">Discom</label><select id="discom"><option>APSPDCL (South)</option><option>APEPDCL (North/East)</option></select></div><div class="calc-input-group"><label for="category">Consumer category</label><select id="category"><option value="domestic" selected>Domestic</option><option value="commercial">Commercial</option><option value="agricultural">Agricultural</option><option value="industrial">Industrial</option></select></div><div class="calc-input-group"><label for="units">Units consumed (kWh)</label><input id="units" type="number" value="180"></div><div class="calc-input-group"><label for="load">Connected load (kW)</label><input id="load" type="number" step="0.5" value="3"></div><div class="calc-input-group"><label for="fppca">Fuel adjustment / FPPCA (₹ per unit)</label><input id="fppca" type="number" step="0.01" value="0"></div></div><button class="calc-btn" id="calculate" type="button">Calculate AP electricity bill</button><div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="fixed">₹0.00</span><span class="result-label">Fixed charges</span></div><div class="result-card"><span class="result-value" id="energy">₹0.00</span><span class="result-label">Energy charges</span></div><div class="result-card"><span class="result-value" id="duty">₹0.00</span><span class="result-label">Electricity duty</span></div><div class="result-card highlight"><span class="result-value" id="total">₹0.00</span><span class="result-label">Total bill amount</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><div id="slab-breakup" class="amortization-table"></div></div></section>
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Select APSPDCL or APEPDCL based on your service area.</li><li>Choose domestic, commercial, agricultural, or industrial category.</li><li>Enter monthly units consumed from your meter reading or bill.</li><li>Enter connected load and any FPPCA shown in the latest bill if applicable.</li><li>Calculate fixed charge, energy charge by slab, duty, and estimated total bill.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">Total bill = fixed charge + slab-wise energy charges + FPPCA + electricity duty<br>Domestic slabs are telescopic, so each block of units is charged at its own rate.</div><p>Andhra Pradesh domestic billing uses telescopic slabs for LT domestic consumers. This means the first block of units is charged at the first slab rate, the next block at the next slab rate, and so on. Fixed charge is calculated using connected load in kW. Electricity duty and fuel/power purchase cost adjustment can be added as separate line items depending on the tariff order and monthly adjustment.</p><p>The calculator uses the commonly cited APERC domestic slab structure of 0-30 units at ₹1.90, 31-75 at ₹3.00, 76-125 at ₹4.50, 126-225 at ₹6.00, 226-400 at ₹8.75, and above 400 at ₹9.75. Agricultural, commercial, and industrial modes use simplified planning rates. For official billing, check the latest tariff order and your discom bill because subsidies, arrears, true-up, and FPPCA can alter the final amount.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>A domestic consumer in Vijayawada using 180 units with 3 kW load pays fixed charges of about ₹30.</p><p>Energy charge is calculated across slabs up to 180 units, then electricity duty and FPPCA are added.</p><p><strong>The calculator shows each slab so the consumer can compare it with the APSPDCL or APEPDCL bill.</strong></p></div></section>
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>AP domestic tariff slabs used</h2><table class="reference-table"><thead><tr><th>Monthly units</th><th>Rate per unit</th><th>Billing method</th></tr></thead><tbody><tr><td>0-30</td><td>₹1.90</td><td>Telescopic</td></tr><tr><td>31-75</td><td>₹3.00</td><td>Telescopic</td></tr><tr><td>76-125</td><td>₹4.50</td><td>Telescopic</td></tr><tr><td>126-225</td><td>₹6.00</td><td>Telescopic</td></tr><tr><td>226-400</td><td>₹8.75</td><td>Telescopic</td></tr><tr><td>>400</td><td>₹9.75</td><td>Telescopic</td></tr><tr><td>Fixed charge</td><td>₹10/kW/month</td><td>Domestic estimate</td></tr><tr><td>Electricity duty</td><td>₹0.06/unit</td><td>Planning estimate</td></tr></tbody></table></section>
     <section class="content-section"><h2>Reading your AP electricity meter</h2><p>Read the current kWh number and subtract the previous bill reading to estimate units. Smart meters and online portals can show consumption history. If the bill is estimated, reconcile it when actual reading is captured. LT supply is common for homes and small shops, while HT supply applies to larger contracted demand consumers.</p></section>
 <section class="content-section"><h2>Reducing AP electricity bill</h2><p>High-slab units are expensive. Efficient fans, inverter ACs, correct thermostat settings, LED lighting, solar water heating, and shifting heavy daytime use where practical can reduce monthly units. Consumers above 500 units should check whether smart-meter time-of-day options or rooftop solar net metering are relevant under current rules.</p></section>
@@ -77,7 +75,6 @@
   </article>
   <aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
-  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>
 </main>
 <hr class="footer-separator" aria-hidden="true">
@@ -123,7 +120,7 @@
       </nav>
       <div class="footer-brand-company">
         <div class="footer-brand">
-          <span class="footer-brand-name">CalcHub</span>
+          <span class="footer-brand-name">Claculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
           <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
@@ -140,7 +137,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span>© 2026 Claculatorcity. All calculations run locally in your browser.</span>
       <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
     </div>
   </div>

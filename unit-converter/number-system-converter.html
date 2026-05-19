@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Number System Converter — Binary, Octal, Decimal, Hex | CalcHub</title>
+  <title>Number System Converter — Binary, Octal, Decimal, Hex | Claculatorcity</title>
   <meta name="description" content="Free number system converter. Convert numbers between binary (base 2), octal (base 8), decimal (base 10) and hexadecimal (base 16) with step-by-step conversion working.">
-  <link rel="canonical" href="https://calculatorcity.com/unit-converter/number-system-converter.html">
+  <link rel="canonical" href="https://claculatorcity.com/unit-converter/number-system-converter.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,19 +35,19 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Number System Converter","url":"https://calculatorcity.com/unit-converter/number-system-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Number System Converter","url":"https://claculatorcity.com/unit-converter/number-system-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">CalcHub</a>
+      <a class="logo" href="../index.html">Claculatorcity</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
@@ -60,24 +60,21 @@
       <h1>Number System Converter</h1>
       <p>The number system converter translates any number between the four bases used in computing and mathematics — binary (base 2, used internally by computers), octal (base 8, used in file permissions), decimal (base 10, everyday numbers), and hexadecimal (base 16, used in colour codes, memory addresses, and web colours). Enter a number in any base and see all four representations simultaneously with step-by-step conversion working.</p>
       <section class="calc-widget">
-        <div class="calc-input-group"><label for="num-input">Enter number</label><input type="text" id="num-input" value="255" placeholder="e.g. 255 or FF or 11111111"></div>
+        <div class="calc-input-group"><label for="num-input">Enter number</label><input type="text" id="num-input" value="255"></div>
         <div class="calc-input-group"><label for="input-base">Input base</label><select id="input-base"><option value="2">Binary (Base 2)</option><option value="8">Octal (Base 8)</option><option value="10" selected>Decimal (Base 10)</option><option value="16">Hexadecimal (Base 16)</option></select></div>
         <div class="calc-result show" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
         <div class="formula-box" id="steps-box" style="margin-top:1rem;"></div>
       </section>
       <section class="content-section"><h2>Numbers 0–20 in All Four Bases</h2><table class="reference-table" id="number-reference"><thead><tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hex</th></tr></thead><tbody></tbody></table></section>
-      <div class="ad-slot" aria-label="Advertisement"></div>
       <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Type or paste your number in the input field — it can be in any base.</li><li>Select the base of the number you entered from the Input base dropdown.</li><li>All four conversions appear instantly — binary, octal, decimal, and hexadecimal.</li><li>The step-by-step box shows how decimal converts to binary using repeated division by 2.</li><li>Useful for programming: paste a hex colour code like FF or 1A to see its decimal and binary values.</li></ol></section>
       <section class="content-section"><h2>Formula</h2><div class="formula-box"><p>To convert from decimal to any base: repeatedly divide by the target base and collect remainders, then read remainders bottom-up.</p><p>Decimal 13 to binary: 13÷2=6 r1, 6÷2=3 r0, 3÷2=1 r1, 1÷2=0 r1 → read up → 1101.</p><p>To convert from any base to decimal: multiply each digit by base^position and sum. Binary 1101 to decimal: 1×2³ + 1×2² + 0×2¹ + 1×2⁰ = 8+4+0+1 = 13.</p><p>Hexadecimal uses digits 0–9 then A=10, B=11, C=12, D=13, E=14, F=15. Hex FF = 15×16¹ + 15×16⁰ = 240+15 = 255.</p></div></section>
       <section class="content-section">
         <h2>FAQ</h2>
         <div class="faq-item"><h3 class="faq-question">What is binary and why do computers use it?</h3><div class="faq-answer"><p>Binary is base 2, using only 0 and 1. Computers use it because digital circuits naturally represent two states.</p></div></div><div class="faq-item"><h3 class="faq-question">What is hexadecimal and where is it used?</h3><div class="faq-answer"><p>Hexadecimal is base 16. It is common in memory addresses, machine code, debugging and web colour values.</p></div></div><div class="faq-item"><h3 class="faq-question">How do you convert binary to decimal?</h3><div class="faq-answer"><p>Multiply each binary digit by its power of 2 based on position, then add the results.</p></div></div><div class="faq-item"><h3 class="faq-question">What is octal and where is it used in computing?</h3><div class="faq-answer"><p>Octal is base 8 and is still seen in Unix-style file permissions, such as 755.</p></div></div><div class="faq-item"><h3 class="faq-question">How do hex colour codes like #FF5733 work?</h3><div class="faq-answer"><p>A six-digit hex colour stores red, green and blue channels. FF is 255 red, 57 is 87 green, and 33 is 51 blue.</p></div></div>
       </section>
-      <div class="ad-slot" aria-label="Advertisement"></div>
     </article>
     <aside class="calc-sidebar">
       <div class="card sidebar-card"><h3>Related converters</h3><ul><li><a href="../unit-converter/length-converter.html">Length</a></li><li><a href="../unit-converter/weight-converter.html">Weight</a></li><li><a href="../unit-converter/temperature-converter.html">Temperature</a></li><li><a href="../unit-converter/area-converter.html">Area</a></li><li><a href="../unit-converter/volume-converter.html">Volume</a></li></ul></div>
-      <div class="ad-slot" aria-label="Advertisement"></div>
     </aside>
   </main>
   <hr class="footer-separator" aria-hidden="true">
@@ -123,7 +120,7 @@
       </nav>
       <div class="footer-brand-company">
         <div class="footer-brand">
-          <span class="footer-brand-name">CalcHub</span>
+          <span class="footer-brand-name">Claculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
           <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
@@ -140,7 +137,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span>© 2026 Claculatorcity. All calculations run locally in your browser.</span>
       <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
     </div>
   </div>

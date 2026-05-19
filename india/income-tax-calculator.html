@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Income Tax Calculator India 2024-25 — New vs Old Regime | CalcHub</title>
+  <title>Income Tax Calculator India 2024-25 — New vs Old Regime | Claculatorcity</title>
   <meta name="description" content="Free income tax calculator for India FY 2024-25. Compare new regime vs old regime. Calculate exact tax liability with all deductions. Supports all income slabs.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.com/india/income-tax-calculator.html">
+  <link rel="canonical" href="https://claculatorcity.com/india/income-tax-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Income Tax Calculator India (FY 2024-25)", "url": "https://calculatorcity.com/india/income-tax-calculator.html", "description": "Free income tax calculator for India FY 2024-25. Compare new regime vs old regime. Calculate exact tax liability with all deductions. Supports all income slabs.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "Income Tax Calculator India (FY 2024-25)", "item": "https://calculatorcity.com/india/income-tax-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Income Tax Calculator India (FY 2024-25)", "url": "https://claculatorcity.com/india/income-tax-calculator.html", "description": "Free income tax calculator for India FY 2024-25. Compare new regime vs old regime. Calculate exact tax liability with all deductions. Supports all income slabs.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://claculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://claculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "Income Tax Calculator India (FY 2024-25)", "item": "https://claculatorcity.com/india/income-tax-calculator.html"}]}</script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ CalcHub</a>
+    <a class="logo" href="../index.html">⌗ Claculatorcity</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,7 +33,7 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input>
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
@@ -73,11 +73,9 @@
       <button class="calc-btn" id="calculate" type="button">Calculate income tax</button>
       <div class="calc-result show"><div class="result-grid"><div class="result-card" id="new-card"><span class="result-value" id="new-tax">₹0.00</span><span class="result-label">New regime net tax</span><span id="new-badge"></span></div><div class="result-card" id="old-card"><span class="result-value" id="old-tax">₹0.00</span><span class="result-label">Old regime net tax</span><span id="old-badge"></span></div><div class="result-card"><span class="result-value" id="new-taxable">₹0.00</span><span class="result-label">New taxable income</span></div><div class="result-card"><span class="result-value" id="old-taxable">₹0.00</span><span class="result-label">Old taxable income</span></div><div class="result-card"><span class="result-value" id="cess-out">₹0.00</span><span class="result-label">Cess included at 4%</span></div><div class="result-card"><span class="result-value" id="monthly-tds">₹0.00</span><span class="result-label">Lower monthly TDS</span></div></div><div class="mini-note" id="tax-note"></div><div class="chart-container"><canvas id="calc-chart"></canvas></div></div>
     </section>
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter annual gross salary or total taxable income before deductions.</li><li>Fill HRA, rent, basic salary, and city details if you want automatic HRA exemption under the old regime.</li><li>Add old-regime deductions such as 80C, 80D, professional tax, and home loan interest.</li><li>Choose New Regime, Old Regime, or Compare Both to focus the output.</li><li>Review taxable income, cess, net tax, monthly TDS, and the green badge showing the lower-tax regime.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">Tax = slab-wise income tax − eligible rebate<br>Net tax payable = Tax + 4% health and education cess<br>Monthly TDS = Net tax payable / 12</div><p>Income tax is calculated slab by slab. Each slab taxes only the portion of income that falls inside that band, not the entire income at the highest rate. For FY 2024-25, the new regime for most individual salaried taxpayers has lower slab rates and a salary standard deduction of ₹75,000, but it does not allow common deductions such as HRA exemption, 80C, 80D, or self-occupied home loan interest. The old regime keeps those deductions but uses higher slab rates after ₹5,00,000.</p><p>This calculator first computes taxable income separately for each regime. It then applies rebate logic, adds health and education cess at 4%, and divides the final yearly tax by 12 for a monthly TDS planning number. It does not calculate surcharge for very high incomes, marginal relief beyond standard rebate handling, capital gains special rates, or business-income restrictions on switching regimes.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>Assume gross salary of ₹12,00,000, 80C investments of ₹1,50,000, 80D premium of ₹25,000, rent of ₹3,00,000, and basic salary of ₹6,00,000.</p><p>The old regime may reduce taxable income through HRA and deductions, while the new regime mainly uses the ₹75,000 standard deduction.</p><p><strong>The calculator compares both and shows the lower annual tax and monthly TDS.</strong></p></div></section>
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>Section 80C investments and limits</h2><table class="reference-table"><thead><tr><th>Investment or payment</th><th>Typical 80C treatment</th></tr></thead><tbody><tr><td>Employee Provident Fund</td><td>Included within ₹1,50,000 limit</td></tr><tr><td>Public Provident Fund</td><td>Included within ₹1,50,000 limit</td></tr><tr><td>ELSS mutual funds</td><td>Included; 3-year lock-in</td></tr><tr><td>Life insurance premium</td><td>Included subject to policy rules</td></tr><tr><td>Principal repayment on home loan</td><td>Included for eligible house property</td></tr><tr><td>Sukanya Samriddhi Yojana</td><td>Included within ₹1,50,000 limit</td></tr><tr><td>National Savings Certificate</td><td>Included within ₹1,50,000 limit</td></tr><tr><td>5-year tax saver FD</td><td>Included; interest taxable</td></tr><tr><td>Tuition fees for children</td><td>Included for eligible full-time education</td></tr><tr><td>Senior Citizens Savings Scheme</td><td>Included within ₹1,50,000 limit</td></tr></tbody></table></section>
     <section class="content-section"><h2>New regime vs old regime</h2><p>The new regime is the default regime for many individual taxpayers, but salaried taxpayers without business income can generally choose the old regime while filing the return. The better choice depends on deduction depth. A taxpayer with high HRA exemption, full 80C, health insurance, home loan interest, and professional tax may still prefer the old regime. A taxpayer with fewer deductions often pays less in the new regime because slabs are lower and the rebate limit is higher.</p><p>Use this page as a planning estimate before declaring investments to your employer. Your Form 16, AIS, capital gains, bank interest, and other income can change the final return calculation.</p></section>
     <section class="content-section"><h2>Using this result in India</h2>
@@ -95,7 +93,6 @@
   </article>
   <aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li><li><a href="../india/hra-exemption-calculator.html">HRA Exemption</a></li></ul></div>
-  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>
 </main>
 <hr class="footer-separator" aria-hidden="true">
@@ -141,7 +138,7 @@
       </nav>
       <div class="footer-brand-company">
         <div class="footer-brand">
-          <span class="footer-brand-name">CalcHub</span>
+          <span class="footer-brand-name">Claculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
           <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
@@ -158,7 +155,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span>© 2026 Claculatorcity. All calculations run locally in your browser.</span>
       <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
     </div>
   </div>

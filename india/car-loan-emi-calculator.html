@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Car Loan EMI Calculator India — Auto Loan EMI | CalcHub</title>
+  <title>Car Loan EMI Calculator India — Auto Loan EMI | Claculatorcity</title>
   <meta name="description" content="Free car loan EMI calculator India. Calculate monthly car loan EMI with down payment, interest rate and tenure. Get full amortization schedule.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.com/india/car-loan-emi-calculator.html">
+  <link rel="canonical" href="https://claculatorcity.com/india/car-loan-emi-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Car Loan EMI Calculator", "url": "https://calculatorcity.com/india/car-loan-emi-calculator.html", "description": "Free car loan EMI calculator India. Calculate monthly car loan EMI with down payment, interest rate and tenure. Get full amortization schedule.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "Car Loan EMI Calculator", "item": "https://calculatorcity.com/india/car-loan-emi-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Car Loan EMI Calculator", "url": "https://claculatorcity.com/india/car-loan-emi-calculator.html", "description": "Free car loan EMI calculator India. Calculate monthly car loan EMI with down payment, interest rate and tenure. Get full amortization schedule.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://claculatorcity.com/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://claculatorcity.com/#india"}, {"@type": "ListItem", "position": 3, "name": "Car Loan EMI Calculator", "item": "https://claculatorcity.com/india/car-loan-emi-calculator.html"}]}</script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ CalcHub</a>
+    <a class="logo" href="../index.html">⌗ Claculatorcity</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,7 +33,7 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input>
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
@@ -54,11 +54,9 @@
     <h1>Car Loan EMI Calculator</h1>
     <p>The car loan EMI calculator estimates monthly auto loan payments in India after accounting for down payment, interest rate, and tenure. Enter car price or loan amount, choose down payment as rupees or percentage, and select a tenure from 12 to 84 months. The output shows loan amount, EMI, total interest, total payment, and a year-wise amortization schedule for comparing bank and dealer finance offers.</p>
     <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="car-price">Car price / loan basis (₹)</label><div class="input-prefix"><span>₹</span><input id="car-price" type="number" value="1000000"></div></div><div class="calc-input-group"><label for="down-payment">Down payment</label><input id="down-payment" type="number" value="200000"></div><div class="calc-input-group"><label for="down-mode">Down payment mode</label><select id="down-mode"><option value="amount" selected>₹ amount</option><option value="percent">% of car price</option></select></div><div class="calc-input-group"><label for="rate">Annual interest rate (%)</label><input id="rate" type="number" step="0.1" value="9"></div><div class="calc-input-group"><label for="tenure">Loan tenure (months)</label><select id="tenure"><option>12</option><option>24</option><option>36</option><option>48</option><option selected>60</option><option>72</option><option>84</option></select></div></div><button class="calc-btn" id="calculate" type="button">Calculate car loan EMI</button><div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="loan">₹0.00</span><span class="result-label">Loan amount after down payment</span></div><div class="result-card highlight"><span class="result-value" id="emi">₹0.00</span><span class="result-label">Monthly EMI</span></div><div class="result-card"><span class="result-value" id="interest">₹0.00</span><span class="result-label">Total interest</span></div><div class="result-card"><span class="result-value" id="payment">₹0.00</span><span class="result-label">Total payment</span></div><div class="result-card"><span class="result-value" id="down-percent">0%</span><span class="result-label">Down payment %</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><div id="amortization" class="amortization-table"></div></div></section>
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter the car price or loan basis amount.</li><li>Enter down payment as rupees or select percentage mode.</li><li>Set annual car loan interest rate from your bank or dealer quote.</li><li>Choose tenure in months.</li><li>Calculate EMI and review total interest plus year-wise repayment.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">Loan amount = Car price − down payment<br>EMI = P × r × (1 + r)<sup>n</sup> / ((1 + r)<sup>n</sup> − 1)</div><p>A car loan is an amortizing loan similar to other retail loans. The principal is the financed amount after down payment. The annual rate is converted to a monthly rate and applied across the selected number of monthly instalments. Each EMI includes interest on the outstanding balance plus a principal component. Early EMIs contain more interest because the balance is higher.</p><p>Indian car loans often include processing fee, hypothecation, documentation charges, bundled insurance, extended warranty, and dealer discounts. This calculator focuses on EMI and interest. When comparing offers, check the final on-road price, down payment, flat vs reducing rate wording, foreclosure charges, late-payment fees, and whether accessories or insurance are being financed into the loan.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>For a ₹10,00,000 car with ₹2,00,000 down payment, the loan amount is ₹8,00,000.</p><p>At 9% for 60 months, EMI is about ₹16,607 and total interest is about ₹1,96,420.</p><p><strong>Total paid to the lender is about ₹9,96,420 excluding processing fee.</strong></p></div></section>
-    <div class="ad-slot" aria-label="Advertisement"></div>
     <section class="content-section"><h2>EMI comparison at 9% for 60 months</h2><table class="reference-table"><thead><tr><th>Car price</th><th>20% down payment</th><th>Loan amount</th><th>Approx. EMI</th></tr></thead><tbody><tr><td>₹5L</td><td>₹1L</td><td>₹4L</td><td>₹8,303</td></tr><tr><td>₹8L</td><td>₹1.6L</td><td>₹6.4L</td><td>₹13,285</td></tr><tr><td>₹10L</td><td>₹2L</td><td>₹8L</td><td>₹16,607</td></tr><tr><td>₹12L</td><td>₹2.4L</td><td>₹9.6L</td><td>₹19,928</td></tr><tr><td>₹15L</td><td>₹3L</td><td>₹12L</td><td>₹24,910</td></tr><tr><td>₹20L</td><td>₹4L</td><td>₹16L</td><td>₹33,214</td></tr><tr><td>₹25L</td><td>₹5L</td><td>₹20L</td><td>₹41,517</td></tr><tr><td>₹30L</td><td>₹6L</td><td>₹24L</td><td>₹49,821</td></tr></tbody></table></section>
     <section class="content-section"><h2>Down payment strategy</h2><p>A higher down payment lowers EMI and total interest, but it also uses liquid savings. For Indian buyers, a practical approach is to avoid stretching EMI beyond comfortable monthly cash flow after fuel, parking, maintenance, insurance renewal, and annual service costs.</p></section>
     <section class="content-section"><h2>Using this result in India</h2>
@@ -76,7 +74,6 @@
   </article>
   <aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
-  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>
 </main>
 <hr class="footer-separator" aria-hidden="true">
@@ -122,7 +119,7 @@
       </nav>
       <div class="footer-brand-company">
         <div class="footer-brand">
-          <span class="footer-brand-name">CalcHub</span>
+          <span class="footer-brand-name">Claculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
           <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
@@ -139,7 +136,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span>© 2026 Claculatorcity. All calculations run locally in your browser.</span>
       <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
     </div>
   </div>

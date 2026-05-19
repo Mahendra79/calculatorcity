@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>GPA Calculator &mdash; Semester and Cumulative GPA | CalcHub</title>
+  <title>GPA Calculator &mdash; Semester and Cumulative GPA | Claculatorcity</title>
   <meta name="description" content="Free GPA calculator for semester GPA on a 4.0 scale. Add subjects with grades and credit hours. Also calculates cumulative GPA from previous and current semester.">
-  <link rel="canonical" href="https://calculatorcity.com/science-other/gpa-calculator.html">
+  <link rel="canonical" href="https://claculatorcity.com/science-other/gpa-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,19 +18,19 @@
     .subject-row{display:grid;grid-template-columns:minmax(150px,1fr) 130px 130px auto;gap:.75rem;align-items:end;margin-bottom:.75rem}.remove-row{min-height:44px}.inline-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}.section-divider{border-top:1px solid var(--border);margin:1.5rem 0;padding-top:1.5rem}.table-wrap{overflow-x:auto}.grade-summary{color:var(--text-secondary);margin-top:.75rem}@media(max-width:767px){.subject-row{grid-template-columns:1fr}.remove-row{width:100%}}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"GPA Calculator","url":"https://calculatorcity.com/science-other/gpa-calculator.html","description":"Calculate semester GPA and cumulative GPA on a 4.0 scale using grades and credit hours.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"GPA Calculator","url":"https://claculatorcity.com/science-other/gpa-calculator.html","description":"Calculate semester GPA and cumulative GPA on a 4.0 scale using grades and credit hours.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">CalcHub</a>
+      <a class="logo" href="../index.html">Claculatorcity</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" placeholder="Search calculators" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
@@ -59,17 +59,15 @@
         <div class="section-divider" aria-labelledby="cumulative-heading">
           <h2 id="cumulative-heading">Cumulative GPA</h2>
           <div class="result-grid">
-            <div class="calc-input-group"><label for="prev-gpa">Previous cumulative GPA</label><input type="number" id="prev-gpa" min="0" max="4" step="0.01" placeholder="e.g. 3.20"></div>
-            <div class="calc-input-group"><label for="prev-credits">Previous total credits earned</label><input type="number" id="prev-credits" min="0" step="0.5" placeholder="e.g. 48"></div>
-            <div class="calc-input-group"><label for="current-gpa">Current semester GPA</label><input type="number" id="current-gpa" min="0" max="4" step="0.01" placeholder="Auto-filled after semester calculation"></div>
-            <div class="calc-input-group"><label for="current-credits">Current semester credits</label><input type="number" id="current-credits" min="0" step="0.5" placeholder="Auto-filled after semester calculation"></div>
+            <div class="calc-input-group"><label for="prev-gpa">Previous cumulative GPA</label><input type="number" id="prev-gpa" min="0" max="4" step="0.01"></div>
+            <div class="calc-input-group"><label for="prev-credits">Previous total credits earned</label><input type="number" id="prev-credits" min="0" step="0.5"></div>
+            <div class="calc-input-group"><label for="current-gpa">Current semester GPA</label><input type="number" id="current-gpa" min="0" max="4" step="0.01"></div>
+            <div class="calc-input-group"><label for="current-credits">Current semester credits</label><input type="number" id="current-credits" min="0" step="0.5"></div>
           </div>
           <button class="calc-btn" type="button" id="calc-cumulative">Calculate Cumulative GPA</button>
           <div class="calc-result" id="cumulative-result-box" aria-live="polite"><div class="result-grid" id="cumulative-result"></div></div>
         </div>
       </section>
-
-      <div class="ad-slot" aria-label="Advertisement"></div>
 
       <section class="content-section">
         <h2>How to Use</h2>
@@ -115,8 +113,6 @@
         <p>Institutions also vary. Some use 10-point CGPA systems, some use percentages, some apply relative grading, and some treat A+ as higher than 4.0. Before submitting an application, use the official conversion method requested by the university, employer, or scholarship body. This calculator is best for planning, checking semester impact, and understanding the arithmetic behind weighted grade points. If your college publishes its own grade conversion table, use that table instead of a generic one.</p>
       </section>
 
-      <div class="ad-slot" aria-label="Advertisement"></div>
-
       <section class="content-section">
         <h2>FAQ</h2>
         <div class="faq-item"><h3 class="faq-question">What is GPA?</h3><div class="faq-answer"><p>GPA means grade point average. It converts letter grades into numerical grade points and averages them using course credit hours as weights. On a 4.0 scale, A grades usually equal 4.0, B grades are around 3.0, C grades are around 2.0, D is around 1.0, and F is 0.0. The purpose is to summarize academic performance across several subjects in a single number. Because credits matter, GPA is more accurate than simply counting how many A or B grades appear on a transcript.</p></div></div>
@@ -130,7 +126,6 @@
     <aside class="calc-sidebar">
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law</a></li><li><a href="../science-other/gpa-calculator.html">GPA</a></li><li><a href="../science-other/grade-calculator.html">Grade</a></li><li><a href="../science-other/password-generator.html">Password Generator</a></li><li><a href="../science-other/electricity-cost-calculator.html">Electricity Cost</a></li></ul></div>
       <div class="card sidebar-card"><h3>GPA tips</h3><ul><li>Credit hours control weight.</li><li>Use official conversions when required.</li><li>Track cumulative impact early.</li></ul></div>
-      <div class="ad-slot" aria-label="Advertisement"></div>
     </aside>
   </main>
   <hr class="footer-separator" aria-hidden="true">
@@ -176,7 +171,7 @@
       </nav>
       <div class="footer-brand-company">
         <div class="footer-brand">
-          <span class="footer-brand-name">CalcHub</span>
+          <span class="footer-brand-name">Claculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
           <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
@@ -193,7 +188,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 CalcHub. All calculations run locally in your browser.</span>
+      <span>© 2026 Claculatorcity. All calculations run locally in your browser.</span>
       <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
     </div>
   </div>
@@ -228,7 +223,7 @@
     row.innerHTML = `
       <div class="calc-input-group">
         <label for="subject-${rowCount}">Subject name ${rowCount}</label>
-        <input type="text" id="subject-${rowCount}" class="subject-input" value="${data.subject}" placeholder="e.g. Physics">
+        <input type="text" id="subject-${rowCount}" class="subject-input" value="${data.subject}">
       </div>
       <div class="calc-input-group">
         <label for="grade-${rowCount}">Letter grade ${rowCount}</label>

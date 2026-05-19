@@ -163,23 +163,6 @@
   overflow: hidden;
 }
 
-.ad-slot {
-  margin: 1.5rem 0;
-}
-
-.ad-slot:empty {
-  display: none;
-}
-
-.ad-slot:not(:empty) {
-  min-height: 250px;
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-secondary);
-}
-
 .india-section {
   background: var(--india-light);
   border: 1px solid #fed7aa;

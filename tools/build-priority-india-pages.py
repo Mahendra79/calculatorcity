@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INDIA = ROOT / "india"
-DOMAIN = "https://calculatorcity.com"
+DOMAIN = "https://claculatorcity.com"
 
 spec = importlib.util.spec_from_file_location("production_polish", ROOT / "tools" / "production-polish.py")
 production = importlib.util.module_from_spec(spec)
@@ -36,7 +36,6 @@ def sidebar(current: str) -> str:
     items = "".join(f'<li><a href="../india/{href}">{name}</a></li>' for name, href in links)
     return f"""<aside class="calc-sidebar">
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul>{items}</ul></div>
-  <div class="ad-slot" aria-label="Advertisement"></div>
 </aside>"""
 
 
@@ -314,7 +313,7 @@ def on_road_page() -> str:
           <div class="calc-input-group"><label for="car-variant">Variant</label><select id="car-variant" disabled><option value="">Select model first</option></select></div>
           <div class="calc-input-group"><label for="fuel-type">Fuel type</label><select id="fuel-type"><option value="petrol">Petrol</option><option value="diesel">Diesel</option><option value="cng">CNG</option><option value="electric">Electric (EV)</option><option value="hybrid">Hybrid</option></select></div>
         </div>
-        <div class="calc-input-group"><label for="ex-showroom">Ex-showroom price (₹) <span style="font-size:11px; color:var(--text-muted)">— auto-filled when variant selected, or enter manually</span></label><input type="number" id="ex-showroom" placeholder="e.g. 850000" min="100000"></div>
+        <div class="calc-input-group"><label for="ex-showroom">Ex-showroom price (₹) <span style="font-size:11px; color:var(--text-muted)">— auto-filled when variant selected, or enter manually</span></label><input type="number" id="ex-showroom" min="100000"></div>
       </div>
       <div class="calc-step" style="margin-top:16px; padding-top:16px; border-top:0.5px solid var(--border);">
         <h3 style="font-size:15px; margin-bottom:12px;">Step 2 — Select state &amp; options</h3>
@@ -326,7 +325,7 @@ def on_road_page() -> str:
           <label style="display:flex; align-items:center; gap:6px; font-size:13px; cursor:pointer;"><input type="checkbox" id="incl-insurance" checked> Include 1st year insurance (~2.5% of IDV)</label>
           <label style="display:flex; align-items:center; gap:6px; font-size:13px; cursor:pointer;"><input type="checkbox" id="incl-fastag" checked> Include Fastag (₹500)</label>
           <label style="display:flex; align-items:center; gap:6px; font-size:13px; cursor:pointer;"><input type="checkbox" id="incl-handling"> Include handling/logistics charges</label>
-          <div class="calc-input-group" style="flex:1; min-width:150px;"><label for="handling-amt">Handling charges (₹)</label><input type="number" id="handling-amt" value="7500" placeholder="e.g. 7500"></div>
+          <div class="calc-input-group" style="flex:1; min-width:150px;"><label for="handling-amt">Handling charges (₹)</label><input type="number" id="handling-amt" value="7500"></div>
         </div>
       </div>
       <button class="calc-btn" id="calc-btn" style="background:#f97316; margin-top:16px;">Calculate On-Road Price</button>
@@ -415,7 +414,7 @@ function renderStateComparison(exShowroom, fuel) {{
 """
     return page(
         "on-road-price-calculator.html",
-        "On-Road Price Calculator India — Car On-Road Price 2025 | CalcHub",
+        "On-Road Price Calculator India — Car On-Road Price 2025 | Claculatorcity",
         "Calculate on-road price of any car in India. Select car brand, model, variant and state to get complete breakup of RTO, insurance, TCS and other charges. Free and accurate.",
         "Car On-Road Price Calculator India",
         "The on-road price calculator gives you the complete cost of buying any car in India — beyond just the showroom price. It adds RTO registration charges, which vary by state, first-year comprehensive insurance, Fastag, TCS for cars above ₹10 lakh, and handling charges. The on-road price can be 15–25% higher than the ex-showroom price depending on which state you register the car in.",
@@ -527,7 +526,7 @@ window.addEventListener('load', () => {{ calculate(); reverseCalc(); }});
 """
     return page(
         "cgpa-to-percentage-calculator.html",
-        "CGPA to Percentage Calculator — All Indian Universities | CalcHub",
+        "CGPA to Percentage Calculator — All Indian Universities | Claculatorcity",
         "Convert CGPA to percentage for CBSE, VTU, Anna University, JNTU, Mumbai University, Pune University and 15+ Indian universities. Also converts percentage to CGPA.",
         "CGPA to Percentage Calculator",
         "The CGPA to percentage calculator converts your Cumulative Grade Point Average to a percentage for all major Indian universities and boards. Each university uses a different multiplier formula — CBSE uses CGPA × 9.5, while VTU and JNTU Hyderabad use CGPA × 10. This matters when applying for jobs, higher education, or government exams where percentage is required. Enter your CGPA, select your university, and get the exact conversion with the formula used.",
@@ -606,7 +605,7 @@ window.addEventListener('load', calculateEPF);
 """
     return page(
         "pf-epf-calculator.html",
-        "EPF Calculator — PF Balance and Retirement Corpus | CalcHub",
+        "EPF Calculator — PF Balance and Retirement Corpus | Claculatorcity",
         "Free EPF/PF calculator India. Calculate monthly PF contribution, total corpus at retirement and year-wise growth. Based on current EPFO interest rate of 8.25%.",
         "EPF / PF Calculator (Employee Provident Fund)",
         "The EPF calculator estimates your provident fund corpus at retirement using monthly Basic + DA salary, employee contribution, employer EPF contribution, expected salary increment, current EPF balance, and EPFO interest rate. It separates EPF and EPS, shows the monthly deduction and employer split, and builds a year-wise table so you can see how compounding works over time. Use it to test retirement scenarios before changing jobs, increasing VPF, or withdrawing PF early.",
@@ -670,7 +669,7 @@ window.addEventListener('load', calculateGratuity);
 """
     return page(
         "gratuity-calculator.html",
-        "Gratuity Calculator India — Gratuity Amount as per Act | CalcHub",
+        "Gratuity Calculator India — Gratuity Amount as per Act | Claculatorcity",
         "Free gratuity calculator India. Calculate gratuity amount as per Payment of Gratuity Act 1972. Shows eligibility, tax exemption limit and formula with examples.",
         "Gratuity Calculator India",
         "The gratuity calculator estimates the lump-sum amount payable to an employee in India based on last drawn Basic + DA, years of service, and organisation type. It follows the Payment of Gratuity Act formula for covered private-sector establishments, includes a not-covered estimate, and gives a separate government employee option. The result shows eligibility, formula, tax-exempt limit, and the effect of longer service.",
@@ -742,7 +741,7 @@ window.addEventListener('load', calculateSSY);
 """
     return page(
         "sukanya-samriddhi-calculator.html",
-        "Sukanya Samriddhi Yojana Calculator 2025 — SSY Maturity | CalcHub",
+        "Sukanya Samriddhi Yojana Calculator 2025 — SSY Maturity | Claculatorcity",
         "Free SSY calculator for Sukanya Samriddhi Yojana. Calculate maturity amount, year-wise balance and interest earned. Current SSY interest rate 8.2% for Q1 2025-26.",
         "Sukanya Samriddhi Yojana (SSY) Calculator 2025",
         "The Sukanya Samriddhi Yojana calculator estimates the maturity value of an SSY account for your daughter using annual deposit, current age, notified interest rate, and deposit start year. It follows the core SSY rule that deposits are made for 15 years while the account earns interest until maturity around age 21. The result shows total deposited, interest earned, age-18 withdrawal reference, and a year-wise table for planning education and marriage goals.",

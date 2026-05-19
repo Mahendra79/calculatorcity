@@ -1649,9 +1649,7 @@
 (function() {
   "use strict";
 
-  const BASE_URL = "/india/electricity/";
   const CANONICAL_BASE = "https://calculatorcity.com/india/electricity/";
-  const IS_FILE_PROTOCOL = window.location.protocol === "file:";
   const RUPEE = "\u20b9";
 
   const stateColors = {
@@ -2650,8 +2648,7 @@
   }
 
   function buildStateUrl(slug) {
-    if (IS_FILE_PROTOCOL) return "index.html?state=" + encodeURIComponent(slug);
-    return BASE_URL + slug + "/";
+    return "index.html?state=" + encodeURIComponent(slug);
   }
 
   function loadState(slug, options) {

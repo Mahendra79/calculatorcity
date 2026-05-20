@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="page-title">Haryana Stamp Duty Calculator 2025 — Property Registration HR | CalcHub</title>
+  <title id="page-title">Haryana Stamp Duty Calculator 2025 — Property Registration HR | Calculatorcity</title>
   <meta name="description" id="page-meta" content="Calculate stamp duty for Haryana property. Women pay only 5% vs 7% for men — 2% discount. Gurugram, Faridabad, Chandigarh registration charges.">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="canonical" id="page-canonical" href="https://calculatorcity.in/india/stamp-duty/haryana.html">
-  <meta property="og:title" id="og-title" content="Haryana Stamp Duty Calculator 2025 — Property Registration HR | CalcHub">
+  <meta property="og:title" id="og-title" content="Haryana Stamp Duty Calculator 2025 — Property Registration HR | Calculatorcity">
   <meta property="og:description" id="og-description" content="Calculate stamp duty for Haryana property. Women pay only 5% vs 7% for men — 2% discount. Gurugram, Faridabad, Chandigarh registration charges.">
   <meta property="og:type" content="website">
   <meta property="og:url" id="og-url" content="https://calculatorcity.in/india/stamp-duty/haryana.html">
@@ -88,12 +88,13 @@ body.page-loaded { opacity: 1; }
 }
 
 :root {
-  --stamp-primary: #7c3aed;
-  --stamp-primary-dark: #6d28d9;
-  --stamp-primary-light: #f5f3ff;
-  --stamp-primary-border: #ddd6fe;
-  --state-color: #7c3aed;
-  --state-light: #f5f3ff;
+  --stamp-primary: #16a34a;
+  --stamp-primary-dark: #0f172a;
+  --stamp-primary-light: #16a34a12;
+  --stamp-primary-border: #16a34a33;
+  --state-color: #16a34a;
+  --state-light: #16a34a12;
+  --state-border: #16a34a33;
   --cheap-color: #16a34a;
   --expensive-color: #dc2626;
   --women-color: #ec4899;
@@ -106,6 +107,9 @@ body.page-loaded { opacity: 1; }
 }
 
 .stamp-page {
+  --primary: var(--state-color);
+  --primary-dark: var(--state-color);
+  --primary-light: var(--state-light);
   font-family: var(--font-body);
   background: #f8fafc;
 }
@@ -117,8 +121,8 @@ body.page-loaded { opacity: 1; }
 .stamp-hero {
   background:
     radial-gradient(circle at top left, var(--state-light), transparent 32rem),
-    linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #ffffff 100%);
-  border-bottom: 1px solid var(--stamp-primary-border);
+    linear-gradient(135deg, var(--state-light) 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--state-border);
   padding: 2rem 0 1.5rem;
 }
 .stamp-hero .breadcrumb {
@@ -138,9 +142,10 @@ body.page-loaded { opacity: 1; }
   justify-content: center;
   border-radius: 12px;
   background: #fff;
-  border: 1px solid var(--stamp-primary-border);
+  border: 1px solid var(--state-border);
+  color: var(--state-color);
   font-size: 1.7rem;
-  box-shadow: 0 4px 16px rgba(124,58,237,0.12);
+  box-shadow: 0 4px 16px rgba(15,23,42,0.08);
 }
 .hero-h1 {
   margin: 0;
@@ -158,10 +163,10 @@ body.page-loaded { opacity: 1; }
 }
 .state-selector-wrap {
   background: white;
-  border: 2px solid var(--stamp-primary-border);
+  border: 1.5px solid var(--state-border);
   border-radius: var(--widget-radius);
   padding: 1rem 1.25rem;
-  box-shadow: 0 4px 16px rgba(124,58,237,0.1);
+  box-shadow: 0 4px 16px rgba(15,23,42,0.08);
 }
 .state-label,
 .input-label {
@@ -224,7 +229,7 @@ body.page-loaded { opacity: 1; }
 }
 .calc-widget-box {
   background: white;
-  border: 2px solid #e2e8f0;
+  border: 1.5px solid var(--state-border);
   border-radius: var(--widget-radius);
   padding: 1.5rem;
   box-shadow: 0 4px 24px rgba(15,23,42,0.06);
@@ -385,12 +390,14 @@ body.page-loaded { opacity: 1; }
 }
 .amount-input-wrap {
   position: relative;
+  display: grid;
+  gap: 0.45rem;
   margin-bottom: 0.75rem;
 }
-.amount-input {
+.calc-input-group .amount-input {
   width: 100%;
   min-width: 0;
-  padding: 1rem 4.25rem 1rem 2.5rem;
+  padding: 1rem 1rem 1rem 2.75rem;
   font-size: clamp(1.35rem, 7vw, 1.75rem);
   font-weight: 500;
   font-family: var(--font-mono);
@@ -400,10 +407,11 @@ body.page-loaded { opacity: 1; }
   border-radius: 10px;
   transition: var(--transition);
 }
-.amount-input:focus {
+.calc-input-group .amount-input:focus {
   outline: none;
   border-color: var(--state-color);
   background: white;
+  box-shadow: 0 0 0 3px var(--state-light);
 }
 .rupee-prefix {
   position: absolute;
@@ -416,11 +424,10 @@ body.page-loaded { opacity: 1; }
   font-family: var(--font-mono);
 }
 .amount-badge {
-  position: absolute;
-  right: 0.875rem;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 5rem;
+  position: static;
+  transform: none;
+  justify-self: start;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -479,7 +486,7 @@ body.page-loaded { opacity: 1; }
   to { opacity: 1; transform: translateY(0); }
 }
 .result-total {
-  background: linear-gradient(135deg, var(--state-color), var(--stamp-primary-dark));
+  background: linear-gradient(135deg, var(--state-color), #0f172a);
   color: white;
   border-radius: var(--card-radius);
   padding: 1.5rem;
@@ -593,8 +600,8 @@ body.page-loaded { opacity: 1; }
   text-decoration: none;
 }
 .compare-item:hover {
-  border-color: var(--state-color);
-  background: var(--stamp-primary-light);
+  border-color: var(--tile-color, var(--state-color));
+  background: var(--tile-light, var(--state-light));
   text-decoration: none;
 }
 .compare-item-name {
@@ -647,8 +654,8 @@ body.page-loaded { opacity: 1; }
   text-decoration: none;
 }
 .state-tile:hover {
-  border-color: var(--stamp-primary);
-  background: var(--stamp-primary-light);
+  border-color: var(--tile-color, var(--state-color));
+  background: var(--tile-light, var(--state-light));
   transform: translateY(-1px);
   text-decoration: none;
 }
@@ -698,8 +705,8 @@ body.page-loaded { opacity: 1; }
   margin-bottom: 0;
 }
 .tariff-summary {
-  background: var(--stamp-primary-light);
-  border: 1px solid var(--stamp-primary-border);
+  background: var(--state-light);
+  border: 1px solid var(--state-border);
   border-radius: var(--card-radius);
   padding: 1rem;
   margin-bottom: 1.25rem;
@@ -874,14 +881,8 @@ body.page-loaded { opacity: 1; }
     min-width: calc(33.333% - 6px);
   }
   .amount-badge {
-    position: static;
     display: inline-block;
-    transform: none;
-    margin-top: 0.5rem;
     max-width: 100%;
-  }
-  .amount-input {
-    padding-right: 1rem;
   }
   .breakdown-table,
   .rates-table {
@@ -897,7 +898,7 @@ body.page-loaded { opacity: 1; }
   </style>
   <noscript><style>body{opacity:1!important}</style></noscript>
 </head>
-<body class="stamp-page">
+<body class="india-page stamp-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
@@ -1174,13 +1175,13 @@ body.page-loaded { opacity: 1; }
       <nav class="footer-categories" aria-labelledby="footer-categories-heading">
         <h3 id="footer-categories-heading" class="footer-links-label">CATEGORIES</h3>
         <div class="footer-category-pills">
-          <a href="../../index.html#math"><span>Math Calculators</span></a>
-          <a href="../../index.html#finance"><span>Finance Calculators</span></a>
-          <a href="../../index.html#unit"><span>Unit Converters</span></a>
-          <a href="../../index.html#health"><span>Health &amp; Fitness</span></a>
-          <a href="../../index.html#datetime"><span>Date &amp; Time</span></a>
-          <a href="../../index.html#science"><span>Science &amp; Other</span></a>
-          <a href="../../index.html#india"><span>India Calculators</span></a>
+          <a href="../../index.html#math"><i class="ti ti-math" aria-hidden="true"></i><span>Math Calculators</span></a>
+          <a href="../../index.html#finance"><i class="ti ti-coin-rupee" aria-hidden="true"></i><span>Finance Calculators</span></a>
+          <a href="../../index.html#unit"><i class="ti ti-ruler" aria-hidden="true"></i><span>Unit Converters</span></a>
+          <a href="../../index.html#health"><i class="ti ti-heartbeat" aria-hidden="true"></i><span>Health &amp; Fitness</span></a>
+          <a href="../../index.html#datetime"><i class="ti ti-calendar" aria-hidden="true"></i><span>Date &amp; Time</span></a>
+          <a href="../../index.html#science"><i class="ti ti-flask" aria-hidden="true"></i><span>Science &amp; Other</span></a>
+          <a href="../../index.html#india"><i class="ti ti-map-pin" aria-hidden="true"></i><span>India Calculators</span></a>
         </div>
       </nav>
       <nav class="footer-popular" aria-labelledby="footer-popular-heading">
@@ -1212,7 +1213,7 @@ body.page-loaded { opacity: 1; }
         <div class="footer-brand">
           <span class="footer-brand-name">Calculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
-          <span class="footer-local-badge"><span>No data sent</span></span>
+          <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
         <hr class="footer-company-divider" aria-hidden="true">
         <nav class="footer-company-links" aria-labelledby="footer-company-heading">

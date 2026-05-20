@@ -1066,7 +1066,7 @@ function tariffSummary(state) {
 
 function pageHtml({ slug, state, data, order }) {
   const isState = Boolean(state);
-  const title = isState ? state.seo.title : "India Stamp Duty Calculator 2025 — All States Property Registration | CalcHub";
+  const title = isState ? state.seo.title : "India Stamp Duty Calculator 2025 — All States Property Registration | Calculatorcity";
   const description = isState ? state.seo.description : "Calculate stamp duty and registration charges for property purchase in India. Compare all Indian states and UTs with women discounts, transfer duty and registration charges.";
   const canonicalPath = isState ? stateUrl(slug) : "/india/stamp-duty/";
   const h1 = isState ? state.seo.h1 : "Stamp Duty Calculator India";

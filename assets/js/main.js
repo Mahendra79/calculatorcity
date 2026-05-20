@@ -289,9 +289,63 @@ const calculators = [
   },
   {
     "name": "Stamp Duty Calculator India",
-    "url": "/india/stamp-duty-calculator.html",
+    "url": "/india/stamp-duty/index.html",
     "category": "India",
-    "keywords": "stamp duty calculator india india rupee tax investment loan gst salary"
+    "keywords": "stamp duty calculator india property registration charges state wise women discount circle rate"
+  },
+  {
+    "name": "Delhi Stamp Duty Calculator",
+    "url": "/india/stamp-duty/delhi.html",
+    "category": "India",
+    "keywords": "delhi stamp duty calculator property registration women discount circle rate"
+  },
+  {
+    "name": "Maharashtra Stamp Duty Calculator",
+    "url": "/india/stamp-duty/maharashtra.html",
+    "category": "India",
+    "keywords": "maharashtra mumbai pune stamp duty calculator property registration women discount metro cess"
+  },
+  {
+    "name": "Karnataka Stamp Duty Calculator",
+    "url": "/india/stamp-duty/karnataka.html",
+    "category": "India",
+    "keywords": "karnataka bengaluru stamp duty calculator property registration kaveri guideline value"
+  },
+  {
+    "name": "Tamil Nadu Stamp Duty Calculator",
+    "url": "/india/stamp-duty/tamil-nadu.html",
+    "category": "India",
+    "keywords": "tamil nadu chennai stamp duty calculator property registration tnreginet guideline value"
+  },
+  {
+    "name": "Telangana Stamp Duty Calculator",
+    "url": "/india/stamp-duty/telangana.html",
+    "category": "India",
+    "keywords": "telangana hyderabad stamp duty calculator property registration transfer duty igrs"
+  },
+  {
+    "name": "Andhra Pradesh Stamp Duty Calculator",
+    "url": "/india/stamp-duty/andhra-pradesh.html",
+    "category": "India",
+    "keywords": "andhra pradesh ap stamp duty calculator property registration transfer duty"
+  },
+  {
+    "name": "Gujarat Stamp Duty Calculator",
+    "url": "/india/stamp-duty/gujarat.html",
+    "category": "India",
+    "keywords": "gujarat ahmedabad stamp duty calculator property registration jantri garvi"
+  },
+  {
+    "name": "Uttar Pradesh Stamp Duty Calculator",
+    "url": "/india/stamp-duty/uttar-pradesh.html",
+    "category": "India",
+    "keywords": "uttar pradesh up noida lucknow stamp duty calculator property registration women discount"
+  },
+  {
+    "name": "West Bengal Stamp Duty Calculator",
+    "url": "/india/stamp-duty/west-bengal.html",
+    "category": "India",
+    "keywords": "west bengal kolkata stamp duty calculator property registration urban rural"
   },
   {
     "name": "Sukanya Samriddhi Yojana (SSY) Calculator",

@@ -774,9 +774,20 @@
     }
 
     .compare-row {
-      display: grid;
+      display: flex;
+      flex-wrap: wrap;
       gap: var(--elec-space-3);
-      align-items: end;
+      align-items: flex-end;
+    }
+
+    .compare-row .calc-input-group {
+      flex: 1 1 16rem;
+      margin: 0;
+    }
+
+    .compare-row .btn-secondary {
+      flex: 0 0 auto;
+      white-space: nowrap;
     }
 
     .compare-row input {
@@ -1234,7 +1245,7 @@
       }
 
       .compare-row {
-        grid-template-columns: minmax(0, 1fr) auto;
+        flex-wrap: nowrap;
       }
 
       .chart-container {
@@ -3378,5 +3389,3 @@
 </script>
 </body>
 </html>
-
-

@@ -1,6 +1,6 @@
 {
-  "name": "Claculatorcity — Free Online Calculators",
-  "short_name": "Claculatorcity",
+  "name": "Calculatorcity — Free Online Calculators",
+  "short_name": "Calculatorcity",
   "description": "80+ free online calculators",
   "start_url": "/",
   "display": "standalone",
@@ -8,3 +8,5 @@
   "theme_color": "#2563eb",
   "icons": [{"src": "/assets/icons/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]
 }
+
+

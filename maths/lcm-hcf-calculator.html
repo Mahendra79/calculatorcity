@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><title>LCM and HCF Calculator ? Find Values with Steps | Claculatorcity</title>
+  <meta charset="UTF-8"><title>LCM and HCF Calculator ? Find Values with Steps | Calculatorcity</title>
   <meta name="description" content="Find LCM and HCF for up to five numbers with prime factorisation, Euclidean steps, division working and clear lowest common multiple results online now.">
-  <link rel="canonical" href="https://claculatorcity.com/maths/lcm-hcf-calculator.html"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://calculatorcity.in/maths/lcm-hcf-calculator.html"><meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/base.css"><link rel="stylesheet" href="../assets/css/layout.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"LCM and HCF Calculator","url":"https://claculatorcity.com/maths/lcm-hcf-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"LCM and HCF Calculator","url":"https://calculatorcity.in/maths/lcm-hcf-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 </head>
 <body><a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ Claculatorcity</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ Calculatorcity</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
   <main id="main" class="page-container two-col-layout" role="main"><article class="calc-main">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>LCM and HCF Calculator</span></nav><h1>LCM and HCF Calculator</h1>
@@ -67,7 +67,7 @@
       </nav>
       <div class="footer-brand-company">
         <div class="footer-brand">
-          <span class="footer-brand-name">Claculatorcity</span>
+          <span class="footer-brand-name">Calculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
           <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
@@ -84,10 +84,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Claculatorcity. All calculations run locally in your browser.</span>
+      <span>© 2026 Calculatorcity. All calculations run locally in your browser.</span>
       <span class="footer-disclaimer">For education and planning only. Results are estimates — not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
     </div>
   </div>
 </footer>
   <script src="../assets/js/main.js" defer></script><script>(function(){const box=document.getElementById('numbers');function add(v){if(box.children.length>=5)return;const div=document.createElement('div');div.className='calc-input-group num-row';div.innerHTML=`<label>Number</label><input class="num" type="number" value="${v}" min="1" step="1">`;box.appendChild(div);div.querySelector('input').addEventListener('input',calc)}[12,18].forEach(add);document.getElementById('add-number').addEventListener('click',()=>{add(2);calc()});function gcd(a,b){while(b){[a,b]=[b,a%b]}return Math.abs(a)}function lcm(a,b){return Math.abs(a*b)/gcd(a,b)}function factors(n){const out=[];let d=2;while(n>1){while(n%d===0){out.push(d);n/=d}d++}return out}function calc(){const vals=[...document.querySelectorAll('.num')].map(i=>Math.abs(parseInt(i.value,10))).filter(Boolean);if(vals.length<2)return;const h=vals.reduce(gcd),L=vals.reduce(lcm);document.getElementById('result-grid').innerHTML=`<div class="result-card"><span class="result-value">${L}</span><span class="result-label">LCM</span></div><div class="result-card"><span class="result-value">${h}</span><span class="result-label">HCF</span></div><div class="result-card"><span class="result-value">${vals.join(', ')}</span><span class="result-label">Numbers used</span></div>`;document.getElementById('factor-output').innerHTML='<strong>Prime factors</strong><br>'+vals.map(v=>`${v} = ${factors(v).join(' × ')}`).join('<br>');document.getElementById('calc-result').classList.add('show')}document.getElementById('calculate-lcm').addEventListener('click',calc);calc();})();</script>
 </body></html>
+
+

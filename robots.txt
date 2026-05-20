@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://claculatorcity.com/sitemap.xml
+Sitemap: https://calculatorcity.in/sitemap.xml
+

@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title id="page-title">Electricity Bill Calculator India - All States | Claculatorcity</title>
-  <meta name="description" id="page-meta" content="Free electricity bill calculator for all Indian states and union territories. Select your state to estimate slab-wise charges, fixed charges, duty, FAC, DISCOM details, and FAQs.">
+  <title id="page-title">India Electricity Bill Calculator - All States - Calculatorcity</title>
+  <meta name="description" id="page-meta" content="Calculate electricity bill for all Indian states online. Supports APSPDCL, TANGEDCO, MSEDCL, BESCOM, KSEB and all major state electricity boards.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" id="page-canonical" href="https://claculatorcity.com/india/electricity/">
-  <meta property="og:title" id="og-title" content="Electricity Bill Calculator India">
-  <meta property="og:description" id="og-description" content="Calculate electricity bills for Indian states and union territories with slab-wise estimates.">
+  <link rel="canonical" id="page-canonical" href="https://calculatorcity.in/india/electricity/">
+  <meta property="og:title" id="og-title" content="India Electricity Bill Calculator">
+  <meta property="og:description" id="og-description" content="Calculate electricity bill for all Indian states online. Supports APSPDCL, TANGEDCO, MSEDCL, BESCOM, KSEB and all major state electricity boards.">
   <meta property="og:type" content="website">
-  <meta property="og:url" id="og-url" content="https://claculatorcity.com/india/electricity/">
+  <meta property="og:url" id="og-url" content="https://calculatorcity.in/india/electricity/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1277,12 +1277,12 @@
       }
     }
   </style>
-  <script type="application/ld+json" id="schema-json">
+    <script type="application/ld+json" id="schema-json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Electricity Bill Calculator India",
-    "url": "https://claculatorcity.com/india/electricity/",
+    "name": "India Electricity Bill Calculator",
+    "url": "https://calculatorcity.in/india/electricity/",
     "applicationCategory": "CalculatorApplication",
     "operatingSystem": "Any",
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}
@@ -1293,7 +1293,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../../index.html">&#8983; Claculatorcity</a>
+    <a class="logo" href="../../index.html">&#8983; Calculatorcity</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../../index.html#math">Math</a>
       <a href="../../index.html#finance">Finance</a>
@@ -1335,7 +1335,7 @@
       <div class="hero-content">
         <div class="hero-icon" aria-hidden="true"><i class="ti ti-bolt"></i></div>
         <div>
-          <h1 id="page-h1">Electricity Bill Calculator India</h1>
+          <h1 id="page-h1">India Electricity Bill Calculator</h1>
           <p id="page-subtitle" class="hero-subtitle">Calculate electricity bills for any Indian state or union territory with slab-wise energy charges, fixed charges, electricity duty, FAC, subsidy options, and DISCOM details.</p>
         </div>
       </div>
@@ -1619,7 +1619,7 @@
       </nav>
       <div class="footer-brand-company">
         <div class="footer-brand">
-          <span class="footer-brand-name">Claculatorcity</span>
+          <span class="footer-brand-name">Calculatorcity</span>
           <p class="footer-tagline">Free calculators running locally in your browser.</p>
           <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
         </div>
@@ -1636,7 +1636,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Claculatorcity. All calculations run locally in your browser.</span>
+      <span>&copy; 2026 Calculatorcity. All calculations run locally in your browser.</span>
       <span class="footer-disclaimer">For education and planning only. Results are estimates - not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
     </div>
   </div>
@@ -1648,7 +1648,8 @@
 (function() {
   "use strict";
 
-  const CANONICAL_BASE = "https://claculatorcity.com/india/electricity/";
+  const CANONICAL_BASE = "https://calculatorcity.in/india/electricity/";
+  const STATIC_PAGE_STATE = "";
   const RUPEE = "\u20b9";
 
   const stateColors = {
@@ -1670,7 +1671,7 @@
     { name: "Central India", slugs: ["madhya-pradesh", "chhattisgarh"] },
     { name: "East India", slugs: ["west-bengal", "bihar", "odisha", "jharkhand"] },
     { name: "Northeast", slugs: ["assam", "arunachal-pradesh", "manipur", "meghalaya", "mizoram", "nagaland", "tripura", "sikkim"] },
-    { name: "Union Territories", slugs: ["andaman-nicobar-islands", "chandigarh", "dadra-nagar-haveli-daman-diu", "ladakh", "lakshadweep", "puducherry"] }
+    { name: "Union Territories", slugs: ["andaman-nicobar", "chandigarh", "dadra-nagar-haveli", "ladakh", "lakshadweep", "puducherry"] }
   ];
 
   const STATE_RECORDS = [
@@ -1694,7 +1695,7 @@
       ] },
       note: "AP uses two regional DISCOMs with a telescopic domestic structure. This calculator keeps APSPDCL and APEPDCL visible because the service company matters for bill payment and complaints.",
       payment: "Pay through the APSPDCL or APEPDCL portal, BBPS apps, UPI apps, MeeSeva, or authorised customer service centres.",
-      seo: { title: "Andhra Pradesh Electricity Bill Calculator - APSPDCL / APEPDCL | Claculatorcity", description: "Calculate Andhra Pradesh electricity bill with APSPDCL and APEPDCL slabs, BPL free units, fixed charges, duty and FAC.", h1: "Andhra Pradesh Electricity Bill Calculator", subtitle: "APSPDCL and APEPDCL domestic tariff with BPL free-unit support and slab-wise bill breakdown." },
+      seo: { title: "Andhra Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Andhra Pradesh electricity bill online. Supports APSPDCL, APEPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Andhra Pradesh Electricity Bill Calculator", subtitle: "Calculate your Andhra Pradesh electricity bill with APSPDCL, APEPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "What is the AP electricity bill for 150 units?", a: "With the default AP domestic tariff in this calculator, 150 units is about \u20b9727 including energy charges, FAC, fixed charge, meter rent, and 6% duty." },
         { q: "Which company serves Andhra Pradesh electricity consumers?", a: "APSPDCL serves southern districts and APEPDCL serves northern and eastern districts. Domestic slabs are shown together here, but payment and service requests go to your DISCOM." }
@@ -1720,7 +1721,7 @@
       ] },
       note: "Telangana separates Hyderabad and southern districts under TSSPDCL while northern districts use TSNPDCL. Both are represented for bill lookup and customer-service clarity.",
       payment: "Pay Telangana electricity bills through TSSPDCL or TSNPDCL portals, MeeSeva, BBPS, UPI apps, and bank apps.",
-      seo: { title: "Telangana Electricity Bill Calculator - TSSPDCL / TSNPDCL | Claculatorcity", description: "Calculate Telangana electricity bill for TSSPDCL and TSNPDCL with domestic slab rates, fixed charges, duty and FAC.", h1: "Telangana Electricity Bill Calculator", subtitle: "TSSPDCL and TSNPDCL domestic tariff for Hyderabad, Warangal, Karimnagar and all Telangana districts." },
+      seo: { title: "Telangana Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Telangana electricity bill online. Supports TSSPDCL, TSNPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Telangana Electricity Bill Calculator", subtitle: "Calculate your Telangana electricity bill with TSSPDCL, TSNPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which DISCOM serves Hyderabad?", a: "Hyderabad is served by TSSPDCL. Northern Telangana areas such as Warangal and Karimnagar are generally served by TSNPDCL." },
         { q: "How is Telangana electricity duty handled?", a: "The calculator applies the Telangana duty percentage on energy charges, then adds fixed charge, meter rent, and FAC for a planning estimate." }
@@ -1747,7 +1748,7 @@
       ] },
       note: "Karnataka has five DISCOMs, with BESCOM covering Bengaluru. The Gruha Jyothi toggle models the free-unit benefit separately from the base slab table.",
       payment: "Pay through BESCOM, MESCOM, GESCOM, HESCOM, or CESC portals, BBPS apps, UPI apps, and Karnataka One centres.",
-      seo: { title: "Karnataka Electricity Bill Calculator - BESCOM / MESCOM | Claculatorcity", description: "Calculate Karnataka electricity bill for BESCOM, MESCOM, GESCOM, HESCOM and CESC with Gruha Jyothi support.", h1: "Karnataka Electricity Bill Calculator", subtitle: "BESCOM, MESCOM, GESCOM, HESCOM and CESC Mysuru with Gruha Jyothi free-unit modelling." },
+      seo: { title: "Karnataka Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Karnataka electricity bill online. Supports BESCOM, MESCOM, HESCOM, GESCOM tariff slabs for domestic, commercial & agricultural connections.", h1: "Karnataka Electricity Bill Calculator", subtitle: "Calculate your Karnataka electricity bill with BESCOM, MESCOM, HESCOM, GESCOM tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which DISCOM covers Bengaluru?", a: "BESCOM covers Bengaluru and nearby districts. The other Karnataka DISCOMs cover coastal, northern, Hyderabad-Karnataka and Mysuru regions." },
         { q: "How does the Gruha Jyothi toggle work?", a: "When enabled, this calculator deducts 200 free units before applying the slab calculation. Official eligibility and monthly credits must be confirmed on the DISCOM bill." }
@@ -1767,7 +1768,7 @@
       ] },
       note: "Tamil Nadu's domestic estimate includes a zero-rate first slab, making low consumption households very different from most other large states.",
       payment: "Pay TANGEDCO bills through the TNEB online portal, official app, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Tamil Nadu Electricity Bill Calculator - TANGEDCO | Claculatorcity", description: "Calculate Tamil Nadu electricity bill with TANGEDCO domestic slabs including the first 100 free units.", h1: "Tamil Nadu Electricity Bill Calculator", subtitle: "TANGEDCO domestic tariff with first 100 units modelled as free in the base slab table." },
+      seo: { title: "Tamil Nadu Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Tamil Nadu electricity bill online. Supports TANGEDCO tariff slabs for domestic, commercial and agricultural connections.", h1: "Tamil Nadu Electricity Bill Calculator", subtitle: "Calculate your Tamil Nadu electricity bill with TANGEDCO tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Are the first 100 units free in this Tamil Nadu estimate?", a: "Yes. The default Tamil Nadu slab table in this calculator sets the first 100 units to zero energy charge." },
         { q: "Does Tamil Nadu have multiple DISCOMs?", a: "Tamil Nadu domestic consumers are shown under TANGEDCO, which covers the state for distribution and billing." }
@@ -1789,7 +1790,7 @@
       ] },
       note: "Kerala has a single statewide utility, so district selection is less important than units consumed and the applicable LT category.",
       payment: "Pay through kseb.in, KSEB apps, BBPS, UPI apps, Akshaya centres, and authorised counters.",
-      seo: { title: "Kerala Electricity Bill Calculator - KSEB | Claculatorcity", description: "Calculate Kerala electricity bill with KSEB domestic slab rates, fixed charges, duty and FAC.", h1: "Kerala Electricity Bill Calculator", subtitle: "KSEB domestic tariff for all Kerala districts with slab-wise bill breakdown." },
+      seo: { title: "Kerala Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Kerala electricity bill online. Supports KSEB tariff slabs for domestic, commercial and agricultural connections.", h1: "Kerala Electricity Bill Calculator", subtitle: "Calculate your Kerala electricity bill with KSEB tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Does Kerala have multiple electricity DISCOMs?", a: "This calculator treats Kerala as a single-utility state under KSEB for domestic bill estimates." },
         { q: "What matters most in a KSEB bill estimate?", a: "Monthly units, consumer category, fixed charge, duty, FAC, arrears, and any solar or subsidy credits can all affect the final KSEB bill." }
@@ -1814,7 +1815,7 @@
       ] },
       note: "Maharashtra bills are sensitive to duty and FAC. Mumbai consumers should verify the selected licensee because Mumbai does not use the same service company as most of the state.",
       payment: "Pay through Mahavitaran, Tata Power, Adani Electricity or BEST portals, BBPS, UPI apps, and authorised centres.",
-      seo: { title: "Maharashtra Electricity Bill Calculator - MSEDCL / Mumbai | Claculatorcity", description: "Calculate Maharashtra electricity bill for MSEDCL, Tata Power, Adani Electricity and BEST with duty and FAC.", h1: "Maharashtra Electricity Bill Calculator", subtitle: "MSEDCL, Tata Power, Adani Electricity and BEST estimates with Maharashtra duty and FAC." },
+      seo: { title: "Maharashtra Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Maharashtra electricity bill online. Supports MSEDCL, Adani, TATA Power tariff slabs for domestic, commercial and agricultural connections.", h1: "Maharashtra Electricity Bill Calculator", subtitle: "Calculate your Maharashtra electricity bill with MSEDCL, Adani, TATA Power tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Does Mumbai use MSEDCL?", a: "Mumbai has Tata Power, Adani Electricity and BEST service areas. MSEDCL serves most of Maharashtra outside Mumbai." },
         { q: "Why can Maharashtra bills feel high?", a: "The default Maharashtra estimate includes higher upper-slab rates, FAC, and a high duty percentage compared with many other states." }
@@ -1839,7 +1840,7 @@
       ] },
       note: "Gujarat uses four regional Vij companies. The domestic estimate is compact, so fixed charges and duty often drive differences for low-consumption homes.",
       payment: "Pay through the DGVCL, PGVCL, MGVCL or UGVCL portal, BBPS, UPI apps, eGram centres, or authorised counters.",
-      seo: { title: "Gujarat Electricity Bill Calculator - DGVCL / PGVCL / MGVCL / UGVCL | Claculatorcity", description: "Calculate Gujarat electricity bill for all four Vij DISCOMs with domestic slab rates and fixed charges.", h1: "Gujarat Electricity Bill Calculator", subtitle: "DGVCL, PGVCL, MGVCL and UGVCL domestic tariff estimates for Gujarat consumers." },
+      seo: { title: "Gujarat Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Gujarat electricity bill online. Supports DGVCL, MGVCL, PGVCL, UGVCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Gujarat Electricity Bill Calculator", subtitle: "Calculate your Gujarat electricity bill with DGVCL, MGVCL, PGVCL, UGVCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which Gujarat DISCOM covers Ahmedabad?", a: "UGVCL covers many north Gujarat and Ahmedabad-area consumers, but the exact company should be checked on the bill." },
         { q: "Does Gujarat have one tariff table?", a: "The calculator uses one domestic planning table while keeping the four DISCOM names visible for payment and service lookup." }
@@ -1864,7 +1865,7 @@
       ] },
       note: "Delhi's subsidy toggle is separate from tariff slabs. It models common subsidy credits but official opt-in status must be checked on the BSES or TPDDL bill.",
       payment: "Pay through BSES Delhi, Tata Power DDL, BBPS, UPI apps, and bank apps using the CA number on your bill.",
-      seo: { title: "Delhi Electricity Bill Calculator - BSES / TPDDL | Claculatorcity", description: "Calculate Delhi electricity bill for BSES Rajdhani, BSES Yamuna and TPDDL with subsidy support.", h1: "Delhi Electricity Bill Calculator", subtitle: "BSES Rajdhani, BSES Yamuna and TPDDL estimates with Delhi subsidy toggle." },
+      seo: { title: "Delhi Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Delhi electricity bill online. Supports BRPL, BYPL, TPDDL, NDMC tariff slabs for domestic, commercial and agricultural connections.", h1: "Delhi Electricity Bill Calculator", subtitle: "Calculate your Delhi electricity bill with BRPL, BYPL, TPDDL, NDMC tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "How does the Delhi subsidy toggle work?", a: "When enabled, the calculator subtracts \u20b9800 up to 200 units or \u20b9400 from 201 to 400 units after normal bill charges." },
         { q: "Which Delhi DISCOM serves North Delhi?", a: "TPDDL generally serves North and Northwest Delhi. BSES Rajdhani covers south and west areas, while BSES Yamuna covers east and central areas." }
@@ -1890,7 +1891,7 @@
       ] },
       note: "UPPCL operates through regional subsidiaries. Your account number and DISCOM determine the correct payment portal and complaint channel.",
       payment: "Pay through UPPCL online, regional DISCOM portals, BBPS, UPI apps, and authorised collection centres.",
-      seo: { title: "Uttar Pradesh Electricity Bill Calculator - UPPCL | Claculatorcity", description: "Calculate Uttar Pradesh electricity bill for UPPCL DISCOMs with LMV domestic slab rates.", h1: "Uttar Pradesh Electricity Bill Calculator", subtitle: "UPPCL domestic tariff estimate for PVVNL, MVVNL, DVVNL and PuVVNL consumers." },
+      seo: { title: "Uttar Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Uttar Pradesh electricity bill online. Supports PVVNL, DVVNL, MVVNL, PuVVNL slabs for domestic, commercial & agricultural connections.", h1: "Uttar Pradesh Electricity Bill Calculator", subtitle: "Calculate your Uttar Pradesh electricity bill with PVVNL, DVVNL, MVVNL, PuVVNL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which DISCOM covers Lucknow?", a: "Lucknow is generally served by MVVNL under the UPPCL structure." },
         { q: "How are UP electricity slabs applied?", a: "This page uses telescopic slabs, so only units within each slab are charged at that slab's rate." }
@@ -1915,7 +1916,7 @@
       ] },
       note: "Rajasthan bills can rise sharply in summer because cooling loads push homes into higher slabs.",
       payment: "Pay through the Rajasthan Energy portal, DISCOM sites, BBPS, UPI apps, e-Mitra, and authorised counters.",
-      seo: { title: "Rajasthan Electricity Bill Calculator - JVVNL / AVVNL / JdVVNL | Claculatorcity", description: "Calculate Rajasthan electricity bill for JVVNL, AVVNL and JdVVNL with domestic tariff slabs.", h1: "Rajasthan Electricity Bill Calculator", subtitle: "JVVNL, AVVNL and JdVVNL domestic tariff estimates with summer bill context." },
+      seo: { title: "Rajasthan Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Rajasthan electricity bill online. Supports JVVNL, AVVNL, JdVVNL tariff slabs for domestic, commercial and agricultural connections.", h1: "Rajasthan Electricity Bill Calculator", subtitle: "Calculate your Rajasthan electricity bill with JVVNL, AVVNL, JdVVNL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which DISCOM covers Jaipur?", a: "Jaipur is generally served by JVVNL." },
         { q: "Why is Rajasthan summer consumption high?", a: "Air cooling and air conditioning increase units in hot months, pushing usage into higher domestic slabs." }
@@ -1938,7 +1939,7 @@
       ] },
       note: "Kolkata-area CESC consumers should check their bill carefully because CESC and WBSEDCL tariff structures can differ.",
       payment: "Pay through WBSEDCL or CESC portals, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "West Bengal Electricity Bill Calculator - WBSEDCL / CESC | Claculatorcity", description: "Calculate West Bengal electricity bill for WBSEDCL and CESC areas with domestic slabs.", h1: "West Bengal Electricity Bill Calculator", subtitle: "WBSEDCL and CESC Kolkata estimates with slab-wise bill breakdown." },
+      seo: { title: "West Bengal Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your West Bengal electricity bill online. Supports WBSEDCL, CESC tariff slabs for domestic, commercial and agricultural connections.", h1: "West Bengal Electricity Bill Calculator", subtitle: "Calculate your West Bengal electricity bill with WBSEDCL, CESC tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Does Kolkata use WBSEDCL?", a: "Many Kolkata-area consumers are served by CESC rather than WBSEDCL. Check your bill for the licensee name." },
         { q: "What is the main West Bengal bill input?", a: "Monthly units are the primary driver, followed by duty, FAC, fixed charge, and whether you are in WBSEDCL or CESC territory." }
@@ -1964,7 +1965,7 @@
       ] },
       note: "Madhya Pradesh uses west, central and east distribution companies. The IVRS or consumer number normally identifies the correct zone.",
       payment: "Pay through the MP electricity portal, zone DISCOM portals, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Madhya Pradesh Electricity Bill Calculator - MP DISCOMs | Claculatorcity", description: "Calculate Madhya Pradesh electricity bill for west, central and east MP DISCOMs with domestic slabs.", h1: "Madhya Pradesh Electricity Bill Calculator", subtitle: "MPPKVVCL, MPMKVVCL and eastern MP domestic tariff estimates." },
+      seo: { title: "Madhya Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Madhya Pradesh electricity bill online. Supports MPMKVVCL, MPPKVVCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Madhya Pradesh Electricity Bill Calculator", subtitle: "Calculate your Madhya Pradesh electricity bill with MPMKVVCL, MPPKVVCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which DISCOM covers Indore?", a: "Indore is generally served by MPPKVVCL, the west zone company." },
         { q: "Which DISCOM covers Bhopal?", a: "Bhopal is generally served by MPMKVVCL, the central zone company." }
@@ -1988,7 +1989,7 @@
       ] },
       note: "DHBVNL covers the southern industrial belt including Gurugram and Faridabad, while UHBVNL covers north Haryana.",
       payment: "Pay through DHBVNL or UHBVNL portals, BBPS, UPI apps, and authorised bill collection points.",
-      seo: { title: "Haryana Electricity Bill Calculator - DHBVNL / UHBVNL | Claculatorcity", description: "Calculate Haryana electricity bill for DHBVNL and UHBVNL with domestic tariff slabs.", h1: "Haryana Electricity Bill Calculator", subtitle: "DHBVNL and UHBVNL domestic bill estimates for Haryana consumers." },
+      seo: { title: "Haryana Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Haryana electricity bill online. Supports DHBVN, UHBVN tariff slabs for domestic, commercial and agricultural connections.", h1: "Haryana Electricity Bill Calculator", subtitle: "Calculate your Haryana electricity bill with DHBVN, UHBVN tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which DISCOM serves Gurugram?", a: "Gurugram is generally served by DHBVNL." },
         { q: "Which DISCOM serves Ambala and Panchkula?", a: "Ambala and Panchkula are generally served by UHBVNL." }
@@ -2008,7 +2009,7 @@
       ] },
       note: "Punjab domestic bills are shown under PSPCL. Agricultural supply and subsidy cases follow separate rules from ordinary domestic consumers.",
       payment: "Pay through PSPCL, BBPS, UPI apps, bank apps, and authorised collection centres using your account number.",
-      seo: { title: "Punjab Electricity Bill Calculator - PSPCL | Claculatorcity", description: "Calculate Punjab electricity bill with PSPCL domestic slabs, fixed charges, duty and FAC.", h1: "Punjab Electricity Bill Calculator", subtitle: "PSPCL domestic tariff estimate with Punjab-specific duty and bill-payment context." },
+      seo: { title: "Punjab Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Punjab electricity bill online. Supports PSPCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Punjab Electricity Bill Calculator", subtitle: "Calculate your Punjab electricity bill with PSPCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Does PSPCL serve all of Punjab?", a: "For domestic distribution, PSPCL is shown as the statewide utility in this calculator." },
         { q: "Are farm connections covered here?", a: "No. The calculator focuses on domestic estimates; agricultural connections can have separate subsidy treatment." }
@@ -2031,7 +2032,7 @@
       ] },
       note: "North and south Bihar use different companies, so your consumer number should be checked against NBPDCL or SBPDCL before payment.",
       payment: "Pay through NBPDCL or SBPDCL portals, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Bihar Electricity Bill Calculator - NBPDCL / SBPDCL | Claculatorcity", description: "Calculate Bihar electricity bill for NBPDCL and SBPDCL with domestic slab rates.", h1: "Bihar Electricity Bill Calculator", subtitle: "NBPDCL and SBPDCL domestic tariff estimate for Bihar consumers." },
+      seo: { title: "Bihar Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Bihar electricity bill online. Supports NBPDCL, SBPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Bihar Electricity Bill Calculator", subtitle: "Calculate your Bihar electricity bill with NBPDCL, SBPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which Bihar DISCOM covers Patna?", a: "Patna-area service depends on the specific division, but many south Bihar areas are under SBPDCL." },
         { q: "How do I know whether I am NBPDCL or SBPDCL?", a: "Check the company name printed on the bill or use the consumer number on the official Bihar power portal." }
@@ -2056,7 +2057,7 @@
       ] },
       note: "Odisha has four Tata Power distribution companies covering central, north, west and south service areas.",
       payment: "Pay through the respective Tata Power Odisha DISCOM portal, BBPS, UPI apps, and authorised collection counters.",
-      seo: { title: "Odisha Electricity Bill Calculator - TPCODL / TPNODL / TPWODL / TPSODL | Claculatorcity", description: "Calculate Odisha electricity bill for all four Tata Power Odisha DISCOMs with domestic tariff slabs.", h1: "Odisha Electricity Bill Calculator", subtitle: "TPCODL, TPNODL, TPWODL and TPSODL domestic electricity bill estimates." },
+      seo: { title: "Odisha Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Odisha electricity bill online. Supports TPNODL, TPSODL, TPWODL tariff slabs for domestic, commercial and agricultural connections.", h1: "Odisha Electricity Bill Calculator", subtitle: "Calculate your Odisha electricity bill with TPNODL, TPSODL, TPWODL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which Odisha DISCOM covers Bhubaneswar?", a: "Bhubaneswar and Cuttack are generally served by TPCODL." },
         { q: "Are Odisha's old DISCOM names still used?", a: "Older names such as CESU, NESCO, WESCO and SOUTHCO are often remembered locally, but Tata Power Odisha names are used here." }
@@ -2076,7 +2077,7 @@
       ] },
       note: "Himachal Pradesh has low domestic rates in this estimate, reflecting a hydro-rich hill-state profile.",
       payment: "Pay through HPSEBL online, BBPS, UPI apps, Lokmitra Kendras, and authorised counters.",
-      seo: { title: "Himachal Pradesh Electricity Bill Calculator - HPSEBL | Claculatorcity", description: "Calculate Himachal Pradesh electricity bill with HPSEBL domestic slabs and free-unit estimate.", h1: "Himachal Pradesh Electricity Bill Calculator", subtitle: "HPSEBL domestic tariff estimate with low-consumption free slab modelling." },
+      seo: { title: "Himachal Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Himachal Pradesh electricity bill online. Supports HPSEBL tariff slabs for domestic, commercial and agricultural connections.", h1: "Himachal Pradesh Electricity Bill Calculator", subtitle: "Calculate your Himachal Pradesh electricity bill with HPSEBL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Why is the Himachal Pradesh estimate low for small bills?", a: "The default HP slab table includes a zero-rate first slab and low upper rates compared with many larger states." },
         { q: "Does HPSEBL cover Shimla?", a: "Yes. HPSEBL is shown as the statewide distribution utility for Himachal Pradesh." }
@@ -2097,7 +2098,7 @@
       ] },
       note: "Goa's domestic calculator is shown separately from neighbouring Maharashtra and Karnataka because the UT-style regulator and tariff structure differ.",
       payment: "Pay through the Goa Electricity Department portal, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Goa Electricity Bill Calculator - Goa Electricity Department | Claculatorcity", description: "Calculate Goa electricity bill with domestic slab rates, fixed charges and duty.", h1: "Goa Electricity Bill Calculator", subtitle: "Goa Electricity Department domestic tariff estimate with slab-wise bill breakdown." },
+      seo: { title: "Goa Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Goa electricity bill online. Supports Goa Electricity Department tariff slabs for domestic, commercial and agricultural connections.", h1: "Goa Electricity Bill Calculator", subtitle: "Calculate your Goa electricity bill with Goa Electricity Department tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Is Goa electricity tariff the same as Maharashtra?", a: "No. Goa uses its own tariff structure and regulator, so it should be calculated separately." },
         { q: "Does Goa have solar net metering?", a: "Goa supports rooftop solar and net metering in applicable cases; solar credits must be checked against the official bill." }
@@ -2117,7 +2118,7 @@
       ] },
       note: "Jharkhand is mineral and industry heavy, but this page focuses on household domestic supply under JBVNL.",
       payment: "Pay through JBVNL online, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Jharkhand Electricity Bill Calculator - JBVNL | Claculatorcity", description: "Calculate Jharkhand electricity bill with JBVNL domestic slab rates and charges.", h1: "Jharkhand Electricity Bill Calculator", subtitle: "JBVNL domestic tariff estimate for Jharkhand residential consumers." },
+      seo: { title: "Jharkhand Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Jharkhand electricity bill online. Supports JBVNL tariff slabs for domestic, commercial and agricultural connections.", h1: "Jharkhand Electricity Bill Calculator", subtitle: "Calculate your Jharkhand electricity bill with JBVNL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which utility serves Ranchi?", a: "JBVNL is shown as the distribution utility for Jharkhand domestic consumers, including Ranchi." },
         { q: "Does this include industrial Jharkhand tariffs?", a: "No. The calculator is optimised for domestic estimates; industrial categories need official tariff schedules." }
@@ -2138,7 +2139,7 @@
       ] },
       note: "Chhattisgarh is a power-generating state, but household bills still depend on regulated slab tariffs and duty.",
       payment: "Pay through CSPDCL online, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Chhattisgarh Electricity Bill Calculator - CSPDCL | Claculatorcity", description: "Calculate Chhattisgarh electricity bill with CSPDCL domestic slab rates and charges.", h1: "Chhattisgarh Electricity Bill Calculator", subtitle: "CSPDCL domestic tariff estimate for Chhattisgarh households." },
+      seo: { title: "Chhattisgarh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Chhattisgarh electricity bill online. Supports CSPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Chhattisgarh Electricity Bill Calculator", subtitle: "Calculate your Chhattisgarh electricity bill with CSPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Does CSPDCL cover Raipur?", a: "Yes. CSPDCL is shown as the statewide distribution utility for domestic consumers." },
         { q: "Why include FAC for Chhattisgarh?", a: "Fuel adjustment charges can appear separately on bills, so the calculator includes an editable FAC field through the slab editor." }
@@ -2158,7 +2159,7 @@
       ] },
       note: "Assam domestic bills are shown under APDCL. Terrain, distribution losses, and seasonal demand can affect the billing context.",
       payment: "Pay through APDCL online, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Assam Electricity Bill Calculator - APDCL | Claculatorcity", description: "Calculate Assam electricity bill with APDCL domestic slab rates and charges.", h1: "Assam Electricity Bill Calculator", subtitle: "APDCL domestic tariff estimate for Assam households." },
+      seo: { title: "Assam Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Assam electricity bill online. Supports APDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Assam Electricity Bill Calculator", subtitle: "Calculate your Assam electricity bill with APDCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which utility serves Guwahati?", a: "APDCL is shown as the distribution utility for domestic consumers in Assam, including Guwahati." },
         { q: "Is APDCL different from ASEB?", a: "ASEB was restructured, and APDCL handles distribution functions shown in this calculator." }
@@ -2178,7 +2179,7 @@
       ] },
       note: "Uttarakhand is a hill state with hydro resources, but domestic bills are still calculated through UPCL slab and fixed-charge logic.",
       payment: "Pay through UPCL online, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Uttarakhand Electricity Bill Calculator - UPCL | Claculatorcity", description: "Calculate Uttarakhand electricity bill with UPCL domestic slab rates and charges.", h1: "Uttarakhand Electricity Bill Calculator", subtitle: "UPCL domestic tariff estimate for Dehradun, Haridwar, Haldwani and all districts." },
+      seo: { title: "Uttarakhand Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Uttarakhand electricity bill online. Supports UPCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Uttarakhand Electricity Bill Calculator", subtitle: "Calculate your Uttarakhand electricity bill with UPCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Does UPCL cover Dehradun?", a: "Yes. UPCL is shown as the statewide distribution utility for Uttarakhand domestic consumers." },
         { q: "Are hill-area heating loads included?", a: "The calculator estimates based on units only, so winter heating appliances are reflected through higher kWh consumption." }
@@ -2198,7 +2199,7 @@
       ] },
       note: "Jammu & Kashmir uses a heavily subsidised domestic estimate here. Cold-weather consumption can still make monthly units high.",
       payment: "Pay through JKPDD portals, BBPS, UPI apps, and local payment counters.",
-      seo: { title: "Jammu & Kashmir Electricity Bill Calculator - JKPDD | Claculatorcity", description: "Calculate Jammu and Kashmir electricity bill with JKPDD domestic slab rates and charges.", h1: "Jammu & Kashmir Electricity Bill Calculator", subtitle: "JKPDD domestic tariff estimate for Jammu, Kashmir valley and surrounding districts." },
+      seo: { title: "Jammu & Kashmir Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Jammu & Kashmir electricity bill online. Supports JKPDD, JPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Jammu & Kashmir Electricity Bill Calculator", subtitle: "Calculate your Jammu & Kashmir electricity bill with JKPDD, JPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Is Jammu & Kashmir electricity cheap in this estimate?", a: "The default slab table uses low domestic rates, but actual bills can include local adjustments and high winter units." },
         { q: "Is Ladakh included under Jammu & Kashmir here?", a: "No. Ladakh has a separate calculator entry after becoming a separate union territory." }
@@ -2218,7 +2219,7 @@
       ] },
       note: "Manipur bills are shown under MSPDCL with a compact low-to-mid consumption domestic slab table.",
       payment: "Pay through MSPDCL channels, BBPS where supported, UPI apps, and authorised counters.",
-      seo: { title: "Manipur Electricity Bill Calculator - MSPDCL | Claculatorcity", description: "Calculate Manipur electricity bill with MSPDCL domestic tariff slabs and charges.", h1: "Manipur Electricity Bill Calculator", subtitle: "MSPDCL domestic tariff estimate for Manipur households." },
+      seo: { title: "Manipur Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Manipur electricity bill online. Supports MSPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Manipur Electricity Bill Calculator", subtitle: "Calculate your Manipur electricity bill with MSPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which utility serves Imphal?", a: "MSPDCL is shown as the distribution utility for Manipur domestic consumers, including Imphal." },
         { q: "Why are Northeast bill estimates state-specific?", a: "Each northeastern state has its own utility, geography, procurement costs, and tariff orders." }
@@ -2238,7 +2239,7 @@
       ] },
       note: "Meghalaya's hydro resources and terrain both matter for electricity planning, but this calculator focuses on domestic slab billing.",
       payment: "Pay through MePDCL channels, BBPS where supported, UPI apps, and authorised counters.",
-      seo: { title: "Meghalaya Electricity Bill Calculator - MePDCL | Claculatorcity", description: "Calculate Meghalaya electricity bill with MePDCL domestic tariff slabs and charges.", h1: "Meghalaya Electricity Bill Calculator", subtitle: "MePDCL domestic tariff estimate for Shillong and all Meghalaya districts." },
+      seo: { title: "Meghalaya Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Meghalaya electricity bill online. Supports MePDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Meghalaya Electricity Bill Calculator", subtitle: "Calculate your Meghalaya electricity bill with MePDCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which utility serves Shillong?", a: "MePDCL is shown as the distribution utility for Meghalaya domestic consumers, including Shillong." },
         { q: "Does Meghalaya use one statewide domestic utility?", a: "This calculator models Meghalaya domestic bills under MePDCL." }
@@ -2257,7 +2258,7 @@
       ] },
       note: "Mizoram's hill geography makes distribution costs different from mainland states; the calculator keeps the slab table simple and editable.",
       payment: "Pay through state electricity offices, supported online channels, BBPS where available, and authorised counters.",
-      seo: { title: "Mizoram Electricity Bill Calculator | Claculatorcity", description: "Calculate Mizoram electricity bill with domestic tariff slabs and charges.", h1: "Mizoram Electricity Bill Calculator", subtitle: "Mizoram Power and Electricity Department domestic tariff estimate." },
+      seo: { title: "Mizoram Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Mizoram electricity bill online. Supports Power & Electricity Department tariff slabs for domestic, commercial and agricultural connections.", h1: "Mizoram Electricity Bill Calculator", subtitle: "Calculate your Mizoram electricity bill with Power & Electricity Department tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which utility serves Aizawl?", a: "The Power and Electricity Department, Government of Mizoram is shown for domestic supply." },
         { q: "Can Mizoram slab rates be edited?", a: "Yes. Use Edit slabs to match the latest bill or tariff order." }
@@ -2276,7 +2277,7 @@
       ] },
       note: "Nagaland domestic estimates are shown under the state electricity department with a three-slab household structure.",
       payment: "Pay through Department of Electricity channels, BBPS where supported, UPI apps, and authorised counters.",
-      seo: { title: "Nagaland Electricity Bill Calculator | Claculatorcity", description: "Calculate Nagaland electricity bill with domestic tariff slabs and charges.", h1: "Nagaland Electricity Bill Calculator", subtitle: "Nagaland Department of Electricity domestic tariff estimate." },
+      seo: { title: "Nagaland Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Nagaland electricity bill online. Supports Department of Power tariff slabs for domestic, commercial and agricultural connections.", h1: "Nagaland Electricity Bill Calculator", subtitle: "Calculate your Nagaland electricity bill with Department of Power tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which utility serves Kohima?", a: "The Department of Electricity, Government of Nagaland is shown for Kohima and other districts." },
         { q: "Why is the Nagaland table short?", a: "The default domestic estimate uses fewer slabs, and the slab editor lets you match your latest bill if needed." }
@@ -2295,7 +2296,7 @@
       ] },
       note: "Arunachal Pradesh has major hydropower potential and remote distribution terrain, so final bills should be reconciled with the local utility bill.",
       payment: "Pay through state power department channels, supported online modes, and authorised local offices.",
-      seo: { title: "Arunachal Pradesh Electricity Bill Calculator | Claculatorcity", description: "Calculate Arunachal Pradesh electricity bill with domestic tariff slabs and charges.", h1: "Arunachal Pradesh Electricity Bill Calculator", subtitle: "Arunachal Pradesh domestic tariff estimate with editable slabs." },
+      seo: { title: "Arunachal Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Arunachal Pradesh electricity bill online. Supports APPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Arunachal Pradesh Electricity Bill Calculator", subtitle: "Calculate your Arunachal Pradesh electricity bill with APPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which utility serves Itanagar?", a: "The state Department of Power is shown for Arunachal Pradesh domestic consumers." },
         { q: "Why are Arunachal rates state-specific?", a: "Remote terrain, hydro potential, and local subsidy policy make a separate calculator useful." }
@@ -2315,7 +2316,7 @@
       ] },
       note: "Tripura's domestic bill estimate is shown under TSECL, with natural-gas and regional grid context affecting broader power costs.",
       payment: "Pay through TSECL online, BBPS where supported, UPI apps, and authorised counters.",
-      seo: { title: "Tripura Electricity Bill Calculator - TSECL | Claculatorcity", description: "Calculate Tripura electricity bill with TSECL domestic tariff slabs and charges.", h1: "Tripura Electricity Bill Calculator", subtitle: "TSECL domestic tariff estimate for Tripura households." },
+      seo: { title: "Tripura Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Tripura electricity bill online. Supports TSECL tariff slabs for domestic, commercial and agricultural connections.", h1: "Tripura Electricity Bill Calculator", subtitle: "Calculate your Tripura electricity bill with TSECL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Does TSECL cover Agartala?", a: "Yes. TSECL is shown as the domestic distribution utility for Tripura." },
         { q: "Are gas-based generation effects included?", a: "Only through the editable FAC estimate. Official fuel adjustments must be checked on the bill." }
@@ -2334,14 +2335,14 @@
       ] },
       note: "Sikkim is a hydropower-rich hill state, so this estimate uses low domestic rates and a compact slab table.",
       payment: "Pay through state power department channels, supported online modes, and authorised counters.",
-      seo: { title: "Sikkim Electricity Bill Calculator | Claculatorcity", description: "Calculate Sikkim electricity bill with domestic tariff slabs and charges.", h1: "Sikkim Electricity Bill Calculator", subtitle: "Sikkim domestic tariff estimate with low-slab hill-state context." },
+      seo: { title: "Sikkim Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Sikkim electricity bill online. Supports SECL tariff slabs for domestic, commercial and agricultural connections.", h1: "Sikkim Electricity Bill Calculator", subtitle: "Calculate your Sikkim electricity bill with SECL tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Which utility serves Gangtok?", a: "The Energy and Power Department, Government of Sikkim is shown for Gangtok and all districts." },
         { q: "Why is the Sikkim estimate low?", a: "The default table reflects a hydropower-rich, small-state domestic tariff profile." }
       ]
     },
     {
-      slug: "andaman-nicobar-islands", code: "AN", name: "Andaman & Nicobar Islands", type: "Union Territory", region: "Union Territories", color: stateColors.default, regulator: "JERC",
+      slug: "andaman-nicobar", code: "AN", name: "Andaman & Nicobar Islands", type: "Union Territory", region: "Union Territories", color: stateColors.default, regulator: "JERC",
       utility: "Electricity Department A&N",
       discoms: [{ id: "an_ed", name: "A&N ED", fullName: "Electricity Department, Andaman and Nicobar Administration", districts: "Port Blair and island service areas" }],
       categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
@@ -2354,7 +2355,7 @@
       ] },
       note: "Island electricity costs are shaped by isolated grids, diesel backup, solar additions, and logistics. Verify the latest tariff order before paying a large bill.",
       payment: "Pay through the Andaman and Nicobar electricity portal or authorised administration counters where applicable.",
-      seo: { title: "Andaman & Nicobar Electricity Bill Calculator | Claculatorcity", description: "Calculate Andaman and Nicobar Islands electricity bill with domestic tariff slabs and charges.", h1: "Andaman & Nicobar Electricity Bill Calculator", subtitle: "Island domestic tariff estimate for Port Blair and Andaman & Nicobar service areas." },
+      seo: { title: "Andaman & Nicobar Islands Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Andaman & Nicobar Islands electricity bill online. Supports Electricity Dept A&N slabs for domestic, commercial & agricultural connections.", h1: "Andaman & Nicobar Islands Electricity Bill Calculator", subtitle: "Calculate your Andaman & Nicobar Islands electricity bill with Electricity Department A&N tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Why does Andaman & Nicobar need a separate calculator?", a: "Island grids have different cost structures and tariff schedules from mainland states." },
         { q: "Does the calculator cover Port Blair?", a: "Yes. Port Blair is included under the Andaman and Nicobar electricity department estimate." }
@@ -2373,14 +2374,14 @@
       ] },
       note: "Chandigarh is separate from Punjab and Haryana for tariff purposes, so use the UT entry rather than neighbouring state calculators.",
       payment: "Pay through Chandigarh Administration online services, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Chandigarh Electricity Bill Calculator | Claculatorcity", description: "Calculate Chandigarh electricity bill with UT domestic tariff slabs and charges.", h1: "Chandigarh Electricity Bill Calculator", subtitle: "Chandigarh UT domestic tariff estimate separate from Punjab and Haryana." },
+      seo: { title: "Chandigarh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Chandigarh electricity bill online. Supports Electricity Department Chandigarh slabs for domestic, commercial & agricultural connections.", h1: "Chandigarh Electricity Bill Calculator", subtitle: "Calculate your Chandigarh electricity bill with Electricity Department Chandigarh tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Is Chandigarh tariff the same as Punjab?", a: "No. Chandigarh is a union territory with its own tariff schedule." },
         { q: "Who regulates Chandigarh electricity tariff?", a: "Chandigarh comes under the joint regulatory framework for Goa and union territories." }
       ]
     },
     {
-      slug: "dadra-nagar-haveli-daman-diu", code: "DN", name: "Dadra & Nagar Haveli and Daman & Diu", type: "Union Territory", region: "West India", color: stateColors.default, regulator: "JERC",
+      slug: "dadra-nagar-haveli", code: "DN", name: "Dadra & Nagar Haveli and Daman & Diu", type: "Union Territory", region: "West India", color: stateColors.default, regulator: "JERC",
       utility: "DNHDD Power Distribution",
       discoms: [{ id: "dnhddpdcl", name: "DNHDD PDCL", fullName: "Dadra and Nagar Haveli and Daman and Diu Power Distribution Corporation", districts: "Dadra & Nagar Haveli, Daman and Diu" }],
       categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }, { id: "industrial", name: "Industrial", description: "Industrial supply" }],
@@ -2393,7 +2394,7 @@
       ] },
       note: "This UT has a strong industrial load profile, but the calculator defaults to domestic household slabs.",
       payment: "Pay through the UT power distribution portal, BBPS where supported, UPI apps, and authorised counters.",
-      seo: { title: "Dadra & Nagar Haveli and Daman & Diu Electricity Bill Calculator | Claculatorcity", description: "Calculate Dadra and Nagar Haveli and Daman and Diu electricity bill with domestic slabs.", h1: "Dadra & Nagar Haveli and Daman & Diu Electricity Bill Calculator", subtitle: "DNHDD domestic tariff estimate for the merged union territory." },
+      seo: { title: "Dadra & Nagar Haveli and Daman & Diu Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Dadra & Nagar Haveli and Daman & Diu electricity bill online with Department of Electricity domestic, commercial & agricultural slabs.", h1: "Dadra & Nagar Haveli and Daman & Diu Electricity Bill Calculator", subtitle: "Calculate your Dadra & Nagar Haveli and Daman & Diu electricity bill with Department of Electricity tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Is Daman and Diu separate from Dadra and Nagar Haveli?", a: "They are now administered as one union territory, so this calculator combines the UT entry." },
         { q: "Does this handle industrial tariffs?", a: "The UI includes an industrial category label, but the default calculator is tuned for domestic estimates." }
@@ -2412,7 +2413,7 @@
       ] },
       note: "Ladakh's harsh climate and remote grid make consumption patterns unusual. Heating and backup loads can dominate winter usage.",
       payment: "Pay through Ladakh power department channels, supported digital modes, and authorised local offices.",
-      seo: { title: "Ladakh Electricity Bill Calculator | Claculatorcity", description: "Calculate Ladakh electricity bill with domestic tariff slabs and charges.", h1: "Ladakh Electricity Bill Calculator", subtitle: "Ladakh domestic tariff estimate for Leh, Kargil and high-altitude service areas." },
+      seo: { title: "Ladakh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Ladakh electricity bill online. Supports LREDA, Power Department Ladakh tariff slabs for domestic, commercial and agricultural connections.", h1: "Ladakh Electricity Bill Calculator", subtitle: "Calculate your Ladakh electricity bill with LREDA, Power Department Ladakh tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Is Ladakh included under Jammu & Kashmir?", a: "No. Ladakh is a separate union territory and has its own calculator entry." },
         { q: "Why can Ladakh units be high in winter?", a: "Heating and cold-weather appliance use can raise kWh consumption even when tariff rates are subsidised." }
@@ -2432,7 +2433,7 @@
       ] },
       note: "Lakshadweep's island grid makes fuel, solar integration, and logistics more important than in mainland distribution systems.",
       payment: "Pay through UT electricity department channels and authorised local offices where available.",
-      seo: { title: "Lakshadweep Electricity Bill Calculator | Claculatorcity", description: "Calculate Lakshadweep electricity bill with domestic tariff slabs and charges.", h1: "Lakshadweep Electricity Bill Calculator", subtitle: "Lakshadweep island domestic tariff estimate for Kavaratti and service islands." },
+      seo: { title: "Lakshadweep Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Lakshadweep electricity bill online. Supports Electricity Department Lakshadweep slabs for domestic, commercial & agricultural connections.", h1: "Lakshadweep Electricity Bill Calculator", subtitle: "Calculate your Lakshadweep electricity bill with Electricity Department Lakshadweep tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Why is Lakshadweep separate from Kerala?", a: "Lakshadweep is a union territory with its own power administration and island-specific tariff context." },
         { q: "Can I edit Lakshadweep rates?", a: "Yes. Use Edit slabs to match the latest UT electricity bill or notification." }
@@ -2452,7 +2453,7 @@
       ] },
       note: "Puducherry is surrounded by different states across its enclaves, but electricity tariff is handled separately by the UT administration.",
       payment: "Pay through the Puducherry electricity portal, BBPS, UPI apps, and authorised counters.",
-      seo: { title: "Puducherry Electricity Bill Calculator | Claculatorcity", description: "Calculate Puducherry electricity bill with domestic tariff slabs and first free-unit estimate.", h1: "Puducherry Electricity Bill Calculator", subtitle: "Puducherry UT domestic tariff estimate with first 50 units modelled as free." },
+      seo: { title: "Puducherry Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Puducherry electricity bill online. Supports PIED tariff slabs for domestic, commercial and agricultural connections.", h1: "Puducherry Electricity Bill Calculator", subtitle: "Calculate your Puducherry electricity bill with PIED tariff slabs, fixed charges, duty, and bill breakdown." },
       faq: [
         { q: "Is Puducherry tariff the same as Tamil Nadu?", a: "No. Puducherry is a union territory with its own tariff schedule, even though Puducherry town is surrounded by Tamil Nadu." },
         { q: "Are the first 50 units free in this estimate?", a: "Yes. The default Puducherry domestic slab table sets the first 50 units to zero energy charge." }
@@ -2534,7 +2535,7 @@
     buildStateTiles();
     renderBaseFaq();
     setupEventListeners();
-    const slugFromUrl = getSlugFromPath();
+    const slugFromUrl = STATIC_PAGE_STATE || getSlugFromPath();
     if (slugFromUrl && stateData[slugFromUrl]) {
       loadState(slugFromUrl, { push: false });
       history.replaceState({ state: slugFromUrl }, "", window.location.href);
@@ -2575,14 +2576,14 @@
         '<span class="state-tile-code">' + escapeHTML(state.code) + '</span>' +
         '<span class="state-tile-name">' + escapeHTML(state.name) + '</span>' +
         '<span class="state-tile-discom">' + escapeHTML(getDiscomSummary(state)) + '</span>';
-      tile.addEventListener("click", () => loadState(slug, { push: true, recalculate: hasEnteredUnits() }));
+      tile.addEventListener("click", () => { window.location.href = buildStateUrl(slug); });
       grid.appendChild(tile);
     });
   }
 
   function setupEventListeners() {
     byId("state-select").addEventListener("change", event => {
-      if (event.target.value) loadState(event.target.value, { push: true, recalculate: hasVisibleResults() });
+      if (event.target.value) window.location.href = buildStateUrl(event.target.value);
     });
 
     byId("calc-btn").addEventListener("click", calculateBill);
@@ -2638,16 +2639,13 @@
   }
 
   function getSlugFromPath() {
-    const queryState = new URLSearchParams(window.location.search).get("state");
-    if (queryState && stateData[queryState]) return queryState;
-    const hashState = window.location.hash.replace(/^#\/?/, "").replace(/\/$/, "");
-    if (hashState && stateData[hashState]) return hashState;
-    const match = window.location.pathname.match(/\/india\/electricity\/([^/]+)\/?$/);
-    return match && match[1] !== "index.html" ? match[1] : "";
+    const fileMatch = window.location.pathname.match(/\/india\/electricity\/([^/]+)\.html$/);
+    if (fileMatch && fileMatch[1] !== "index" && stateData[fileMatch[1]]) return fileMatch[1];
+    const cleanMatch = window.location.pathname.match(/\/india\/electricity\/([^/]+)\/?$/);
+    return cleanMatch && stateData[cleanMatch[1]] ? cleanMatch[1] : "";
   }
-
   function buildStateUrl(slug) {
-    return "index.html?state=" + encodeURIComponent(slug);
+    return slug + ".html";
   }
 
   function loadState(slug, options) {
@@ -2662,13 +2660,6 @@
     currentSlabs = state.tariff.slabs.map(slab => Object.assign({}, slab));
     currentCharges = getChargesClone(state.tariff);
 
-    if (opts.push) {
-      try {
-        history.pushState({ state: slug }, "", buildStateUrl(slug));
-      } catch (error) {
-        window.location.hash = slug;
-      }
-    }
 
     applyStateColor(state);
     updateSEO(state);
@@ -2718,10 +2709,10 @@
     document.querySelectorAll(".state-tile").forEach(tile => tile.classList.remove("active-state"));
     document.documentElement.style.setProperty("--state-color", stateColors.default);
     document.documentElement.style.setProperty("--state-light", "#fff7ed");
-    document.title = "Electricity Bill Calculator India - All States | Claculatorcity";
+    document.title = "India Electricity Bill Calculator - All States - Calculatorcity";
     byId("page-title").textContent = document.title;
-    byId("page-h1").textContent = "Electricity Bill Calculator India";
-    byId("page-subtitle").textContent = "Calculate electricity bills for any Indian state or union territory with slab-wise energy charges, fixed charges, electricity duty, FAC, subsidy options, and DISCOM details.";
+    byId("page-h1").textContent = "India Electricity Bill Calculator";
+    byId("page-subtitle").textContent = "Calculate electricity bill for all Indian states online. Supports major state electricity boards, slab tariffs, fixed charges, duty, and FAC.";
     byId("breadcrumb-current").textContent = "Electricity Bill Calculator";
   }
 
@@ -2770,8 +2761,8 @@
         {
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://claculatorcity.com/" },
-            { "@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://claculatorcity.com/#india" },
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/" },
+            { "@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india" },
             { "@type": "ListItem", "position": 3, "name": state.seo.h1, "item": url }
           ]
         },
@@ -2976,8 +2967,8 @@
 
   function renderBaseFaq() {
     renderFaqList([
-      { q: "Does this page support all Indian states and union territories?", a: "Yes. It includes 28 states and 8 union territories in one single-page calculator." },
-      { q: "Does changing the state reload the page?", a: "No. State selection updates the URL using browser history and refreshes the calculator without a full page reload." },
+      { q: "Does this page support all Indian states and union territories?", a: "Yes. It includes 28 states and 8 union territories with dedicated static calculator pages." },
+      { q: "Does each state have its own electricity calculator page?", a: "Yes. Each state and union territory has its own static HTML page for reliable refreshes and SEO-friendly URLs." },
       { q: "Are the rates editable?", a: "Yes. After selecting a state, use Edit slabs to customise rates, fixed charge, meter rent, duty, and FAC for your own bill." }
     ]);
   }
@@ -3213,7 +3204,7 @@
         '<div class="state-compare-item-name">' + escapeHTML(state.name) + '</div>' +
         '<div class="state-compare-item-amount">' + formatINR(bill) + '</div>' +
         '<div class="state-compare-item-note">' + (bill < currentBill ? RUPEE + diff + " cheaper" : bill > currentBill ? RUPEE + diff + " costlier" : "Same estimate") + '</div>';
-      item.addEventListener("click", () => loadState(slug, { push: true, recalculate: true }));
+      item.addEventListener("click", () => { window.location.href = buildStateUrl(slug); });
       grid.appendChild(item);
     });
   }
@@ -3387,3 +3378,5 @@
 </script>
 </body>
 </html>
+
+

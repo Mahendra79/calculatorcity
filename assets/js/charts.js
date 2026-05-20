@@ -1,9 +1,9 @@
-const ClaculatorcityCharts = {};
+const CalculatorcityCharts = {};
 
 function destroyExistingChart(canvasId) {
-  if (ClaculatorcityCharts[canvasId]) {
-    ClaculatorcityCharts[canvasId].destroy();
-    delete ClaculatorcityCharts[canvasId];
+  if (CalculatorcityCharts[canvasId]) {
+    CalculatorcityCharts[canvasId].destroy();
+    delete CalculatorcityCharts[canvasId];
   }
 }
 
@@ -11,7 +11,7 @@ function createPieChart(canvasId, labels, data, colors) {
   const canvas = document.getElementById(canvasId);
   if (!canvas || typeof Chart === "undefined") return null;
   destroyExistingChart(canvasId);
-  ClaculatorcityCharts[canvasId] = new Chart(canvas, {
+  CalculatorcityCharts[canvasId] = new Chart(canvas, {
     type: "pie",
     data: {
       labels,
@@ -22,14 +22,14 @@ function createPieChart(canvasId, labels, data, colors) {
       maintainAspectRatio: false
     }
   });
-  return ClaculatorcityCharts[canvasId];
+  return CalculatorcityCharts[canvasId];
 }
 
 function createLineChart(canvasId, labels, data, label, color) {
   const canvas = document.getElementById(canvasId);
   if (!canvas || typeof Chart === "undefined") return null;
   destroyExistingChart(canvasId);
-  ClaculatorcityCharts[canvasId] = new Chart(canvas, {
+  CalculatorcityCharts[canvasId] = new Chart(canvas, {
     type: "line",
     data: {
       labels,
@@ -47,14 +47,14 @@ function createLineChart(canvasId, labels, data, label, color) {
       maintainAspectRatio: false
     }
   });
-  return ClaculatorcityCharts[canvasId];
+  return CalculatorcityCharts[canvasId];
 }
 
 function createBarChart(canvasId, labels, datasets, options = {}) {
   const canvas = document.getElementById(canvasId);
   if (!canvas || typeof Chart === "undefined") return null;
   destroyExistingChart(canvasId);
-  ClaculatorcityCharts[canvasId] = new Chart(canvas, {
+  CalculatorcityCharts[canvasId] = new Chart(canvas, {
     type: "bar",
     data: { labels, datasets },
     options: {
@@ -63,7 +63,7 @@ function createBarChart(canvasId, labels, datasets, options = {}) {
       ...options
     }
   });
-  return ClaculatorcityCharts[canvasId];
+  return CalculatorcityCharts[canvasId];
 }
 
 function createStackedBarChart(canvasId, labels, datasets) {
@@ -74,3 +74,4 @@ function createStackedBarChart(canvasId, labels, datasets) {
     }
   });
 }
+

@@ -1,0 +1,3382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title id="page-title">Andhra Pradesh Electricity Bill Calculator 2024 - Calculatorcity</title>
+  <meta name="description" id="page-meta" content="Calculate your Andhra Pradesh electricity bill online. Supports APSPDCL, APEPDCL tariff slabs for domestic, commercial and agricultural connections.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" id="page-canonical" href="https://calculatorcity.in/india/electricity/andhra-pradesh/">
+  <meta property="og:title" id="og-title" content="Andhra Pradesh Electricity Bill Calculator">
+  <meta property="og:description" id="og-description" content="Calculate your Andhra Pradesh electricity bill online. Supports APSPDCL, APEPDCL tariff slabs for domestic, commercial and agricultural connections.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" id="og-url" content="https://calculatorcity.in/india/electricity/andhra-pradesh/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/calculator.css">
+  <style>
+    :root {
+      --elec-primary: #f97316;
+      --elec-primary-dark: #ea580c;
+      --elec-primary-light: #fff7ed;
+      --elec-primary-border: #fed7aa;
+      --state-color: #f97316;
+      --state-light: #fff7ed;
+      --cheap-color: #16a34a;
+      --mid-color: #d97706;
+      --expensive-color: #dc2626;
+      --elec-white: #ffffff;
+      --elec-black-soft: #0f172a;
+      --elec-text: #0f172a;
+      --elec-text-secondary: #475569;
+      --elec-text-muted: #64748b;
+      --elec-text-soft: #94a3b8;
+      --elec-bg: #ffffff;
+      --elec-bg-soft: #f8fafc;
+      --elec-bg-muted: #f1f5f9;
+      --elec-border: #e2e8f0;
+      --elec-border-strong: #cbd5e1;
+      --elec-success-bg: #f0fdf4;
+      --elec-success-border: #bbf7d0;
+      --elec-success-text: #166534;
+      --elec-warning-bg: #fef3c7;
+      --elec-warning-border: #fde68a;
+      --elec-warning-text: #92400e;
+      --elec-danger-bg: #fef2f2;
+      --elec-danger-text: #991b1b;
+      --elec-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+      --elec-shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+      --elec-shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.14);
+      --elec-shadow-state: 0 8px 24px rgba(249, 115, 22, 0.18);
+      --elec-overlay: rgba(15, 23, 42, 0.56);
+      --widget-radius: 16px;
+      --card-radius: 12px;
+      --btn-radius: 10px;
+      --elec-space-1: 0.25rem;
+      --elec-space-2: 0.5rem;
+      --elec-space-3: 0.75rem;
+      --elec-space-4: 1rem;
+      --elec-space-5: 1.25rem;
+      --elec-space-6: 1.5rem;
+      --elec-space-8: 2rem;
+      --elec-space-10: 2.5rem;
+      --elec-space-12: 3rem;
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [hidden] { display: none !important; }
+
+    .electricity-page {
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --primary: var(--state-color);
+      --primary-dark: var(--elec-primary-dark);
+      --primary-light: var(--state-light);
+      font-family: var(--font);
+      background: var(--elec-bg);
+    }
+
+    .electricity-page input,
+    .electricity-page select,
+    .electricity-page button {
+      font-family: var(--font);
+    }
+
+    .elec-number,
+    .result-total-value,
+    .breakdown-table td:last-child,
+    .breakdown-table th:last-child,
+    .units-input,
+    .state-compare-item-amount,
+    .modal-slab-row input,
+    .modal-charge-row input {
+      font-family: var(--font);
+    }
+
+    .elec-hero {
+      padding: var(--elec-space-6) 0 var(--elec-space-5);
+      border-bottom: 1px solid var(--elec-primary-border);
+      background:
+        radial-gradient(circle at top left, var(--state-light), transparent 34rem),
+        linear-gradient(135deg, var(--elec-primary-light), var(--elec-white));
+    }
+
+    .elec-hero .breadcrumb {
+      margin-bottom: var(--elec-space-4);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--elec-space-3);
+      align-items: center;
+      margin-bottom: var(--elec-space-5);
+    }
+
+    .hero-icon {
+      width: 2.9rem;
+      height: 2.9rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--elec-primary-border);
+      border-radius: var(--card-radius);
+      color: var(--elec-primary-dark);
+      background: var(--elec-white);
+      box-shadow: var(--elec-shadow-md);
+      font-size: 1.45rem;
+    }
+
+    .hero-content h1 {
+      margin: 0;
+      color: var(--elec-text);
+      font-size: clamp(1.55rem, 5vw, 2.35rem);
+      line-height: 1.18;
+    }
+
+    .hero-subtitle {
+      max-width: 48rem;
+      margin: var(--elec-space-2) 0 0;
+      color: var(--elec-text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .state-selector-wrap {
+      display: grid;
+      gap: var(--elec-space-2);
+      padding: var(--elec-space-4);
+      border: 1.5px solid var(--elec-primary-border);
+      border-radius: var(--widget-radius);
+      background: var(--elec-white);
+      box-shadow: var(--elec-shadow-md);
+    }
+
+    .state-label,
+    .input-label {
+      display: block;
+      color: var(--elec-text-muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .state-label {
+      display: inline-flex;
+      gap: var(--elec-space-2);
+      align-items: center;
+    }
+
+    .state-select-wrapper,
+    .units-input-wrapper {
+      position: relative;
+    }
+
+    .state-select,
+    .units-input,
+    .compare-row input {
+      width: 100%;
+      border: 1.5px solid var(--elec-border);
+      border-radius: var(--btn-radius);
+      color: var(--elec-text);
+      background: var(--elec-white);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .state-select {
+      min-height: 3.2rem;
+      padding: 0.85rem 3rem 0.85rem 1rem;
+      appearance: none;
+      cursor: pointer;
+      font-size: 1.02rem;
+      font-weight: 600;
+    }
+
+    .state-select:focus,
+    .units-input:focus,
+    .compare-row input:focus,
+    .modal-charge-row input:focus,
+    .modal-slab-row input:focus {
+      border-color: var(--state-color);
+      box-shadow: 0 0 0 3px var(--state-light);
+    }
+
+    .select-arrow {
+      position: absolute;
+      top: 50%;
+      right: var(--elec-space-4);
+      transform: translateY(-50%);
+      color: var(--elec-text-soft);
+      pointer-events: none;
+    }
+
+    .elec-calc-section {
+      padding: var(--elec-space-6) 0;
+      background: var(--elec-bg-soft);
+    }
+
+    .calc-layout {
+      display: grid;
+      gap: var(--elec-space-5);
+      align-items: start;
+    }
+
+    .calc-main-col {
+      min-width: 0;
+    }
+
+    .calc-sidebar-col {
+      display: none;
+    }
+
+    .state-info-bar,
+    .discom-row,
+    .category-row,
+    .special-options,
+    .calc-widget-box,
+    .results-panel,
+    .compare-section,
+    .state-compare-section,
+    .tips-section,
+    .sidebar-card,
+    .content-block {
+      border: 1px solid var(--elec-border);
+      border-radius: var(--card-radius);
+      background: var(--elec-white);
+      box-shadow: var(--elec-shadow-sm);
+    }
+
+    .state-info-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--elec-space-3);
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--elec-space-4);
+      padding: var(--elec-space-4);
+      border-color: var(--state-color);
+    }
+
+    .state-info-left {
+      display: flex;
+      gap: var(--elec-space-3);
+      align-items: center;
+    }
+
+    .state-code {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--btn-radius);
+      color: var(--elec-white);
+      background: var(--state-color);
+      font-weight: 800;
+    }
+
+    .state-info-name {
+      color: var(--elec-text);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .state-info-discom {
+      color: var(--elec-text-muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    .state-info-badges,
+    .discom-tabs,
+    .category-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--elec-space-2);
+    }
+
+    .mini-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.6rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      color: var(--state-color);
+      background: var(--state-light);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .discom-row,
+    .category-row,
+    .special-options {
+      margin-bottom: var(--elec-space-4);
+      padding: var(--elec-space-4);
+    }
+
+    .discom-tabs,
+    .category-tabs {
+      margin-top: var(--elec-space-2);
+    }
+
+    .discom-tab,
+    .category-tab,
+    .chart-tab,
+    .btn-small {
+      border: 1.5px solid var(--elec-border);
+      border-radius: var(--btn-radius);
+      color: var(--elec-text-secondary);
+      background: var(--elec-white);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .discom-tab,
+    .category-tab {
+      min-height: 2.75rem;
+      padding: 0.55rem 0.75rem;
+      text-align: left;
+    }
+
+    .tab-title {
+      display: block;
+      color: inherit;
+      font-size: 0.85rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .tab-subtitle {
+      display: block;
+      margin-top: 0.1rem;
+      color: inherit;
+      opacity: 0.75;
+      font-size: 0.72rem;
+      line-height: 1.25;
+    }
+
+    .discom-tab:hover,
+    .category-tab:hover,
+    .chart-tab:hover {
+      border-color: var(--state-color);
+      color: var(--state-color);
+    }
+
+    .discom-tab.active,
+    .category-tab.active,
+    .chart-tab.active {
+      border-color: var(--state-color);
+      color: var(--elec-white);
+      background: var(--state-color);
+    }
+
+    .special-options {
+      border-color: var(--elec-success-border);
+      background: var(--elec-success-bg);
+    }
+
+    .special-option-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--elec-space-3);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .special-option-label {
+      color: var(--elec-success-text);
+      font-weight: 700;
+    }
+
+    .special-option-hint {
+      margin-top: var(--elec-space-1);
+      color: var(--elec-success-text);
+      font-size: 0.8rem;
+      opacity: 0.82;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 2.8rem;
+      height: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .toggle-switch input {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: var(--elec-border-strong);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .toggle-slider::before {
+      content: "";
+      position: absolute;
+      top: 0.2rem;
+      left: 0.2rem;
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 50%;
+      background: var(--elec-white);
+      box-shadow: var(--elec-shadow-sm);
+      transition: var(--transition);
+    }
+
+    .toggle-switch input:checked + .toggle-slider {
+      background: var(--cheap-color);
+    }
+
+    .toggle-switch input:checked + .toggle-slider::before {
+      transform: translateX(1.3rem);
+    }
+
+    .calc-widget-box {
+      padding: var(--elec-space-5);
+      border-width: 2px;
+      border-radius: var(--widget-radius);
+      box-shadow: var(--elec-shadow-md);
+    }
+
+    .calc-widget-box:focus-within {
+      border-color: var(--state-color);
+    }
+
+    .units-input-group {
+      margin-bottom: var(--elec-space-5);
+    }
+
+    .label-hint {
+      display: block;
+      margin-top: var(--elec-space-1);
+      color: var(--elec-text-soft);
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .units-input-wrapper {
+      margin-bottom: var(--elec-space-3);
+    }
+
+    .units-input {
+      min-height: 4.15rem;
+      padding: 0.95rem 4.2rem 0.95rem 1rem;
+      background: var(--elec-bg-soft);
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+
+    .units-badge {
+      position: absolute;
+      top: 50%;
+      right: var(--elec-space-4);
+      transform: translateY(-50%);
+      padding: 0.15rem 0.5rem;
+      border-radius: 0.4rem;
+      color: var(--elec-text-muted);
+      background: var(--elec-bg-muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .units-slider {
+      --slider-progress: 0%;
+      width: 100%;
+      height: 2.25rem;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      appearance: none;
+    }
+
+    .units-slider::-webkit-slider-runnable-track {
+      height: 0.4rem;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--state-color) 0%, var(--state-color) var(--slider-progress), var(--elec-border) var(--slider-progress), var(--elec-border) 100%);
+    }
+
+    .units-slider::-webkit-slider-thumb {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-top: -0.43rem;
+      border: 3px solid var(--elec-white);
+      border-radius: 999px;
+      background: var(--state-color);
+      box-shadow: var(--elec-shadow-sm);
+      appearance: none;
+    }
+
+    .units-slider::-moz-range-track {
+      height: 0.4rem;
+      border-radius: 999px;
+      background: var(--elec-border);
+    }
+
+    .units-slider::-moz-range-progress {
+      height: 0.4rem;
+      border-radius: 999px;
+      background: var(--state-color);
+    }
+
+    .units-slider::-moz-range-thumb {
+      width: 1rem;
+      height: 1rem;
+      border: 3px solid var(--elec-white);
+      border-radius: 999px;
+      background: var(--state-color);
+      box-shadow: var(--elec-shadow-sm);
+    }
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      color: var(--elec-text-soft);
+      font-size: 0.72rem;
+    }
+
+    .slab-preview {
+      margin-bottom: var(--elec-space-4);
+      padding: var(--elec-space-4);
+      border: 1px solid var(--elec-border);
+      border-radius: var(--btn-radius);
+      background: var(--elec-bg-soft);
+    }
+
+    .slab-preview-title,
+    .breakdown-title,
+    .sidebar-card-title {
+      color: var(--elec-text-muted);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .slab-preview-list {
+      display: grid;
+      gap: var(--elec-space-1);
+      margin-top: var(--elec-space-2);
+    }
+
+    .slab-preview-item {
+      display: flex;
+      gap: var(--elec-space-3);
+      justify-content: space-between;
+      padding: 0.2rem 0;
+      color: var(--elec-text-secondary);
+      font-size: 0.83rem;
+    }
+
+    .slab-preview-item.active-slab {
+      color: var(--state-color);
+      font-weight: 800;
+    }
+
+    .edit-slabs-btn {
+      display: inline-flex;
+      gap: var(--elec-space-2);
+      align-items: center;
+      margin-top: var(--elec-space-3);
+      border: 0;
+      color: var(--state-color);
+      background: transparent;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .calc-btn-main {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--elec-space-2);
+      min-height: 3.3rem;
+      border: 0;
+      border-radius: var(--btn-radius);
+      color: var(--elec-white);
+      background: var(--state-color);
+      box-shadow: var(--elec-shadow-state);
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .calc-btn-main:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: var(--elec-shadow-lg);
+    }
+
+    .calc-btn-main:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .calc-btn-main:disabled {
+      color: var(--elec-text-soft);
+      background: var(--elec-border);
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+
+    .calc-hint {
+      margin: var(--elec-space-2) 0 0;
+      color: var(--elec-text-soft);
+      text-align: center;
+      font-size: 0.82rem;
+    }
+
+    .results-box {
+      margin-top: var(--elec-space-6);
+      animation: fadeSlideUp 0.26s ease;
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(0.75rem); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .result-total {
+      margin-bottom: var(--elec-space-4);
+      padding: var(--elec-space-6);
+      border-radius: var(--card-radius);
+      color: var(--elec-white);
+      background: linear-gradient(135deg, var(--state-color), var(--elec-primary-dark));
+      box-shadow: var(--elec-shadow-state);
+      text-align: center;
+    }
+
+    .result-total-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      opacity: 0.9;
+    }
+
+    .result-total-value {
+      margin: var(--elec-space-1) 0;
+      font-size: clamp(2.25rem, 10vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .result-total-meta {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .slab-warning {
+      display: flex;
+      gap: var(--elec-space-2);
+      align-items: flex-start;
+      margin-bottom: var(--elec-space-4);
+      padding: var(--elec-space-3) var(--elec-space-4);
+      border: 1px solid var(--elec-warning-border);
+      border-radius: var(--btn-radius);
+      color: var(--elec-warning-text);
+      background: var(--elec-warning-bg);
+      font-size: 0.88rem;
+    }
+
+    .results-panel {
+      margin-bottom: var(--elec-space-4);
+      padding: var(--elec-space-4);
+    }
+
+    .breakdown-table,
+    .tariff-content-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+
+    .breakdown-table th,
+    .breakdown-table td,
+    .tariff-content-table th,
+    .tariff-content-table td {
+      padding: 0.55rem 0.45rem;
+      border-bottom: 1px solid var(--elec-border);
+      color: var(--elec-text-secondary);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .breakdown-table th,
+    .tariff-content-table th {
+      color: var(--elec-text-muted);
+      background: var(--elec-bg-soft);
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .breakdown-table td:last-child,
+    .breakdown-table th:last-child,
+    .tariff-content-table td:last-child,
+    .tariff-content-table th:last-child {
+      text-align: right;
+    }
+
+    .breakdown-table tr.active-slab td {
+      color: var(--state-color);
+      background: var(--state-light);
+      font-weight: 700;
+    }
+
+    .breakdown-table tfoot td {
+      background: var(--elec-bg-soft);
+      font-weight: 700;
+    }
+
+    .chart-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--elec-space-2);
+      margin-bottom: var(--elec-space-3);
+    }
+
+    .chart-tab {
+      min-height: 2.2rem;
+      padding: 0.35rem 0.85rem;
+      font-weight: 700;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 13rem;
+      padding: var(--elec-space-3);
+      border: 1px solid var(--elec-border);
+      border-radius: var(--card-radius);
+      background: var(--elec-white);
+    }
+
+    .compare-section,
+    .state-compare-section,
+    .tips-section {
+      margin-bottom: var(--elec-space-4);
+      padding: var(--elec-space-4);
+    }
+
+    .section-mini-title {
+      display: flex;
+      gap: var(--elec-space-2);
+      align-items: center;
+      margin-bottom: var(--elec-space-3);
+      color: var(--elec-text);
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    .compare-row {
+      display: grid;
+      gap: var(--elec-space-3);
+      align-items: end;
+    }
+
+    .compare-row input {
+      min-height: 2.75rem;
+      padding: 0.7rem 0.85rem;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-small {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.75rem;
+      padding: 0.6rem 1rem;
+      border-radius: var(--btn-radius);
+      cursor: pointer;
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      border: 0;
+      color: var(--elec-white);
+      background: var(--state-color);
+    }
+
+    .btn-secondary {
+      border: 1.5px solid var(--elec-border);
+      color: var(--elec-text-secondary);
+      background: var(--elec-white);
+    }
+
+    .btn-secondary:hover,
+    .btn-small:hover {
+      border-color: var(--state-color);
+      color: var(--state-color);
+    }
+
+    .compare-result {
+      margin-top: var(--elec-space-3);
+      padding: var(--elec-space-3);
+      border-radius: var(--btn-radius);
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .compare-result.more {
+      color: var(--elec-danger-text);
+      background: var(--elec-danger-bg);
+    }
+
+    .compare-result.less {
+      color: var(--elec-success-text);
+      background: var(--elec-success-bg);
+    }
+
+    .compare-result.same {
+      color: var(--elec-text-secondary);
+      background: var(--elec-bg-soft);
+    }
+
+    .state-compare-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+      gap: var(--elec-space-2);
+    }
+
+    .state-compare-item {
+      padding: var(--elec-space-3);
+      border: 1px solid var(--elec-border);
+      border-radius: var(--btn-radius);
+      background: var(--elec-bg-soft);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .state-compare-item:hover {
+      border-color: var(--state-color);
+      background: var(--state-light);
+      transform: translateY(-1px);
+    }
+
+    .state-compare-item-name {
+      color: var(--elec-text-secondary);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .state-compare-item-amount {
+      margin-top: var(--elec-space-1);
+      color: var(--elec-text);
+      font-size: 0.94rem;
+      font-weight: 800;
+    }
+
+    .state-compare-item-note {
+      margin-top: var(--elec-space-1);
+      color: var(--elec-text-soft);
+      font-size: 0.72rem;
+    }
+
+    .state-compare-item.cheaper .state-compare-item-amount {
+      color: var(--cheap-color);
+    }
+
+    .state-compare-item.expensive .state-compare-item-amount {
+      color: var(--expensive-color);
+    }
+
+    .tips-list {
+      display: grid;
+      gap: var(--elec-space-2);
+    }
+
+    .tip-item {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--elec-space-2);
+      padding: var(--elec-space-3);
+      border-radius: var(--btn-radius);
+      color: var(--elec-text-secondary);
+      background: var(--elec-bg-soft);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .tip-item i {
+      color: var(--state-color);
+      font-size: 1.1rem;
+      margin-top: 0.1rem;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--elec-space-4);
+      background: var(--elec-overlay);
+      backdrop-filter: blur(2px);
+    }
+
+    .modal-box {
+      width: min(100%, 34rem);
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: var(--widget-radius);
+      background: var(--elec-white);
+      box-shadow: var(--elec-shadow-lg);
+    }
+
+    .modal-header,
+    .modal-footer {
+      position: sticky;
+      display: flex;
+      gap: var(--elec-space-3);
+      align-items: center;
+      background: var(--elec-white);
+      z-index: 1;
+    }
+
+    .modal-header {
+      top: 0;
+      justify-content: space-between;
+      padding: var(--elec-space-4) var(--elec-space-5);
+      border-bottom: 1px solid var(--elec-border);
+    }
+
+    .modal-title {
+      margin: 0;
+      color: var(--elec-text);
+      font-size: 1.15rem;
+    }
+
+    .modal-close {
+      width: 2.2rem;
+      height: 2.2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: var(--btn-radius);
+      color: var(--elec-text-muted);
+      background: var(--elec-bg-muted);
+      cursor: pointer;
+    }
+
+    .modal-subtitle {
+      padding: var(--elec-space-3) var(--elec-space-5) 0;
+      color: var(--elec-text-muted);
+      font-size: 0.88rem;
+    }
+
+    .modal-charges {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--elec-space-3);
+      padding: var(--elec-space-4) var(--elec-space-5);
+    }
+
+    .modal-charge-row {
+      display: grid;
+      gap: var(--elec-space-1);
+    }
+
+    .modal-charge-row label {
+      color: var(--elec-text-muted);
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+
+    .modal-charge-row input,
+    .modal-slab-row input {
+      width: 100%;
+      min-height: 2.45rem;
+      padding: 0.5rem 0.65rem;
+      border: 1.5px solid var(--elec-border);
+      border-radius: var(--btn-radius);
+      outline: none;
+    }
+
+    .modal-slabs-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--elec-space-3);
+      padding: 0 var(--elec-space-5) var(--elec-space-2);
+      color: var(--elec-text-muted);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .btn-small {
+      min-height: 2rem;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.76rem;
+    }
+
+    .modal-slabs-list {
+      display: grid;
+      gap: var(--elec-space-2);
+      padding: 0 var(--elec-space-5) var(--elec-space-4);
+    }
+
+    .modal-slab-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      gap: var(--elec-space-2);
+      align-items: center;
+    }
+
+    .remove-slab-btn {
+      width: 2.15rem;
+      height: 2.15rem;
+      border: 0;
+      border-radius: var(--btn-radius);
+      color: var(--expensive-color);
+      background: var(--elec-danger-bg);
+      cursor: pointer;
+    }
+
+    .modal-footer {
+      bottom: 0;
+      justify-content: flex-end;
+      padding: var(--elec-space-4) var(--elec-space-5);
+      border-top: 1px solid var(--elec-border);
+    }
+
+    .modal-open {
+      overflow: hidden;
+    }
+
+    .all-states-section {
+      padding: var(--elec-space-10) 0;
+      border-top: 1px solid var(--elec-border);
+      background: var(--elec-white);
+    }
+
+    .all-states-title {
+      margin: 0;
+      color: var(--elec-text);
+      font-size: 1.35rem;
+    }
+
+    .all-states-subtitle {
+      margin: var(--elec-space-1) 0 var(--elec-space-5);
+      color: var(--elec-text-muted);
+    }
+
+    .states-tabs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+      gap: var(--elec-space-2);
+    }
+
+    .state-tile {
+      min-height: 5.35rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--elec-space-1);
+      padding: var(--elec-space-3);
+      border: 1.5px solid var(--elec-border);
+      border-radius: var(--btn-radius);
+      color: var(--elec-text);
+      background: var(--elec-bg-soft);
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .state-tile:hover {
+      border-color: var(--elec-primary);
+      background: var(--elec-primary-light);
+      transform: translateY(-1px);
+    }
+
+    .state-tile.active-state {
+      border-color: var(--state-color);
+      color: var(--elec-white);
+      background: var(--state-color);
+      box-shadow: var(--elec-shadow-state);
+    }
+
+    .state-tile-code {
+      min-width: 2rem;
+      min-height: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: var(--state-color);
+      background: var(--state-light);
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+
+    .state-tile.active-state .state-tile-code {
+      color: var(--state-color);
+      background: var(--elec-white);
+    }
+
+    .state-tile-name {
+      color: inherit;
+      font-size: 0.82rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .state-tile-discom {
+      color: inherit;
+      opacity: 0.75;
+      font-size: 0.68rem;
+      line-height: 1.3;
+    }
+
+    .state-content-section {
+      padding: var(--elec-space-8) 0;
+      background: var(--elec-bg-soft);
+    }
+
+    .content-layout {
+      max-width: 880px;
+    }
+
+    .content-block {
+      margin-bottom: var(--elec-space-5);
+      padding: var(--elec-space-5);
+    }
+
+    .content-block h2 {
+      margin: 0 0 var(--elec-space-3);
+      color: var(--elec-text);
+      font-size: 1.2rem;
+    }
+
+    .content-block p,
+    .content-block li {
+      color: var(--elec-text-secondary);
+      font-size: 0.94rem;
+      line-height: 1.75;
+    }
+
+    .tariff-content-table tr.free-units td {
+      color: var(--cheap-color);
+      font-weight: 800;
+    }
+
+    .electricity-page .faq-item {
+      margin-bottom: var(--elec-space-2);
+    }
+
+    .electricity-page .faq-question {
+      border: 0;
+      background: transparent;
+      color: var(--elec-text);
+      font-family: var(--font);
+      text-align: left;
+    }
+
+    .electricity-page .faq-question::after {
+      color: var(--state-color);
+    }
+
+    .electricity-page .faq-answer {
+      color: var(--elec-text-secondary);
+    }
+
+    .calc-sidebar-col {
+      position: sticky;
+      top: 80px;
+    }
+
+    .sidebar-card {
+      margin-bottom: var(--elec-space-4);
+      padding: var(--elec-space-4);
+    }
+
+    .quick-ref-list,
+    .tariff-detail-list {
+      display: grid;
+      gap: var(--elec-space-2);
+      margin-top: var(--elec-space-3);
+    }
+
+    .quick-ref-item,
+    .tariff-detail-item {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--elec-space-3);
+      padding: 0.45rem 0.6rem;
+      border-radius: 0.45rem;
+      color: var(--elec-text-secondary);
+      background: var(--elec-bg-soft);
+      font-size: 0.82rem;
+    }
+
+    .tariff-detail-item strong {
+      color: var(--elec-text);
+    }
+
+    @media (min-width: 680px) {
+      .state-selector-wrap {
+        grid-template-columns: 14rem minmax(0, 1fr);
+        align-items: center;
+      }
+
+      .state-label {
+        margin: 0;
+      }
+
+      .compare-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+
+      .chart-container {
+        height: 15rem;
+      }
+    }
+
+    @media (min-width: 920px) {
+      .elec-hero {
+        padding: var(--elec-space-8) 0 var(--elec-space-6);
+      }
+
+      .calc-layout {
+        grid-template-columns: minmax(0, 1fr) 18rem;
+        gap: var(--elec-space-6);
+      }
+
+      .calc-sidebar-col {
+        display: block;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .modal-charges,
+      .modal-slab-row {
+        grid-template-columns: 1fr;
+      }
+
+      .remove-slab-btn {
+        width: 100%;
+      }
+
+      .breakdown-table {
+        font-size: 0.78rem;
+      }
+
+      .breakdown-table th,
+      .breakdown-table td {
+        padding: 0.45rem 0.32rem;
+      }
+    }
+  </style>
+      <script type="application/ld+json" id="schema-json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Andhra Pradesh Electricity Bill Calculator",
+    "url": "https://calculatorcity.in/india/electricity/andhra-pradesh/",
+    "applicationCategory": "CalculatorApplication",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}
+  }
+  </script>
+</head>
+<body class="india-page electricity-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../../index.html">&#8983; Calculatorcity</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../../index.html#math">Math</a>
+      <a href="../../index.html#finance">Finance</a>
+      <a href="../../index.html#unit">Unit</a>
+      <a href="../../index.html#health">Health</a>
+      <a href="../../index.html#datetime">Date &amp; Time</a>
+      <a href="../../index.html#science">Science</a>
+      <a class="nav-india" href="../../index.html#india">India</a>
+    </nav>
+    <div class="header-search">
+      <label class="sr-only" for="header-search">Search calculators</label>
+      <input id="header-search" class="search-input" type="search" data-search-input>
+    </div>
+    <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+    <a href="../../index.html#math">Math</a>
+    <a href="../../index.html#finance">Finance</a>
+    <a href="../../index.html#unit">Unit Converter</a>
+    <a href="../../index.html#health">Health &amp; Fitness</a>
+    <a href="../../index.html#datetime">Date &amp; Time</a>
+    <a href="../../index.html#science">Science &amp; Other</a>
+    <a href="../../index.html#india">India</a>
+  </nav>
+</header>
+
+<main id="main" role="main">
+  <section class="elec-hero">
+    <div class="page-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../../index.html">Home</a>
+        <span><a href="../../index.html#india">India Calculators</a></span>
+        <span id="breadcrumb-current">Electricity Bill Calculator</span>
+      </nav>
+      <p>
+        <span class="badge badge-india">India</span>
+        <span class="badge badge-india">Electricity</span>
+      </p>
+      <div class="hero-content">
+        <div class="hero-icon" aria-hidden="true"><i class="ti ti-bolt"></i></div>
+        <div>
+          <h1 id="page-h1">Andhra Pradesh Electricity Bill Calculator</h1>
+          <p id="page-subtitle" class="hero-subtitle">Calculate electricity bills for any Indian state or union territory with slab-wise energy charges, fixed charges, electricity duty, FAC, subsidy options, and DISCOM details.</p>
+        </div>
+      </div>
+      <div class="state-selector-wrap">
+        <label for="state-select" class="state-label"><i class="ti ti-map-pin" aria-hidden="true"></i> Select your state or UT</label>
+        <div class="state-select-wrapper">
+          <select id="state-select" class="state-select" aria-label="Select state or union territory">
+            <option value="">Choose your state or UT</option>
+          </select>
+          <span class="select-arrow" aria-hidden="true"><i class="ti ti-chevron-down"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="elec-calc-section">
+    <div class="page-container">
+      <div class="calc-layout">
+        <div class="calc-main-col">
+          <div class="state-info-bar" id="state-info-bar" hidden>
+            <div class="state-info-left">
+              <span class="state-code" id="state-code">IN</span>
+              <div>
+                <div class="state-info-name" id="state-info-name">State name</div>
+                <div class="state-info-discom" id="state-info-discom">DISCOM details</div>
+              </div>
+            </div>
+            <div class="state-info-badges" id="state-info-badges"></div>
+          </div>
+
+          <div class="discom-row" id="discom-row" hidden>
+            <label class="input-label">Select your DISCOM</label>
+            <div class="discom-tabs" id="discom-tabs" role="group" aria-label="Select DISCOM"></div>
+          </div>
+
+          <div class="category-row" id="category-row" hidden>
+            <label class="input-label">Consumer category</label>
+            <div class="category-tabs" id="category-tabs" role="group" aria-label="Consumer category"></div>
+          </div>
+
+          <div class="special-options" id="special-options" hidden></div>
+
+          <div class="calc-widget-box" id="calc-widget">
+            <div class="units-input-group">
+              <label for="units-input" class="input-label">
+                Units consumed (kWh)
+                <span class="label-hint">Use the monthly units from your meter reading or electricity bill.</span>
+              </label>
+              <div class="units-input-wrapper">
+                <input type="number" id="units-input" class="units-input" min="0" max="9999" step="1" inputmode="decimal" aria-label="Enter units consumed in kWh">
+                <span class="units-badge">kWh</span>
+              </div>
+              <input type="range" id="units-slider" class="units-slider" min="0" max="1000" value="0" step="10" aria-label="Adjust units with slider">
+              <div class="slider-labels" aria-hidden="true">
+                <span>0</span><span>250</span><span>500</span><span>750</span><span>1000+</span>
+              </div>
+            </div>
+
+            <div class="slab-preview" id="slab-preview" hidden>
+              <div class="slab-preview-title">Current slab rates</div>
+              <div class="slab-preview-list" id="slab-preview-list"></div>
+              <button class="edit-slabs-btn" id="edit-slabs-btn" type="button">
+                <i class="ti ti-pencil" aria-hidden="true"></i> Edit slabs
+              </button>
+            </div>
+
+            <button class="calc-btn-main" id="calc-btn" type="button" disabled>
+              <i class="ti ti-bolt" aria-hidden="true"></i>
+              Calculate bill
+            </button>
+            <p class="calc-hint" id="calc-hint">Select a state above to calculate.</p>
+          </div>
+
+          <div class="results-box" id="results-box" aria-live="polite" hidden>
+            <div class="result-total">
+              <div class="result-total-label">Total bill amount</div>
+              <div class="result-total-value" id="result-total">&#8377;0.00</div>
+              <div class="result-total-meta" id="result-meta">for 0 units</div>
+            </div>
+
+            <div class="slab-warning" id="slab-warning" hidden>
+              <i class="ti ti-alert-triangle" aria-hidden="true"></i>
+              <span id="slab-warning-text"></span>
+            </div>
+
+            <div class="results-panel">
+              <div class="breakdown-title">Bill breakdown</div>
+              <table class="breakdown-table" id="breakdown-table">
+                <thead>
+                  <tr>
+                    <th>Slab range</th>
+                    <th>Units</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody id="breakdown-tbody"></tbody>
+                <tfoot id="breakdown-tfoot"></tfoot>
+              </table>
+            </div>
+
+            <div class="results-panel">
+              <div class="chart-tabs" role="tablist" aria-label="Bill chart type">
+                <button class="chart-tab active" data-chart="pie" type="button">Pie chart</button>
+                <button class="chart-tab" data-chart="bar" type="button">Slab bar</button>
+              </div>
+              <div class="chart-container">
+                <canvas id="bill-chart" aria-label="Bill breakdown chart" role="img"></canvas>
+              </div>
+            </div>
+
+            <div class="compare-section">
+              <div class="section-mini-title"><i class="ti ti-calendar-stats" aria-hidden="true"></i> Compare with last month</div>
+              <div class="compare-row">
+                <div class="calc-input-group">
+                  <label for="last-month-units" class="input-label">Last month units</label>
+                  <input type="number" id="last-month-units" min="0" inputmode="decimal">
+                </div>
+                <button class="btn-secondary" id="compare-btn" type="button">Compare</button>
+              </div>
+              <div class="compare-result" id="compare-result" hidden></div>
+            </div>
+
+            <div class="state-compare-section">
+              <div class="section-mini-title"><i class="ti ti-map-search" aria-hidden="true"></i> Same units in other states</div>
+              <div class="state-compare-grid" id="state-compare-grid"></div>
+            </div>
+
+            <div class="tips-section">
+              <div class="section-mini-title"><i class="ti ti-bulb" aria-hidden="true"></i> Tips to reduce your bill</div>
+              <div class="tips-list" id="tips-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="calc-sidebar-col" aria-label="Electricity bill sidebar">
+          <div class="sidebar-card" id="tariff-card" hidden>
+            <div class="sidebar-card-title">Current tariff</div>
+            <div id="tariff-details"></div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-title">Quick reference</div>
+            <div class="quick-ref-list">
+              <div class="quick-ref-item"><span>1 unit</span><strong>1 kWh</strong></div>
+              <div class="quick-ref-item"><span>1.5 ton AC</span><strong>1.3-1.8/hr</strong></div>
+              <div class="quick-ref-item"><span>Refrigerator</span><strong>1-2/day</strong></div>
+              <div class="quick-ref-item"><span>LED bulb</span><strong>0.01/hr</strong></div>
+              <div class="quick-ref-item"><span>Ceiling fan</span><strong>0.04-0.08/hr</strong></div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-title">Related Indian calculators</div>
+            <div class="quick-ref-list">
+              <a href="../gst-calculator.html">GST Calculator</a>
+              <a href="../income-tax-calculator.html">Income Tax</a>
+              <a href="../home-loan-emi-calculator.html">Home Loan EMI</a>
+              <a href="../ap-electricity-bill-calculator.html">AP Electricity Bill</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title">Edit slab rates</h2>
+        <button class="modal-close" id="modal-close" type="button" aria-label="Close modal"><i class="ti ti-x" aria-hidden="true"></i></button>
+      </div>
+      <p class="modal-subtitle">Customise rates to match your bill. Changes apply only in this browser session.</p>
+      <div class="modal-charges">
+        <div class="modal-charge-row">
+          <label for="edit-fixed">Fixed charge (&#8377;/month)</label>
+          <input type="number" id="edit-fixed" min="0" step="0.01">
+        </div>
+        <div class="modal-charge-row">
+          <label for="edit-meter-rent">Meter rent (&#8377;/month)</label>
+          <input type="number" id="edit-meter-rent" min="0" step="0.01">
+        </div>
+        <div class="modal-charge-row">
+          <label for="edit-duty">Electricity duty (%)</label>
+          <input type="number" id="edit-duty" min="0" max="30" step="0.1">
+        </div>
+        <div class="modal-charge-row">
+          <label for="edit-fac">FAC per unit (&#8377;)</label>
+          <input type="number" id="edit-fac" min="0" step="0.01">
+        </div>
+      </div>
+      <div class="modal-slabs-header">
+        <span>Slab ranges</span>
+        <button class="btn-small" id="add-slab-btn" type="button">Add slab</button>
+      </div>
+      <div class="modal-slabs-list" id="modal-slabs-list"></div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="reset-slabs-btn" type="button">Reset</button>
+        <button class="btn-primary" id="save-slabs-btn" type="button">Save and recalculate</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="all-states-section">
+    <div class="page-container">
+      <h2 class="all-states-title">Electricity bill calculator - all states and UTs</h2>
+      <p class="all-states-subtitle">Choose any of India's 28 states or 8 union territories to load local tariff slabs, utilities, content, and FAQs.</p>
+      <div class="states-tabs-grid" id="states-tabs-grid"></div>
+    </div>
+  </section>
+
+  <section class="state-content-section">
+    <div class="page-container content-layout">
+      <div class="content-block" id="content-how-it-works">
+        <h2 id="content-h2-how">How is an electricity bill calculated in India?</h2>
+        <div id="content-how-text">
+          <p>Most Indian domestic electricity bills use telescopic slabs. The first block of units is charged at the first rate, the next block at the next rate, and so on. Fixed charge, meter rent, electricity duty, and monthly fuel adjustment charges are then added.</p>
+          <p>Select a state or union territory above to load local DISCOM names, slab ranges, subsidy options, bill breakdown, tariff table, and state-specific FAQs.</p>
+        </div>
+      </div>
+      <div class="content-block" id="content-tariff-block">
+        <h2 id="content-h2-tariff">India electricity tariff reference</h2>
+        <div id="content-tariff-table">
+          <p>Tariff tables appear here after you choose a state or union territory.</p>
+        </div>
+      </div>
+      <div class="content-block" id="content-state-specific">
+        <div id="content-state-text">
+          <h2>Important note</h2>
+          <p>This calculator is an estimate for planning and bill checking. Official bills can include arrears, security deposit adjustments, late fees, true-up charges, solar credits, subsidies, minimum charges, or tariff-order changes.</p>
+        </div>
+      </div>
+      <div class="content-block" id="content-faq">
+        <h2 id="content-h2-faq">Electricity bill calculator FAQs</h2>
+        <div class="faq-list" id="faq-list"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<hr class="footer-separator" aria-hidden="true">
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-main">
+      <nav class="footer-categories" aria-labelledby="footer-categories-heading">
+        <h3 id="footer-categories-heading" class="footer-links-label">CATEGORIES</h3>
+        <div class="footer-category-pills">
+          <a href="../../index.html#math"><i class="ti ti-math" aria-hidden="true"></i><span>Math Calculators</span></a>
+          <a href="../../index.html#finance"><i class="ti ti-coin-rupee" aria-hidden="true"></i><span>Finance Calculators</span></a>
+          <a href="../../index.html#unit"><i class="ti ti-ruler" aria-hidden="true"></i><span>Unit Converters</span></a>
+          <a href="../../index.html#health"><i class="ti ti-heartbeat" aria-hidden="true"></i><span>Health &amp; Fitness</span></a>
+          <a href="../../index.html#datetime"><i class="ti ti-calendar" aria-hidden="true"></i><span>Date &amp; Time</span></a>
+          <a href="../../index.html#science"><i class="ti ti-flask" aria-hidden="true"></i><span>Science &amp; Other</span></a>
+          <a href="../../index.html#india"><i class="ti ti-map-pin" aria-hidden="true"></i><span>India Calculators</span></a>
+        </div>
+      </nav>
+      <nav class="footer-popular" aria-labelledby="footer-popular-heading">
+        <h3 id="footer-popular-heading" class="footer-links-label">POPULAR CALCULATORS</h3>
+        <div class="footer-popular-links">
+          <a href="../../maths/percentage-calculator.html">Percentage</a>
+          <a href="../gst-calculator.html">GST</a>
+          <a href="../income-tax-calculator.html">Income Tax</a>
+          <a href="../home-loan-emi-calculator.html">Home Loan EMI</a>
+          <a href="../sip-calculator.html">SIP</a>
+          <a href="../fd-calculator.html">FD</a>
+          <a href="../../health-fitness/bmi-calculator.html">BMI</a>
+          <a href="../../date-time/age-calculator.html">Age</a>
+          <a href="../../finance/currency-converter.html">Currency</a>
+          <a href="../gold-price-calculator.html">Gold Price</a>
+          <a href="../../finance/loan-emi-calculator.html">Loan EMI</a>
+          <a href="../../finance/compound-interest-calculator.html">Compound Interest</a>
+          <a href="../ctc-salary-calculator.html">CTC Salary</a>
+          <a href="../pf-epf-calculator.html">EPF / PF</a>
+          <a href="../ppf-calculator.html">PPF</a>
+          <a href="../hra-exemption-calculator.html">HRA Exemption</a>
+          <a href="../tds-calculator.html">TDS</a>
+          <a href="../../finance/discount-calculator.html">Discount</a>
+          <a href="../cgpa-to-percentage-calculator.html">CGPA to %</a>
+          <a href="../stamp-duty-calculator.html">Stamp Duty</a>
+        </div>
+      </nav>
+      <div class="footer-brand-company">
+        <div class="footer-brand">
+          <span class="footer-brand-name">Calculatorcity</span>
+          <p class="footer-tagline">Free calculators running locally in your browser.</p>
+          <span class="footer-local-badge"><i class="ti ti-device-desktop" aria-hidden="true"></i><span>No data sent</span></span>
+        </div>
+        <hr class="footer-company-divider" aria-hidden="true">
+        <nav class="footer-company-links" aria-labelledby="footer-company-heading">
+          <h3 id="footer-company-heading" class="footer-links-label">COMPANY</h3>
+          <a href="../../company/about-us.html">About Us</a>
+          <a href="../../company/blogs.html">Blog</a>
+          <a href="../../company/contact-us.html">Contact Us</a>
+          <a href="../../company/help.html">Help</a>
+          <a href="../../company/privacy-policy.html">Privacy Policy</a>
+          <a href="../../company/terms-and-conditions.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Calculatorcity. All calculations run locally in your browser.</span>
+      <span class="footer-disclaimer">For education and planning only. Results are estimates - not financial, tax, legal, or medical advice. Verify with a qualified expert.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../../assets/js/main.js" defer></script>
+<script>
+(function() {
+  "use strict";
+
+  const CANONICAL_BASE = "https://calculatorcity.in/india/electricity/";
+  const STATIC_PAGE_STATE = "andhra-pradesh";
+  const RUPEE = "\u20b9";
+
+  const stateColors = {
+    "andhra-pradesh": "#f97316",
+    "telangana": "#f97316",
+    "karnataka": "#f97316",
+    "tamil-nadu": "#f97316",
+    "kerala": "#f97316",
+    "maharashtra": "#f97316",
+    "delhi": "#f97316",
+    "gujarat": "#f97316",
+    "default": "#f97316"
+  };
+
+  const stateGroups = [
+    { name: "South India", slugs: ["andhra-pradesh", "telangana", "karnataka", "tamil-nadu", "kerala", "goa"] },
+    { name: "West India", slugs: ["maharashtra", "gujarat", "rajasthan"] },
+    { name: "North India", slugs: ["delhi", "uttar-pradesh", "haryana", "punjab", "himachal-pradesh", "uttarakhand", "jammu-kashmir"] },
+    { name: "Central India", slugs: ["madhya-pradesh", "chhattisgarh"] },
+    { name: "East India", slugs: ["west-bengal", "bihar", "odisha", "jharkhand"] },
+    { name: "Northeast", slugs: ["assam", "arunachal-pradesh", "manipur", "meghalaya", "mizoram", "nagaland", "tripura", "sikkim"] },
+    { name: "Union Territories", slugs: ["andaman-nicobar", "chandigarh", "dadra-nagar-haveli", "ladakh", "lakshadweep", "puducherry"] }
+  ];
+
+  const STATE_RECORDS = [
+    {
+      slug: "andhra-pradesh", code: "AP", name: "Andhra Pradesh", type: "State", region: "South India", color: stateColors.default, regulator: "APERC",
+      utility: "APSPDCL / APEPDCL",
+      discoms: [
+        { id: "apspdcl", name: "APSPDCL", fullName: "AP Southern Power Distribution Company", districts: "Kurnool, Nellore, Prakasam, Chittoor, YSR Kadapa, Anantapur" },
+        { id: "apepdcl", name: "APEPDCL", fullName: "AP Eastern Power Distribution Company", districts: "Visakhapatnam, Vizianagaram, Srikakulam, East Godavari, West Godavari, Krishna, Guntur" }
+      ],
+      categories: [{ id: "domestic", name: "LT-1 Domestic", description: "Residential homes" }, { id: "commercial", name: "LT-2 Commercial", description: "Shops and offices" }, { id: "agricultural", name: "Agriculture", description: "Farm supply" }],
+      specialOptions: [{ id: "bpl", label: "BPL / ration card holder", hint: "Applies 30 free units before slab calculation.", type: "toggle", freeUnits: 30 }],
+      tariff: { fixedCharge: 75, meterRent: 25, duty: 6, fac: 0.15, slabs: [
+        { from: 0, to: 30, rate: 1.45, label: "0-30 units" },
+        { from: 30, to: 100, rate: 3.35, label: "31-100 units" },
+        { from: 100, to: 200, rate: 5.85, label: "101-200 units" },
+        { from: 200, to: 300, rate: 7.10, label: "201-300 units" },
+        { from: 300, to: 400, rate: 8.50, label: "301-400 units" },
+        { from: 400, to: 800, rate: 9.50, label: "401-800 units" },
+        { from: 800, to: Infinity, rate: 10.30, label: "Above 800 units" }
+      ] },
+      note: "AP uses two regional DISCOMs with a telescopic domestic structure. This calculator keeps APSPDCL and APEPDCL visible because the service company matters for bill payment and complaints.",
+      payment: "Pay through the APSPDCL or APEPDCL portal, BBPS apps, UPI apps, MeeSeva, or authorised customer service centres.",
+      seo: { title: "Andhra Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Andhra Pradesh electricity bill online. Supports APSPDCL, APEPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Andhra Pradesh Electricity Bill Calculator", subtitle: "Calculate your Andhra Pradesh electricity bill with APSPDCL, APEPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "What is the AP electricity bill for 150 units?", a: "With the default AP domestic tariff in this calculator, 150 units is about \u20b9727 including energy charges, FAC, fixed charge, meter rent, and 6% duty." },
+        { q: "Which company serves Andhra Pradesh electricity consumers?", a: "APSPDCL serves southern districts and APEPDCL serves northern and eastern districts. Domestic slabs are shown together here, but payment and service requests go to your DISCOM." }
+      ]
+    },
+    {
+      slug: "telangana", code: "TS", name: "Telangana", type: "State", region: "South India", color: stateColors.default, regulator: "TSERC",
+      utility: "TSSPDCL / TSNPDCL",
+      discoms: [
+        { id: "tsspdcl", name: "TSSPDCL", fullName: "TS Southern Power Distribution Company", districts: "Hyderabad, Rangareddy, Medak, Mahbubnagar, Nalgonda" },
+        { id: "tsnpdcl", name: "TSNPDCL", fullName: "TS Northern Power Distribution Company", districts: "Karimnagar, Warangal, Khammam, Nizamabad, Adilabad" }
+      ],
+      categories: [{ id: "domestic", name: "LT-1A Domestic", description: "Residential homes" }, { id: "commercial", name: "LT-2 Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 85, meterRent: 20, duty: 5, fac: 0.12, slabs: [
+        { from: 0, to: 50, rate: 1.45, label: "0-50 units" },
+        { from: 50, to: 100, rate: 3.25, label: "51-100 units" },
+        { from: 100, to: 200, rate: 5.50, label: "101-200 units" },
+        { from: 200, to: 300, rate: 6.60, label: "201-300 units" },
+        { from: 300, to: 400, rate: 7.50, label: "301-400 units" },
+        { from: 400, to: 800, rate: 9.00, label: "401-800 units" },
+        { from: 800, to: Infinity, rate: 9.50, label: "Above 800 units" }
+      ] },
+      note: "Telangana separates Hyderabad and southern districts under TSSPDCL while northern districts use TSNPDCL. Both are represented for bill lookup and customer-service clarity.",
+      payment: "Pay Telangana electricity bills through TSSPDCL or TSNPDCL portals, MeeSeva, BBPS, UPI apps, and bank apps.",
+      seo: { title: "Telangana Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Telangana electricity bill online. Supports TSSPDCL, TSNPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Telangana Electricity Bill Calculator", subtitle: "Calculate your Telangana electricity bill with TSSPDCL, TSNPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which DISCOM serves Hyderabad?", a: "Hyderabad is served by TSSPDCL. Northern Telangana areas such as Warangal and Karimnagar are generally served by TSNPDCL." },
+        { q: "How is Telangana electricity duty handled?", a: "The calculator applies the Telangana duty percentage on energy charges, then adds fixed charge, meter rent, and FAC for a planning estimate." }
+      ]
+    },
+    {
+      slug: "karnataka", code: "KA", name: "Karnataka", type: "State", region: "South India", color: stateColors.default, regulator: "KERC",
+      utility: "BESCOM / MESCOM / GESCOM / HESCOM / CESC",
+      discoms: [
+        { id: "bescom", name: "BESCOM", fullName: "Bangalore Electricity Supply Company", districts: "Bengaluru Urban, Bengaluru Rural, Tumkur, Kolar, Ramanagara" },
+        { id: "mescom", name: "MESCOM", fullName: "Mangalore Electricity Supply Company", districts: "Dakshina Kannada, Udupi, Shivamogga, Chikkamagaluru, Hassan" },
+        { id: "gescom", name: "GESCOM", fullName: "Gulbarga Electricity Supply Company", districts: "Kalaburagi, Bidar, Raichur, Koppal, Yadgir" },
+        { id: "hescom", name: "HESCOM", fullName: "Hubli Electricity Supply Company", districts: "Dharwad, Gadag, Belagavi, Vijayapura, Bagalkot" },
+        { id: "cesc", name: "CESC Mysuru", fullName: "Chamundeshwari Electricity Supply Corporation", districts: "Mysuru, Mandya, Chamarajanagar" }
+      ],
+      categories: [{ id: "domestic", name: "LT-2 Domestic", description: "Residential homes" }, { id: "commercial", name: "LT-3 Commercial", description: "Shops and offices" }],
+      specialOptions: [{ id: "gruha_jyothi", label: "Gruha Jyothi beneficiary", hint: "Applies 200 free units before slab calculation.", type: "toggle", freeUnits: 200 }],
+      tariff: { fixedCharge: 70, meterRent: 20, duty: 6, fac: 0.20, slabs: [
+        { from: 0, to: 30, rate: 3.15, label: "0-30 units" },
+        { from: 30, to: 100, rate: 6.00, label: "31-100 units" },
+        { from: 100, to: 200, rate: 7.10, label: "101-200 units" },
+        { from: 200, to: 500, rate: 7.85, label: "201-500 units" },
+        { from: 500, to: Infinity, rate: 8.30, label: "Above 500 units" }
+      ] },
+      note: "Karnataka has five DISCOMs, with BESCOM covering Bengaluru. The Gruha Jyothi toggle models the free-unit benefit separately from the base slab table.",
+      payment: "Pay through BESCOM, MESCOM, GESCOM, HESCOM, or CESC portals, BBPS apps, UPI apps, and Karnataka One centres.",
+      seo: { title: "Karnataka Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Karnataka electricity bill online. Supports BESCOM, MESCOM, HESCOM, GESCOM tariff slabs for domestic, commercial & agricultural connections.", h1: "Karnataka Electricity Bill Calculator", subtitle: "Calculate your Karnataka electricity bill with BESCOM, MESCOM, HESCOM, GESCOM tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which DISCOM covers Bengaluru?", a: "BESCOM covers Bengaluru and nearby districts. The other Karnataka DISCOMs cover coastal, northern, Hyderabad-Karnataka and Mysuru regions." },
+        { q: "How does the Gruha Jyothi toggle work?", a: "When enabled, this calculator deducts 200 free units before applying the slab calculation. Official eligibility and monthly credits must be confirmed on the DISCOM bill." }
+      ]
+    },
+    {
+      slug: "tamil-nadu", code: "TN", name: "Tamil Nadu", type: "State", region: "South India", color: stateColors.default, regulator: "TNERC",
+      utility: "TANGEDCO",
+      discoms: [{ id: "tangedco", name: "TANGEDCO", fullName: "Tamil Nadu Generation and Distribution Corporation", districts: "All Tamil Nadu districts" }],
+      categories: [{ id: "domestic", name: "LT-1A Domestic", description: "Residential homes" }, { id: "commercial", name: "LT Commercial", description: "Shops and offices" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 60, meterRent: 15, duty: 5, fac: 0.10, slabs: [
+        { from: 0, to: 100, rate: 0, label: "0-100 units (free)" },
+        { from: 100, to: 200, rate: 1.50, label: "101-200 units" },
+        { from: 200, to: 500, rate: 3.00, label: "201-500 units" },
+        { from: 500, to: Infinity, rate: 5.70, label: "Above 500 units" }
+      ] },
+      note: "Tamil Nadu's domestic estimate includes a zero-rate first slab, making low consumption households very different from most other large states.",
+      payment: "Pay TANGEDCO bills through the TNEB online portal, official app, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Tamil Nadu Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Tamil Nadu electricity bill online. Supports TANGEDCO tariff slabs for domestic, commercial and agricultural connections.", h1: "Tamil Nadu Electricity Bill Calculator", subtitle: "Calculate your Tamil Nadu electricity bill with TANGEDCO tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Are the first 100 units free in this Tamil Nadu estimate?", a: "Yes. The default Tamil Nadu slab table in this calculator sets the first 100 units to zero energy charge." },
+        { q: "Does Tamil Nadu have multiple DISCOMs?", a: "Tamil Nadu domestic consumers are shown under TANGEDCO, which covers the state for distribution and billing." }
+      ]
+    },
+    {
+      slug: "kerala", code: "KL", name: "Kerala", type: "State", region: "South India", color: stateColors.default, regulator: "KSERC",
+      utility: "KSEB",
+      discoms: [{ id: "kseb", name: "KSEB", fullName: "Kerala State Electricity Board", districts: "All Kerala districts" }],
+      categories: [{ id: "domestic", name: "LT-1 Domestic", description: "Residential homes" }, { id: "commercial", name: "LT-7 Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 55, meterRent: 20, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 40, rate: 2.45, label: "0-40 units" },
+        { from: 40, to: 80, rate: 3.75, label: "41-80 units" },
+        { from: 80, to: 150, rate: 5.50, label: "81-150 units" },
+        { from: 150, to: 300, rate: 6.50, label: "151-300 units" },
+        { from: 300, to: 500, rate: 7.10, label: "301-500 units" },
+        { from: 500, to: Infinity, rate: 7.60, label: "Above 500 units" }
+      ] },
+      note: "Kerala has a single statewide utility, so district selection is less important than units consumed and the applicable LT category.",
+      payment: "Pay through kseb.in, KSEB apps, BBPS, UPI apps, Akshaya centres, and authorised counters.",
+      seo: { title: "Kerala Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Kerala electricity bill online. Supports KSEB tariff slabs for domestic, commercial and agricultural connections.", h1: "Kerala Electricity Bill Calculator", subtitle: "Calculate your Kerala electricity bill with KSEB tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Does Kerala have multiple electricity DISCOMs?", a: "This calculator treats Kerala as a single-utility state under KSEB for domestic bill estimates." },
+        { q: "What matters most in a KSEB bill estimate?", a: "Monthly units, consumer category, fixed charge, duty, FAC, arrears, and any solar or subsidy credits can all affect the final KSEB bill." }
+      ]
+    },
+    {
+      slug: "maharashtra", code: "MH", name: "Maharashtra", type: "State", region: "West India", color: stateColors.default, regulator: "MERC",
+      utility: "MSEDCL / Mumbai DISCOMs",
+      discoms: [
+        { id: "msedcl", name: "MSEDCL", fullName: "Maharashtra State Electricity Distribution Company", districts: "Most of Maharashtra outside Mumbai" },
+        { id: "tata_power", name: "Tata Power", fullName: "Tata Power Mumbai Distribution", districts: "Parts of Mumbai" },
+        { id: "adani", name: "Adani Electricity", fullName: "Adani Electricity Mumbai", districts: "Mumbai suburbs" },
+        { id: "best", name: "BEST", fullName: "Brihanmumbai Electric Supply and Transport", districts: "South Mumbai island city" }
+      ],
+      categories: [{ id: "domestic", name: "R-1 Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Shops and offices" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 95, meterRent: 30, duty: 16, fac: 0.35, slabs: [
+        { from: 0, to: 100, rate: 3.46, label: "0-100 units" },
+        { from: 100, to: 300, rate: 7.11, label: "101-300 units" },
+        { from: 300, to: 500, rate: 10.31, label: "301-500 units" },
+        { from: 500, to: Infinity, rate: 11.99, label: "Above 500 units" }
+      ] },
+      note: "Maharashtra bills are sensitive to duty and FAC. Mumbai consumers should verify the selected licensee because Mumbai does not use the same service company as most of the state.",
+      payment: "Pay through Mahavitaran, Tata Power, Adani Electricity or BEST portals, BBPS, UPI apps, and authorised centres.",
+      seo: { title: "Maharashtra Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Maharashtra electricity bill online. Supports MSEDCL, Adani, TATA Power tariff slabs for domestic, commercial and agricultural connections.", h1: "Maharashtra Electricity Bill Calculator", subtitle: "Calculate your Maharashtra electricity bill with MSEDCL, Adani, TATA Power tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Does Mumbai use MSEDCL?", a: "Mumbai has Tata Power, Adani Electricity and BEST service areas. MSEDCL serves most of Maharashtra outside Mumbai." },
+        { q: "Why can Maharashtra bills feel high?", a: "The default Maharashtra estimate includes higher upper-slab rates, FAC, and a high duty percentage compared with many other states." }
+      ]
+    },
+    {
+      slug: "gujarat", code: "GJ", name: "Gujarat", type: "State", region: "West India", color: stateColors.default, regulator: "GERC",
+      utility: "DGVCL / PGVCL / MGVCL / UGVCL",
+      discoms: [
+        { id: "dgvcl", name: "DGVCL", fullName: "Dakshin Gujarat Vij Company", districts: "Surat, Valsad, Navsari, Tapi, Bharuch" },
+        { id: "pgvcl", name: "PGVCL", fullName: "Paschim Gujarat Vij Company", districts: "Rajkot, Junagadh, Bhavnagar, Jamnagar" },
+        { id: "mgvcl", name: "MGVCL", fullName: "Madhya Gujarat Vij Company", districts: "Vadodara, Anand, Kheda, Panchmahal" },
+        { id: "ugvcl", name: "UGVCL", fullName: "Uttar Gujarat Vij Company", districts: "Ahmedabad, Gandhinagar, Mehsana, Banaskantha" }
+      ],
+      categories: [{ id: "domestic", name: "LT-1 Domestic", description: "Residential homes" }, { id: "commercial", name: "LT Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 55, meterRent: 15, duty: 5, fac: 0.10, slabs: [
+        { from: 0, to: 50, rate: 2.75, label: "0-50 units" },
+        { from: 50, to: 200, rate: 4.55, label: "51-200 units" },
+        { from: 200, to: 400, rate: 5.85, label: "201-400 units" },
+        { from: 400, to: Infinity, rate: 7.00, label: "Above 400 units" }
+      ] },
+      note: "Gujarat uses four regional Vij companies. The domestic estimate is compact, so fixed charges and duty often drive differences for low-consumption homes.",
+      payment: "Pay through the DGVCL, PGVCL, MGVCL or UGVCL portal, BBPS, UPI apps, eGram centres, or authorised counters.",
+      seo: { title: "Gujarat Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Gujarat electricity bill online. Supports DGVCL, MGVCL, PGVCL, UGVCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Gujarat Electricity Bill Calculator", subtitle: "Calculate your Gujarat electricity bill with DGVCL, MGVCL, PGVCL, UGVCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which Gujarat DISCOM covers Ahmedabad?", a: "UGVCL covers many north Gujarat and Ahmedabad-area consumers, but the exact company should be checked on the bill." },
+        { q: "Does Gujarat have one tariff table?", a: "The calculator uses one domestic planning table while keeping the four DISCOM names visible for payment and service lookup." }
+      ]
+    },
+    {
+      slug: "delhi", code: "DL", name: "Delhi", type: "Union Territory", region: "North India", color: stateColors.default, regulator: "DERC",
+      utility: "BSES Rajdhani / BSES Yamuna / TPDDL",
+      discoms: [
+        { id: "bses_rajdhani", name: "BSES Rajdhani", fullName: "BSES Rajdhani Power Limited", districts: "South Delhi, West Delhi, Dwarka, Najafgarh" },
+        { id: "bses_yamuna", name: "BSES Yamuna", fullName: "BSES Yamuna Power Limited", districts: "East Delhi, Central Delhi, Shahdara" },
+        { id: "tpddl", name: "TPDDL", fullName: "Tata Power Delhi Distribution", districts: "North Delhi, Northwest Delhi, Rohini, Narela" }
+      ],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [{ id: "subsidy", label: "Claim Delhi government subsidy", hint: "\u20b9800 credit up to 200 units or \u20b9400 credit from 201-400 units.", type: "toggle", isSubsidy: true }],
+      tariff: { fixedCharge: 125, meterRent: 20, duty: 5, fac: 0.10, slabs: [
+        { from: 0, to: 200, rate: 3.00, label: "0-200 units" },
+        { from: 200, to: 400, rate: 4.50, label: "201-400 units" },
+        { from: 400, to: 800, rate: 6.50, label: "401-800 units" },
+        { from: 800, to: 1200, rate: 7.00, label: "801-1200 units" },
+        { from: 1200, to: Infinity, rate: 8.00, label: "Above 1200 units" }
+      ] },
+      note: "Delhi's subsidy toggle is separate from tariff slabs. It models common subsidy credits but official opt-in status must be checked on the BSES or TPDDL bill.",
+      payment: "Pay through BSES Delhi, Tata Power DDL, BBPS, UPI apps, and bank apps using the CA number on your bill.",
+      seo: { title: "Delhi Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Delhi electricity bill online. Supports BRPL, BYPL, TPDDL, NDMC tariff slabs for domestic, commercial and agricultural connections.", h1: "Delhi Electricity Bill Calculator", subtitle: "Calculate your Delhi electricity bill with BRPL, BYPL, TPDDL, NDMC tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "How does the Delhi subsidy toggle work?", a: "When enabled, the calculator subtracts \u20b9800 up to 200 units or \u20b9400 from 201 to 400 units after normal bill charges." },
+        { q: "Which Delhi DISCOM serves North Delhi?", a: "TPDDL generally serves North and Northwest Delhi. BSES Rajdhani covers south and west areas, while BSES Yamuna covers east and central areas." }
+      ]
+    },
+    {
+      slug: "uttar-pradesh", code: "UP", name: "Uttar Pradesh", type: "State", region: "North India", color: stateColors.default, regulator: "UPERC",
+      utility: "UPPCL DISCOMs",
+      discoms: [
+        { id: "pvvnl", name: "PVVNL", fullName: "Paschimanchal Vidyut Vitran Nigam", districts: "Meerut, Moradabad, Saharanpur, Noida, Ghaziabad" },
+        { id: "mvvnl", name: "MVVNL", fullName: "Madhyanchal Vidyut Vitran Nigam", districts: "Lucknow, Sitapur, Hardoi, Unnao, Raebareli" },
+        { id: "dvvnl", name: "DVVNL", fullName: "Dakshinanchal Vidyut Vitran Nigam", districts: "Agra, Mathura, Aligarh, Jhansi, Banda" },
+        { id: "puvvnl", name: "PuVVNL", fullName: "Purvanchal Vidyut Vitran Nigam", districts: "Varanasi, Gorakhpur, Prayagraj, Azamgarh" }
+      ],
+      categories: [{ id: "domestic", name: "LMV-1 Domestic", description: "Residential homes" }, { id: "commercial", name: "LMV-2 Commercial", description: "Commercial premises" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 80, meterRent: 20, duty: 5, fac: 0.12, slabs: [
+        { from: 0, to: 100, rate: 3.35, label: "0-100 units" },
+        { from: 100, to: 150, rate: 3.85, label: "101-150 units" },
+        { from: 150, to: 300, rate: 5.00, label: "151-300 units" },
+        { from: 300, to: 500, rate: 5.50, label: "301-500 units" },
+        { from: 500, to: Infinity, rate: 6.00, label: "Above 500 units" }
+      ] },
+      note: "UPPCL operates through regional subsidiaries. Your account number and DISCOM determine the correct payment portal and complaint channel.",
+      payment: "Pay through UPPCL online, regional DISCOM portals, BBPS, UPI apps, and authorised collection centres.",
+      seo: { title: "Uttar Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Uttar Pradesh electricity bill online. Supports PVVNL, DVVNL, MVVNL, PuVVNL slabs for domestic, commercial & agricultural connections.", h1: "Uttar Pradesh Electricity Bill Calculator", subtitle: "Calculate your Uttar Pradesh electricity bill with PVVNL, DVVNL, MVVNL, PuVVNL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which DISCOM covers Lucknow?", a: "Lucknow is generally served by MVVNL under the UPPCL structure." },
+        { q: "How are UP electricity slabs applied?", a: "This page uses telescopic slabs, so only units within each slab are charged at that slab's rate." }
+      ]
+    },
+    {
+      slug: "rajasthan", code: "RJ", name: "Rajasthan", type: "State", region: "West India", color: stateColors.default, regulator: "RERC",
+      utility: "JVVNL / AVVNL / JdVVNL",
+      discoms: [
+        { id: "jvvnl", name: "JVVNL", fullName: "Jaipur Vidyut Vitran Nigam", districts: "Jaipur, Kota, Bundi, Sawai Madhopur" },
+        { id: "avvnl", name: "AVVNL", fullName: "Ajmer Vidyut Vitran Nigam", districts: "Ajmer, Udaipur, Bhilwara, Chittorgarh" },
+        { id: "jdvvnl", name: "JdVVNL", fullName: "Jodhpur Vidyut Vitran Nigam", districts: "Jodhpur, Bikaner, Barmer, Jaisalmer" }
+      ],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "NDS", description: "Non-domestic supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 65, meterRent: 15, duty: 8, fac: 0.15, slabs: [
+        { from: 0, to: 50, rate: 3.55, label: "0-50 units" },
+        { from: 50, to: 150, rate: 5.50, label: "51-150 units" },
+        { from: 150, to: 300, rate: 7.25, label: "151-300 units" },
+        { from: 300, to: 500, rate: 7.85, label: "301-500 units" },
+        { from: 500, to: Infinity, rate: 8.75, label: "Above 500 units" }
+      ] },
+      note: "Rajasthan bills can rise sharply in summer because cooling loads push homes into higher slabs.",
+      payment: "Pay through the Rajasthan Energy portal, DISCOM sites, BBPS, UPI apps, e-Mitra, and authorised counters.",
+      seo: { title: "Rajasthan Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Rajasthan electricity bill online. Supports JVVNL, AVVNL, JdVVNL tariff slabs for domestic, commercial and agricultural connections.", h1: "Rajasthan Electricity Bill Calculator", subtitle: "Calculate your Rajasthan electricity bill with JVVNL, AVVNL, JdVVNL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which DISCOM covers Jaipur?", a: "Jaipur is generally served by JVVNL." },
+        { q: "Why is Rajasthan summer consumption high?", a: "Air cooling and air conditioning increase units in hot months, pushing usage into higher domestic slabs." }
+      ]
+    },
+    {
+      slug: "west-bengal", code: "WB", name: "West Bengal", type: "State", region: "East India", color: stateColors.default, regulator: "WBERC",
+      utility: "WBSEDCL / CESC",
+      discoms: [
+        { id: "wbsedcl", name: "WBSEDCL", fullName: "West Bengal State Electricity Distribution Company", districts: "Most of West Bengal outside CESC area" },
+        { id: "cesc", name: "CESC", fullName: "Calcutta Electric Supply Corporation", districts: "Kolkata, Howrah and surrounding licensed areas" }
+      ],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 60, meterRent: 15, duty: 7, fac: 0.12, slabs: [
+        { from: 0, to: 25, rate: 4.00, label: "0-25 units" },
+        { from: 25, to: 100, rate: 5.45, label: "26-100 units" },
+        { from: 100, to: 300, rate: 6.24, label: "101-300 units" },
+        { from: 300, to: Infinity, rate: 7.85, label: "Above 300 units" }
+      ] },
+      note: "Kolkata-area CESC consumers should check their bill carefully because CESC and WBSEDCL tariff structures can differ.",
+      payment: "Pay through WBSEDCL or CESC portals, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "West Bengal Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your West Bengal electricity bill online. Supports WBSEDCL, CESC tariff slabs for domestic, commercial and agricultural connections.", h1: "West Bengal Electricity Bill Calculator", subtitle: "Calculate your West Bengal electricity bill with WBSEDCL, CESC tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Does Kolkata use WBSEDCL?", a: "Many Kolkata-area consumers are served by CESC rather than WBSEDCL. Check your bill for the licensee name." },
+        { q: "What is the main West Bengal bill input?", a: "Monthly units are the primary driver, followed by duty, FAC, fixed charge, and whether you are in WBSEDCL or CESC territory." }
+      ]
+    },
+    {
+      slug: "madhya-pradesh", code: "MP", name: "Madhya Pradesh", type: "State", region: "Central India", color: stateColors.default, regulator: "MPERC",
+      utility: "MP DISCOMs",
+      discoms: [
+        { id: "west", name: "MPPKVVCL", fullName: "MP Paschim Kshetra Vidyut Vitaran Company", districts: "Indore, Ujjain, Ratlam, Dhar" },
+        { id: "central", name: "MPMKVVCL", fullName: "MP Madhya Kshetra Vidyut Vitaran Company", districts: "Bhopal, Vidisha, Guna, Betul" },
+        { id: "east", name: "MPPoKVVCL", fullName: "MP Poorv Kshetra Vidyut Vitaran Company", districts: "Jabalpur, Rewa, Sagar, Chhindwara" }
+      ],
+      categories: [{ id: "domestic", name: "LV-1 Domestic", description: "Residential homes" }, { id: "commercial", name: "LV-2 Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 70, meterRent: 20, duty: 7, fac: 0.12, slabs: [
+        { from: 0, to: 30, rate: 3.42, label: "0-30 units" },
+        { from: 30, to: 100, rate: 4.86, label: "31-100 units" },
+        { from: 100, to: 150, rate: 5.79, label: "101-150 units" },
+        { from: 150, to: 300, rate: 6.24, label: "151-300 units" },
+        { from: 300, to: 500, rate: 6.93, label: "301-500 units" },
+        { from: 500, to: Infinity, rate: 7.39, label: "Above 500 units" }
+      ] },
+      note: "Madhya Pradesh uses west, central and east distribution companies. The IVRS or consumer number normally identifies the correct zone.",
+      payment: "Pay through the MP electricity portal, zone DISCOM portals, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Madhya Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Madhya Pradesh electricity bill online. Supports MPMKVVCL, MPPKVVCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Madhya Pradesh Electricity Bill Calculator", subtitle: "Calculate your Madhya Pradesh electricity bill with MPMKVVCL, MPPKVVCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which DISCOM covers Indore?", a: "Indore is generally served by MPPKVVCL, the west zone company." },
+        { q: "Which DISCOM covers Bhopal?", a: "Bhopal is generally served by MPMKVVCL, the central zone company." }
+      ]
+    },
+    {
+      slug: "haryana", code: "HR", name: "Haryana", type: "State", region: "North India", color: stateColors.default, regulator: "HERC",
+      utility: "DHBVNL / UHBVNL",
+      discoms: [
+        { id: "dhbvnl", name: "DHBVNL", fullName: "Dakshin Haryana Bijli Vitran Nigam", districts: "Gurugram, Faridabad, Palwal, Rewari, Bhiwani" },
+        { id: "uhbvnl", name: "UHBVNL", fullName: "Uttar Haryana Bijli Vitran Nigam", districts: "Ambala, Panchkula, Karnal, Panipat, Rohtak, Hisar" }
+      ],
+      categories: [{ id: "domestic", name: "DS Domestic", description: "Residential homes" }, { id: "commercial", name: "NDS", description: "Commercial premises" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 80, meterRent: 20, duty: 5, fac: 0.10, slabs: [
+        { from: 0, to: 50, rate: 2.50, label: "0-50 units" },
+        { from: 50, to: 100, rate: 4.00, label: "51-100 units" },
+        { from: 100, to: 250, rate: 5.50, label: "101-250 units" },
+        { from: 250, to: 500, rate: 6.50, label: "251-500 units" },
+        { from: 500, to: Infinity, rate: 7.10, label: "Above 500 units" }
+      ] },
+      note: "DHBVNL covers the southern industrial belt including Gurugram and Faridabad, while UHBVNL covers north Haryana.",
+      payment: "Pay through DHBVNL or UHBVNL portals, BBPS, UPI apps, and authorised bill collection points.",
+      seo: { title: "Haryana Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Haryana electricity bill online. Supports DHBVN, UHBVN tariff slabs for domestic, commercial and agricultural connections.", h1: "Haryana Electricity Bill Calculator", subtitle: "Calculate your Haryana electricity bill with DHBVN, UHBVN tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which DISCOM serves Gurugram?", a: "Gurugram is generally served by DHBVNL." },
+        { q: "Which DISCOM serves Ambala and Panchkula?", a: "Ambala and Panchkula are generally served by UHBVNL." }
+      ]
+    },
+    {
+      slug: "punjab", code: "PB", name: "Punjab", type: "State", region: "North India", color: stateColors.default, regulator: "PSERC",
+      utility: "PSPCL",
+      discoms: [{ id: "pspcl", name: "PSPCL", fullName: "Punjab State Power Corporation", districts: "All Punjab districts" }],
+      categories: [{ id: "domestic", name: "DS Domestic", description: "Residential homes" }, { id: "commercial", name: "NRS", description: "Non-residential supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 90, meterRent: 20, duty: 13, fac: 0.15, slabs: [
+        { from: 0, to: 100, rate: 3.49, label: "0-100 units" },
+        { from: 100, to: 300, rate: 5.29, label: "101-300 units" },
+        { from: 300, to: 500, rate: 6.49, label: "301-500 units" },
+        { from: 500, to: Infinity, rate: 7.29, label: "Above 500 units" }
+      ] },
+      note: "Punjab domestic bills are shown under PSPCL. Agricultural supply and subsidy cases follow separate rules from ordinary domestic consumers.",
+      payment: "Pay through PSPCL, BBPS, UPI apps, bank apps, and authorised collection centres using your account number.",
+      seo: { title: "Punjab Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Punjab electricity bill online. Supports PSPCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Punjab Electricity Bill Calculator", subtitle: "Calculate your Punjab electricity bill with PSPCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Does PSPCL serve all of Punjab?", a: "For domestic distribution, PSPCL is shown as the statewide utility in this calculator." },
+        { q: "Are farm connections covered here?", a: "No. The calculator focuses on domestic estimates; agricultural connections can have separate subsidy treatment." }
+      ]
+    },
+    {
+      slug: "bihar", code: "BR", name: "Bihar", type: "State", region: "East India", color: stateColors.default, regulator: "BERC",
+      utility: "NBPDCL / SBPDCL",
+      discoms: [
+        { id: "nbpdcl", name: "NBPDCL", fullName: "North Bihar Power Distribution Company", districts: "Muzaffarpur, Darbhanga, Sitamarhi, Madhubani, Purnea" },
+        { id: "sbpdcl", name: "SBPDCL", fullName: "South Bihar Power Distribution Company", districts: "Patna, Gaya, Nalanda, Aurangabad, Munger" }
+      ],
+      categories: [{ id: "domestic", name: "DS-I Domestic", description: "Residential homes" }, { id: "commercial", name: "NDS", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 60, meterRent: 15, duty: 5, fac: 0.10, slabs: [
+        { from: 0, to: 100, rate: 4.20, label: "0-100 units" },
+        { from: 100, to: 200, rate: 5.50, label: "101-200 units" },
+        { from: 200, to: 400, rate: 6.10, label: "201-400 units" },
+        { from: 400, to: Infinity, rate: 7.00, label: "Above 400 units" }
+      ] },
+      note: "North and south Bihar use different companies, so your consumer number should be checked against NBPDCL or SBPDCL before payment.",
+      payment: "Pay through NBPDCL or SBPDCL portals, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Bihar Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Bihar electricity bill online. Supports NBPDCL, SBPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Bihar Electricity Bill Calculator", subtitle: "Calculate your Bihar electricity bill with NBPDCL, SBPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which Bihar DISCOM covers Patna?", a: "Patna-area service depends on the specific division, but many south Bihar areas are under SBPDCL." },
+        { q: "How do I know whether I am NBPDCL or SBPDCL?", a: "Check the company name printed on the bill or use the consumer number on the official Bihar power portal." }
+      ]
+    },
+    {
+      slug: "odisha", code: "OD", name: "Odisha", type: "State", region: "East India", color: stateColors.default, regulator: "OERC",
+      utility: "Tata Power Odisha DISCOMs",
+      discoms: [
+        { id: "tpcodl", name: "TPCODL", fullName: "Tata Power Central Odisha Distribution", districts: "Bhubaneswar, Cuttack, Puri, Khordha" },
+        { id: "tpnodl", name: "TPNODL", fullName: "Tata Power Northern Odisha Distribution", districts: "Balasore, Bhadrak, Mayurbhanj, Keonjhar" },
+        { id: "tpwodl", name: "TPWODL", fullName: "Tata Power Western Odisha Distribution", districts: "Sambalpur, Bolangir, Kalahandi" },
+        { id: "tpsodl", name: "TPSODL", fullName: "Tata Power Southern Odisha Distribution", districts: "Ganjam, Koraput, Rayagada, Malkangiri" }
+      ],
+      categories: [{ id: "domestic", name: "LT Domestic", description: "Residential homes" }, { id: "commercial", name: "General Purpose", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 60, meterRent: 15, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 50, rate: 2.00, label: "0-50 units" },
+        { from: 50, to: 200, rate: 3.50, label: "51-200 units" },
+        { from: 200, to: 400, rate: 5.50, label: "201-400 units" },
+        { from: 400, to: Infinity, rate: 6.50, label: "Above 400 units" }
+      ] },
+      note: "Odisha has four Tata Power distribution companies covering central, north, west and south service areas.",
+      payment: "Pay through the respective Tata Power Odisha DISCOM portal, BBPS, UPI apps, and authorised collection counters.",
+      seo: { title: "Odisha Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Odisha electricity bill online. Supports TPNODL, TPSODL, TPWODL tariff slabs for domestic, commercial and agricultural connections.", h1: "Odisha Electricity Bill Calculator", subtitle: "Calculate your Odisha electricity bill with TPNODL, TPSODL, TPWODL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which Odisha DISCOM covers Bhubaneswar?", a: "Bhubaneswar and Cuttack are generally served by TPCODL." },
+        { q: "Are Odisha's old DISCOM names still used?", a: "Older names such as CESU, NESCO, WESCO and SOUTHCO are often remembered locally, but Tata Power Odisha names are used here." }
+      ]
+    },
+    {
+      slug: "himachal-pradesh", code: "HP", name: "Himachal Pradesh", type: "State", region: "North India", color: stateColors.default, regulator: "HPERC",
+      utility: "HPSEBL",
+      discoms: [{ id: "hpsebl", name: "HPSEBL", fullName: "Himachal Pradesh State Electricity Board", districts: "All Himachal Pradesh districts" }],
+      categories: [{ id: "domestic", name: "Domestic Supply", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial premises" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 40, meterRent: 10, duty: 5, fac: 0.05, slabs: [
+        { from: 0, to: 60, rate: 0, label: "0-60 units (free)" },
+        { from: 60, to: 125, rate: 2.50, label: "61-125 units" },
+        { from: 125, to: 300, rate: 3.60, label: "126-300 units" },
+        { from: 300, to: Infinity, rate: 4.65, label: "Above 300 units" }
+      ] },
+      note: "Himachal Pradesh has low domestic rates in this estimate, reflecting a hydro-rich hill-state profile.",
+      payment: "Pay through HPSEBL online, BBPS, UPI apps, Lokmitra Kendras, and authorised counters.",
+      seo: { title: "Himachal Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Himachal Pradesh electricity bill online. Supports HPSEBL tariff slabs for domestic, commercial and agricultural connections.", h1: "Himachal Pradesh Electricity Bill Calculator", subtitle: "Calculate your Himachal Pradesh electricity bill with HPSEBL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Why is the Himachal Pradesh estimate low for small bills?", a: "The default HP slab table includes a zero-rate first slab and low upper rates compared with many larger states." },
+        { q: "Does HPSEBL cover Shimla?", a: "Yes. HPSEBL is shown as the statewide distribution utility for Himachal Pradesh." }
+      ]
+    },
+    {
+      slug: "goa", code: "GA", name: "Goa", type: "State", region: "South India", color: stateColors.default, regulator: "JERC",
+      utility: "Goa Electricity Department",
+      discoms: [{ id: "goa_ed", name: "Goa ED", fullName: "Electricity Department, Government of Goa", districts: "All Goa districts" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 60, meterRent: 15, duty: 5, fac: 0.10, slabs: [
+        { from: 0, to: 30, rate: 1.45, label: "0-30 units" },
+        { from: 30, to: 100, rate: 2.60, label: "31-100 units" },
+        { from: 100, to: 200, rate: 3.50, label: "101-200 units" },
+        { from: 200, to: 400, rate: 4.80, label: "201-400 units" },
+        { from: 400, to: Infinity, rate: 6.25, label: "Above 400 units" }
+      ] },
+      note: "Goa's domestic calculator is shown separately from neighbouring Maharashtra and Karnataka because the UT-style regulator and tariff structure differ.",
+      payment: "Pay through the Goa Electricity Department portal, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Goa Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Goa electricity bill online. Supports Goa Electricity Department tariff slabs for domestic, commercial and agricultural connections.", h1: "Goa Electricity Bill Calculator", subtitle: "Calculate your Goa electricity bill with Goa Electricity Department tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Is Goa electricity tariff the same as Maharashtra?", a: "No. Goa uses its own tariff structure and regulator, so it should be calculated separately." },
+        { q: "Does Goa have solar net metering?", a: "Goa supports rooftop solar and net metering in applicable cases; solar credits must be checked against the official bill." }
+      ]
+    },
+    {
+      slug: "jharkhand", code: "JH", name: "Jharkhand", type: "State", region: "East India", color: stateColors.default, regulator: "JSERC",
+      utility: "JBVNL",
+      discoms: [{ id: "jbvnl", name: "JBVNL", fullName: "Jharkhand Bijli Vitran Nigam", districts: "All Jharkhand districts" }],
+      categories: [{ id: "domestic", name: "Domestic Service", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial premises" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 55, meterRent: 15, duty: 5, fac: 0.10, slabs: [
+        { from: 0, to: 100, rate: 3.25, label: "0-100 units" },
+        { from: 100, to: 200, rate: 4.50, label: "101-200 units" },
+        { from: 200, to: 400, rate: 5.75, label: "201-400 units" },
+        { from: 400, to: Infinity, rate: 6.50, label: "Above 400 units" }
+      ] },
+      note: "Jharkhand is mineral and industry heavy, but this page focuses on household domestic supply under JBVNL.",
+      payment: "Pay through JBVNL online, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Jharkhand Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Jharkhand electricity bill online. Supports JBVNL tariff slabs for domestic, commercial and agricultural connections.", h1: "Jharkhand Electricity Bill Calculator", subtitle: "Calculate your Jharkhand electricity bill with JBVNL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which utility serves Ranchi?", a: "JBVNL is shown as the distribution utility for Jharkhand domestic consumers, including Ranchi." },
+        { q: "Does this include industrial Jharkhand tariffs?", a: "No. The calculator is optimised for domestic estimates; industrial categories need official tariff schedules." }
+      ]
+    },
+    {
+      slug: "chhattisgarh", code: "CG", name: "Chhattisgarh", type: "State", region: "Central India", color: stateColors.default, regulator: "CSERC",
+      utility: "CSPDCL",
+      discoms: [{ id: "cspdcl", name: "CSPDCL", fullName: "Chhattisgarh State Power Distribution Company", districts: "All Chhattisgarh districts" }],
+      categories: [{ id: "domestic", name: "LV-1 Domestic", description: "Residential homes" }, { id: "commercial", name: "LV-2 Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 55, meterRent: 15, duty: 6, fac: 0.10, slabs: [
+        { from: 0, to: 30, rate: 3.45, label: "0-30 units" },
+        { from: 30, to: 100, rate: 4.75, label: "31-100 units" },
+        { from: 100, to: 200, rate: 5.85, label: "101-200 units" },
+        { from: 200, to: 400, rate: 6.60, label: "201-400 units" },
+        { from: 400, to: Infinity, rate: 7.50, label: "Above 400 units" }
+      ] },
+      note: "Chhattisgarh is a power-generating state, but household bills still depend on regulated slab tariffs and duty.",
+      payment: "Pay through CSPDCL online, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Chhattisgarh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Chhattisgarh electricity bill online. Supports CSPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Chhattisgarh Electricity Bill Calculator", subtitle: "Calculate your Chhattisgarh electricity bill with CSPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Does CSPDCL cover Raipur?", a: "Yes. CSPDCL is shown as the statewide distribution utility for domestic consumers." },
+        { q: "Why include FAC for Chhattisgarh?", a: "Fuel adjustment charges can appear separately on bills, so the calculator includes an editable FAC field through the slab editor." }
+      ]
+    },
+    {
+      slug: "assam", code: "AS", name: "Assam", type: "State", region: "Northeast", color: stateColors.default, regulator: "AERC",
+      utility: "APDCL",
+      discoms: [{ id: "apdcl", name: "APDCL", fullName: "Assam Power Distribution Company", districts: "All Assam districts" }],
+      categories: [{ id: "domestic", name: "Domestic-A", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial premises" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 50, meterRent: 15, duty: 5, fac: 0.10, slabs: [
+        { from: 0, to: 30, rate: 2.80, label: "0-30 units" },
+        { from: 30, to: 100, rate: 4.30, label: "31-100 units" },
+        { from: 100, to: 200, rate: 5.70, label: "101-200 units" },
+        { from: 200, to: Infinity, rate: 6.50, label: "Above 200 units" }
+      ] },
+      note: "Assam domestic bills are shown under APDCL. Terrain, distribution losses, and seasonal demand can affect the billing context.",
+      payment: "Pay through APDCL online, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Assam Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Assam electricity bill online. Supports APDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Assam Electricity Bill Calculator", subtitle: "Calculate your Assam electricity bill with APDCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which utility serves Guwahati?", a: "APDCL is shown as the distribution utility for domestic consumers in Assam, including Guwahati." },
+        { q: "Is APDCL different from ASEB?", a: "ASEB was restructured, and APDCL handles distribution functions shown in this calculator." }
+      ]
+    },
+    {
+      slug: "uttarakhand", code: "UK", name: "Uttarakhand", type: "State", region: "North India", color: stateColors.default, regulator: "UERC",
+      utility: "UPCL",
+      discoms: [{ id: "upcl", name: "UPCL", fullName: "Uttarakhand Power Corporation", districts: "All Uttarakhand districts" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 50, meterRent: 15, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 100, rate: 3.35, label: "0-100 units" },
+        { from: 100, to: 200, rate: 4.50, label: "101-200 units" },
+        { from: 200, to: 400, rate: 5.50, label: "201-400 units" },
+        { from: 400, to: Infinity, rate: 6.50, label: "Above 400 units" }
+      ] },
+      note: "Uttarakhand is a hill state with hydro resources, but domestic bills are still calculated through UPCL slab and fixed-charge logic.",
+      payment: "Pay through UPCL online, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Uttarakhand Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Uttarakhand electricity bill online. Supports UPCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Uttarakhand Electricity Bill Calculator", subtitle: "Calculate your Uttarakhand electricity bill with UPCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Does UPCL cover Dehradun?", a: "Yes. UPCL is shown as the statewide distribution utility for Uttarakhand domestic consumers." },
+        { q: "Are hill-area heating loads included?", a: "The calculator estimates based on units only, so winter heating appliances are reflected through higher kWh consumption." }
+      ]
+    },
+    {
+      slug: "jammu-kashmir", code: "JK", name: "Jammu & Kashmir", type: "Union Territory", region: "North India", color: stateColors.default, regulator: "JERC",
+      utility: "JKPDD",
+      discoms: [{ id: "jkpdd", name: "JKPDD", fullName: "Jammu and Kashmir Power Development Department", districts: "Jammu and Kashmir districts" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 50, meterRent: 15, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 50, rate: 1.00, label: "0-50 units" },
+        { from: 50, to: 200, rate: 2.00, label: "51-200 units" },
+        { from: 200, to: 400, rate: 3.00, label: "201-400 units" },
+        { from: 400, to: Infinity, rate: 4.50, label: "Above 400 units" }
+      ] },
+      note: "Jammu & Kashmir uses a heavily subsidised domestic estimate here. Cold-weather consumption can still make monthly units high.",
+      payment: "Pay through JKPDD portals, BBPS, UPI apps, and local payment counters.",
+      seo: { title: "Jammu & Kashmir Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Jammu & Kashmir electricity bill online. Supports JKPDD, JPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Jammu & Kashmir Electricity Bill Calculator", subtitle: "Calculate your Jammu & Kashmir electricity bill with JKPDD, JPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Is Jammu & Kashmir electricity cheap in this estimate?", a: "The default slab table uses low domestic rates, but actual bills can include local adjustments and high winter units." },
+        { q: "Is Ladakh included under Jammu & Kashmir here?", a: "No. Ladakh has a separate calculator entry after becoming a separate union territory." }
+      ]
+    },
+    {
+      slug: "manipur", code: "MN", name: "Manipur", type: "State", region: "Northeast", color: stateColors.default, regulator: "Joint ERC",
+      utility: "MSPDCL",
+      discoms: [{ id: "mspdcl", name: "MSPDCL", fullName: "Manipur State Power Distribution Company", districts: "All Manipur districts" }],
+      categories: [{ id: "domestic", name: "LT Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 40, meterRent: 10, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 30, rate: 1.85, label: "0-30 units" },
+        { from: 30, to: 100, rate: 3.25, label: "31-100 units" },
+        { from: 100, to: 200, rate: 4.75, label: "101-200 units" },
+        { from: 200, to: Infinity, rate: 6.00, label: "Above 200 units" }
+      ] },
+      note: "Manipur bills are shown under MSPDCL with a compact low-to-mid consumption domestic slab table.",
+      payment: "Pay through MSPDCL channels, BBPS where supported, UPI apps, and authorised counters.",
+      seo: { title: "Manipur Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Manipur electricity bill online. Supports MSPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Manipur Electricity Bill Calculator", subtitle: "Calculate your Manipur electricity bill with MSPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which utility serves Imphal?", a: "MSPDCL is shown as the distribution utility for Manipur domestic consumers, including Imphal." },
+        { q: "Why are Northeast bill estimates state-specific?", a: "Each northeastern state has its own utility, geography, procurement costs, and tariff orders." }
+      ]
+    },
+    {
+      slug: "meghalaya", code: "ML", name: "Meghalaya", type: "State", region: "Northeast", color: stateColors.default, regulator: "MSERC",
+      utility: "MePDCL",
+      discoms: [{ id: "mepdcl", name: "MePDCL", fullName: "Meghalaya Power Distribution Corporation", districts: "All Meghalaya districts" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 40, meterRent: 10, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 30, rate: 2.25, label: "0-30 units" },
+        { from: 30, to: 100, rate: 3.75, label: "31-100 units" },
+        { from: 100, to: 200, rate: 5.00, label: "101-200 units" },
+        { from: 200, to: Infinity, rate: 6.25, label: "Above 200 units" }
+      ] },
+      note: "Meghalaya's hydro resources and terrain both matter for electricity planning, but this calculator focuses on domestic slab billing.",
+      payment: "Pay through MePDCL channels, BBPS where supported, UPI apps, and authorised counters.",
+      seo: { title: "Meghalaya Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Meghalaya electricity bill online. Supports MePDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Meghalaya Electricity Bill Calculator", subtitle: "Calculate your Meghalaya electricity bill with MePDCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which utility serves Shillong?", a: "MePDCL is shown as the distribution utility for Meghalaya domestic consumers, including Shillong." },
+        { q: "Does Meghalaya use one statewide domestic utility?", a: "This calculator models Meghalaya domestic bills under MePDCL." }
+      ]
+    },
+    {
+      slug: "mizoram", code: "MZ", name: "Mizoram", type: "State", region: "Northeast", color: stateColors.default, regulator: "Joint ERC",
+      utility: "Power & Electricity Department",
+      discoms: [{ id: "mizoram_ped", name: "Mizoram P&E", fullName: "Power and Electricity Department, Government of Mizoram", districts: "All Mizoram districts" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 35, meterRent: 10, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 30, rate: 2.10, label: "0-30 units" },
+        { from: 30, to: 100, rate: 3.50, label: "31-100 units" },
+        { from: 100, to: Infinity, rate: 5.00, label: "Above 100 units" }
+      ] },
+      note: "Mizoram's hill geography makes distribution costs different from mainland states; the calculator keeps the slab table simple and editable.",
+      payment: "Pay through state electricity offices, supported online channels, BBPS where available, and authorised counters.",
+      seo: { title: "Mizoram Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Mizoram electricity bill online. Supports Power & Electricity Department tariff slabs for domestic, commercial and agricultural connections.", h1: "Mizoram Electricity Bill Calculator", subtitle: "Calculate your Mizoram electricity bill with Power & Electricity Department tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which utility serves Aizawl?", a: "The Power and Electricity Department, Government of Mizoram is shown for domestic supply." },
+        { q: "Can Mizoram slab rates be edited?", a: "Yes. Use Edit slabs to match the latest bill or tariff order." }
+      ]
+    },
+    {
+      slug: "nagaland", code: "NL", name: "Nagaland", type: "State", region: "Northeast", color: stateColors.default, regulator: "Joint ERC",
+      utility: "Department of Electricity Nagaland",
+      discoms: [{ id: "doe_nagaland", name: "Nagaland DoE", fullName: "Department of Electricity, Government of Nagaland", districts: "All Nagaland districts" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 35, meterRent: 10, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 30, rate: 2.00, label: "0-30 units" },
+        { from: 30, to: 100, rate: 3.25, label: "31-100 units" },
+        { from: 100, to: Infinity, rate: 5.00, label: "Above 100 units" }
+      ] },
+      note: "Nagaland domestic estimates are shown under the state electricity department with a three-slab household structure.",
+      payment: "Pay through Department of Electricity channels, BBPS where supported, UPI apps, and authorised counters.",
+      seo: { title: "Nagaland Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Nagaland electricity bill online. Supports Department of Power tariff slabs for domestic, commercial and agricultural connections.", h1: "Nagaland Electricity Bill Calculator", subtitle: "Calculate your Nagaland electricity bill with Department of Power tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which utility serves Kohima?", a: "The Department of Electricity, Government of Nagaland is shown for Kohima and other districts." },
+        { q: "Why is the Nagaland table short?", a: "The default domestic estimate uses fewer slabs, and the slab editor lets you match your latest bill if needed." }
+      ]
+    },
+    {
+      slug: "arunachal-pradesh", code: "AR", name: "Arunachal Pradesh", type: "State", region: "Northeast", color: stateColors.default, regulator: "Joint ERC",
+      utility: "Department of Power Arunachal Pradesh",
+      discoms: [{ id: "ar_power", name: "Arunachal Power", fullName: "Department of Power, Government of Arunachal Pradesh", districts: "All Arunachal Pradesh districts" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 30, meterRent: 10, duty: 5, fac: 0.05, slabs: [
+        { from: 0, to: 30, rate: 1.75, label: "0-30 units" },
+        { from: 30, to: 100, rate: 2.90, label: "31-100 units" },
+        { from: 100, to: Infinity, rate: 4.50, label: "Above 100 units" }
+      ] },
+      note: "Arunachal Pradesh has major hydropower potential and remote distribution terrain, so final bills should be reconciled with the local utility bill.",
+      payment: "Pay through state power department channels, supported online modes, and authorised local offices.",
+      seo: { title: "Arunachal Pradesh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Arunachal Pradesh electricity bill online. Supports APPDCL tariff slabs for domestic, commercial and agricultural connections.", h1: "Arunachal Pradesh Electricity Bill Calculator", subtitle: "Calculate your Arunachal Pradesh electricity bill with APPDCL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which utility serves Itanagar?", a: "The state Department of Power is shown for Arunachal Pradesh domestic consumers." },
+        { q: "Why are Arunachal rates state-specific?", a: "Remote terrain, hydro potential, and local subsidy policy make a separate calculator useful." }
+      ]
+    },
+    {
+      slug: "tripura", code: "TR", name: "Tripura", type: "State", region: "Northeast", color: stateColors.default, regulator: "TERC",
+      utility: "TSECL",
+      discoms: [{ id: "tsecl", name: "TSECL", fullName: "Tripura State Electricity Corporation", districts: "All Tripura districts" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 45, meterRent: 10, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 30, rate: 2.60, label: "0-30 units" },
+        { from: 30, to: 100, rate: 4.10, label: "31-100 units" },
+        { from: 100, to: 200, rate: 5.50, label: "101-200 units" },
+        { from: 200, to: Infinity, rate: 6.50, label: "Above 200 units" }
+      ] },
+      note: "Tripura's domestic bill estimate is shown under TSECL, with natural-gas and regional grid context affecting broader power costs.",
+      payment: "Pay through TSECL online, BBPS where supported, UPI apps, and authorised counters.",
+      seo: { title: "Tripura Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Tripura electricity bill online. Supports TSECL tariff slabs for domestic, commercial and agricultural connections.", h1: "Tripura Electricity Bill Calculator", subtitle: "Calculate your Tripura electricity bill with TSECL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Does TSECL cover Agartala?", a: "Yes. TSECL is shown as the domestic distribution utility for Tripura." },
+        { q: "Are gas-based generation effects included?", a: "Only through the editable FAC estimate. Official fuel adjustments must be checked on the bill." }
+      ]
+    },
+    {
+      slug: "sikkim", code: "SK", name: "Sikkim", type: "State", region: "Northeast", color: stateColors.default, regulator: "SSERC",
+      utility: "Energy & Power Department Sikkim",
+      discoms: [{ id: "sikkim_power", name: "Sikkim Power", fullName: "Energy and Power Department, Government of Sikkim", districts: "All Sikkim districts" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 30, meterRent: 10, duty: 5, fac: 0.05, slabs: [
+        { from: 0, to: 30, rate: 1.50, label: "0-30 units" },
+        { from: 30, to: 100, rate: 2.60, label: "31-100 units" },
+        { from: 100, to: Infinity, rate: 4.00, label: "Above 100 units" }
+      ] },
+      note: "Sikkim is a hydropower-rich hill state, so this estimate uses low domestic rates and a compact slab table.",
+      payment: "Pay through state power department channels, supported online modes, and authorised counters.",
+      seo: { title: "Sikkim Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Sikkim electricity bill online. Supports SECL tariff slabs for domestic, commercial and agricultural connections.", h1: "Sikkim Electricity Bill Calculator", subtitle: "Calculate your Sikkim electricity bill with SECL tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Which utility serves Gangtok?", a: "The Energy and Power Department, Government of Sikkim is shown for Gangtok and all districts." },
+        { q: "Why is the Sikkim estimate low?", a: "The default table reflects a hydropower-rich, small-state domestic tariff profile." }
+      ]
+    },
+    {
+      slug: "andaman-nicobar", code: "AN", name: "Andaman & Nicobar Islands", type: "Union Territory", region: "Union Territories", color: stateColors.default, regulator: "JERC",
+      utility: "Electricity Department A&N",
+      discoms: [{ id: "an_ed", name: "A&N ED", fullName: "Electricity Department, Andaman and Nicobar Administration", districts: "Port Blair and island service areas" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 50, meterRent: 15, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 100, rate: 2.25, label: "0-100 units" },
+        { from: 100, to: 200, rate: 4.75, label: "101-200 units" },
+        { from: 200, to: 500, rate: 7.25, label: "201-500 units" },
+        { from: 500, to: Infinity, rate: 9.10, label: "Above 500 units" }
+      ] },
+      note: "Island electricity costs are shaped by isolated grids, diesel backup, solar additions, and logistics. Verify the latest tariff order before paying a large bill.",
+      payment: "Pay through the Andaman and Nicobar electricity portal or authorised administration counters where applicable.",
+      seo: { title: "Andaman & Nicobar Islands Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Andaman & Nicobar Islands electricity bill online. Supports Electricity Dept A&N slabs for domestic, commercial & agricultural connections.", h1: "Andaman & Nicobar Islands Electricity Bill Calculator", subtitle: "Calculate your Andaman & Nicobar Islands electricity bill with Electricity Department A&N tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Why does Andaman & Nicobar need a separate calculator?", a: "Island grids have different cost structures and tariff schedules from mainland states." },
+        { q: "Does the calculator cover Port Blair?", a: "Yes. Port Blair is included under the Andaman and Nicobar electricity department estimate." }
+      ]
+    },
+    {
+      slug: "chandigarh", code: "CH", name: "Chandigarh", type: "Union Territory", region: "North India", color: stateColors.default, regulator: "JERC",
+      utility: "Chandigarh Electricity Department",
+      discoms: [{ id: "chandigarh_ed", name: "Chandigarh ED", fullName: "Electricity Department, Chandigarh Administration", districts: "Chandigarh UT" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 60, meterRent: 15, duty: 8, fac: 0.10, slabs: [
+        { from: 0, to: 150, rate: 2.50, label: "0-150 units" },
+        { from: 150, to: 400, rate: 4.25, label: "151-400 units" },
+        { from: 400, to: Infinity, rate: 5.50, label: "Above 400 units" }
+      ] },
+      note: "Chandigarh is separate from Punjab and Haryana for tariff purposes, so use the UT entry rather than neighbouring state calculators.",
+      payment: "Pay through Chandigarh Administration online services, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Chandigarh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Chandigarh electricity bill online. Supports Electricity Department Chandigarh slabs for domestic, commercial & agricultural connections.", h1: "Chandigarh Electricity Bill Calculator", subtitle: "Calculate your Chandigarh electricity bill with Electricity Department Chandigarh tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Is Chandigarh tariff the same as Punjab?", a: "No. Chandigarh is a union territory with its own tariff schedule." },
+        { q: "Who regulates Chandigarh electricity tariff?", a: "Chandigarh comes under the joint regulatory framework for Goa and union territories." }
+      ]
+    },
+    {
+      slug: "dadra-nagar-haveli", code: "DN", name: "Dadra & Nagar Haveli and Daman & Diu", type: "Union Territory", region: "West India", color: stateColors.default, regulator: "JERC",
+      utility: "DNHDD Power Distribution",
+      discoms: [{ id: "dnhddpdcl", name: "DNHDD PDCL", fullName: "Dadra and Nagar Haveli and Daman and Diu Power Distribution Corporation", districts: "Dadra & Nagar Haveli, Daman and Diu" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }, { id: "industrial", name: "Industrial", description: "Industrial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 45, meterRent: 12, duty: 5, fac: 0.06, slabs: [
+        { from: 0, to: 50, rate: 1.50, label: "0-50 units" },
+        { from: 50, to: 200, rate: 2.40, label: "51-200 units" },
+        { from: 200, to: 400, rate: 3.70, label: "201-400 units" },
+        { from: 400, to: Infinity, rate: 5.25, label: "Above 400 units" }
+      ] },
+      note: "This UT has a strong industrial load profile, but the calculator defaults to domestic household slabs.",
+      payment: "Pay through the UT power distribution portal, BBPS where supported, UPI apps, and authorised counters.",
+      seo: { title: "Dadra & Nagar Haveli and Daman & Diu Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Dadra & Nagar Haveli and Daman & Diu electricity bill online with Department of Electricity domestic, commercial & agricultural slabs.", h1: "Dadra & Nagar Haveli and Daman & Diu Electricity Bill Calculator", subtitle: "Calculate your Dadra & Nagar Haveli and Daman & Diu electricity bill with Department of Electricity tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Is Daman and Diu separate from Dadra and Nagar Haveli?", a: "They are now administered as one union territory, so this calculator combines the UT entry." },
+        { q: "Does this handle industrial tariffs?", a: "The UI includes an industrial category label, but the default calculator is tuned for domestic estimates." }
+      ]
+    },
+    {
+      slug: "ladakh", code: "LA", name: "Ladakh", type: "Union Territory", region: "North India", color: stateColors.default, regulator: "JERC",
+      utility: "LPDD",
+      discoms: [{ id: "lpdd", name: "LPDD", fullName: "Ladakh Power Development Department", districts: "Leh, Kargil and Ladakh service areas" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 30, meterRent: 10, duty: 5, fac: 0.05, slabs: [
+        { from: 0, to: 50, rate: 1.50, label: "0-50 units" },
+        { from: 50, to: 200, rate: 2.50, label: "51-200 units" },
+        { from: 200, to: Infinity, rate: 4.00, label: "Above 200 units" }
+      ] },
+      note: "Ladakh's harsh climate and remote grid make consumption patterns unusual. Heating and backup loads can dominate winter usage.",
+      payment: "Pay through Ladakh power department channels, supported digital modes, and authorised local offices.",
+      seo: { title: "Ladakh Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Ladakh electricity bill online. Supports LREDA, Power Department Ladakh tariff slabs for domestic, commercial and agricultural connections.", h1: "Ladakh Electricity Bill Calculator", subtitle: "Calculate your Ladakh electricity bill with LREDA, Power Department Ladakh tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Is Ladakh included under Jammu & Kashmir?", a: "No. Ladakh is a separate union territory and has its own calculator entry." },
+        { q: "Why can Ladakh units be high in winter?", a: "Heating and cold-weather appliance use can raise kWh consumption even when tariff rates are subsidised." }
+      ]
+    },
+    {
+      slug: "lakshadweep", code: "LD", name: "Lakshadweep", type: "Union Territory", region: "Union Territories", color: stateColors.default, regulator: "JERC",
+      utility: "Lakshadweep Electricity Department",
+      discoms: [{ id: "lakshadweep_ed", name: "Lakshadweep ED", fullName: "Electricity Department, UT of Lakshadweep", districts: "Kavaratti and island service areas" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 25, meterRent: 10, duty: 5, fac: 0.05, slabs: [
+        { from: 0, to: 50, rate: 1.20, label: "0-50 units" },
+        { from: 50, to: 150, rate: 2.20, label: "51-150 units" },
+        { from: 150, to: 300, rate: 3.80, label: "151-300 units" },
+        { from: 300, to: Infinity, rate: 5.00, label: "Above 300 units" }
+      ] },
+      note: "Lakshadweep's island grid makes fuel, solar integration, and logistics more important than in mainland distribution systems.",
+      payment: "Pay through UT electricity department channels and authorised local offices where available.",
+      seo: { title: "Lakshadweep Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Lakshadweep electricity bill online. Supports Electricity Department Lakshadweep slabs for domestic, commercial & agricultural connections.", h1: "Lakshadweep Electricity Bill Calculator", subtitle: "Calculate your Lakshadweep electricity bill with Electricity Department Lakshadweep tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Why is Lakshadweep separate from Kerala?", a: "Lakshadweep is a union territory with its own power administration and island-specific tariff context." },
+        { q: "Can I edit Lakshadweep rates?", a: "Yes. Use Edit slabs to match the latest UT electricity bill or notification." }
+      ]
+    },
+    {
+      slug: "puducherry", code: "PY", name: "Puducherry", type: "Union Territory", region: "South India", color: stateColors.default, regulator: "JERC",
+      utility: "Puducherry Electricity Department",
+      discoms: [{ id: "puducherry_ed", name: "Puducherry ED", fullName: "Electricity Department, Government of Puducherry", districts: "Puducherry, Karaikal, Mahe, Yanam" }],
+      categories: [{ id: "domestic", name: "Domestic", description: "Residential homes" }, { id: "commercial", name: "Commercial", description: "Commercial supply" }],
+      specialOptions: [],
+      tariff: { fixedCharge: 55, meterRent: 15, duty: 5, fac: 0.08, slabs: [
+        { from: 0, to: 50, rate: 0, label: "0-50 units (free)" },
+        { from: 50, to: 100, rate: 1.50, label: "51-100 units" },
+        { from: 100, to: 200, rate: 3.00, label: "101-200 units" },
+        { from: 200, to: Infinity, rate: 5.50, label: "Above 200 units" }
+      ] },
+      note: "Puducherry is surrounded by different states across its enclaves, but electricity tariff is handled separately by the UT administration.",
+      payment: "Pay through the Puducherry electricity portal, BBPS, UPI apps, and authorised counters.",
+      seo: { title: "Puducherry Electricity Bill Calculator 2024 - Calculatorcity", description: "Calculate your Puducherry electricity bill online. Supports PIED tariff slabs for domestic, commercial and agricultural connections.", h1: "Puducherry Electricity Bill Calculator", subtitle: "Calculate your Puducherry electricity bill with PIED tariff slabs, fixed charges, duty, and bill breakdown." },
+      faq: [
+        { q: "Is Puducherry tariff the same as Tamil Nadu?", a: "No. Puducherry is a union territory with its own tariff schedule, even though Puducherry town is surrounded by Tamil Nadu." },
+        { q: "Are the first 50 units free in this estimate?", a: "Yes. The default Puducherry domestic slab table sets the first 50 units to zero energy charge." }
+      ]
+    }
+  ];
+
+  const stateData = STATE_RECORDS.reduce((acc, state) => {
+    acc[state.slug] = state;
+    return acc;
+  }, {});
+  const stateOrder = stateGroups.flatMap(group => group.slugs);
+
+  let currentState = "";
+  let currentDiscom = "";
+  let currentCategory = "";
+  let currentSlabs = [];
+  let currentCharges = {};
+  let selectedOptions = {};
+  let activeChart = "pie";
+  let billChart = null;
+  let pendingChartResult = null;
+  let customSlabs = null;
+
+  const byId = id => document.getElementById(id);
+
+  function formatINR(n) {
+    const value = Number(n);
+    if (!Number.isFinite(value)) return RUPEE + "0.00";
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 2,
+      minimumFractionDigits: 2
+    }).format(value);
+  }
+
+  function formatRate(rate) {
+    return rate === 0 ? "FREE" : RUPEE + Number(rate).toFixed(2);
+  }
+
+  function formatUnits(units) {
+    const value = Number(units) || 0;
+    return value % 1 === 0 ? String(Math.round(value)) : value.toFixed(1);
+  }
+
+  function hexToRgb(hex) {
+    const clean = String(hex || "").replace("#", "");
+    if (clean.length !== 6) return { r: 245, g: 158, b: 11 };
+    return {
+      r: parseInt(clean.slice(0, 2), 16),
+      g: parseInt(clean.slice(2, 4), 16),
+      b: parseInt(clean.slice(4, 6), 16)
+    };
+  }
+
+  function rgba(hex, alpha) {
+    const rgb = hexToRgb(hex);
+    return "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", " + alpha + ")";
+  }
+
+  function escapeHTML(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function stripTags(value) {
+    const div = document.createElement("div");
+    div.innerHTML = value;
+    return div.textContent || div.innerText || "";
+  }
+
+  function init() {
+    populateStateDropdown();
+    buildStateTiles();
+    renderBaseFaq();
+    setupEventListeners();
+    const slugFromUrl = STATIC_PAGE_STATE || getSlugFromPath();
+    if (slugFromUrl && stateData[slugFromUrl]) {
+      loadState(slugFromUrl, { push: false });
+      history.replaceState({ state: slugFromUrl }, "", window.location.href);
+    } else {
+      history.replaceState({ state: "" }, "", window.location.href);
+    }
+    updateSliderGradient();
+  }
+
+  function populateStateDropdown() {
+    const select = byId("state-select");
+    stateGroups.forEach(group => {
+      const optgroup = document.createElement("optgroup");
+      optgroup.label = group.name;
+      group.slugs.forEach(slug => {
+        const state = stateData[slug];
+        if (!state) return;
+        const option = document.createElement("option");
+        option.value = slug;
+        option.textContent = state.name;
+        optgroup.appendChild(option);
+      });
+      select.appendChild(optgroup);
+    });
+  }
+
+  function buildStateTiles() {
+    const grid = byId("states-tabs-grid");
+    stateOrder.forEach(slug => {
+      const state = stateData[slug];
+      if (!state) return;
+      const tile = document.createElement("button");
+      tile.type = "button";
+      tile.className = "state-tile";
+      tile.dataset.slug = slug;
+      tile.setAttribute("aria-label", state.name + " electricity calculator");
+      tile.innerHTML =
+        '<span class="state-tile-code">' + escapeHTML(state.code) + '</span>' +
+        '<span class="state-tile-name">' + escapeHTML(state.name) + '</span>' +
+        '<span class="state-tile-discom">' + escapeHTML(getDiscomSummary(state)) + '</span>';
+      tile.addEventListener("click", () => { window.location.href = buildStateUrl(slug); });
+      grid.appendChild(tile);
+    });
+  }
+
+  function setupEventListeners() {
+    byId("state-select").addEventListener("change", event => {
+      if (event.target.value) window.location.href = buildStateUrl(event.target.value);
+    });
+
+    byId("calc-btn").addEventListener("click", calculateBill);
+
+    byId("units-input").addEventListener("input", () => {
+      const units = getUnits();
+      byId("units-slider").value = Math.min(units, Number(byId("units-slider").max));
+      updateSliderGradient();
+      highlightActiveSlab(units);
+    });
+
+    byId("units-slider").addEventListener("input", () => {
+      byId("units-input").value = byId("units-slider").value;
+      updateSliderGradient();
+      highlightActiveSlab(getUnits());
+    });
+
+    document.querySelectorAll(".chart-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".chart-tab").forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        activeChart = tab.dataset.chart || "pie";
+        if (hasVisibleResults()) calculateBill();
+      });
+    });
+
+    byId("compare-btn").addEventListener("click", compareLastMonth);
+    byId("edit-slabs-btn").addEventListener("click", openModal);
+    byId("modal-close").addEventListener("click", closeModal);
+    byId("modal-overlay").addEventListener("click", event => {
+      if (event.target === byId("modal-overlay")) closeModal();
+    });
+    byId("add-slab-btn").addEventListener("click", () => appendModalSlabRow({ from: 0, to: Infinity, rate: 0, label: "New slab" }));
+    byId("save-slabs-btn").addEventListener("click", saveCustomSlabs);
+    byId("reset-slabs-btn").addEventListener("click", resetSlabsInModal);
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && !byId("modal-overlay").hidden) closeModal();
+    });
+
+    window.addEventListener("popstate", event => {
+      const slug = event.state && event.state.state ? event.state.state : getSlugFromPath();
+      if (slug && stateData[slug]) loadState(slug, { push: false, recalculate: hasEnteredUnits() });
+      else resetToBase();
+    });
+
+    window.addEventListener("load", () => {
+      if (pendingChartResult && window.Chart && hasVisibleResults()) {
+        const result = pendingChartResult;
+        pendingChartResult = null;
+        renderChart(result);
+      }
+    });
+  }
+
+  function getSlugFromPath() {
+    const fileMatch = window.location.pathname.match(/\/india\/electricity\/([^/]+)\.html$/);
+    if (fileMatch && fileMatch[1] !== "index" && stateData[fileMatch[1]]) return fileMatch[1];
+    const cleanMatch = window.location.pathname.match(/\/india\/electricity\/([^/]+)\/?$/);
+    return cleanMatch && stateData[cleanMatch[1]] ? cleanMatch[1] : "";
+  }
+  function buildStateUrl(slug) {
+    return slug + ".html";
+  }
+
+  function loadState(slug, options) {
+    const opts = Object.assign({ push: false, recalculate: false }, options || {});
+    const state = stateData[slug];
+    if (!state) return;
+    if (currentState === slug && !opts.recalculate) return;
+
+    currentState = slug;
+    customSlabs = null;
+    selectedOptions = {};
+    currentSlabs = state.tariff.slabs.map(slab => Object.assign({}, slab));
+    currentCharges = getChargesClone(state.tariff);
+
+
+    applyStateColor(state);
+    updateSEO(state);
+    updateHero(state);
+    renderStateInfo(state);
+    renderDiscomTabs(state);
+    renderCategoryTabs(state);
+    renderSpecialOptions(state);
+    renderSlabPreview(currentSlabs);
+    renderTariffCard(state);
+    renderContent(state);
+    updateActiveTiles(slug);
+
+    byId("state-select").value = slug;
+    byId("calc-btn").disabled = false;
+    byId("calc-hint").textContent = "Enter units and calculate your " + state.name + " bill.";
+    byId("slab-preview").hidden = false;
+    byId("results-box").hidden = true;
+    byId("compare-result").hidden = true;
+    if (billChart) {
+      billChart.destroy();
+      billChart = null;
+    }
+
+    highlightActiveSlab(getUnits());
+    if (opts.recalculate && hasEnteredUnits()) calculateBill();
+  }
+
+  function resetToBase() {
+    currentState = "";
+    currentDiscom = "";
+    currentCategory = "";
+    currentSlabs = [];
+    currentCharges = {};
+    customSlabs = null;
+    selectedOptions = {};
+    byId("state-select").value = "";
+    byId("state-info-bar").hidden = true;
+    byId("discom-row").hidden = true;
+    byId("category-row").hidden = true;
+    byId("special-options").hidden = true;
+    byId("slab-preview").hidden = true;
+    byId("results-box").hidden = true;
+    byId("tariff-card").hidden = true;
+    byId("calc-btn").disabled = true;
+    byId("calc-hint").textContent = "Select a state above to calculate.";
+    document.querySelectorAll(".state-tile").forEach(tile => tile.classList.remove("active-state"));
+    document.documentElement.style.setProperty("--state-color", stateColors.default);
+    document.documentElement.style.setProperty("--state-light", "#fff7ed");
+    document.title = "India Electricity Bill Calculator - All States - Calculatorcity";
+    byId("page-title").textContent = document.title;
+    byId("page-h1").textContent = "India Electricity Bill Calculator";
+    byId("page-subtitle").textContent = "Calculate electricity bill for all Indian states online. Supports major state electricity boards, slab tariffs, fixed charges, duty, and FAC.";
+    byId("breadcrumb-current").textContent = "Electricity Bill Calculator";
+  }
+
+  function getChargesClone(tariff) {
+    return {
+      fixedCharge: Number(tariff.fixedCharge) || 0,
+      meterRent: Number(tariff.meterRent) || 0,
+      duty: Number(tariff.duty) || 0,
+      fac: Number(tariff.fac) || 0
+    };
+  }
+
+  function applyStateColor() {
+    const color = stateColors.default;
+    document.documentElement.style.setProperty("--state-color", color);
+    document.documentElement.style.setProperty("--state-light", rgba(color, 0.12));
+  }
+
+  function updateSEO(state) {
+    const url = CANONICAL_BASE + state.slug + "/";
+    document.title = state.seo.title;
+    byId("page-title").textContent = state.seo.title;
+    byId("page-meta").setAttribute("content", state.seo.description);
+    byId("page-canonical").setAttribute("href", url);
+    byId("og-title").setAttribute("content", state.seo.title);
+    byId("og-description").setAttribute("content", state.seo.description);
+    byId("og-url").setAttribute("content", url);
+
+    const faqEntities = buildFaq(state).map(item => ({
+      "@type": "Question",
+      "name": stripTags(item.q),
+      "acceptedAnswer": { "@type": "Answer", "text": stripTags(item.a) }
+    }));
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": state.seo.h1,
+          "url": url,
+          "description": state.seo.description,
+          "applicationCategory": "CalculatorApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/" },
+            { "@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india" },
+            { "@type": "ListItem", "position": 3, "name": state.seo.h1, "item": url }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": faqEntities
+        }
+      ]
+    };
+    byId("schema-json").textContent = JSON.stringify(schema, null, 2);
+  }
+
+  function updateHero(state) {
+    byId("page-h1").textContent = state.seo.h1;
+    byId("page-subtitle").textContent = state.seo.subtitle;
+    byId("breadcrumb-current").textContent = state.seo.h1;
+  }
+
+  function renderStateInfo(state) {
+    byId("state-code").textContent = state.code;
+    byId("state-info-name").textContent = state.name + " " + state.type;
+    byId("state-info-discom").textContent = getDiscomSummary(state);
+    const badgeWrap = byId("state-info-badges");
+    badgeWrap.textContent = "";
+    [state.region, state.regulator, state.utility].forEach(value => {
+      const badge = document.createElement("span");
+      badge.className = "mini-badge";
+      badge.textContent = value;
+      badgeWrap.appendChild(badge);
+    });
+    byId("state-info-bar").hidden = false;
+  }
+
+  function renderDiscomTabs(state) {
+    const row = byId("discom-row");
+    const tabs = byId("discom-tabs");
+    tabs.textContent = "";
+    currentDiscom = state.discoms[0] ? state.discoms[0].id : "";
+    if (state.discoms.length <= 1) {
+      row.hidden = true;
+      return;
+    }
+    state.discoms.forEach((discom, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "discom-tab" + (index === 0 ? " active" : "");
+      button.dataset.discom = discom.id;
+      button.setAttribute("aria-pressed", index === 0 ? "true" : "false");
+      button.innerHTML = '<span class="tab-title">' + escapeHTML(discom.name) + '</span><span class="tab-subtitle">' + escapeHTML(firstDistrict(discom.districts)) + '</span>';
+      button.addEventListener("click", () => {
+        currentDiscom = discom.id;
+        tabs.querySelectorAll(".discom-tab").forEach(tab => {
+          tab.classList.remove("active");
+          tab.setAttribute("aria-pressed", "false");
+        });
+        button.classList.add("active");
+        button.setAttribute("aria-pressed", "true");
+        renderTariffCard(state);
+      });
+      tabs.appendChild(button);
+    });
+    row.hidden = false;
+  }
+
+  function renderCategoryTabs(state) {
+    const row = byId("category-row");
+    const tabs = byId("category-tabs");
+    tabs.textContent = "";
+    currentCategory = state.categories[0] ? state.categories[0].id : "";
+    if (state.categories.length <= 1) {
+      row.hidden = true;
+      return;
+    }
+    state.categories.forEach((category, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "category-tab" + (index === 0 ? " active" : "");
+      button.dataset.category = category.id;
+      button.setAttribute("aria-pressed", index === 0 ? "true" : "false");
+      button.innerHTML = '<span class="tab-title">' + escapeHTML(category.name) + '</span><span class="tab-subtitle">' + escapeHTML(category.description) + '</span>';
+      button.addEventListener("click", () => {
+        currentCategory = category.id;
+        tabs.querySelectorAll(".category-tab").forEach(tab => {
+          tab.classList.remove("active");
+          tab.setAttribute("aria-pressed", "false");
+        });
+        button.classList.add("active");
+        button.setAttribute("aria-pressed", "true");
+        if (hasVisibleResults()) calculateBill();
+      });
+      tabs.appendChild(button);
+    });
+    row.hidden = false;
+  }
+
+  function renderSpecialOptions(state) {
+    const wrap = byId("special-options");
+    wrap.textContent = "";
+    if (!state.specialOptions || !state.specialOptions.length) {
+      wrap.hidden = true;
+      return;
+    }
+    state.specialOptions.forEach(option => {
+      selectedOptions[option.id] = false;
+      const row = document.createElement("div");
+      row.className = "special-option-row";
+      row.innerHTML =
+        '<div><div class="special-option-label">' + escapeHTML(option.label) + '</div>' +
+        '<div class="special-option-hint">' + escapeHTML(option.hint) + '</div></div>' +
+        '<label class="toggle-switch">' +
+        '<input type="checkbox" id="opt-' + escapeHTML(option.id) + '">' +
+        '<span class="toggle-slider"></span>' +
+        '</label>';
+      const checkbox = row.querySelector("input");
+      checkbox.addEventListener("change", () => {
+        selectedOptions[option.id] = checkbox.checked;
+        if (hasVisibleResults()) calculateBill();
+      });
+      wrap.appendChild(row);
+    });
+    wrap.hidden = false;
+  }
+
+  function renderSlabPreview(slabs) {
+    const list = byId("slab-preview-list");
+    list.textContent = "";
+    slabs.forEach(slab => {
+      const item = document.createElement("div");
+      item.className = "slab-preview-item";
+      item.innerHTML = '<span>' + escapeHTML(slab.label) + '</span><span class="elec-number">' + escapeHTML(formatRate(slab.rate)) + '/unit</span>';
+      if (slab.rate === 0) item.querySelector(".elec-number").textContent = "FREE";
+      list.appendChild(item);
+    });
+  }
+
+  function renderTariffCard(state) {
+    const card = byId("tariff-card");
+    const details = byId("tariff-details");
+    const discom = state.discoms.find(item => item.id === currentDiscom) || state.discoms[0];
+    details.innerHTML =
+      '<div class="tariff-detail-list">' +
+      '<div class="tariff-detail-item"><span>Utility</span><strong>' + escapeHTML(discom ? discom.name : state.utility) + '</strong></div>' +
+      '<div class="tariff-detail-item"><span>Fixed</span><strong>' + formatINR(currentCharges.fixedCharge) + '</strong></div>' +
+      '<div class="tariff-detail-item"><span>Meter rent</span><strong>' + formatINR(currentCharges.meterRent) + '</strong></div>' +
+      '<div class="tariff-detail-item"><span>Duty</span><strong>' + escapeHTML(currentCharges.duty) + '%</strong></div>' +
+      '<div class="tariff-detail-item"><span>FAC</span><strong>' + formatINR(currentCharges.fac) + '/unit</strong></div>' +
+      '</div>';
+    card.hidden = false;
+  }
+
+  function renderContent(state) {
+    byId("content-h2-how").textContent = "How is the " + state.name + " electricity bill calculated?";
+    byId("content-how-text").innerHTML =
+      "<p>" + escapeHTML(state.name) + " domestic bills are estimated with a telescopic slab system. Units inside each slab are charged only at that slab's rate, then fixed charge, meter rent, electricity duty, and FAC are added.</p>" +
+      "<p>" + escapeHTML(state.note) + "</p>" +
+      "<p>The selected consumer category is shown for context. Official category-specific schedules, arrears, rebates, solar credits, and subsidy eligibility should always be reconciled with the latest bill.</p>";
+
+    byId("content-h2-tariff").textContent = state.name + " electricity tariff rates";
+    byId("content-tariff-table").innerHTML = buildTariffTableHTML(state);
+
+    byId("content-state-text").innerHTML =
+      "<h2>" + escapeHTML(state.utility) + " bill payment and service notes</h2>" +
+      "<p>" + escapeHTML(state.payment) + "</p>" +
+      "<p>For exact billing, compare this estimate with the official tariff order from " + escapeHTML(state.regulator) + " and the line items printed on your current electricity bill.</p>";
+
+    byId("content-h2-faq").textContent = state.name + " electricity bill FAQs";
+    renderFaqList(buildFaq(state));
+  }
+
+  function buildTariffTableHTML(state) {
+    const rows = state.tariff.slabs.map(slab => {
+      const cls = slab.rate === 0 ? ' class="free-units"' : "";
+      const rate = slab.rate === 0 ? "FREE" : RUPEE + Number(slab.rate).toFixed(2) + "/kWh";
+      return "<tr" + cls + "><td>" + escapeHTML(slab.label) + "</td><td>" + rate + "</td></tr>";
+    }).join("");
+    return '<table class="tariff-content-table"><thead><tr><th>Slab range</th><th>Rate per unit</th></tr></thead><tbody>' +
+      rows +
+      '</tbody><tfoot>' +
+      '<tr><td>Fixed charge</td><td>' + formatINR(state.tariff.fixedCharge) + '/month</td></tr>' +
+      '<tr><td>Meter rent</td><td>' + formatINR(state.tariff.meterRent) + '/month</td></tr>' +
+      '<tr><td>Electricity duty</td><td>' + escapeHTML(state.tariff.duty) + '%</td></tr>' +
+      '<tr><td>FAC estimate</td><td>' + formatINR(state.tariff.fac) + '/unit</td></tr>' +
+      '</tfoot></table>';
+  }
+
+  function buildFaq(state) {
+    return [
+      {
+        q: "How is the " + state.name + " electricity bill calculated?",
+        a: "This calculator applies " + state.name + " slab rates on a telescopic basis, then adds fixed charge, meter rent, FAC, and " + state.tariff.duty + "% electricity duty."
+      },
+      {
+        q: "Which electricity company is used for " + state.name + "?",
+        a: state.discoms.length > 1 ? "Select your company from " + state.discoms.map(item => item.name).join(", ") + ". The selected company helps identify payment and service context." : state.utility + " is shown as the utility for this calculator."
+      },
+      {
+        q: "Can I use this result as my final official bill?",
+        a: "No. Use it as a planning and audit estimate. Official bills can include arrears, rebates, fuel adjustments, late fees, solar credits, subsidies, and tariff-order changes."
+      }
+    ].concat(state.faq || []);
+  }
+
+  function renderBaseFaq() {
+    renderFaqList([
+      { q: "Does this page support all Indian states and union territories?", a: "Yes. It includes 28 states and 8 union territories with dedicated static calculator pages." },
+      { q: "Does each state have its own electricity calculator page?", a: "Yes. Each state and union territory has its own static HTML page for reliable refreshes and SEO-friendly URLs." },
+      { q: "Are the rates editable?", a: "Yes. After selecting a state, use Edit slabs to customise rates, fixed charge, meter rent, duty, and FAC for your own bill." }
+    ]);
+  }
+
+  function renderFaqList(items) {
+    const list = byId("faq-list");
+    list.textContent = "";
+    items.forEach((item, index) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "faq-item";
+      const answerId = "faq-answer-" + index;
+      wrapper.innerHTML =
+        '<button class="faq-question" type="button" aria-expanded="false" aria-controls="' + answerId + '">' + escapeHTML(item.q) + '</button>' +
+        '<div class="faq-answer" id="' + answerId + '"><p>' + escapeHTML(item.a) + '</p></div>';
+      const button = wrapper.querySelector(".faq-question");
+      const answer = wrapper.querySelector(".faq-answer");
+      button.addEventListener("click", () => {
+        const willOpen = !wrapper.classList.contains("open");
+        wrapper.classList.toggle("open", willOpen);
+        answer.classList.toggle("open", willOpen);
+        button.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      });
+      list.appendChild(wrapper);
+    });
+  }
+
+  function calculateBill() {
+    if (!currentState) return;
+    const state = stateData[currentState];
+    const units = getUnits();
+    byId("units-input").value = units ? String(units) : "";
+    const result = calculateForState(currentState, units, {
+      slabs: customSlabs || currentSlabs,
+      charges: currentCharges,
+      options: selectedOptions
+    });
+
+    byId("result-total").textContent = formatINR(result.total);
+    const optionText = result.freeUnits > 0 ? " | " + formatUnits(result.freeUnits) + " free units" : "";
+    byId("result-meta").textContent = "for " + formatUnits(units) + " units | " + state.name + optionText;
+    renderWarning(result, units);
+    renderBreakdown(result);
+    renderChart(result);
+    renderStateComparison(units, result.total);
+    renderTips(units, state, result);
+    highlightActiveSlab(units);
+    byId("results-box").hidden = false;
+  }
+
+  function calculateForState(slug, units, override) {
+    const state = stateData[slug];
+    const slabs = override && override.slabs ? override.slabs : state.tariff.slabs;
+    const charges = override && override.charges ? override.charges : state.tariff;
+    const options = override && override.options ? override.options : {};
+    const cleanUnits = Math.max(0, Number(units) || 0);
+    let freeUnits = 0;
+    let subsidy = 0;
+
+    (state.specialOptions || []).forEach(option => {
+      if (!options[option.id]) return;
+      if (option.freeUnits) freeUnits += option.freeUnits;
+      if (option.isSubsidy) {
+        if (cleanUnits <= 200) subsidy += 800;
+        else if (cleanUnits <= 400) subsidy += 400;
+      }
+    });
+
+    const categoryFactor = getCategoryFactor(currentCategory, slug);
+    let energy = 0;
+    const slabBreakdown = slabs.map(slab => {
+      const lower = Math.max(Number(slab.from) || 0, freeUnits);
+      const upper = slab.to === Infinity ? Infinity : Number(slab.to);
+      const consumed = Math.max(0, Math.min(cleanUnits, upper) - lower);
+      const rate = Number(slab.rate) * categoryFactor.energy;
+      const amount = consumed * rate;
+      energy += amount;
+      return {
+        label: slab.label,
+        rate,
+        units: consumed,
+        amount,
+        active: consumed > 0,
+        from: slab.from,
+        to: slab.to
+      };
+    });
+
+    const fac = cleanUnits * Number(charges.fac || 0);
+    const duty = energy * Number(charges.duty || 0) / 100;
+    const fixed = Number(charges.fixedCharge || 0) * categoryFactor.fixed;
+    const meterRent = Number(charges.meterRent || 0);
+    const subtotal = energy + fac + duty + fixed + meterRent;
+    const total = Math.max(0, subtotal - subsidy);
+
+    return { units: cleanUnits, freeUnits, subsidy, energy, fac, duty, fixed, meterRent, subtotal, total, slabBreakdown, charges, state };
+  }
+
+  function getCategoryFactor(categoryId, slug) {
+    if (!categoryId) return { energy: 1, fixed: 1 };
+    if (categoryId.includes("commercial")) return { energy: 1.28, fixed: 1.45 };
+    if (categoryId.includes("industrial")) return { energy: 1.5, fixed: 2 };
+    if (categoryId.includes("agricultural")) return { energy: 0.55, fixed: 0.6 };
+    if (slug === "punjab" && categoryId.includes("domestic")) return { energy: 1, fixed: 1 };
+    return { energy: 1, fixed: 1 };
+  }
+
+  function renderWarning(result, units) {
+    const warning = byId("slab-warning");
+    const text = byId("slab-warning-text");
+    const nextSlab = (customSlabs || currentSlabs).find(slab => slab.from > units);
+    if (!nextSlab) {
+      warning.hidden = true;
+      return;
+    }
+    const currentSlab = (customSlabs || currentSlabs).find(slab => units >= slab.from && (slab.to === Infinity || units < slab.to));
+    const unitsToNext = Math.max(1, Math.ceil(nextSlab.from - units));
+    const currentRate = currentSlab ? currentSlab.rate : 0;
+    const rateJump = Math.max(0, nextSlab.rate - currentRate);
+    text.textContent = "You are about " + unitsToNext + " units away from the " + formatRate(nextSlab.rate) + "/unit slab. Avoiding that slab can reduce next month's marginal cost by about " + formatINR(rateJump * unitsToNext) + ".";
+    warning.hidden = false;
+  }
+
+  function renderBreakdown(result) {
+    const tbody = byId("breakdown-tbody");
+    const tfoot = byId("breakdown-tfoot");
+    tbody.textContent = "";
+
+    if (result.freeUnits > 0) {
+      const row = document.createElement("tr");
+      row.className = "active-slab";
+      row.innerHTML = "<td>Free units benefit</td><td>" + formatUnits(Math.min(result.freeUnits, result.units)) + "</td><td>FREE</td><td>" + formatINR(0) + "</td>";
+      tbody.appendChild(row);
+    }
+
+    result.slabBreakdown.filter(row => row.units > 0 || result.units === 0).forEach(row => {
+      const tr = document.createElement("tr");
+      tr.className = row.active ? "active-slab" : "";
+      tr.innerHTML =
+        "<td>" + escapeHTML(row.label) + "</td>" +
+        "<td>" + formatUnits(row.units) + "</td>" +
+        "<td>" + (row.rate === 0 ? "FREE" : RUPEE + row.rate.toFixed(2)) + "</td>" +
+        "<td>" + formatINR(row.amount) + "</td>";
+      tbody.appendChild(tr);
+    });
+
+    tfoot.innerHTML =
+      '<tr><td colspan="3">Energy charges subtotal</td><td>' + formatINR(result.energy) + '</td></tr>' +
+      '<tr><td colspan="3">FAC (' + formatINR(result.charges.fac) + '/unit)</td><td>' + formatINR(result.fac) + '</td></tr>' +
+      '<tr><td colspan="3">Fixed charge</td><td>' + formatINR(result.fixed) + '</td></tr>' +
+      '<tr><td colspan="3">Meter rent</td><td>' + formatINR(result.meterRent) + '</td></tr>' +
+      '<tr><td colspan="3">Electricity duty (' + escapeHTML(result.charges.duty) + '%)</td><td>' + formatINR(result.duty) + '</td></tr>' +
+      (result.subsidy > 0 ? '<tr><td colspan="3">Government subsidy</td><td>-' + formatINR(result.subsidy) + '</td></tr>' : '') +
+      '<tr><td colspan="3">Total bill</td><td>' + formatINR(result.total) + '</td></tr>';
+  }
+
+  function renderChart(result) {
+    if (!window.Chart) {
+      pendingChartResult = result;
+      return;
+    }
+    pendingChartResult = null;
+    const canvas = byId("bill-chart");
+    if (billChart) {
+      billChart.destroy();
+      billChart = null;
+    }
+    const color = stateColors.default;
+
+    if (activeChart === "bar") {
+      const bars = result.slabBreakdown.filter(row => row.units > 0);
+      billChart = new Chart(canvas, {
+        type: "bar",
+        data: {
+          labels: bars.map(row => row.label),
+          datasets: [{
+            label: "Amount",
+            data: bars.map(row => row.amount),
+            backgroundColor: bars.map(row => row.rate === 0 ? "#16a34a" : color),
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { label: ctx => formatINR(ctx.parsed.y) } }
+          },
+          scales: {
+            y: { ticks: { callback: value => RUPEE + value, font: { family: "Inter" } } },
+            x: { ticks: { font: { family: "Inter" } } }
+          }
+        }
+      });
+      return;
+    }
+
+    billChart = new Chart(canvas, {
+      type: "doughnut",
+      data: {
+        labels: ["Energy", "FAC", "Fixed", "Meter rent", "Duty"],
+        datasets: [{
+          data: [result.energy, result.fac, result.fixed, result.meterRent, result.duty],
+          backgroundColor: [color, rgba(color, 0.78), rgba(color, 0.56), rgba(color, 0.36), rgba(color, 0.22)],
+          borderColor: "#ffffff",
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "62%",
+        plugins: {
+          legend: { position: "bottom", labels: { font: { family: "Inter", size: 12 }, padding: 12 } },
+          tooltip: { callbacks: { label: ctx => ctx.label + ": " + formatINR(ctx.parsed) } }
+        }
+      }
+    });
+  }
+
+  function renderStateComparison(units, currentBill) {
+    const grid = byId("state-compare-grid");
+    grid.textContent = "";
+    const priority = ["andhra-pradesh", "telangana", "karnataka", "tamil-nadu", "kerala", "maharashtra", "delhi", "gujarat", "uttar-pradesh", "rajasthan"];
+    priority.filter(slug => slug !== currentState).slice(0, 7).forEach(slug => {
+      const state = stateData[slug];
+      const bill = calculateForState(slug, units, {}).total;
+      const item = document.createElement("button");
+      item.type = "button";
+      item.className = "state-compare-item" + (bill < currentBill ? " cheaper" : bill > currentBill ? " expensive" : "");
+      const diff = Math.abs(Math.round(bill - currentBill));
+      item.innerHTML =
+        '<div class="state-compare-item-name">' + escapeHTML(state.name) + '</div>' +
+        '<div class="state-compare-item-amount">' + formatINR(bill) + '</div>' +
+        '<div class="state-compare-item-note">' + (bill < currentBill ? RUPEE + diff + " cheaper" : bill > currentBill ? RUPEE + diff + " costlier" : "Same estimate") + '</div>';
+      item.addEventListener("click", () => { window.location.href = buildStateUrl(slug); });
+      grid.appendChild(item);
+    });
+  }
+
+  function renderTips(units, state, result) {
+    const list = byId("tips-list");
+    list.textContent = "";
+    const tips = [];
+    const currentSlab = result.slabBreakdown.find(row => row.active);
+    if (currentSlab && currentSlab.from > 0 && units - currentSlab.from <= 50) {
+      tips.push({ icon: "ti ti-bolt", text: "Reducing about " + Math.ceil(units - currentSlab.from + 1) + " units may move you back toward the previous slab." });
+    }
+    if (units > 400) tips.push({ icon: "ti ti-air-conditioning", text: "Air conditioning is likely the main load. Use 24 C, clean filters, and seal room gaps before lowering the thermostat." });
+    if (units > 250) tips.push({ icon: "ti ti-fan", text: "BLDC fans can cut fan electricity sharply in homes where fans run for many hours daily." });
+    if (units > 150) tips.push({ icon: "ti ti-bulb", text: "Replace remaining tube lights or incandescent bulbs with LEDs and reduce standby power from chargers and TVs." });
+    tips.push({ icon: "ti ti-solar-panel", text: "In " + state.name + ", rooftop solar or net metering can reduce high monthly bills where your roof and local rules allow it." });
+    tips.push({ icon: "ti ti-plug", text: "Run heavy appliances in full loads and track weekly meter readings to catch unusual spikes early." });
+
+    tips.slice(0, 4).forEach(tip => {
+      const item = document.createElement("div");
+      item.className = "tip-item";
+      item.innerHTML = '<i class="' + tip.icon + '" aria-hidden="true"></i><span>' + escapeHTML(tip.text) + '</span>';
+      list.appendChild(item);
+    });
+  }
+
+  function compareLastMonth() {
+    if (!currentState) return;
+    const lastUnits = Math.max(0, Number(byId("last-month-units").value) || 0);
+    const currentUnits = getUnits();
+    if (!lastUnits) return;
+    const lastBill = calculateForState(currentState, lastUnits, { slabs: customSlabs || currentSlabs, charges: currentCharges, options: selectedOptions }).total;
+    const currentBill = calculateForState(currentState, currentUnits, { slabs: customSlabs || currentSlabs, charges: currentCharges, options: selectedOptions }).total;
+    const diff = currentBill - lastBill;
+    const pct = lastBill ? Math.abs(diff / lastBill * 100).toFixed(1) : "0.0";
+    const result = byId("compare-result");
+    result.hidden = false;
+    if (diff > 0) {
+      result.className = "compare-result more";
+      result.textContent = "Your estimate is " + formatINR(diff) + " (" + pct + "%) higher than last month.";
+    } else if (diff < 0) {
+      result.className = "compare-result less";
+      result.textContent = "Your estimate is " + formatINR(Math.abs(diff)) + " (" + pct + "%) lower than last month.";
+    } else {
+      result.className = "compare-result same";
+      result.textContent = "Your estimate is the same as last month.";
+    }
+  }
+
+  function openModal() {
+    if (!currentState) return;
+    byId("edit-fixed").value = currentCharges.fixedCharge;
+    byId("edit-meter-rent").value = currentCharges.meterRent;
+    byId("edit-duty").value = currentCharges.duty;
+    byId("edit-fac").value = currentCharges.fac;
+    renderModalSlabs(customSlabs || currentSlabs);
+    byId("modal-overlay").hidden = false;
+    document.body.classList.add("modal-open");
+  }
+
+  function closeModal() {
+    byId("modal-overlay").hidden = true;
+    document.body.classList.remove("modal-open");
+  }
+
+  function renderModalSlabs(slabs) {
+    const list = byId("modal-slabs-list");
+    list.textContent = "";
+    slabs.forEach(slab => appendModalSlabRow(slab));
+  }
+
+  function appendModalSlabRow(slab) {
+    const row = document.createElement("div");
+    row.className = "modal-slab-row";
+    row.innerHTML =
+      '<input type="number" class="slab-from" min="0" aria-label="Slab from units" value="' + escapeHTML(slab.from || 0) + '">' +
+      '<input type="number" class="slab-to" min="0" aria-label="Slab to units" value="' + (slab.to === Infinity ? "" : escapeHTML(slab.to || 0)) + '">' +
+      '<input type="number" class="slab-rate" min="0" step="0.01" aria-label="Slab rate" value="' + escapeHTML(slab.rate || 0) + '">' +
+      '<button class="remove-slab-btn" type="button" aria-label="Remove slab"><i class="ti ti-trash" aria-hidden="true"></i></button>';
+    row.querySelector(".remove-slab-btn").addEventListener("click", () => row.remove());
+    byId("modal-slabs-list").appendChild(row);
+  }
+
+  function saveCustomSlabs() {
+    const rows = Array.from(document.querySelectorAll(".modal-slab-row"));
+    if (!rows.length) return;
+    const nextSlabs = rows.map(row => {
+      const from = Math.max(0, Number(row.querySelector(".slab-from").value) || 0);
+      const toRaw = row.querySelector(".slab-to").value;
+      const to = toRaw === "" ? Infinity : Math.max(from, Number(toRaw) || from);
+      const rate = Math.max(0, Number(row.querySelector(".slab-rate").value) || 0);
+      return { from, to, rate, label: to === Infinity ? "Above " + from + " units" : (from + 1) + "-" + to + " units" };
+    }).sort((a, b) => a.from - b.from);
+    if (nextSlabs[nextSlabs.length - 1].to !== Infinity) {
+      const last = nextSlabs[nextSlabs.length - 1];
+      nextSlabs.push({ from: last.to, to: Infinity, rate: last.rate, label: "Above " + last.to + " units" });
+    }
+    customSlabs = nextSlabs;
+    currentCharges = {
+      fixedCharge: Math.max(0, Number(byId("edit-fixed").value) || 0),
+      meterRent: Math.max(0, Number(byId("edit-meter-rent").value) || 0),
+      duty: Math.max(0, Number(byId("edit-duty").value) || 0),
+      fac: Math.max(0, Number(byId("edit-fac").value) || 0)
+    };
+    closeModal();
+    renderSlabPreview(customSlabs);
+    renderTariffCard(stateData[currentState]);
+    highlightActiveSlab(getUnits());
+    if (hasEnteredUnits()) calculateBill();
+  }
+
+  function resetSlabsInModal() {
+    if (!currentState) return;
+    customSlabs = null;
+    currentSlabs = stateData[currentState].tariff.slabs.map(slab => Object.assign({}, slab));
+    currentCharges = getChargesClone(stateData[currentState].tariff);
+    byId("edit-fixed").value = currentCharges.fixedCharge;
+    byId("edit-meter-rent").value = currentCharges.meterRent;
+    byId("edit-duty").value = currentCharges.duty;
+    byId("edit-fac").value = currentCharges.fac;
+    renderModalSlabs(currentSlabs);
+    renderSlabPreview(currentSlabs);
+  }
+
+  function updateSliderGradient() {
+    const slider = byId("units-slider");
+    const max = Number(slider.max) || 1000;
+    const value = Math.min(Number(slider.value) || 0, max);
+    slider.style.setProperty("--slider-progress", (value / max * 100) + "%");
+  }
+
+  function highlightActiveSlab(units) {
+    const slabs = customSlabs || currentSlabs;
+    const items = document.querySelectorAll(".slab-preview-item");
+    slabs.forEach((slab, index) => {
+      const active = units > slab.from && (slab.to === Infinity || units <= slab.to);
+      if (items[index]) items[index].classList.toggle("active-slab", active);
+    });
+  }
+
+  function updateActiveTiles(slug) {
+    document.querySelectorAll(".state-tile").forEach(tile => {
+      tile.classList.toggle("active-state", tile.dataset.slug === slug);
+    });
+  }
+
+  function getUnits() {
+    return Math.max(0, Math.min(9999, Number(byId("units-input").value) || 0));
+  }
+
+  function hasEnteredUnits() {
+    return getUnits() > 0;
+  }
+
+  function hasVisibleResults() {
+    return !byId("results-box").hidden;
+  }
+
+  function getDiscomSummary(state) {
+    if (!state.discoms.length) return state.utility;
+    if (state.discoms.length === 1) return state.discoms[0].name + " - single utility";
+    return state.discoms.map(item => item.name).join(" / ");
+  }
+
+  function firstDistrict(districts) {
+    return String(districts || "").split(",")[0].trim() || "Service area";
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
+
+

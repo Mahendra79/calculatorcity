@@ -59,7 +59,7 @@
 
   const data = window.stampDutyData || {};
   const stateOrder = window.stampDutyStateOrder || Object.keys(data);
-  const BASE_URL = "/india/stamp-duty/";
+  const CANONICAL_BASE_URL = "/india/stamp-duty/";
   const BRAND_COLOR = "#f97316";
   const BRAND_LIGHT = "#fff7ed";
   const BRAND_BORDER = "#fed7aa";
@@ -117,7 +117,11 @@
   }
 
   function stateUrl(slug) {
-    return BASE_URL + slug + ".html";
+    return slug + ".html";
+  }
+
+  function stateCanonicalPath(slug) {
+    return CANONICAL_BASE_URL + slug + ".html";
   }
 
   function formatINR(value) {
@@ -297,13 +301,13 @@
     const meta = byId("page-meta");
     if (meta) meta.setAttribute("content", state.seo.description);
     const canonical = byId("page-canonical");
-    if (canonical) canonical.setAttribute("href", "https://calculatorcity.in" + stateUrl(state.slug));
+    if (canonical) canonical.setAttribute("href", "https://calculatorcity.in" + stateCanonicalPath(state.slug));
     const ogTitle = byId("og-title");
     if (ogTitle) ogTitle.setAttribute("content", state.seo.title);
     const ogDescription = byId("og-description");
     if (ogDescription) ogDescription.setAttribute("content", state.seo.description);
     const ogUrl = byId("og-url");
-    if (ogUrl) ogUrl.setAttribute("content", "https://calculatorcity.in" + stateUrl(state.slug));
+    if (ogUrl) ogUrl.setAttribute("content", "https://calculatorcity.in" + stateCanonicalPath(state.slug));
     updateFaqSchema(state.content.faq);
   }
 

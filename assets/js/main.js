@@ -690,8 +690,14 @@ document.addEventListener("click", () => {
 }, true);
 
 function resolveCalculatorUrl(url) {
-  if (window.location.protocol !== "file:" || !url.startsWith("/")) return url;
+  if (!url.startsWith("/")) return url;
   const currentPath = window.location.pathname.replace(/\\/g, "/");
+  const firstSegment = currentPath.split("/").filter(Boolean)[0] || "";
+  const rootSections = new Set(["maths", "india", "finance", "unit", "health-fitness", "date-time", "science-other", "company", "assets"]);
+  if (window.location.protocol !== "file:" && window.location.hostname.endsWith("github.io") && firstSegment && !rootSections.has(firstSegment)) {
+    return `/${firstSegment}${url}`;
+  }
+  if (window.location.protocol !== "file:") return url;
   const isSubPage = /\/(maths|india|finance|unit|health-fitness|date-time|science-other)\//.test(currentPath);
   return `${isSubPage ? "../" : ""}${url.slice(1)}`;
 }
@@ -765,11 +771,112 @@ function initFAQ() {
   });
 }
 
+function initFeedbackModal() {
+  const footerLinks = document.querySelector(".footer-company-links");
+  if (!footerLinks || document.querySelector("[data-feedback-open]")) return;
+
+  const openButton = document.createElement("button");
+  openButton.type = "button";
+  openButton.className = "footer-feedback-btn";
+  openButton.dataset.feedbackOpen = "true";
+  openButton.textContent = "Feedback";
+  footerLinks.appendChild(openButton);
+
+  if (!document.getElementById("feedback-modal")) {
+    const overlay = document.createElement("div");
+    overlay.className = "feedback-modal-overlay";
+    overlay.id = "feedback-modal";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-labelledby", "feedback-title");
+    overlay.innerHTML = `
+      <div class="feedback-modal">
+        <div class="feedback-modal-header">
+          <div>
+            <h2 class="feedback-modal-title" id="feedback-title">Send feedback</h2>
+            <p class="feedback-modal-subtitle">Share a correction, suggestion, or issue. Your email app will open with everything filled in.</p>
+          </div>
+          <button class="feedback-modal-close" type="button" aria-label="Close feedback" data-feedback-close>&times;</button>
+        </div>
+        <form class="feedback-form" id="feedback-form">
+          <div class="feedback-form-row">
+            <span class="feedback-recipient">To: janamahi2010@gmail.com</span>
+          </div>
+          <div class="feedback-form-row">
+            <label for="feedback-subject">Subject</label>
+            <input id="feedback-subject" name="subject" type="text" required maxlength="120" placeholder="Feedback about Calculatorcity">
+          </div>
+          <div class="feedback-form-row">
+            <label for="feedback-email">Your email</label>
+            <input id="feedback-email" name="email" type="email" placeholder="you@example.com">
+          </div>
+          <div class="feedback-form-row">
+            <label for="feedback-message">Message</label>
+            <textarea id="feedback-message" name="message" required placeholder="Tell us what should be improved."></textarea>
+          </div>
+          <div class="feedback-actions">
+            <button class="feedback-secondary" type="button" data-feedback-close>Cancel</button>
+            <button class="feedback-submit" type="submit">Open email</button>
+          </div>
+        </form>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  }
+
+  const overlay = document.getElementById("feedback-modal");
+  const form = document.getElementById("feedback-form");
+  const subjectInput = document.getElementById("feedback-subject");
+  const emailInput = document.getElementById("feedback-email");
+  const messageInput = document.getElementById("feedback-message");
+  let previousFocus = null;
+
+  function openModal() {
+    previousFocus = document.activeElement;
+    if (subjectInput && !subjectInput.value) subjectInput.value = `Feedback: ${document.title || "Calculatorcity"}`;
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => subjectInput && subjectInput.focus(), 0);
+  }
+
+  function closeModal() {
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+    if (previousFocus && typeof previousFocus.focus === "function") previousFocus.focus();
+  }
+
+  openButton.addEventListener("click", openModal);
+  overlay.addEventListener("click", event => {
+    if (event.target === overlay || event.target.closest("[data-feedback-close]")) closeModal();
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && overlay.classList.contains("open")) closeModal();
+  });
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+    const subject = subjectInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+    if (!subject || !message) return;
+
+    const body = [
+      message,
+      "",
+      email ? `From: ${email}` : "",
+      `Page: ${window.location.href}`
+    ].filter(Boolean).join("\n");
+
+    window.location.href = `mailto:janamahi2010@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    closeModal();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initSearch();
   initMobileMenu();
   initFAQ();
   initAmountInputFormatting();
   initRangeInputStyling();
+  initFeedbackModal();
 });
 

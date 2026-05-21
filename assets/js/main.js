@@ -288,7 +288,7 @@ const calculators = [
     "keywords": "sip calculator  systematic investment plan  india rupee tax investment loan gst salary"
   },
   {
-    "name": "Stamp Duty Calculator India",
+    "name": "Stamp Duty India Calculator",
     "url": "/india/stamp-duty/index.html",
     "category": "India",
     "keywords": "stamp duty calculator india property registration charges state wise women discount circle rate"

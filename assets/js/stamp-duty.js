@@ -60,6 +60,9 @@
   const data = window.stampDutyData || {};
   const stateOrder = window.stampDutyStateOrder || Object.keys(data);
   const BASE_URL = "/india/stamp-duty/";
+  const BRAND_COLOR = "#f97316";
+  const BRAND_LIGHT = "#fff7ed";
+  const BRAND_BORDER = "#fed7aa";
 
   let currentStateSlug = null;
   let currentGender = "male";
@@ -245,8 +248,8 @@
       const tile = document.createElement("a");
       tile.className = "state-tile";
       tile.href = stateUrl(slug);
-      tile.style.setProperty("--tile-color", state.color);
-      tile.style.setProperty("--tile-light", state.color + "12");
+      tile.style.setProperty("--tile-color", BRAND_COLOR);
+      tile.style.setProperty("--tile-light", BRAND_LIGHT);
       tile.dataset.slug = slug;
       tile.dataset.stateLink = "";
       tile.dataset.href = stateUrl(slug);
@@ -311,9 +314,9 @@
     isRural = false;
 
     syncSeo(state);
-    document.documentElement.style.setProperty("--state-color", state.color);
-    document.documentElement.style.setProperty("--state-light", state.color + "12");
-    document.documentElement.style.setProperty("--state-border", state.color + "33");
+    document.documentElement.style.setProperty("--state-color", BRAND_COLOR);
+    document.documentElement.style.setProperty("--state-light", BRAND_LIGHT);
+    document.documentElement.style.setProperty("--state-border", BRAND_BORDER);
 
     safeSetText("page-h1", state.seo.h1);
     safeSetText("page-subtitle", state.seo.subtitle);
@@ -328,7 +331,7 @@
     const infoBar = byId("state-info-bar");
     if (infoBar) {
       infoBar.style.display = "flex";
-      infoBar.style.borderColor = state.color;
+      infoBar.style.borderColor = BRAND_COLOR;
     }
     setDisplay("calc-widget", "block");
     setDisplay("rates-summary-card", "block");
@@ -596,8 +599,8 @@
       const item = document.createElement("a");
       item.className = "compare-item" + (isCheaper ? " cheaper" : total > currentTotal ? " expensive" : "");
       item.href = stateUrl(slug);
-      item.style.setProperty("--tile-color", state.color);
-      item.style.setProperty("--tile-light", state.color + "12");
+      item.style.setProperty("--tile-color", BRAND_COLOR);
+      item.style.setProperty("--tile-light", BRAND_LIGHT);
       item.dataset.stateLink = "";
       item.dataset.href = stateUrl(slug);
       item.innerHTML =

@@ -1,5 +1,83 @@
 const calculators = [
+    {
+    "name": "AP Electricity Bill Calculator",
+    "url": "/india/electricity/andhra-pradesh.html",
+    "category": "India",
+    "keywords": "ap andhra pradesh electricity bill calculator discom tariff units"
+  },
   {
+    "name": "Telangana Electricity Bill Calculator",
+    "url": "/india/electricity/telangana.html",
+    "category": "India",
+    "keywords": "telangana electricity bill calculator discom tariff units"
+  },
+  {
+    "name": "Karnataka Electricity Bill Calculator",
+    "url": "/india/electricity/karnataka.html",
+    "category": "India",
+    "keywords": "karnataka electricity bill calculator bescom tariff units"
+  },
+  {
+    "name": "Tamil Nadu Electricity Bill Calculator",
+    "url": "/india/electricity/tamil-nadu.html",
+    "category": "India",
+    "keywords": "tamil nadu electricity bill calculator tangedco tariff units"
+  },
+  {
+    "name": "Maharashtra Electricity Bill Calculator",
+    "url": "/india/electricity/maharashtra.html",
+    "category": "India",
+    "keywords": "maharashtra electricity bill calculator msedcl tariff units"
+  },
+  {
+    "name": "Delhi Electricity Bill Calculator",
+    "url": "/india/electricity/delhi.html",
+    "category": "India",
+    "keywords": "delhi electricity bill calculator bses tpddl tariff units subsidy"
+  },
+  {
+    "name": "Gujarat Electricity Bill Calculator",
+    "url": "/india/electricity/gujarat.html",
+    "category": "India",
+    "keywords": "gujarat electricity bill calculator discom tariff units"
+  },
+  {
+    "name": "Kerala Electricity Bill Calculator",
+    "url": "/india/electricity/kerala.html",
+    "category": "India",
+    "keywords": "kerala electricity bill calculator kseb tariff units"
+  },
+  {
+    "name": "UP Electricity Bill Calculator",
+    "url": "/india/electricity/uttar-pradesh.html",
+    "category": "India",
+    "keywords": "up uttar pradesh electricity bill calculator uppcl tariff units"
+  },
+  {
+    "name": "Rajasthan Electricity Bill Calculator",
+    "url": "/india/electricity/rajasthan.html",
+    "category": "India",
+    "keywords": "rajasthan electricity bill calculator tariff units"
+  },
+  {
+    "name": "AP Stamp Duty Calculator",
+    "url": "/india/stamp-duty/andhra-pradesh.html",
+    "category": "India",
+    "keywords": "ap andhra pradesh stamp duty calculator property registration charges"
+  },
+  {
+    "name": "Haryana Stamp Duty Calculator",
+    "url": "/india/stamp-duty/haryana.html",
+    "category": "India",
+    "keywords": "haryana stamp duty calculator property registration charges"
+  },
+  {
+    "name": "UP Stamp Duty Calculator",
+    "url": "/india/stamp-duty/uttar-pradesh.html",
+    "category": "India",
+    "keywords": "up uttar pradesh stamp duty calculator property registration charges"
+  },
+{
     "name": "Age Calculator",
     "url": "/date-time/age-calculator.html",
     "category": "Date & Time",
@@ -187,7 +265,7 @@ const calculators = [
   },
   {
     "name": "Andhra Pradesh Electricity Bill Calculator",
-    "url": "/india/ap-electricity-bill-calculator.html",
+    "url": "/india/electricity/andhra-pradesh.html",
     "category": "India",
     "keywords": "andhra pradesh electricity bill calculator india rupee tax investment loan gst salary"
   },

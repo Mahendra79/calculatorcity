@@ -19,7 +19,14 @@
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/calculator.css">
   <style>
-    :root {
+    body {
+      opacity: 0;
+      transition: opacity 0.18s ease;
+    }
+    body.page-loaded {
+      opacity: 1;
+    }
+:root {
       --elec-primary: #f97316;
       --elec-primary-dark: #ea580c;
       --elec-primary-light: #fff7ed;
@@ -1268,6 +1275,19 @@
       }
     }
 
+    @media (max-width: 900px) {
+      .calc-layout {
+        grid-template-columns: 1fr;
+      }
+      .calc-sidebar-col {
+        display: block !important;
+        position: static;
+      }
+      .calc-sidebar-col .ad-slot {
+        display: none;
+      }
+    }
+
     @media (max-width: 520px) {
       .modal-charges,
       .modal-slab-row {
@@ -1563,8 +1583,57 @@
       <div class="content-block" id="content-how-it-works">
         <h2 id="content-h2-how">How is an electricity bill calculated in India?</h2>
         <div id="content-how-text">
-          <p>Most Indian domestic electricity bills use telescopic slabs. The first block of units is charged at the first rate, the next block at the next rate, and so on. Fixed charge, meter rent, electricity duty, and monthly fuel adjustment charges are then added.</p>
-          <p>Select a state or union territory above to load local DISCOM names, slab ranges, subsidy options, bill breakdown, tariff table, and state-specific FAQs.</p>
+          <!-- DEFAULT CONTENT - always visible, not dependent on JS or state selection -->
+          <div id="default-content">
+
+            <p>Most Indian domestic electricity bills use a <strong>telescopic slab system</strong>.
+            The first block of units is charged at the lowest rate, the next block at a higher rate,
+            and so on. This means you only pay the higher rate on units consumed above each threshold -
+            not on your entire consumption. Fixed charge, meter rent, electricity duty (5-16% depending
+            on state), and Fuel Adjustment Charge (FAC) are added on top of energy charges.</p>
+
+            <p>India has 28 states and 8 union territories - each with its own electricity distribution
+            company (DISCOM) and its own tariff rates set by the respective State Electricity Regulatory
+            Commission (SERC). Rates differ significantly: Tamil Nadu gives the first 100 units free,
+            Delhi provides Rs 800 subsidy for below 200 units, while Maharashtra has the highest electricity
+            duty at 16%. Select your state above to calculate your exact bill.</p>
+
+            <h2 style="font-size:1.1rem;font-weight:600;margin:1.5rem 0 0.75rem;">
+              India electricity tariff - quick state comparison
+            </h2>
+
+            <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:0.875rem;">
+              <thead>
+                <tr style="background:#f8fafc;">
+                  <th style="text-align:left;padding:7px 10px;border-bottom:1px solid #e2e8f0;color:#64748b;">State</th>
+                  <th style="text-align:left;padding:7px 10px;border-bottom:1px solid #e2e8f0;color:#64748b;">DISCOM</th>
+                  <th style="text-align:right;padding:7px 10px;border-bottom:1px solid #e2e8f0;color:#64748b;">First slab</th>
+                  <th style="text-align:right;padding:7px 10px;border-bottom:1px solid #e2e8f0;color:#64748b;">Duty</th>
+                  <th style="text-align:left;padding:7px 10px;border-bottom:1px solid #e2e8f0;color:#64748b;">Special</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Andhra Pradesh</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">APSPDCL / APEPDCL</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;font-family:monospace;">Rs 1.45/unit</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;">6%</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">BPL: 30 units free</td></tr>
+                <tr style="background:#f8fafc;"><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Telangana</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">TSSPDCL / TSNPDCL</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;font-family:monospace;">Rs 1.45/unit</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;">5%</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Low-income subsidy</td></tr>
+                <tr><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Tamil Nadu</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">TANGEDCO</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;font-family:monospace;color:#16a34a;">FREE</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;">5%</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;color:#16a34a;font-weight:500;">First 100 units FREE</td></tr>
+                <tr style="background:#f8fafc;"><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Karnataka</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">BESCOM / MESCOM+</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;font-family:monospace;">Rs 3.15/unit</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;">6%</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Gruha Jyothi: 200 units free BPL</td></tr>
+                <tr><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Maharashtra</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">MSEDCL / Tata / Adani</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;font-family:monospace;">Rs 3.46/unit</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;color:#dc2626;font-weight:500;">16%</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;color:#dc2626;">Highest duty in India</td></tr>
+                <tr style="background:#f8fafc;"><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Delhi</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">BSES / TPDDL</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;font-family:monospace;">Rs 3.00/unit</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;">5%</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;color:#16a34a;">Rs 800 subsidy (0-200 units)</td></tr>
+                <tr><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Gujarat</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">DGVCL / PGVCL / MGVCL / UGVCL</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;font-family:monospace;">Rs 2.75/unit</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;">5%</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">4 zone DISCOMs</td></tr>
+                <tr style="background:#f8fafc;"><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Kerala</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">KSEB</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;font-family:monospace;">Rs 2.45/unit</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;">5%</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Single statewide utility</td></tr>
+                <tr><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">Himachal Pradesh</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;">HPSEBL</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;font-family:monospace;color:#16a34a;">FREE</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;text-align:right;">5%</td><td style="padding:7px 10px;border-bottom:1px solid #f1f5f9;color:#16a34a;">First 60 units free</td></tr>
+                <tr style="background:#f8fafc;"><td style="padding:7px 10px;">Uttar Pradesh</td><td style="padding:7px 10px;">UPPCL (5 sub-DISCOMs)</td><td style="padding:7px 10px;text-align:right;font-family:monospace;">Rs 3.35/unit</td><td style="padding:7px 10px;text-align:right;">5%</td><td style="padding:7px 10px;">Urban vs rural tariff</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <p style="margin-top:1rem;font-size:0.875rem;color:#64748b;">
+              Select your state from the dropdown above to calculate your exact monthly bill with
+              current slab rates, fixed charges, electricity duty, and any applicable subsidies.
+            </p>
+
+          </div>
         </div>
       </div>
       <div class="content-block" id="content-tariff-block">
@@ -1656,6 +1725,30 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
 <script src="../../assets/js/main.js" defer></script>
 <script>
+
+  document.addEventListener("DOMContentLoaded", function() {
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        document.body.classList.add("page-loaded");
+      });
+    });
+  });
+
+  function prefetchPage(href) {
+    if (!href) return;
+    if (document.querySelector('link[rel="prefetch"][href="' + href + '"]')) return;
+    var link = document.createElement("link");
+    link.rel = "prefetch";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+
+  function navigateTo(href) {
+    if (!href) return;
+    document.body.style.transition = "opacity 0.15s ease";
+    document.body.style.opacity = "0";
+    setTimeout(function() { window.location.href = href; }, 150);
+  }
 (function() {
   "use strict";
 
@@ -2587,14 +2680,16 @@
         '<span class="state-tile-code">' + escapeHTML(state.code) + '</span>' +
         '<span class="state-tile-name">' + escapeHTML(state.name) + '</span>' +
         '<span class="state-tile-discom">' + escapeHTML(getDiscomSummary(state)) + '</span>';
-      tile.addEventListener("click", () => { window.location.href = buildStateUrl(slug); });
+      tile.addEventListener("mouseenter", () => { prefetchPage(buildStateUrl(slug)); });
+      tile.addEventListener("focus", () => { prefetchPage(buildStateUrl(slug)); });
+      tile.addEventListener("click", () => { navigateTo(buildStateUrl(slug)); });
       grid.appendChild(tile);
     });
   }
 
   function setupEventListeners() {
     byId("state-select").addEventListener("change", event => {
-      if (event.target.value) window.location.href = buildStateUrl(event.target.value);
+      if (event.target.value) navigateTo(buildStateUrl(event.target.value));
     });
 
     byId("calc-btn").addEventListener("click", calculateBill);
@@ -3215,7 +3310,9 @@
         '<div class="state-compare-item-name">' + escapeHTML(state.name) + '</div>' +
         '<div class="state-compare-item-amount">' + formatINR(bill) + '</div>' +
         '<div class="state-compare-item-note">' + (bill < currentBill ? RUPEE + diff + " cheaper" : bill > currentBill ? RUPEE + diff + " costlier" : "Same estimate") + '</div>';
-      item.addEventListener("click", () => { window.location.href = buildStateUrl(slug); });
+      item.addEventListener("mouseenter", () => { prefetchPage(buildStateUrl(slug)); });
+      item.addEventListener("focus", () => { prefetchPage(buildStateUrl(slug)); });
+      item.addEventListener("click", () => { navigateTo(buildStateUrl(slug)); });
       grid.appendChild(item);
     });
   }

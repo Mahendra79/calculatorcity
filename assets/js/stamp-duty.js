@@ -280,7 +280,7 @@
     }).join("");
 
     safeSetText("content-h2-rates", "Stamp duty rates comparison — all states & UTs");
-    safeSetHTML("content-rates-table", '<table class="rates-table"><thead><tr><th>State / UT</th><th>Men stamp</th><th>Women stamp</th><th>Registration</th><th>Total</th></tr></thead><tbody>' + rows + '</tbody></table>');
+    safeSetHTML("content-rates-table", '<div style="overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -1rem; padding: 0 1rem;"><table class="rates-table" style="min-width: 500px;"><thead><tr><th>State / UT</th><th>Men stamp</th><th>Women stamp</th><th>Registration</th><th>Total</th></tr></thead><tbody>' + rows + '</tbody></table></div>');
     setDisplay("content-rates-section", "block");
     renderFaq(defaultFaq);
     updateFaqSchema(defaultFaq);

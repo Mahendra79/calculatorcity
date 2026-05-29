@@ -250,7 +250,7 @@ def footer() -> str:
         <a href="../india/tds-calculator.html">TDS</a>
         <a href="../finance/discount-calculator.html">Discount</a>
         <a href="../india/cgpa-to-percentage-calculator.html">CGPA to %</a>
-        <a href="../india/stamp-duty-calculator.html">Stamp Duty</a>
+        <a href="../india/stamp-duty/index.html">Stamp Duty</a>
         </div>
       </nav>
       <div class="footer-brand-company">
@@ -1063,7 +1063,7 @@ PAGES.extend([
     "script": """function calculate(){const annual=clamp(value('investment'),500,150000);const rate=value('rate')/100;const beginning=document.getElementById('timing').value==='beginning';let balance=0,invested=0,rows='',labels=[],dep=[],intData=[];for(let y=1;y<=15;y++){const opening=balance;let interest;if(beginning){balance+=annual;invested+=annual;interest=balance*rate;balance+=interest;}else{interest=balance*rate;balance+=interest+annual;invested+=annual;}labels.push(`Year ${y}`);dep.push(invested);intData.push(balance-invested);rows+=`<tr><td>${y}</td><td>${formatIndianNumber(opening)}</td><td>${formatIndianNumber(annual)}</td><td>${formatIndianNumber(interest)}</td><td>${formatIndianNumber(balance)}</td></tr>`;}text('maturity',`${formatIndianNumber(balance)} (${formatShortIndian(balance)})`);text('invested',formatIndianNumber(invested));text('interest',formatIndianNumber(balance-invested));text('tax-saving',formatIndianNumber(Math.min(annual,150000)*0.30));html('year-table','<table class="reference-table"><thead><tr><th>Year</th><th>Opening Balance</th><th>Deposit</th><th>Interest</th><th>Closing Balance</th></tr></thead><tbody>'+rows+'</tbody></table>');drawChart('calc-chart','bar',labels,[{label:'Cumulative invested',data:dep,backgroundColor:'#2563eb'},{label:'Interest accumulated',data:intData,backgroundColor:'#16a34a'}],{scales:{x:{stacked:true},y:{stacked:true}}});}bindCalculator(calculate);""",
 },
 {
-    "file": "stamp-duty-calculator.html",
+    "file": "stamp-duty/index.html",
     "title": "Stamp Duty Calculator India — Property Registration | Calculatorcity",
     "meta": "Calculate stamp duty and registration charges for property purchase in India. State-wise rates for all major states including Andhra Pradesh, Telangana, Maharashtra.",
     "h1": "Stamp Duty Calculator India",

@@ -19,7 +19,14 @@
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/calculator.css">
   <style>
-    :root {
+    body {
+      opacity: 0;
+      transition: opacity 0.18s ease;
+    }
+    body.page-loaded {
+      opacity: 1;
+    }
+:root {
       --elec-primary: #f97316;
       --elec-primary-dark: #ea580c;
       --elec-primary-light: #fff7ed;
@@ -1268,6 +1275,19 @@
       }
     }
 
+    @media (max-width: 900px) {
+      .calc-layout {
+        grid-template-columns: 1fr;
+      }
+      .calc-sidebar-col {
+        display: block !important;
+        position: static;
+      }
+      .calc-sidebar-col .ad-slot {
+        display: none;
+      }
+    }
+
     @media (max-width: 520px) {
       .modal-charges,
       .modal-slab-row {
@@ -1656,6 +1676,30 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
 <script src="../../assets/js/main.js" defer></script>
 <script>
+
+  document.addEventListener("DOMContentLoaded", function() {
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        document.body.classList.add("page-loaded");
+      });
+    });
+  });
+
+  function prefetchPage(href) {
+    if (!href) return;
+    if (document.querySelector('link[rel="prefetch"][href="' + href + '"]')) return;
+    var link = document.createElement("link");
+    link.rel = "prefetch";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+
+  function navigateTo(href) {
+    if (!href) return;
+    document.body.style.transition = "opacity 0.15s ease";
+    document.body.style.opacity = "0";
+    setTimeout(function() { window.location.href = href; }, 150);
+  }
 (function() {
   "use strict";
 
@@ -2587,14 +2631,16 @@
         '<span class="state-tile-code">' + escapeHTML(state.code) + '</span>' +
         '<span class="state-tile-name">' + escapeHTML(state.name) + '</span>' +
         '<span class="state-tile-discom">' + escapeHTML(getDiscomSummary(state)) + '</span>';
-      tile.addEventListener("click", () => { window.location.href = buildStateUrl(slug); });
+      tile.addEventListener("mouseenter", () => { prefetchPage(buildStateUrl(slug)); });
+      tile.addEventListener("focus", () => { prefetchPage(buildStateUrl(slug)); });
+      tile.addEventListener("click", () => { navigateTo(buildStateUrl(slug)); });
       grid.appendChild(tile);
     });
   }
 
   function setupEventListeners() {
     byId("state-select").addEventListener("change", event => {
-      if (event.target.value) window.location.href = buildStateUrl(event.target.value);
+      if (event.target.value) navigateTo(buildStateUrl(event.target.value));
     });
 
     byId("calc-btn").addEventListener("click", calculateBill);
@@ -3215,7 +3261,9 @@
         '<div class="state-compare-item-name">' + escapeHTML(state.name) + '</div>' +
         '<div class="state-compare-item-amount">' + formatINR(bill) + '</div>' +
         '<div class="state-compare-item-note">' + (bill < currentBill ? RUPEE + diff + " cheaper" : bill > currentBill ? RUPEE + diff + " costlier" : "Same estimate") + '</div>';
-      item.addEventListener("click", () => { window.location.href = buildStateUrl(slug); });
+      item.addEventListener("mouseenter", () => { prefetchPage(buildStateUrl(slug)); });
+      item.addEventListener("focus", () => { prefetchPage(buildStateUrl(slug)); });
+      item.addEventListener("click", () => { navigateTo(buildStateUrl(slug)); });
       grid.appendChild(item);
     });
   }

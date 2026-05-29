@@ -43,7 +43,7 @@ POPULAR = [
     ("Currency", "finance/currency-converter.html"),
     ("CGPA to Percentage", "india/cgpa-to-percentage-calculator.html"),
     ("Gold Price", "india/gold-price-calculator.html"),
-    ("Stamp Duty", "india/stamp-duty-calculator.html"),
+    ("Stamp Duty", "india/stamp-duty/index.html"),
 ]
 
 COMPANY = [
@@ -133,7 +133,7 @@ def footer_for(page: Path) -> str:
         ("TDS", "india/tds-calculator.html"),
         ("Discount", "finance/discount-calculator.html"),
         ("CGPA to %", "india/cgpa-to-percentage-calculator.html"),
-        ("Stamp Duty", "india/stamp-duty-calculator.html"),
+        ("Stamp Duty", "india/stamp-duty/index.html"),
     ]
     company = [
         ("About Us", "company/about-us.html"),

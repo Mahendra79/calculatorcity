@@ -2,20 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Ratio Calculator ? Simplify and Scale Ratios | Calculatorcity</title>
   <meta name="description" content="Simplify ratios, find missing proportion values and scale ratios with GCD working, cross multiplication, equivalent ratios and a live ratio bar visual.">
-  <link rel="canonical" href="https://calculatorcity.in/maths/ratio-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Ratio Calculator ? Simplify and Scale Ratios | Calculatorcity">
+  <meta property="og:description" content="Simplify ratios, find missing proportion values and scale ratios with GCD working, cross multiplication, equivalent ratios and a live ratio bar visual.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/maths/ratio-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ratio Calculator ? Simplify and Scale Ratios | Calculatorcity">
+  <meta name="twitter:description" content="Simplify ratios, find missing proportion values and scale ratios with GCD working, cross multiplication, equivalent ratios and a live ratio bar visual.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/maths/ratio-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/base.css"><link rel="stylesheet" href="../assets/css/layout.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Ratio Calculator","url":"https://calculatorcity.in/maths/ratio-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Ratio Calculator","url":"https://mahendra79.github.io/calculatorcity/maths/ratio-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a ratio",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A ratio compares two or more quantities using division. The ratio 2:3 means that for every 2 parts of the first quantity there are 3 parts of the second quantity. Ratios can describe physical sizes, recipes, map distances, financial relationships, image dimensions, or mixing instructions. Unlike a single number, a ratio is about relationship and proportion. If both sides are multiplied by the same number, the relationship stays the same. That is why 2:3, 4:6, and 20:30 are equivalent ratios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I simplify a ratio",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To simplify a ratio, divide every part by the greatest common divisor shared by the parts. For a two-part ratio such as 24:36, the greatest common divisor is 12. Dividing both parts by 12 gives 2:3. The simplified ratio expresses the same comparison with smaller whole numbers. If the two parts have no common divisor other than 1, the ratio is already in simplest form. Simplified ratios are easier to read, compare, and use in later calculations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do equivalent ratios work",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Equivalent ratios describe the same proportional relationship. They are created by multiplying or dividing every part by the same nonzero number. For example, 3:5 is equivalent to 6:10 and 30:50. In missing-value questions, cross multiplication is used. If 3:5 = 12:, then 3/5 = 12/D. Multiply 5 by 12 and divide by 3 to get D = 20. So 3:5 equals 12:20. This is the same reasoning used in map scales and recipe scaling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can ratios have decimals",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ratios can include decimals, but they are often converted to whole-number ratios for clarity. If a ratio is 1.5:2.5, multiply both parts by 10 to get 15:25, then simplify to 3:5. Decimal ratios appear in design, finance, chemistry, and measurement. The important rule is to apply the same multiplication to every part. If the decimal values represent measured quantities, keep enough precision so rounding does not change the intended relationship too much."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where are ratios used in real life",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ratios are used in recipes, construction mixes, map scales, screen sizes, photography, financial analysis, chemistry, and sports statistics. A recipe might use a 2:1 ratio of flour to sugar. A map might use 1:50000 to show that one unit on paper equals fifty thousand units in real distance. A phone screen may use a 20:9 width-to-height ratio. Ratios make it possible to scale quantities up or down while preserving the same relationship between parts."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Ratio Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Choose Simplify when you have a ratio like 12:18 and want the lowest whole-number form."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose Find Missing when you know A:B = C: and need the fourth proportional value."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose Scale when you want to multiply both parts of a ratio by the same factor, such as doubling a recipe."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter A and B as positive numbers. For missing and scale modes, enter C as the known value or multiplier."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate and read both the result cards and the ratio bar. The bar shows the relative size of A and B visually."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ Calculatorcity</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
-      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
+      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
   <main id="main" class="page-container two-col-layout" role="main">
     <article class="calc-main">
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>Ratio Calculator</span></nav>
@@ -25,7 +126,18 @@
         <div class="calc-tabs"><button class="calc-tab active" type="button" data-mode="simplify">Simplify</button><button class="calc-tab" type="button" data-mode="missing">Find Missing</button><button class="calc-tab" type="button" data-mode="scale">Scale</button></div>
         <div class="result-grid"><div class="calc-input-group"><label for="a">Ratio A</label><input id="a" type="number" value="12"></div><div class="calc-input-group"><label for="b">Ratio B</label><input id="b" type="number" value="18"></div><div class="calc-input-group"><label for="c">C or multiplier</label><input id="c" type="number" value="30"><span class="hint">For missing mode: A:B = C:</span></div></div>
         <button class="calc-btn" id="calculate-ratio" type="button">Calculate Ratio</button>
-        <div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div><p id="ratio-note" style="margin-top:1rem;"></p></div>
+        <div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div><p id="ratio-note" style="margin-top:1rem;"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
       <section class="content-section"><h2>Ratio Bar Visual</h2><div class="formula-box"><svg viewBox="0 0 640 120" style="width:100%;height:auto"><rect x="30" y="44" width="580" height="34" rx="8" fill="#e2e8f0"></rect><rect id="ratio-a" x="30" y="44" width="232" height="34" rx="8" fill="#2563eb"></rect><rect id="ratio-b" x="262" y="44" width="348" height="34" rx="8" fill="#16a34a"></rect><text id="ratio-a-label" x="42" y="66" font-size="14" fill="#fff">A</text><text id="ratio-b-label" x="276" y="66" font-size="14" fill="#fff">B</text></svg></div></section>
       <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Choose Simplify when you have a ratio like 12:18 and want the lowest whole-number form.</li><li>Choose Find Missing when you know A:B = C: and need the fourth proportional value.</li><li>Choose Scale when you want to multiply both parts of a ratio by the same factor, such as doubling a recipe.</li><li>Enter A and B as positive numbers. For missing and scale modes, enter C as the known value or multiplier.</li><li>Click Calculate and read both the result cards and the ratio bar. The bar shows the relative size of A and B visually.</li></ol></section>
@@ -35,7 +147,8 @@
       <section class="content-section"><h2>Real-World Ratio Reference</h2><table class="reference-table"><thead><tr><th>Use case</th><th>Ratio</th><th>Meaning</th></tr></thead><tbody><tr><td>HD video</td><td>16:9</td><td>Width to height</td></tr><tr><td>A4 paper</td><td>1:√2</td><td>Width to height</td></tr><tr><td>Golden ratio</td><td>1:1.618</td><td>Aesthetic proportion</td></tr><tr><td>Map scale 1:50000</td><td>1:50000</td><td>1 cm = 500 m</td></tr><tr><td>Standard brick</td><td>2:1:0.5</td><td>Length:width:height</td></tr><tr><td>Concrete mix</td><td>1:2:4</td><td>Cement:sand:gravel</td></tr><tr><td>Fuel-oil mix</td><td>50:1</td><td>Petrol to 2-stroke oil</td></tr><tr><td>Blood sugar</td><td>70:130</td><td>Normal fasting mg/dL range</td></tr></tbody></table></section>
       <section class="content-section"><h2>Ratio Calculator FAQ</h2><div class="faq-item"><h3 class="faq-question">What is a ratio</h3><div class="faq-answer"><p>A ratio compares two or more quantities using division. The ratio 2:3 means that for every 2 parts of the first quantity there are 3 parts of the second quantity. Ratios can describe physical sizes, recipes, map distances, financial relationships, image dimensions, or mixing instructions. Unlike a single number, a ratio is about relationship and proportion. If both sides are multiplied by the same number, the relationship stays the same. That is why 2:3, 4:6, and 20:30 are equivalent ratios.</p></div></div><div class="faq-item"><h3 class="faq-question">How do I simplify a ratio</h3><div class="faq-answer"><p>To simplify a ratio, divide every part by the greatest common divisor shared by the parts. For a two-part ratio such as 24:36, the greatest common divisor is 12. Dividing both parts by 12 gives 2:3. The simplified ratio expresses the same comparison with smaller whole numbers. If the two parts have no common divisor other than 1, the ratio is already in simplest form. Simplified ratios are easier to read, compare, and use in later calculations.</p></div></div><div class="faq-item"><h3 class="faq-question">How do equivalent ratios work</h3><div class="faq-answer"><p>Equivalent ratios describe the same proportional relationship. They are created by multiplying or dividing every part by the same nonzero number. For example, 3:5 is equivalent to 6:10 and 30:50. In missing-value questions, cross multiplication is used. If 3:5 = 12:, then 3/5 = 12/D. Multiply 5 by 12 and divide by 3 to get D = 20. So 3:5 equals 12:20. This is the same reasoning used in map scales and recipe scaling.</p></div></div><div class="faq-item"><h3 class="faq-question">Can ratios have decimals</h3><div class="faq-answer"><p>Ratios can include decimals, but they are often converted to whole-number ratios for clarity. If a ratio is 1.5:2.5, multiply both parts by 10 to get 15:25, then simplify to 3:5. Decimal ratios appear in design, finance, chemistry, and measurement. The important rule is to apply the same multiplication to every part. If the decimal values represent measured quantities, keep enough precision so rounding does not change the intended relationship too much.</p></div></div><div class="faq-item"><h3 class="faq-question">Where are ratios used in real life</h3><div class="faq-answer"><p>Ratios are used in recipes, construction mixes, map scales, screen sizes, photography, financial analysis, chemistry, and sports statistics. A recipe might use a 2:1 ratio of flour to sugar. A map might use 1:50000 to show that one unit on paper equals fifty thousand units in real distance. A phone screen may use a 20:9 width-to-height ratio. Ratios make it possible to scale quantities up or down while preserving the same relationship between parts.</p></div></div></section>
     </article>
-    <aside class="calc-sidebar"><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/fraction-calculator.html">Fraction Calculator</a></li><li><a href="../maths/percentage-calculator.html">Percentage Calculator</a></li><li><a href="../maths/average-calculator.html">Average Calculator</a></li><li><a href="../unit-converter/length-converter.html">Length Converter</a></li><li><a href="../finance/discount-calculator.html">Discount Calculator</a></li></ul></div></aside>
+    <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/fraction-calculator.html">Fraction Calculator</a></li><li><a href="../maths/percentage-calculator.html">Percentage Calculator</a></li><li><a href="../maths/average-calculator.html">Average Calculator</a></li><li><a href="../unit-converter/length-converter.html">Length Converter</a></li><li><a href="../finance/discount-calculator.html">Discount Calculator</a></li></ul></div></aside>
   </main>
   <hr class="footer-separator" aria-hidden="true">
 <footer class="site-footer">

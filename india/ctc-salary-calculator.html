@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>CTC to In-Hand Salary Calculator India | Calculatorcity</title>
   <meta name="description" content="Free CTC to in-hand salary calculator India. Convert your annual CTC to monthly take-home salary with complete breakup of PF, HRA, basic, and deductions.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="CTC to In-Hand Salary Calculator India | Calculatorcity">
+  <meta property="og:description" content="Free CTC to in-hand salary calculator India. Convert your annual CTC to monthly take-home salary with complete breakup of PF, HRA, basic, and deductions.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/ctc-salary-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CTC to In-Hand Salary Calculator India | Calculatorcity">
+  <meta name="twitter:description" content="Free CTC to in-hand salary calculator India. Convert your annual CTC to monthly take-home salary with complete breakup of PF, HRA, basic, and deductions.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/ctc-salary-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/ctc-salary-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +30,95 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "CTC to In-Hand Salary Calculator", "url": "https://calculatorcity.in/india/ctc-salary-calculator.html", "description": "Free CTC to in-hand salary calculator India. Convert your annual CTC to monthly take-home salary with complete breakup of PF, HRA, basic, and deductions.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "CTC to In-Hand Salary Calculator", "item": "https://calculatorcity.in/india/ctc-salary-calculator.html"}]}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "CTC to In-Hand Salary Calculator", "url": "https://mahendra79.github.io/calculatorcity/india/ctc-salary-calculator.html", "description": "Free CTC to in-hand salary calculator India. Convert your annual CTC to monthly take-home salary with complete breakup of PF, HRA, basic, and deductions.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "CTC to In-Hand Salary Calculator", "item": "https://mahendra79.github.io/calculatorcity/india/ctc-salary-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is CTC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CTC means Cost to Company. It is the total annual cost an employer associates with your compensation, not necessarily the cash paid every month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is in-hand salary lower than CTC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In-hand salary is lower because CTC can include employer benefits, PF, gratuity, tax deductions, professional tax, and variable pay."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is basic salary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Basic salary is the core salary component. Many benefits and deductions such as HRA, PF, and gratuity are linked to basic pay."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is PF calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Employee PF is generally 12% of basic salary, often with wage-cap practices depending on employer policy and statutory coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does rent paid change in-hand salary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rent paid does not directly change monthly payroll unless old-regime HRA declarations are used for TDS. This calculator uses rent for context but estimates TDS simply."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the CTC to In-Hand Salary Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the annual CTC mentioned in the offer letter."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose metro or non-metro because HRA is usually structured differently."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter monthly rent, professional tax state, VPF, and any other recurring deductions."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate in-hand salary to generate the salary slip breakup."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review earnings, statutory deductions, tax estimate, and net monthly salary before comparing offers."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,11 +130,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -52,6 +153,11 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#india">India Calculators</a></span><span>CTC to In-Hand Salary Calculator</span></nav>
     <p><span class="badge badge-india">🇮🇳 India</span></p>
     <h1>CTC to In-Hand Salary Calculator</h1>
+<p class="mini-note" style="margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;">
+  <i class="ti ti-clock" aria-hidden="true" style="font-size:1rem"></i>
+  Rates last verified: <strong>April 2025 (FY 2025-26)</strong>.
+  Always confirm with the official government portal before filing.
+</p>
     <p>The CTC to in-hand salary calculator converts an Indian annual compensation package into an estimated monthly take-home salary. Enter annual CTC, city type, rent, professional tax state, voluntary PF, and extra deductions to see a salary slip style breakup. It estimates basic pay, HRA, special allowance, LTA, employee PF, professional tax, income tax TDS, and the final net salary credited to your bank account.</p>
     <section class="calc-widget">
       <div class="field-grid">
@@ -63,7 +169,18 @@
         <div class="calc-input-group"><label for="vpf">VPF monthly (₹)</label><div class="input-prefix"><span>₹</span><input id="vpf" type="number" value="0"></div></div>
       </div>
       <button class="calc-btn" id="calculate" type="button">Calculate in-hand salary</button>
-      <div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="net-monthly">₹0.00</span><span class="result-label">Net take-home salary</span></div><div class="result-card"><span class="result-value" id="gross-monthly">₹0.00</span><span class="result-label">Gross monthly salary</span></div><div class="result-card"><span class="result-value" id="deductions">₹0.00</span><span class="result-label">Monthly deductions</span></div><div class="result-card"><span class="result-value" id="tds">₹0.00</span><span class="result-label">Estimated income tax TDS</span></div></div><div class="visual-panel"><div id="salary-slip" class="svg-slip"></div></div></div>
+      <div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="net-monthly">₹0.00</span><span class="result-label">Net take-home salary</span></div><div class="result-card"><span class="result-value" id="gross-monthly">₹0.00</span><span class="result-label">Gross monthly salary</span></div><div class="result-card"><span class="result-value" id="deductions">₹0.00</span><span class="result-label">Monthly deductions</span></div><div class="result-card"><span class="result-value" id="tds">₹0.00</span><span class="result-label">Estimated income tax TDS</span></div></div><div class="visual-panel"><div id="salary-slip" class="svg-slip"></div></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
     </section>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter the annual CTC mentioned in the offer letter.</li><li>Choose metro or non-metro because HRA is usually structured differently.</li><li>Enter monthly rent, professional tax state, VPF, and any other recurring deductions.</li><li>Click Calculate in-hand salary to generate the salary slip breakup.</li><li>Review earnings, statutory deductions, tax estimate, and net monthly salary before comparing offers.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">Basic = 40% of CTC<br>HRA = 50% of basic in metro, 40% in non-metro<br>Net salary = Gross monthly earnings − employee PF − professional tax − TDS − other deductions</div><p>CTC is not the same as in-hand salary. Cost to Company can include employer PF, gratuity accrual, insurance premium, variable bonus, joining bonus, meal benefits, and other components that may not be paid monthly. This calculator uses a common Indian salary structure: basic salary at 40% of CTC, HRA based on city type, a small LTA component, and special allowance as the balancing figure. It then estimates employee PF at 12% of basic with a practical monthly cap shown in the calculator.</p><p>Income tax TDS is estimated using a simplified new-regime calculation for salary planning. Actual take-home can differ if your employer uses a different salary structure, variable pay is paid quarterly or annually, old-regime declarations are accepted, NPS employer contribution is included, or reimbursements require bills. Treat the output as an offer-comparison estimate, not a payroll guarantee.</p></section>
@@ -84,6 +201,7 @@
     <section class="content-section"><h2>Important notes for India</h2><ul class="summary-list"><li>Professional tax rates are state-specific and may vary by salary slab and month.</li><li>Employer PF, gratuity, insurance, and variable pay can be included in CTC but not monthly take-home.</li><li>The calculator estimates TDS; final tax depends on chosen regime, declarations, Form 16, AIS, and other income.</li><li>Offer letters may use different basic/HRA percentages, so compare with the actual salary annexure.</li></ul></section>
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li><li><a href="../india/hra-exemption-calculator.html">HRA Exemption</a></li></ul></div>
 </aside>
 </main>
@@ -152,7 +270,7 @@
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatIndianNumber(n) {

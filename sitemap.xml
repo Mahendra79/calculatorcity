@@ -1,331 +1,330 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://calculatorcity.in/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://calculatorcity.in/company/about-us.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://calculatorcity.in/company/blogs.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://calculatorcity.in/company/contact-us.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://calculatorcity.in/company/help.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://calculatorcity.in/company/privacy-policy.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://calculatorcity.in/company/terms-and-conditions.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/age-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/date-difference-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/days-until-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/leap-year-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/retirement-date-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/time-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/time-zone-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/unix-timestamp-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/week-number-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/date-time/working-days-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/break-even-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/compound-interest-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/currency-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/discount-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/inflation-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/loan-emi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/mortgage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/roi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/simple-interest-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/finance/tip-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/bmi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/body-fat-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/calorie-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/heart-rate-zone-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/ideal-weight-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/pregnancy-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/protein-intake-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/sleep-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/steps-to-calories-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/health-fitness/water-intake-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/advance-tax-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/ap-electricity-bill-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/car-loan-emi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/cgpa-to-percentage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/ctc-salary-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/fd-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/gold-price-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/gratuity-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/gst-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/home-loan-emi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/hra-exemption-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/income-tax-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/nps-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/on-road-price-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/pf-epf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/ppf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/sip-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/andhra-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/telangana.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/karnataka.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/tamil-nadu.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/kerala.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/maharashtra.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/gujarat.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/delhi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/uttar-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/rajasthan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/west-bengal.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/madhya-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/haryana.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/punjab.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/bihar.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/odisha.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/himachal-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/goa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/jharkhand.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/chhattisgarh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/assam.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/uttarakhand.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/jammu-kashmir.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/chandigarh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/puducherry.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/ladakh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/stamp-duty/andaman-nicobar.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/sukanya-samriddhi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/india/tds-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/average-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/exponent-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/fraction-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/lcm-hcf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/percentage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/probability-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/quadratic-equation-solver.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/ratio-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/scientific-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/maths/square-root-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/density-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/electricity-cost-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/fuel-efficiency-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/gpa-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/grade-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/ohms-law-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/password-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/random-number-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/speed-distance-time-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/science-other/word-character-counter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/area-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/data-storage-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/energy-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/length-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/number-system-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/pressure-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/speed-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/temperature-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/volume-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculatorcity.in/unit-converter/weight-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/company/about-us.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/company/blogs.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/company/contact-us.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/company/help.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/company/privacy-policy.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/company/terms-and-conditions.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/age-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/date-difference-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/days-until-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/leap-year-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/retirement-date-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/time-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/time-zone-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/unix-timestamp-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/week-number-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/date-time/working-days-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/break-even-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/compound-interest-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/currency-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/discount-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/inflation-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/loan-emi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/mortgage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/roi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/simple-interest-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/finance/tip-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/bmi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/body-fat-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/calorie-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/heart-rate-zone-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/ideal-weight-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/pregnancy-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/protein-intake-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/sleep-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/steps-to-calories-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/health-fitness/water-intake-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/advance-tax-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/car-loan-emi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/cgpa-to-percentage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/ctc-salary-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/fd-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/gold-price-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/gratuity-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/gst-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/home-loan-emi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/hra-exemption-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/income-tax-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/nps-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/on-road-price-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/pf-epf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/ppf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/sip-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/andhra-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/telangana.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/karnataka.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/tamil-nadu.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/kerala.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/maharashtra.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/gujarat.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/delhi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/uttar-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/rajasthan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/west-bengal.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/madhya-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/haryana.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/punjab.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/bihar.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/odisha.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/himachal-pradesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/goa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/jharkhand.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/chhattisgarh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/assam.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/uttarakhand.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/jammu-kashmir.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/chandigarh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/puducherry.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/ladakh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/stamp-duty/andaman-nicobar.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/sukanya-samriddhi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/india/tds-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/average-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/exponent-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/fraction-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/lcm-hcf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/percentage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/probability-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/quadratic-equation-solver.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/ratio-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/scientific-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/maths/square-root-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/density-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/electricity-cost-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/fuel-efficiency-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/gpa-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/grade-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/ohms-law-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/password-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/random-number-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/speed-distance-time-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/science-other/word-character-counter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/area-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/data-storage-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/energy-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/length-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/number-system-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/pressure-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/speed-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/temperature-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/volume-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahendra79.github.io/calculatorcity/unit-converter/weight-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/andhra-pradesh.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/andhra-pradesh.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/telangana.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/telangana.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/karnataka.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/karnataka.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/maharashtra.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/maharashtra.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/tamil-nadu.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/tamil-nadu.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/kerala.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/kerala.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/gujarat.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/gujarat.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/rajasthan.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/rajasthan.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/uttar-pradesh.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/uttar-pradesh.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/madhya-pradesh.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/madhya-pradesh.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/bihar.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/bihar.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/west-bengal.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/west-bengal.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/odisha.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/odisha.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/punjab.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/punjab.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/haryana.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/haryana.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/delhi.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/delhi.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/jharkhand.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/jharkhand.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/chhattisgarh.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/chhattisgarh.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/assam.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/assam.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/himachal-pradesh.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/himachal-pradesh.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/uttarakhand.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/uttarakhand.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/goa.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/goa.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/manipur.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/manipur.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/meghalaya.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/meghalaya.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/mizoram.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/mizoram.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/nagaland.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/nagaland.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/sikkim.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/sikkim.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/tripura.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/tripura.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/arunachal-pradesh.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/arunachal-pradesh.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/puducherry.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/puducherry.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/chandigarh.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/chandigarh.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/andaman-nicobar.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/andaman-nicobar.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/lakshadweep.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/lakshadweep.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/dadra-nagar-haveli.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/dadra-nagar-haveli.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/jammu-kashmir.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/jammu-kashmir.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calculatorcity.in/india/electricity/ladakh.html</loc>
+    <loc>https://mahendra79.github.io/calculatorcity/india/electricity/ladakh.html</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

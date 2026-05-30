@@ -958,3 +958,163 @@ document.addEventListener("DOMContentLoaded", () => {
   initFeedbackModal();
 });
 
+/* PWA install prompt */
+let _deferredInstall = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  _deferredInstall = e;
+  setTimeout(_showInstallBanner, 45000);
+});
+function _showInstallBanner() {
+  if (!_deferredInstall || sessionStorage.getItem('pwa_dismissed')) return;
+  const banner = document.createElement('div');
+  banner.id = 'pwa-banner';
+  banner.style.cssText = 'position:fixed;bottom:1rem;left:1rem;right:1rem;max-width:480px;margin:auto;' +
+    'background:var(--bg);border:1px solid var(--primary);border-radius:var(--radius-lg);' +
+    'padding:1rem 1.25rem;display:flex;gap:1rem;align-items:center;z-index:9999;box-shadow:var(--shadow-lg);';
+  banner.innerHTML = '<span style="flex:1;font-size:0.9rem;color:var(--text)">Add Calculatorcity to your home screen for quick access</span>' +
+    '<button onclick="window._installPWA()" class="btn btn-primary" style="padding:0.55rem 1rem;font-size:0.9rem;white-space:nowrap">Install</button>' +
+    '<button onclick="document.getElementById(\'pwa-banner\').remove();sessionStorage.setItem(\'pwa_dismissed\',\'1\')" ' +
+    'style="border:0;background:transparent;cursor:pointer;font-size:1.4rem;color:var(--text-muted);padding:0 4px" aria-label="Dismiss">&times;</button>';
+  document.body.appendChild(banner);
+}
+window._installPWA = async function() {
+  if (!_deferredInstall) return;
+  _deferredInstall.prompt();
+  const result = await _deferredInstall.userChoice;
+  if (result.outcome === 'accepted') { _deferredInstall = null; }
+  const b = document.getElementById('pwa-banner');
+  if (b) b.remove();
+};
+
+/* Service Worker registration */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/calculatorcity/sw.js').catch(() => {});
+  });
+}
+
+/* Calculation history (localStorage) */
+function _escapeCalcHistoryHtml(value) {
+  return String(value == null ? '' : value).replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[char]));
+}
+function saveCalcHistory(calcName, resultText) {
+  try {
+    const key = 'calcCity_history';
+    const hist = JSON.parse(localStorage.getItem(key) || '[]');
+    hist.unshift({ calc: calcName, result: resultText, time: Date.now() });
+    localStorage.setItem(key, JSON.stringify(hist.slice(0, 5)));
+    renderCalcHistory();
+  } catch(e) {}
+}
+function renderCalcHistory() {
+  const el = document.getElementById('calc-history');
+  if (!el) return;
+  try {
+    const hist = JSON.parse(localStorage.getItem('calcCity_history') || '[]');
+    if (!hist.length) return;
+    el.innerHTML = '<h3 style="margin-bottom:0.75rem;font-size:1rem">Recent calculations</h3>' +
+      hist.map(h => `<div style="padding:0.5rem 0;border-bottom:1px solid var(--border);font-size:0.88rem">
+        <strong>${_escapeCalcHistoryHtml(h.calc)}</strong><br>
+        <span style="color:var(--text-secondary)">${_escapeCalcHistoryHtml(h.result)}</span>
+      </div>`).join('');
+    el.style.display = 'block';
+  } catch(e) {}
+}
+window.addEventListener('load', renderCalcHistory);
+window.saveCalcHistory = saveCalcHistory;
+
+/* Result copy and sharing */
+function _collectResultText() {
+  const vals = [...document.querySelectorAll('.result-value')].map(el => {
+    const lbl = el.nextElementSibling;
+    return (lbl ? lbl.textContent.trim() + ': ' : '') + el.textContent.trim();
+  }).filter(Boolean).join('\n');
+  return vals;
+}
+function _shareTextFromResults() {
+  const title = document.querySelector('h1');
+  const vals = _collectResultText();
+  return (title ? title.textContent.trim() : document.title) + (vals ? '\n' + vals : '') + '\n\ncalculatorcity.in';
+}
+function _updateWAShare() {
+  const links = document.querySelectorAll('#wa-share-btn');
+  if (!links.length) return;
+  const shareText = _shareTextFromResults();
+  links.forEach(wa => {
+    wa.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+  });
+}
+window._updateWAShare = _updateWAShare;
+window._copyResult = function(btn) {
+  const shareText = _shareTextFromResults();
+  const done = () => {
+    if (!btn) return;
+    btn.innerHTML = '<i class="ti ti-check" aria-hidden="true"></i> Copied!';
+    setTimeout(() => { btn.innerHTML = '<i class="ti ti-copy" aria-hidden="true"></i> Copy Result'; }, 2000);
+  };
+  const fail = () => { if (btn) btn.textContent = 'Copy failed'; };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(shareText).then(done).catch(fail);
+  } else {
+    try {
+      const textArea = document.createElement('textarea');
+      textArea.value = shareText;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy') ? done() : fail();
+      textArea.remove();
+    } catch(e) { fail(); }
+  }
+  _updateWAShare();
+};
+function _createResultShareRow() {
+  const row = document.createElement('div');
+  row.className = 'result-share-row';
+  row.style.cssText = 'display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;';
+  row.innerHTML =
+    '<button class="btn btn-secondary" onclick="_copyResult(this)" style="flex:1;min-width:130px;font-size:0.9rem">' +
+    '<i class="ti ti-copy" aria-hidden="true"></i> Copy Result</button>' +
+    '<a id="wa-share-btn" class="btn btn-secondary" style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center" href="#" target="_blank" rel="noopener noreferrer">' +
+    '<i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share</a>';
+  return row;
+}
+function _ensureResultShareRows() {
+  document.querySelectorAll('.calc-result').forEach(result => {
+    if (!result.querySelector('.result-share-row')) result.appendChild(_createResultShareRow());
+  });
+  _updateWAShare();
+}
+let _lastSavedResult = '';
+let _resultSaveTimer = null;
+function _saveVisibleResultHistory() {
+  const vals = _collectResultText();
+  if (!vals) return;
+  const title = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : document.title;
+  const key = title + '\n' + vals;
+  if (key === _lastSavedResult) return;
+  _lastSavedResult = key;
+  saveCalcHistory(title, vals.replace(/\n/g, ' · '));
+}
+function _scheduleResultEnhancementUpdate() {
+  clearTimeout(_resultSaveTimer);
+  _resultSaveTimer = setTimeout(() => {
+    _ensureResultShareRows();
+    _saveVisibleResultHistory();
+  }, 250);
+}
+window.addEventListener('load', () => {
+  _ensureResultShareRows();
+  _saveVisibleResultHistory();
+  const observer = new MutationObserver(_scheduleResultEnhancementUpdate);
+  observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+});
+

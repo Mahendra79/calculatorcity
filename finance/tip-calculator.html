@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Tip Calculator — Split Bill Between Friends | Calculatorcity</title>
   <meta name="description" content="Free tip calculator. Enter bill amount, tip percentage and number of people to find tip amount, total bill and per-person share. Preset tip buttons included.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Tip Calculator — Split Bill Between Friends | Calculatorcity">
+  <meta property="og:description" content="Free tip calculator. Enter bill amount, tip percentage and number of people to find tip amount, total bill and per-person share. Preset tip buttons included.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/finance/tip-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tip Calculator — Split Bill Between Friends | Calculatorcity">
+  <meta name="twitter:description" content="Free tip calculator. Enter bill amount, tip percentage and number of people to find tip amount, total bill and per-person share. Preset tip buttons included.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/finance/tip-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/finance/tip-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +30,48 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Tip Calculator", "url": "https://calculatorcity.in/finance/tip-calculator.html", "description": "Free tip calculator. Enter bill amount, tip percentage and number of people to find tip amount, total bill and per-person share. Preset tip buttons included.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Tip Calculator", "url": "https://mahendra79.github.io/calculatorcity/finance/tip-calculator.html", "description": "Free tip calculator. Enter bill amount, tip percentage and number of people to find tip amount, total bill and per-person share. Preset tip buttons included.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should I tip?", "acceptedAnswer": {"@type": "Answer", "text": "Tip amounts depend on country, service type, bill size, and whether service charge is already included. In the United States, restaurant tipping is often 15% to 20%. In India, tipping is more discretionary and may be 0% to 10% depending on service and venue. For small services, rounding up can be simpler than calculating a percentage."}}, {"@type": "Question", "name": "Is tipping mandatory in India?", "acceptedAnswer": {"@type": "Answer", "text": "Tipping is generally not legally mandatory in India. Some restaurants add a service charge, which is different from a voluntary tip and may be subject to local rules or customer choice. If service charge is included and you are satisfied, you may not need to add another tip unless you want to reward exceptional service."}}, {"@type": "Question", "name": "How do I split a bill with different items?", "acceptedAnswer": {"@type": "Answer", "text": "This calculator splits the total equally. If people ordered very different amounts, first allocate item costs manually or use a bill-splitting app, then apply tax and tip proportionally. Another simple method is to have each person pay for their own items and split only shared dishes, service charge, and delivery fees."}}, {"@type": "Question", "name": "What is service charge vs tip?", "acceptedAnswer": {"@type": "Answer", "text": "A service charge is added by the business, usually as a percentage of the bill. A tip is a voluntary amount chosen by the customer. The practical difference matters because service charge may be distributed according to company policy, while a cash tip may go more directly to staff. Rules vary by country and venue."}}, {"@type": "Question", "name": "How do I tip when the bill is split?", "acceptedAnswer": {"@type": "Answer", "text": "Decide whether the tip should be calculated on the full bill before splitting or separately by person. For equal splits, calculate total tip, add it to the bill, and divide by the number of people. For unequal splits, calculate each person's share and apply the same tip percentage to each share."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Tip Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the bill amount exactly as it appears in your bank statement, quote, invoice, or planning sheet. Use the same currency throughout the calculator."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the tip percentage as a plain number, not as a fraction or text label. Percent fields should use 8 for 8%, not 0.08."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Complete the remaining fields for the number of people and rounding preference and check units such as years, months, per-unit price, or number of people before calculating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select Calculate to produce tip amount, total bill, per-person tip, and per-person total. The result cards separate the main answer from supporting figures so the calculation is easier to audit."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review the formula, worked example, and reference table before using the result in a financial decision, quotation, or repayment plan."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -34,11 +83,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -63,7 +116,18 @@
     <div class="calc-input-group"><label for="rounding">Round per-person total</label><select id="rounding"><option value="none">No rounding</option><option value="up">Round up</option><option value="down">Round down</option></select></div>
   </div>
   <button class="calc-btn" type="button" id="calculate">Calculate</button>
-  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
+  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
 </section>
     
 <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps">
@@ -87,6 +151,7 @@
   </article>
   
 <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card">
     <h3>Related calculators</h3>
     <ul>
@@ -168,7 +233,7 @@
 </footer>
 
 
-<script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatCurrency(value) {

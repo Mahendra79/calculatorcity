@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Electricity Cost Calculator &mdash; Monthly Bill Estimator | Calculatorcity</title>
   <meta name="description" content="Estimate your monthly electricity bill by appliance. Enter wattage, daily usage hours and cost per kWh. Shows cost per appliance with bar chart. Default rate &#8377;8/kWh for India.">
-  <link rel="canonical" href="https://calculatorcity.in/science-other/electricity-cost-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Electricity Cost Calculator — Monthly Bill Estimator | Calculatorcity">
+  <meta property="og:description" content="Estimate your monthly electricity bill by appliance. Enter wattage, daily usage hours and cost per kWh. Shows cost per appliance with bar chart. Default rate ₹8/kWh for India.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/science-other/electricity-cost-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Electricity Cost Calculator — Monthly Bill Estimator | Calculatorcity">
+  <meta name="twitter:description" content="Estimate your monthly electricity bill by appliance. Enter wattage, daily usage hours and cost per kWh. Shows cost per appliance with bar chart. Default rate ₹8/kWh for India.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/science-other/electricity-cost-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,26 +30,111 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .table-wrap{overflow-x:auto}.appliance-table{min-width:820px}.appliance-table input{width:100%;padding:.45rem;border:1px solid var(--border);border-radius:var(--radius);font:inherit}.appliance-table input[type=number]{min-width:78px}.inline-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}.chart-container{height:360px}.note{color:var(--text-secondary);font-size:.95rem;margin-top:1rem}@media(max-width:767px){.chart-container{height:300px}}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Electricity Cost Calculator","url":"https://calculatorcity.in/science-other/electricity-cost-calculator.html","description":"Estimate monthly and annual electricity cost by appliance using wattage, daily hours, days per month, and kWh rate.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Electricity Cost Calculator","url":"https://mahendra79.github.io/calculatorcity/science-other/electricity-cost-calculator.html","description":"Estimate monthly and annual electricity cost by appliance using wattage, daily hours, days per month, and kWh rate.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is electricity bill calculated in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Indian electricity bills usually charge for units consumed, where one unit equals one kWh. The bill may include energy charges based on slabs, fixed charges, meter rent, fuel adjustment charges, taxes, and other local components. Residential rates differ by state, distribution company, sanctioned load, and consumption band. This calculator estimates the energy portion by multiplying appliance kWh by an average rate. For exact billing, read your tariff schedule and bill line items. For appliance comparison, an average per-unit rate is often enough."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What uses the most electricity at home?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "High-wattage cooling and heating appliances usually use the most electricity. Air conditioners, geysers, room heaters, electric ovens, pumps, old refrigerators, and clothes dryers can dominate a bill. Usage hours matter too. A lower-wattage device used continuously can still add up, but high-wattage appliances create the biggest monthly changes when usage increases. The chart on this page helps identify your top contributors. After finding them, reduce run hours, improve insulation, service equipment, choose efficient settings, or replace inefficient appliances when the payback makes sense."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many units does an AC use per hour?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An AC's hourly units depend on its power draw. A 1.5 ton AC drawing about 1500 W uses roughly 1.5 kWh per hour if running at that level continuously. Inverter models may use less after the room reaches the set temperature, while older or poorly maintained units may use more. Room size, insulation, outdoor temperature, thermostat setting, sunlight, and filter condition all matter. As a rough estimate, units per hour = watts / 1000. For better accuracy, use a plug-in energy meter or smart meter data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I reduce my electricity bill?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with the largest contributors. Set AC temperatures moderately, clean filters, seal air leaks, use fans to improve comfort, reduce geyser runtime, switch to LED lighting, run washing machines with full loads, and turn off standby devices that are not needed. Maintain refrigerators with good door seals and ventilation. Compare old appliances with star-rated efficient models before replacing them; savings are highest when usage is heavy. Track monthly units after changes so you can separate real savings from weather or occupancy differences."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a unit of electricity (kWh)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A unit of electricity is commonly one kilowatt-hour, abbreviated kWh. It means using one kilowatt of power for one hour. A 1000 W geyser running for one hour uses 1 kWh. A 100 W bulb running for ten hours also uses 1 kWh. Electricity meters record energy in these units, and bills multiply units by the applicable tariff. Understanding kWh helps compare appliances fairly because both wattage and runtime are included. Watts alone do not tell the full cost."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Electricity Cost Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Keep the default electricity rate of ₹8 per kWh or enter the rate from your electricity bill."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review the preloaded appliances and edit wattage, daily hours, and days per month to match your home."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use Add Appliance for additional devices such as geysers, pumps, routers, ovens, or desktop computers."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate Electricity Cost to see monthly kWh, cost per appliance, total monthly units, monthly bill estimate, and annual cost."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Read the horizontal bar chart to identify which appliances contribute the most to your monthly electricity cost."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health &amp; Fitness</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science &amp; Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -57,7 +158,18 @@
           <button class="btn btn-secondary" type="button" id="add-appliance">+ Add Appliance</button>
           <button class="calc-btn" type="button" id="calc-btn" style="width:auto">Calculate Electricity Cost</button>
         </div>
-        <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div><p class="note" id="electricity-note"></p></div>
+        <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div><p class="note" id="electricity-note"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         <div class="chart-container"><canvas id="cost-chart" aria-label="Monthly appliance electricity cost bar chart"></canvas></div>
       </section>
 
@@ -130,6 +242,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law</a></li><li><a href="../science-other/gpa-calculator.html">GPA</a></li><li><a href="../science-other/grade-calculator.html">Grade</a></li><li><a href="../science-other/password-generator.html">Password Generator</a></li><li><a href="../science-other/electricity-cost-calculator.html">Electricity Cost</a></li></ul></div>
       <div class="card sidebar-card"><h3>Bill tips</h3><ul><li>1 unit = 1 kWh.</li><li>High watts plus long hours cost most.</li><li>Use your bill's average rate.</li></ul></div>
     </aside>
@@ -199,8 +312,8 @@
     </div>
   </div>
 </footer>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
 (function() {
   const preloaded = [

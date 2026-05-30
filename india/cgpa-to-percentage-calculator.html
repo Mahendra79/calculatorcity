@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>CGPA to Percentage Calculator — All Indian Universities | Calculatorcity</title>
   <meta name="description" content="Convert CGPA to percentage for CBSE, VTU, Anna University, JNTU, Mumbai University, Pune University and 15+ Indian universities. Also converts percentage to CGPA.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="CGPA to Percentage Calculator — All Indian Universities | Calculatorcity">
+  <meta property="og:description" content="Convert CGPA to percentage for CBSE, VTU, Anna University, JNTU, Mumbai University, Pune University and 15+ Indian universities. Also converts percentage to CGPA.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/cgpa-to-percentage-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CGPA to Percentage Calculator — All Indian Universities | Calculatorcity">
+  <meta name="twitter:description" content="Convert CGPA to percentage for CBSE, VTU, Anna University, JNTU, Mumbai University, Pune University and 15+ Indian universities. Also converts percentage to CGPA.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/cgpa-to-percentage-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/cgpa-to-percentage-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +30,48 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "CGPA to Percentage Calculator", "url": "https://calculatorcity.in/india/cgpa-to-percentage-calculator.html", "description": "Convert CGPA to percentage for CBSE, VTU, Anna University, JNTU, Mumbai University, Pune University and 15+ Indian universities. Also converts percentage to CGPA.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "CGPA to Percentage Calculator", "url": "https://mahendra79.github.io/calculatorcity/india/cgpa-to-percentage-calculator.html", "description": "Convert CGPA to percentage for CBSE, VTU, Anna University, JNTU, Mumbai University, Pune University and 15+ Indian universities. Also converts percentage to CGPA.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is CGPA and how is it different from percentage?", "acceptedAnswer": {"@type": "Answer", "text": "CGPA means Cumulative Grade Point Average. It is an average of grade points across subjects or semesters, usually on a 10-point scale in India. Percentage expresses marks out of 100. They are related but not identical because CGPA compresses marks into grade bands, while percentage is a direct numeric scale. Universities therefore publish conversion rules for jobs, higher studies, scholarships, and government applications. A CGPA of 8.0 can become 76%, 80%, 75%, or 67.8% depending on the university formula, so always use the rule printed by your board or university."}}, {"@type": "Question", "name": "Why does each university use a different conversion formula?", "acceptedAnswer": {"@type": "Answer", "text": "Indian universities design grading systems independently. Some use a simple multiplier such as CGPA × 10 because the grade scale is intended to map directly to percentage. CBSE uses 9.5 because it was derived from historical performance of students under the board’s grading system. Mumbai University uses CGPA × 7.1 + 11, which produces lower percentages for the same CGPA than many engineering universities. These differences are not mistakes; they reflect academic regulations. For official submissions, attach the university conversion certificate or refer to the regulation page if asked."}}, {"@type": "Question", "name": "Which formula does CBSE use for CGPA to percentage?", "acceptedAnswer": {"@type": "Answer", "text": "CBSE commonly uses CGPA × 9.5 for Class 10 board result conversion. For example, a CGPA of 8.0 becomes 76%, and a CGPA of 9.5 becomes 90.25%. This formula is widely accepted for CBSE school records, but students should still check the current marksheet, migration certificate, or school instructions when applying to colleges or jobs. If a form asks for marks obtained and total marks rather than percentage, do not force a CGPA conversion. Use the format requested by the institution or recruitment notice."}}, {"@type": "Question", "name": "How do I convert CGPA for a government job application?", "acceptedAnswer": {"@type": "Answer", "text": "For government jobs, read the official notification carefully. Many recruitment forms ask for percentage and specify that candidates must use the formula prescribed by their university or board. Select your university in this calculator and use that percentage, but keep proof ready. If your university has a conversion certificate, upload or produce it when required. If the university is not listed, use the custom multiplier only when you know the exact official rule. Do not choose a formula that gives a higher percentage simply because it looks more favorable; that can create document-verification issues later."}}, {"@type": "Question", "name": "Is CGPA 8.0 a good score for placement?", "acceptedAnswer": {"@type": "Answer", "text": "A CGPA of 8.0 is generally considered strong in many Indian engineering, commerce, and science programs, especially when the minimum placement cutoff is 6.5 or 7.0. However, its meaning depends on the university, branch, grading strictness, and recruiter criteria. In CBSE it converts to 76%; in VTU or JNTU it converts to 80%; in Anna University it becomes 75%; and in Mumbai University it becomes 67.8%. Recruiters often look at projects, internships, coding skills, communication, and consistency along with CGPA. Use percentage conversion for eligibility, not as the only measure of readiness."}}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "CGPA to Percentage Calculator", "item": "https://calculatorcity.in/india/cgpa-to-percentage-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "CGPA to Percentage Calculator", "item": "https://mahendra79.github.io/calculatorcity/india/cgpa-to-percentage-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the CGPA to Percentage Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter your CGPA exactly as shown on your marksheet."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select your university, board, or custom formula option."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use custom multiplier only when your institution has published a specific conversion rule."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review the percentage, class, formula, and comparison table."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the reverse calculator when a job form gives percentage and you need an approximate CGPA."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -34,11 +83,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -62,12 +115,34 @@
         <div class="calc-input-group" id="custom-wrap" style="display:none;"><label for="custom-multiplier">Custom multiplier</label><input id="custom-multiplier" type="number" step="0.01" value="10"></div>
       </div>
       <button class="calc-btn" id="calculate" style="background:#f97316;">Convert CGPA to Percentage</button>
-      <div class="calc-result show" id="cgpa-result"></div>
+      <div class="calc-result show" id="cgpa-result">
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       <div style="margin-top:18px; padding-top:16px; border-top:0.5px solid var(--border);">
         <h3 style="font-size:15px; margin-bottom:12px;">Reverse calculator — Percentage to CGPA</h3>
         <div class="field-grid"><div class="calc-input-group"><label for="percentage">Percentage</label><input id="percentage" type="number" min="0" max="100" step="0.01" value="80"></div><div class="calc-input-group"><label for="reverse-university">University / Board</label><select id="reverse-university"></select></div></div>
         <button class="calc-btn" id="reverse-btn" type="button" style="background:#f97316;">Convert Percentage to CGPA</button>
-        <div class="calc-result" id="reverse-result"></div>
+        <div class="calc-result" id="reverse-result">
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </div>
     </section>
     <section id="university-comparison" class="content-section"><h2>Compare across universities</h2><p id="comparison-summary" style="color:var(--text-secondary);"></p><div style="overflow-x:auto;"><table class="reference-table"><thead><tr><th>University</th><th>Formula</th><th>Converted percentage</th><th>Notes</th></tr></thead><tbody id="comparison-body"></tbody></table></div></section>
@@ -85,6 +160,7 @@
 
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
 </aside>
 </main>
@@ -153,7 +229,7 @@
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 

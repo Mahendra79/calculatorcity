@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Currency Converter — 30 Major World Currencies | Calculatorcity</title>
   <meta name="description" content="Convert between 30 major world currencies with indicative exchange rates. Shows converted amount, rate used and reverse rate. Rates are indicative — verify with your bank.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Currency Converter — 30 Major World Currencies | Calculatorcity">
+  <meta property="og:description" content="Convert between 30 major world currencies with indicative exchange rates. Shows converted amount, rate used and reverse rate. Rates are indicative — verify with your bank.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/finance/currency-converter.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Currency Converter — 30 Major World Currencies | Calculatorcity">
+  <meta name="twitter:description" content="Convert between 30 major world currencies with indicative exchange rates. Shows converted amount, rate used and reverse rate. Rates are indicative — verify with your bank.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/finance/currency-converter.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/finance/currency-converter.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +30,48 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Currency Converter", "url": "https://calculatorcity.in/finance/currency-converter.html", "description": "Convert between 30 major world currencies with indicative exchange rates. Shows converted amount, rate used and reverse rate. Rates are indicative — verify with your bank.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Currency Converter", "url": "https://mahendra79.github.io/calculatorcity/finance/currency-converter.html", "description": "Convert between 30 major world currencies with indicative exchange rates. Shows converted amount, rate used and reverse rate. Rates are indicative — verify with your bank.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What affects currency exchange rates?", "acceptedAnswer": {"@type": "Answer", "text": "Exchange rates move because of interest rates, inflation, trade balances, central bank policy, capital flows, political risk, and market expectations. A currency can strengthen even when domestic news looks weak if investors expect higher future returns or safer assets. Short-term rates can also move because of liquidity and dealer spreads."}}, {"@type": "Question", "name": "What is a mid-market rate?", "acceptedAnswer": {"@type": "Answer", "text": "The mid-market rate is the midpoint between the buying and selling prices in the currency market. It is often the rate shown by financial data sites. Customers usually cannot transact exactly at the mid-market rate because banks and money changers add a spread. The spread is part of how the provider earns revenue."}}, {"@type": "Question", "name": "Why do bank rates differ from online rates?", "acceptedAnswer": {"@type": "Answer", "text": "Online rates often show indicative or mid-market values. Banks quote customer rates that include spreads, card network charges, cash handling costs, taxes, and sometimes fixed fees. The final amount can also differ depending on whether you are buying foreign currency, selling it, loading a travel card, or receiving a wire transfer."}}, {"@type": "Question", "name": "What is currency appreciation?", "acceptedAnswer": {"@type": "Answer", "text": "Currency appreciation means one currency becomes more valuable relative to another. If INR appreciates against USD, fewer rupees are needed to buy one dollar. Appreciation helps importers and foreign travelers but can reduce export competitiveness. Depreciation is the opposite: more local currency is needed to buy the same foreign currency."}}, {"@type": "Question", "name": "How do I get the best exchange rate?", "acceptedAnswer": {"@type": "Answer", "text": "Compare the total amount received after spreads and fees, not just the advertised rate. For travel, cards may beat airport cash counters, but foreign transaction fees can change the result. For remittances, compare bank wires, specialist transfer services, and timing. Large transactions deserve a direct quote from the provider."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Currency Converter",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the amount to convert exactly as it appears in your bank statement, quote, invoice, or planning sheet. Use the same currency throughout the calculator."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the from and to currencies as a plain number, not as a fraction or text label. Percent fields should use 8 for 8%, not 0.08."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Complete the remaining fields for the direction of conversion and check units such as years, months, per-unit price, or number of people before calculating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select Calculate to produce converted amount, rate used, and reverse rate. The result cards separate the main answer from supporting figures so the calculation is easier to audit."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review the formula, worked example, and reference table before using the result in a financial decision, quotation, or repayment plan."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -34,11 +83,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -63,7 +116,18 @@
   </div>
   <button class="btn btn-secondary" id="swap" type="button">Swap ↔</button>
   <button class="calc-btn" type="button" id="calculate">Convert</button>
-  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
+  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
 </section>
     
 <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps">
@@ -87,6 +151,7 @@
   </article>
   
 <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card">
     <h3>Related calculators</h3>
     <ul>
@@ -168,7 +233,7 @@
 </footer>
 
 
-<script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatCurrency(value) {

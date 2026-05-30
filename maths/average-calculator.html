@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Average Calculator ? Mean, Median, Mode and Range | Calculatorcity</title>
   <meta name="description" content="Free average calculator for mean, median, mode and range. Enter up to 50 values to get a complete statistical summary with a live bar chart online fast.">
-  <link rel="canonical" href="https://calculatorcity.in/maths/average-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Average Calculator ? Mean, Median, Mode and Range | Calculatorcity">
+  <meta property="og:description" content="Free average calculator for mean, median, mode and range. Enter up to 50 values to get a complete statistical summary with a live bar chart online fast.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/maths/average-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Average Calculator ? Mean, Median, Mode and Range | Calculatorcity">
+  <meta name="twitter:description" content="Free average calculator for mean, median, mode and range. Enter up to 50 values to get a complete statistical summary with a live bar chart online fast.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/maths/average-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,12 +30,97 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Average Calculator","url":"https://calculatorcity.in/maths/average-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Average Calculator","url":"https://mahendra79.github.io/calculatorcity/maths/average-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between mean and average",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In everyday language, average usually means the arithmetic mean: add all values and divide by how many values there are. In statistics, “average” is a broader informal word that can refer to several measures of central tendency, including mean, median, and mode. If someone asks for the average score on a test, they usually mean the mean. If a report says the average income is median income, it is using median because income data often has large outliers. This calculator shows all main averages so the choice is explicit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is median better than mean",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Median is better when the dataset contains outliers or is heavily skewed. For example, if five homes sell for ₹40 lakh, ₹42 lakh, ₹45 lakh, ₹47 lakh, and ₹5 crore, the mean becomes much higher than what most homes cost. The median remains the middle value and better represents a typical sale. Median is also useful for salaries, property prices, waiting times, and response times because one unusually high or low value can distort the mean. Use the chart to spot this situation visually."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if there are two modes",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A dataset can have more than one mode. If two values appear equally often and more often than every other value, the dataset is called bimodal. If three or more values tie for highest frequency, it is multimodal. For example, 2, 2, 3, 4, 4, 5 has two modes: 2 and 4. If every value appears only once, many teachers and statisticians say there is no mode. This calculator follows that convention and displays “No mode” when all entered values are unique."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does range tell us",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Range tells us how spread out a dataset is by subtracting the smallest value from the largest value. It is simple and easy to understand, but it uses only two values. That means it can be strongly affected by one extreme number. If test scores are 78, 80, 81, 82, and 100, the range is 22 because of the 100, even though most scores are close together. Range is best used as a quick spread check, not as a full description of variation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are averages used in real life",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Averages are used whenever many values need to be summarized. Teachers use them for class scores, businesses use them for sales and customer ratings, doctors use them to review repeated measurements, and sports analysts use them to compare performance. Mean gives an overall balance point, median shows a typical middle value, mode shows the most common value, and range shows spread. Looking at all four prevents common mistakes, such as trusting a mean that is distorted by one unusually large or unusually small observation."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Average Calculator (Mean, Median, Mode, Range)",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter each number in its own row. The calculator starts with five sample test scores, but you can replace them with marks, sales numbers, temperatures, survey scores, or any numeric dataset."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the + Add Number button when your dataset has more than five values. You can enter up to fifty values, which is enough for most classroom and everyday statistical summaries."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the remove button beside a row to delete a value that should not be included. The calculator keeps at least two rows so median and range remain meaningful."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate Statistics. The result cards show mean, median, mode, range, count, and sum separately so you can interpret the dataset from several angles."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Look at the bar chart after calculating. A mean line far away from most bars suggests an outlier, and a wide spread between bars explains why the range is large."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ Calculatorcity</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
-      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
+      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
   <main id="main" class="page-container two-col-layout" role="main">
     <article class="calc-main">
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>Average Calculator</span></nav>
@@ -30,7 +131,18 @@
         <div id="number-list"></div>
         <button class="btn btn-secondary" type="button" id="add-number">+ Add Number</button>
         <button class="calc-btn" type="button" id="calculate-average" style="margin-top:1rem;">Calculate Statistics</button>
-        <div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div></div>
+        <div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
 
       <section class="content-section">
@@ -89,7 +201,8 @@
         <div class="faq-item"><h3 class="faq-question">How are averages used in real life</h3><div class="faq-answer"><p>Averages are used whenever many values need to be summarized. Teachers use them for class scores, businesses use them for sales and customer ratings, doctors use them to review repeated measurements, and sports analysts use them to compare performance. Mean gives an overall balance point, median shows a typical middle value, mode shows the most common value, and range shows spread. Looking at all four prevents common mistakes, such as trusting a mean that is distorted by one unusually large or unusually small observation.</p></div></div>
       </section>
     </article>
-    <aside class="calc-sidebar"><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage Calculator</a></li><li><a href="../maths/fraction-calculator.html">Fraction Calculator</a></li><li><a href="../maths/ratio-calculator.html">Ratio Calculator</a></li><li><a href="../maths/probability-calculator.html">Probability Calculator</a></li><li><a href="../science-other/grade-calculator.html">Grade Calculator</a></li></ul></div></aside>
+    <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage Calculator</a></li><li><a href="../maths/fraction-calculator.html">Fraction Calculator</a></li><li><a href="../maths/ratio-calculator.html">Ratio Calculator</a></li><li><a href="../maths/probability-calculator.html">Probability Calculator</a></li><li><a href="../science-other/grade-calculator.html">Grade Calculator</a></li></ul></div></aside>
   </main>
   <hr class="footer-separator" aria-hidden="true">
 <footer class="site-footer">
@@ -156,7 +269,7 @@
     </div>
   </div>
 </footer>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
   <script src="../assets/js/main.js" defer></script>
   <script>
     (function() {

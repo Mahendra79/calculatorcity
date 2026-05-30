@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Mortgage Calculator — Monthly Payment and Total Cost | Calculatorcity</title>
   <meta name="description" content="Free mortgage calculator. Enter home price, down payment, interest rate and term to get monthly payment, total cost, LTV ratio and full amortization schedule.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Mortgage Calculator — Monthly Payment and Total Cost | Calculatorcity">
+  <meta property="og:description" content="Free mortgage calculator. Enter home price, down payment, interest rate and term to get monthly payment, total cost, LTV ratio and full amortization schedule.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/finance/mortgage-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mortgage Calculator — Monthly Payment and Total Cost | Calculatorcity">
+  <meta name="twitter:description" content="Free mortgage calculator. Enter home price, down payment, interest rate and term to get monthly payment, total cost, LTV ratio and full amortization schedule.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/finance/mortgage-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/finance/mortgage-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +30,48 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Mortgage Calculator", "url": "https://calculatorcity.in/finance/mortgage-calculator.html", "description": "Free mortgage calculator. Enter home price, down payment, interest rate and term to get monthly payment, total cost, LTV ratio and full amortization schedule.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Mortgage Calculator", "url": "https://mahendra79.github.io/calculatorcity/finance/mortgage-calculator.html", "description": "Free mortgage calculator. Enter home price, down payment, interest rate and term to get monthly payment, total cost, LTV ratio and full amortization schedule.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a mortgage?", "acceptedAnswer": {"@type": "Answer", "text": "A mortgage is a loan secured by real estate. The borrower receives money to buy a property and repays it through scheduled installments. If the borrower fails to repay according to the contract, the lender may have rights over the property. Mortgage payments usually include principal and interest, while taxes and insurance may be paid separately or through an escrow arrangement."}}, {"@type": "Question", "name": "What is LTV ratio?", "acceptedAnswer": {"@type": "Answer", "text": "Loan-to-value ratio compares the loan amount with the property value. If a home costs ₹50,00,000 and the loan is ₹40,00,000, LTV is 80%. Lower LTV means a larger down payment and less lender risk. Lenders often use LTV to decide eligibility, rate, insurance requirements, and maximum loan size."}}, {"@type": "Question", "name": "What is PMI?", "acceptedAnswer": {"@type": "Answer", "text": "PMI means private mortgage insurance in markets where lenders require insurance for higher LTV loans. It protects the lender, not the borrower, if the borrower defaults. India and other markets may use different terms or insurance structures, but the idea is similar: high leverage can add extra costs beyond the interest rate."}}, {"@type": "Question", "name": "Fixed vs variable rate mortgage: which is better?", "acceptedAnswer": {"@type": "Answer", "text": "A fixed rate gives payment stability because the rate is locked for the agreed period. A variable rate can rise or fall with market benchmarks. Fixed rates help budgeting, while variable rates may be cheaper initially but carry reset risk. The better choice depends on rate outlook, income stability, and how long you expect to keep the loan."}}, {"@type": "Question", "name": "How much can I afford to borrow?", "acceptedAnswer": {"@type": "Answer", "text": "Affordability depends on income, existing debts, emergency savings, down payment, credit profile, and non-loan housing costs. A lender may approve a high amount, but your personal comfort may be lower. Stress-test the payment with a higher rate or temporary income drop before deciding."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Mortgage Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the home price exactly as it appears in your bank statement, quote, invoice, or planning sheet. Use the same currency throughout the calculator."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the annual mortgage interest rate as a plain number, not as a fraction or text label. Percent fields should use 8 for 8%, not 0.08."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Complete the remaining fields for the down payment and loan term and check units such as years, months, per-unit price, or number of people before calculating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select Calculate to produce monthly payment, loan amount, total cost, total interest, and LTV ratio. The result cards separate the main answer from supporting figures so the calculation is easier to audit."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review the formula, worked example, and reference table before using the result in a financial decision, quotation, or repayment plan."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -34,11 +83,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -63,7 +116,18 @@
     <div class="calc-input-group"><label for="term">Loan term (years)</label><select id="term"><option>5</option><option>10</option><option>15</option><option selected>20</option><option>25</option><option>30</option></select></div>
   </div>
   <button class="calc-btn" type="button" id="calculate">Calculate</button>
-  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
+  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
   <div class="chart-container"><canvas id="calc-chart"></canvas></div>
   <div id="amortization" class="amortization-table"></div>
 </section>
@@ -89,6 +153,7 @@
   </article>
   
 <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card">
     <h3>Related calculators</h3>
     <ul>
@@ -169,8 +234,8 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatCurrency(value) {

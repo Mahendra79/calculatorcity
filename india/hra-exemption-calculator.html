@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>HRA Exemption Calculator — HRA Tax Exemption India | Calculatorcity</title>
   <meta name="description" content="Free HRA exemption calculator India. Find your House Rent Allowance tax exemption under Section 10(13A). Supports metro and non-metro cities.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="HRA Exemption Calculator — HRA Tax Exemption India | Calculatorcity">
+  <meta property="og:description" content="Free HRA exemption calculator India. Find your House Rent Allowance tax exemption under Section 10(13A). Supports metro and non-metro cities.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/hra-exemption-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HRA Exemption Calculator — HRA Tax Exemption India | Calculatorcity">
+  <meta name="twitter:description" content="Free HRA exemption calculator India. Find your House Rent Allowance tax exemption under Section 10(13A). Supports metro and non-metro cities.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/hra-exemption-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/hra-exemption-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +30,95 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "HRA Exemption Calculator (Section 10-13A)", "url": "https://calculatorcity.in/india/hra-exemption-calculator.html", "description": "Free HRA exemption calculator India. Find your House Rent Allowance tax exemption under Section 10(13A). Supports metro and non-metro cities.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "HRA Exemption Calculator (Section 10-13A)", "item": "https://calculatorcity.in/india/hra-exemption-calculator.html"}]}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "HRA Exemption Calculator (Section 10-13A)", "url": "https://mahendra79.github.io/calculatorcity/india/hra-exemption-calculator.html", "description": "Free HRA exemption calculator India. Find your House Rent Allowance tax exemption under Section 10(13A). Supports metro and non-metro cities.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "HRA Exemption Calculator (Section 10-13A)", "item": "https://mahendra79.github.io/calculatorcity/india/hra-exemption-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I claim HRA in the new tax regime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HRA exemption is generally not available under the new regime for salaried individuals. It is an old-regime exemption."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which cities count as metro for HRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For HRA, metro typically means Delhi, Mumbai, Kolkata, and Chennai. Other cities are treated as non-metro."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is landlord PAN required?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Employers generally require landlord PAN if annual rent exceeds ₹1,00,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I claim HRA while paying rent to parents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It may be possible if the arrangement is genuine, rent is actually paid, and parents report rental income where applicable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if rent is less than 10% of salary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Then the rent-minus-10% condition is zero or negative, so HRA exemption is not available."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the HRA Exemption Calculator (Section 10-13A)",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter monthly basic salary plus DA for the period you paid rent."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter monthly HRA received from your employer."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter actual rent paid per month."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose metro only for Delhi, Mumbai, Kolkata, or Chennai; other cities are non-metro for HRA rules."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Calculate and use the lowest of the three conditions as the monthly exemption."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,11 +130,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -52,6 +153,11 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#india">India Calculators</a></span><span>HRA Exemption Calculator (Section 10-13A)</span></nav>
     <p><span class="badge badge-india">🇮🇳 India</span></p>
     <h1>HRA Exemption Calculator (Section 10-13A)</h1>
+<p class="mini-note" style="margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;">
+  <i class="ti ti-clock" aria-hidden="true" style="font-size:1rem"></i>
+  Rates last verified: <strong>April 2025 (FY 2025-26)</strong>.
+  Always confirm with the official government portal before filing.
+</p>
     <p>The HRA exemption calculator estimates tax-free House Rent Allowance for salaried employees in India under Section 10(13A). Enter monthly basic salary plus DA, HRA received, rent paid, and city type to see all three statutory conditions side by side. The calculator identifies the minimum value, annual exemption, and taxable HRA so you can submit accurate rent declarations to your employer.</p>
     <section class="calc-widget">
       <div class="field-grid">
@@ -61,7 +167,18 @@
         <div class="calc-input-group"><label for="city">City</label><select id="city"><option value="metro">Metro (Delhi/Mumbai/Kolkata/Chennai)</option><option value="non-metro" selected>Non-metro</option></select></div>
       </div>
       <button class="calc-btn" id="calculate" type="button">Calculate HRA exemption</button>
-      <div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="condition1">₹0.00</span><span class="result-label">Actual HRA received</span></div><div class="result-card"><span class="result-value" id="condition2">₹0.00</span><span class="result-label">40% / 50% of salary</span></div><div class="result-card"><span class="result-value" id="condition3">₹0.00</span><span class="result-label">Rent minus 10% salary</span></div><div class="result-card highlight"><span class="result-value" id="exemption">₹0.00</span><span class="result-label">Annual HRA exemption</span></div><div class="result-card"><span class="result-value" id="taxable">₹0.00</span><span class="result-label">Taxable HRA</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div></div>
+      <div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="condition1">₹0.00</span><span class="result-label">Actual HRA received</span></div><div class="result-card"><span class="result-value" id="condition2">₹0.00</span><span class="result-label">40% / 50% of salary</span></div><div class="result-card"><span class="result-value" id="condition3">₹0.00</span><span class="result-label">Rent minus 10% salary</span></div><div class="result-card highlight"><span class="result-value" id="exemption">₹0.00</span><span class="result-label">Annual HRA exemption</span></div><div class="result-card"><span class="result-value" id="taxable">₹0.00</span><span class="result-label">Taxable HRA</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
     </section>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter monthly basic salary plus DA for the period you paid rent.</li><li>Enter monthly HRA received from your employer.</li><li>Enter actual rent paid per month.</li><li>Choose metro only for Delhi, Mumbai, Kolkata, or Chennai; other cities are non-metro for HRA rules.</li><li>Calculate and use the lowest of the three conditions as the monthly exemption.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">HRA exemption = minimum of:<br>1. Actual HRA received<br>2. 50% of salary in metro or 40% in non-metro<br>3. Rent paid − 10% of salary</div><p>HRA exemption under Section 10(13A) is based on three values for the period during which rented accommodation is occupied. Salary generally means basic salary plus dearness allowance to the extent it forms part of retirement benefits, and turnover-based commission where applicable. The exemption is the least of actual HRA received, 50% of salary for specified metro cities or 40% for other places, and rent paid in excess of 10% of salary.</p><p>If rent paid is less than or equal to 10% of salary, the third condition becomes zero and no HRA exemption is available. If you live in your own house or do not actually pay rent, HRA is taxable. Employers may require rent receipts, rental agreement, landlord PAN where annual rent exceeds ₹1,00,000, and proof of payment before allowing exemption in payroll TDS.</p></section>
@@ -82,6 +199,7 @@
     <section class="content-section"><h2>Important notes for India</h2><ul class="summary-list"><li>HRA exemption is an old-regime benefit; it is generally not allowed in the new regime.</li><li>Metro for HRA means Delhi, Mumbai, Kolkata, and Chennai, not every large Indian city.</li><li>Maintain rent receipts, agreement, and payment proof, especially for high rent claims.</li><li>Landlord PAN is commonly required by employers when annual rent paid exceeds ₹1,00,000.</li></ul></section>
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
 </aside>
 </main>
@@ -150,8 +268,8 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatIndianNumber(n) {

@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Temperature Converter — Celsius, Fahrenheit, Kelvin | Calculatorcity</title>
   <meta name="description" content="Convert Celsius, Fahrenheit, Kelvin and Rankine temperatures instantly. Shows all four scales simultaneously. Includes thermometer visual and key temperature references.">
-  <link rel="canonical" href="https://calculatorcity.in/unit-converter/temperature-converter.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Temperature Converter — Celsius, Fahrenheit, Kelvin | Calculatorcity">
+  <meta property="og:description" content="Convert Celsius, Fahrenheit, Kelvin and Rankine temperatures instantly. Shows all four scales simultaneously. Includes thermometer visual and key temperature references.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/unit-converter/temperature-converter.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Temperature Converter — Celsius, Fahrenheit, Kelvin | Calculatorcity">
+  <meta name="twitter:description" content="Convert Celsius, Fahrenheit, Kelvin and Rankine temperatures instantly. Shows all four scales simultaneously. Includes thermometer visual and key temperature references.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/unit-converter/temperature-converter.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +30,7 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .unit-select-row { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: end; }
     #result-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
@@ -35,22 +52,77 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Temperature Converter","url":"https://calculatorcity.in/unit-converter/temperature-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Temperature Converter","url":"https://mahendra79.github.io/calculatorcity/unit-converter/temperature-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the formula to convert Celsius to Fahrenheit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply Celsius by 9/5, then add 32."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is absolute zero and what is Kelvin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolute zero is 0 K, or −273.15°C, where thermal motion is at its theoretical minimum."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do the US and UK use different temperature scales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The US commonly uses Fahrenheit for weather. The UK uses Celsius for most public weather and scientific contexts, though Fahrenheit may still appear informally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a normal human body temperature in Celsius and Fahrenheit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A commonly cited normal body temperature is about 37°C or 98.6°F, though healthy readings vary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "At what temperature are Celsius and Fahrenheit equal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Celsius and Fahrenheit are equal at −40 degrees."
+        }
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -70,7 +142,18 @@
           <label for="temp-val">Value in <span id="temp-label">Celsius</span></label>
           <input type="number" id="temp-val" value="0" step="any">
         </div>
-        <div class="calc-result show" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
+        <div class="calc-result show" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
       <section class="unit-visual" aria-label="Temperature thermometer"><h2>Thermometer</h2><svg viewBox="0 0 320 420" role="img" aria-label="Thermometer with color temperature zones"><rect x="132" y="38" width="56" height="280" rx="28" fill="#fff" stroke="#cbd5e1" stroke-width="8"/><clipPath id="tube"><rect x="144" y="52" width="32" height="250" rx="16"/></clipPath><g clip-path="url(#tube)"><rect x="144" y="52" width="32" height="42" fill="#dc2626"/><rect x="144" y="94" width="32" height="48" fill="#f97316"/><rect x="144" y="142" width="32" height="44" fill="#facc15"/><rect x="144" y="186" width="32" height="45" fill="#16a34a"/><rect x="144" y="231" width="32" height="45" fill="#06b6d4"/><rect x="144" y="276" width="32" height="26" fill="#2563eb"/><rect id="mercury-empty" x="144" y="52" width="32" height="250" fill="#fff" opacity=".78"/></g><circle cx="160" cy="340" r="46" fill="#dc2626" stroke="#991b1b" stroke-width="6"/><text id="thermo-label" x="160" y="398" text-anchor="middle" font-size="16" font-weight="700">0°C</text><text x="210" y="72" font-size="13">Very hot</text><text x="210" y="124" font-size="13">Hot</text><text x="210" y="170" font-size="13">Warm</text><text x="210" y="214" font-size="13">Comfortable</text><text x="210" y="260" font-size="13">Cold</text><text x="210" y="302" font-size="13">Freezing</text></svg></section>
       <section class="content-section">
@@ -83,6 +166,7 @@
       </section>
     </article>
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related converters</h3><ul><li><a href="../unit-converter/length-converter.html">Length</a></li><li><a href="../unit-converter/weight-converter.html">Weight</a></li><li><a href="../unit-converter/temperature-converter.html">Temperature</a></li><li><a href="../unit-converter/area-converter.html">Area</a></li><li><a href="../unit-converter/volume-converter.html">Volume</a></li></ul></div>
     </aside>
   </main>
@@ -151,7 +235,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
 <script>
 (function() {
   let activeUnit = 'celsius';

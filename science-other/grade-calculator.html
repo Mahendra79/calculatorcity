@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Grade Calculator &mdash; Find Final Grade and Required Score | Calculatorcity</title>
   <meta name="description" content="Calculate your weighted course grade from assignments, exams and projects. Find the minimum score needed on your final exam to reach your target grade.">
-  <link rel="canonical" href="https://calculatorcity.in/science-other/grade-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Grade Calculator — Find Final Grade and Required Score | Calculatorcity">
+  <meta property="og:description" content="Calculate your weighted course grade from assignments, exams and projects. Find the minimum score needed on your final exam to reach your target grade.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/science-other/grade-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grade Calculator — Find Final Grade and Required Score | Calculatorcity">
+  <meta name="twitter:description" content="Calculate your weighted course grade from assignments, exams and projects. Find the minimum score needed on your final exam to reach your target grade.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/science-other/grade-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,26 +30,111 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .calc-tabs.two-tabs{grid-template-columns:repeat(2,1fr)}.mode-panel[hidden]{display:none}.grade-row{display:grid;grid-template-columns:minmax(150px,1fr) 115px 115px 115px auto;gap:.75rem;align-items:end;margin-bottom:.75rem}.inline-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}.weight-status{font-weight:700;margin:.5rem 0;color:var(--text-secondary)}.weight-status.ok{color:var(--success)}.weight-status.warn{color:var(--warning)}.table-wrap{overflow-x:auto}@media(max-width:767px){.calc-tabs.two-tabs{grid-template-columns:1fr}.grade-row{grid-template-columns:1fr}.grade-row .btn{width:100%}}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Grade Calculator","url":"https://calculatorcity.in/science-other/grade-calculator.html","description":"Calculate weighted grades and the score required on a final exam to reach a target course grade.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Grade Calculator","url":"https://mahendra79.github.io/calculatorcity/science-other/grade-calculator.html","description":"Calculate weighted grades and the score required on a final exam to reach a target course grade.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a weighted grade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A weighted grade is a course grade where each assessment counts according to its assigned importance. A final exam might be worth 40%, a midterm 30%, assignments 20%, and participation 10%. Your percentage on each part is multiplied by its weight, then the weighted contributions are added. This is different from averaging all scores equally. Weighted grading is common because a major exam or project should usually affect the final grade more than a short quiz or participation mark."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What grade do I need to pass?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The passing grade depends on your institution, course, and program rules. Some colleges use 60% as a passing mark, some use 50%, and some Indian universities may use 40% or 45% depending on the subject and regulation. Professional programs can require higher minimums in core courses. Use the target grade field to enter the exact passing threshold from your syllabus. If the required final score is above 100%, passing through the final alone is not possible without extra credit, moderation, or a retake policy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my final grade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "List every graded component, convert each score to a percentage, multiply it by its course weight, and add the weighted results. If the weights total 100%, the sum is your final course percentage. If some work is still pending, the sum is the contribution from completed work, and the remaining weight can be used to calculate required future scores. Always use the weights from the syllabus because gradebooks sometimes display category averages that are not final until every item in the category is entered."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum passing grade in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no single minimum passing grade across India. Many school and university systems use 33%, 35%, 40%, 45%, or 50% depending on level, board, university, and subject. Engineering, medical, professional, and postgraduate programs may set higher internal or external passing requirements. Some courses also require separate passing marks in theory and practical components. Check the official regulation, syllabus, or exam notification before relying on a general boundary. The calculator can use any target percentage once you know the correct threshold."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do professors calculate final grades?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Professors usually follow the assessment weights listed in the course syllabus. They may grade each item as points, percentages, rubrics, or letter grades, then convert those scores into weighted course contributions. Some courses drop the lowest quiz, curve an exam, add participation, or apply attendance rules. Others require minimum performance on a final exam regardless of average. Because policies vary, the syllabus is the authority. This calculator matches the standard weighted method, so it is most accurate when your course uses explicit percentage weights."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Grade Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Choose Calculate Current Grade if you have several graded components with scores and weights."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter each assignment name, your score, the maximum score, and the percentage weight in the course."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Watch the running total weight. A complete course grading plan should add up to 100%."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate Current Grade to see the weighted percentage, letter grade, and remaining score needed for your target."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose What do I need on the final if you already know your current overall grade, final exam weight, and target grade."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health &amp; Fitness</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science &amp; Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -62,7 +163,18 @@
             <button class="btn btn-secondary" type="button" id="add-grade-row">+ Add graded item</button>
             <button class="calc-btn" type="button" id="calc-current" style="width:auto">Calculate Current Grade</button>
           </div>
-          <div class="calc-result" id="current-result-box" aria-live="polite"><div class="result-grid" id="current-result"></div></div>
+          <div class="calc-result" id="current-result-box" aria-live="polite"><div class="result-grid" id="current-result"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         </div>
 
         <div class="mode-panel" data-panel="final" hidden>
@@ -72,7 +184,18 @@
             <div class="calc-input-group"><label for="target-grade">Target course grade (%)</label><input type="number" id="target-grade" value="75" min="0" max="100" step="0.1"></div>
           </div>
           <button class="calc-btn" type="button" id="calc-final">Calculate Required Final Score</button>
-          <div class="calc-result" id="final-result-box" aria-live="polite"><div class="result-grid" id="final-result"></div></div>
+          <div class="calc-result" id="final-result-box" aria-live="polite"><div class="result-grid" id="final-result"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         </div>
       </section>
 
@@ -134,6 +257,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law</a></li><li><a href="../science-other/gpa-calculator.html">GPA</a></li><li><a href="../science-other/grade-calculator.html">Grade</a></li><li><a href="../science-other/password-generator.html">Password Generator</a></li><li><a href="../science-other/electricity-cost-calculator.html">Electricity Cost</a></li></ul></div>
       <div class="card sidebar-card"><h3>Grade tips</h3><ul><li>Weights should total 100%.</li><li>Use syllabus weights first.</li><li>Check if categories are curved.</li></ul></div>
     </aside>
@@ -203,7 +327,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
 (function() {
   let rowCount = 0;

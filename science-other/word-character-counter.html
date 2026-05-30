@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Word Counter &mdash; Count Words, Characters and Reading Time | Calculatorcity</title>
   <meta name="description" content="Free word and character counter. Paste or type text to see words, characters, sentences, paragraphs, reading time, speaking time and most frequent words. Updates live.">
-  <link rel="canonical" href="https://calculatorcity.in/science-other/word-character-counter.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Word Counter — Count Words, Characters and Reading Time | Calculatorcity">
+  <meta property="og:description" content="Free word and character counter. Paste or type text to see words, characters, sentences, paragraphs, reading time, speaking time and most frequent words. Updates live.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/science-other/word-character-counter.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Word Counter — Count Words, Characters and Reading Time | Calculatorcity">
+  <meta name="twitter:description" content="Free word and character counter. Paste or type text to see words, characters, sentences, paragraphs, reading time, speaking time and most frequent words. Updates live.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/science-other/word-character-counter.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,26 +30,111 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     textarea{width:100%;min-height:260px;resize:vertical;padding:1rem;border:1.5px solid var(--border);border-radius:var(--radius);font:inherit;line-height:1.6;color:var(--text);background:var(--bg)}textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-light)}.top-words{margin-top:1rem;color:var(--text-secondary)}.live-note{color:var(--text-secondary);margin-bottom:1rem}.table-wrap{overflow-x:auto}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Word Counter","url":"https://calculatorcity.in/science-other/word-character-counter.html","description":"Count words, characters, sentences, paragraphs, unique words, reading time, speaking time, and frequent words live in the browser.","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Word Counter","url":"https://mahendra79.github.io/calculatorcity/science-other/word-character-counter.html","description":"Count words, characters, sentences, paragraphs, unique words, reading time, speaking time, and frequent words live in the browser.","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many words should a blog post have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A useful blog post should be long enough to answer the searcher's question completely, not long for its own sake. Short news updates or announcements can work at 300 to 600 words. Standard explanatory posts often fall between 1000 and 1500 words. Competitive SEO topics may need 1500 to 2500 words or more if the subject requires examples, comparisons, and practical detail. The best length depends on intent, competition, subject complexity, and whether the article remains clear and helpful throughout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast do people read on average?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many adults read ordinary text at roughly 200 to 250 words per minute, though speed varies widely. Technical material, dense legal writing, unfamiliar vocabulary, and careful study can be much slower. Skimming can be much faster but with lower comprehension. This calculator uses 200 words per minute for a conservative reading time estimate. If you are preparing a speech, use speaking time instead because spoken delivery includes pauses, emphasis, audience reaction, and breathing. Reading silently is usually faster than presenting aloud."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a reading level?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A reading level estimates how difficult a text is for readers based on features such as sentence length, word length, syllables, vocabulary, and structure. Different formulas exist, including Flesch-Kincaid and Gunning Fog. This page does not calculate reading level because simple formulas can misread technical terms, brand names, bullet lists, and specialized writing. Still, word count, sentence count, and paragraph count help you notice complexity. Shorter sentences, clear transitions, concrete examples, and familiar terms usually make writing easier to read."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should an email be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A professional email is often best between 75 and 150 words when the purpose is simple: request, update, confirmation, or reminder. Longer emails can work when context, decisions, or documentation are required, but they should use clear structure. Put the main request near the top, use short paragraphs, and separate action items from background. If the message becomes several hundred words, consider whether it should be a document, ticket, or meeting note instead. The right length is the shortest version that gives the reader enough context to act."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many words per minute can a fast reader read?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fast readers may read 350 to 500 words per minute for easy material, and some trained skim readers can move faster. However, high speed can reduce comprehension when the text is complex, unfamiliar, or information-dense. Reading speed also depends on purpose. Scanning a page for one answer is different from studying a textbook, reviewing a contract, or editing a draft. For planning articles and speeches, use average estimates unless you know your audience. Clear writing helps both average and fast readers because it reduces the need to reread."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Word Counter",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Paste or type your text into the large text area."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Watch the result cards update instantly as the text changes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the word count for essays, articles, captions, scripts, assignments, and application forms."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Check character counts with and without spaces when a platform has strict limits."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review the most frequent words to spot repetition, keyword stuffing, or writing that needs variety."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health &amp; Fitness</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science &amp; Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -54,7 +155,18 @@
         <div class="calc-result show" id="calc-result" aria-live="polite">
           <div class="result-grid" id="result-grid"></div>
           <p class="top-words" id="top-words"></p>
-        </div>
+        
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
 
       <section class="content-section">
@@ -111,6 +223,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law</a></li><li><a href="../science-other/gpa-calculator.html">GPA</a></li><li><a href="../science-other/grade-calculator.html">Grade</a></li><li><a href="../science-other/password-generator.html">Password Generator</a></li><li><a href="../science-other/electricity-cost-calculator.html">Electricity Cost</a></li></ul></div>
       <div class="card sidebar-card"><h3>Writing checks</h3><ul><li>200 wpm reading estimate.</li><li>130 wpm speaking estimate.</li><li>Top words exclude common stop words.</li></ul></div>
     </aside>
@@ -180,7 +293,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
 (function() {
   const textarea = document.getElementById('text-input');

@@ -2,15 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../../assets/css/base.css" as="style">
+  <link rel="preload" href="../../assets/js/main.js" as="script">
   <title id="page-title">Ladakh Electricity Bill Calculator 2024 - Calculatorcity</title>
   <meta name="description" id="page-meta" content="Calculate your Ladakh electricity bill online. Supports LREDA, Power Department Ladakh tariff slabs for domestic, commercial and agricultural connections.">
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ladakh Electricity Bill Calculator 2024 - Calculatorcity">
+  <meta name="twitter:description" content="Calculate your Ladakh electricity bill online. Supports LREDA, Power Department Ladakh tariff slabs for domestic, commercial and agricultural connections.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" id="page-canonical" href="https://calculatorcity.in/india/electricity/ladakh/">
-  <meta property="og:title" id="og-title" content="Ladakh Electricity Bill Calculator">
+  <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" id="page-canonical" href="https://mahendra79.github.io/calculatorcity/india/electricity/ladakh.html">
+  <meta property="og:title" id="og-title" content="Ladakh Electricity Bill Calculator 2024 - Calculatorcity">
   <meta property="og:description" id="og-description" content="Calculate your Ladakh electricity bill online. Supports LREDA, Power Department Ladakh tariff slabs for domestic, commercial and agricultural connections.">
   <meta property="og:type" content="website">
-  <meta property="og:url" id="og-url" content="https://calculatorcity.in/india/electricity/ladakh/">
+  <meta property="og:url" id="og-url" content="https://mahendra79.github.io/calculatorcity/india/electricity/ladakh.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,6 +30,7 @@
   <link rel="stylesheet" href="../../assets/css/layout.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     body {
       opacity: 0;
@@ -1313,7 +1326,7 @@
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Ladakh Electricity Bill Calculator",
-    "url": "https://calculatorcity.in/india/electricity/ladakh/",
+    "url": "https://mahendra79.github.io/calculatorcity/india/electricity/ladakh/",
     "applicationCategory": "CalculatorApplication",
     "operatingSystem": "Any",
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}
@@ -1324,7 +1337,10 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../../index.html">&#8983; Calculatorcity</a>
+    <a class="logo" href="../../index.html">
+  <img src="../../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../../index.html#math">Math</a>
       <a href="../../index.html#finance">Finance</a>
@@ -1336,11 +1352,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../../index.html#math">Math</a>
     <a href="../../index.html#finance">Finance</a>
     <a href="../../index.html#unit">Unit Converter</a>
@@ -1503,6 +1523,7 @@
         </div>
 
         <aside class="calc-sidebar-col" aria-label="Electricity bill sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
           <div class="sidebar-card" id="tariff-card" hidden>
             <div class="sidebar-card-title">Current tariff</div>
             <div id="tariff-details"></div>
@@ -1703,7 +1724,7 @@
 (function() {
   "use strict";
 
-  const CANONICAL_BASE = "https://calculatorcity.in/india/electricity/";
+  const CANONICAL_BASE = "https://mahendra79.github.io/calculatorcity/india/electricity/";
   const STATIC_PAGE_STATE = "ladakh";
   const RUPEE = "\u20b9";
 
@@ -2818,8 +2839,8 @@
         {
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/" },
-            { "@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india" },
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/" },
+            { "@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india" },
             { "@type": "ListItem", "position": 3, "name": state.seo.h1, "item": url }
           ]
         },

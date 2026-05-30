@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Volume Converter — Litres, ml, Gallons, Cups, Pints | Calculatorcity</title>
   <meta name="description" content="Free volume converter for litres, millilitres, gallons (US and UK), cups, pints, quarts, fluid ounces, tablespoons and teaspoons. Includes cooking measurement guide.">
-  <link rel="canonical" href="https://calculatorcity.in/unit-converter/volume-converter.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Volume Converter — Litres, ml, Gallons, Cups, Pints | Calculatorcity">
+  <meta property="og:description" content="Free volume converter for litres, millilitres, gallons (US and UK), cups, pints, quarts, fluid ounces, tablespoons and teaspoons. Includes cooking measurement guide.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/unit-converter/volume-converter.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Volume Converter — Litres, ml, Gallons, Cups, Pints | Calculatorcity">
+  <meta name="twitter:description" content="Free volume converter for litres, millilitres, gallons (US and UK), cups, pints, quarts, fluid ounces, tablespoons and teaspoons. Includes cooking measurement guide.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/unit-converter/volume-converter.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +30,7 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .unit-select-row { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: end; }
     #result-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
@@ -35,22 +52,106 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Volume Converter","url":"https://calculatorcity.in/unit-converter/volume-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Volume Converter","url":"https://mahendra79.github.io/calculatorcity/unit-converter/volume-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between a US gallon and a UK gallon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A US gallon is 3.78541 L. A UK imperial gallon is 4.54609 L."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many millilitres are in one cup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One US cup is about 236.588 mL, commonly rounded to 237 mL."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many tablespoons are in a quarter cup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A quarter US cup equals 4 US tablespoons."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between fluid ounces and ounces (weight)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fluid ounces measure volume. Ounces measure mass or weight, so they are not interchangeable without knowing density."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert a recipe from cups to millilitres?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply the number of US cups by 236.588 to get millilitres."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Volume Converter",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Type the number you want to convert in the Value field at the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you are converting from in the left dropdown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you want to convert to in the right dropdown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Read the live result below; there is no calculate button."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the Swap button to reverse the conversion direction instantly."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -78,7 +179,18 @@
         <div class="calc-result show" id="calc-result" aria-live="polite">
           <div class="result-grid" id="result-grid"></div>
           <p id="conversion-factor" style="margin-top:.75rem; font-size:.875rem; color:var(--text-secondary);"></p>
-        </div>
+        
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
       <section class="unit-visual" aria-label="Volume containers"><h2>Relative Volume Containers</h2><svg viewBox="0 0 700 280" role="img" aria-label="Containers comparing teaspoon, tablespoon, cup, litre bottle and gallon jug"><rect x="45" y="215" width="24" height="18" rx="6" fill="#60a5fa"/><text x="28" y="255" font-size="13">1 tsp</text><rect x="118" y="202" width="34" height="31" rx="7" fill="#34d399"/><text x="98" y="255" font-size="13">1 tbsp</text><path d="M220 140h80v90h-80z" fill="#fbbf24"/><path d="M300 158h25c20 0 20 45 0 45h-25" fill="none" stroke="#d97706" stroke-width="8"/><text x="223" y="255" font-size="13">1 cup</text><path d="M405 65h58l12 36v132h-82V101z" fill="#a78bfa"/><text x="398" y="255" font-size="13">1 litre</text><path d="M560 42h82l20 52v139H540V94z" fill="#fb7185"/><path d="M570 62c35 30 60 30 85 0" fill="none" stroke="#be123c" stroke-width="8"/><text x="560" y="255" font-size="13">1 gallon</text></svg></section>
       <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Type the number you want to convert in the Value field at the top.</li><li>Select the unit you are converting from in the left dropdown.</li><li>Select the unit you want to convert to in the right dropdown.</li><li>Read the live result below; there is no calculate button.</li><li>Use the Swap button to reverse the conversion direction instantly.</li></ol></section><section class="content-section">
@@ -90,6 +202,7 @@
       </section>
     </article>
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related converters</h3><ul><li><a href="../unit-converter/length-converter.html">Length</a></li><li><a href="../unit-converter/weight-converter.html">Weight</a></li><li><a href="../unit-converter/temperature-converter.html">Temperature</a></li><li><a href="../unit-converter/area-converter.html">Area</a></li><li><a href="../unit-converter/volume-converter.html">Volume</a></li></ul></div>
     </aside>
   </main>
@@ -158,7 +271,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
 <script>
 (function() {
   // Conversion rates relative to base unit

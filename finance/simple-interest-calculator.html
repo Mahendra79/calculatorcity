@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Simple Interest Calculator — SI = P × R × T | Calculatorcity</title>
   <meta name="description" content="Free simple interest calculator using the P×R×T formula. Find interest earned, total amount and compare with compound interest for the same inputs.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Simple Interest Calculator — SI = P × R × T | Calculatorcity">
+  <meta property="og:description" content="Free simple interest calculator using the P×R×T formula. Find interest earned, total amount and compare with compound interest for the same inputs.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/finance/simple-interest-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Simple Interest Calculator — SI = P × R × T | Calculatorcity">
+  <meta name="twitter:description" content="Free simple interest calculator using the P×R×T formula. Find interest earned, total amount and compare with compound interest for the same inputs.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/finance/simple-interest-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/finance/simple-interest-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +30,48 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Simple Interest Calculator", "url": "https://calculatorcity.in/finance/simple-interest-calculator.html", "description": "Free simple interest calculator using the P×R×T formula. Find interest earned, total amount and compare with compound interest for the same inputs.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Simple Interest Calculator", "url": "https://mahendra79.github.io/calculatorcity/finance/simple-interest-calculator.html", "description": "Free simple interest calculator using the P×R×T formula. Find interest earned, total amount and compare with compound interest for the same inputs.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is simple interest?", "acceptedAnswer": {"@type": "Answer", "text": "Simple interest is interest calculated only on the original principal. It does not add previously earned interest back into the base. Because the interest amount per year stays constant, simple interest grows in a straight line. It is common in basic loans, school examples, some short-term lending, and quick estimates where compounding is not part of the agreement."}}, {"@type": "Question", "name": "What is the difference between simple interest and compound interest?", "acceptedAnswer": {"@type": "Answer", "text": "Simple interest uses only the principal for every period, while compound interest uses the principal plus accumulated interest. For the same rate and time, compound interest usually creates a higher final amount for savers and a higher cost for borrowers. The difference becomes larger when the time period is long or the rate is high."}}, {"@type": "Question", "name": "Where is simple interest used?", "acceptedAnswer": {"@type": "Answer", "text": "Simple interest may be used for short-term loans, informal lending, basic promissory notes, certain penalty calculations, and educational examples. Many modern bank products use compounding or amortization instead, so it is important to confirm which method applies. If a lender quotes a flat rate, compare it carefully with reducing-balance EMI calculations."}}, {"@type": "Question", "name": "How do I calculate monthly simple interest?", "acceptedAnswer": {"@type": "Answer", "text": "First calculate annual simple interest as P × R / 100. Divide that yearly interest by 12 to estimate monthly interest. For a multi-year loan, total simple interest is P × R × T / 100, and average monthly interest is total interest divided by the number of months. This assumes a clean simple-interest agreement without day-count adjustments."}}, {"@type": "Question", "name": "Is simple interest or compound interest better for a borrower?", "acceptedAnswer": {"@type": "Answer", "text": "For a borrower, simple interest is usually cheaper than compound interest when rate and time are the same, because unpaid interest does not itself earn interest. However, real loans may use EMI amortization, fees, penalties, or floating rates. Compare the total repayment, not only the formula name, before choosing a loan."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Simple Interest Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the principal amount exactly as it appears in your bank statement, quote, invoice, or planning sheet. Use the same currency throughout the calculator."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the annual simple interest rate as a plain number, not as a fraction or text label. Percent fields should use 8 for 8%, not 0.08."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Complete the remaining fields for the time in years and check units such as years, months, per-unit price, or number of people before calculating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select Calculate to produce simple interest, total amount, monthly interest, and compound comparison. The result cards separate the main answer from supporting figures so the calculation is easier to audit."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review the formula, worked example, and reference table before using the result in a financial decision, quotation, or repayment plan."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -34,11 +83,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -61,7 +114,18 @@
     <div class="calc-input-group"><label for="time">Time (T) in years</label><input id="time" type="number" min="0" step="0.01" value="3"></div>
   </div>
   <button class="calc-btn" type="button" id="calculate">Calculate</button>
-  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
+  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
 </section>
     
 <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps">
@@ -85,6 +149,7 @@
   </article>
   
 <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card">
     <h3>Related calculators</h3>
     <ul>
@@ -166,7 +231,7 @@
 </footer>
 
 
-<script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatCurrency(value) {

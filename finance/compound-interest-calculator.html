@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Compound Interest Calculator — See Your Investment Grow | Calculatorcity</title>
   <meta name="description" content="Free compound interest calculator. Calculate final amount, total interest and growth chart for any principal, rate, time and compounding frequency. Compare with simple interest.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Compound Interest Calculator — See Your Investment Grow | Calculatorcity">
+  <meta property="og:description" content="Free compound interest calculator. Calculate final amount, total interest and growth chart for any principal, rate, time and compounding frequency. Compare with simple interest.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/finance/compound-interest-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compound Interest Calculator — See Your Investment Grow | Calculatorcity">
+  <meta name="twitter:description" content="Free compound interest calculator. Calculate final amount, total interest and growth chart for any principal, rate, time and compounding frequency. Compare with simple interest.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/finance/compound-interest-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/finance/compound-interest-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +30,48 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Compound Interest Calculator", "url": "https://calculatorcity.in/finance/compound-interest-calculator.html", "description": "Free compound interest calculator. Calculate final amount, total interest and growth chart for any principal, rate, time and compounding frequency. Compare with simple interest.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Compound Interest Calculator", "url": "https://mahendra79.github.io/calculatorcity/finance/compound-interest-calculator.html", "description": "Free compound interest calculator. Calculate final amount, total interest and growth chart for any principal, rate, time and compounding frequency. Compare with simple interest.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is compound interest and how does it differ from simple interest?", "acceptedAnswer": {"@type": "Answer", "text": "Compound interest adds each period's interest back to the balance, so future interest is earned on a larger base. Simple interest calculates interest only on the original principal. That is why compound and simple lines may start close together but separate over long periods. The difference is small for short durations and low rates, but it becomes meaningful when money stays invested for many years."}}, {"@type": "Question", "name": "How does compounding frequency affect the final amount?", "acceptedAnswer": {"@type": "Answer", "text": "More frequent compounding credits interest more often, which raises the final amount when the stated annual rate is the same. Monthly compounding usually produces more than annual compounding, and daily compounding produces slightly more than monthly. The gain is real but it gets smaller as frequency rises, so the biggest practical comparison is often annual versus monthly rather than monthly versus daily."}}, {"@type": "Question", "name": "What is the Rule of 72 and how does it estimate doubling time?", "acceptedAnswer": {"@type": "Answer", "text": "The Rule of 72 is a quick mental shortcut: divide 72 by the annual return percentage to estimate how many years money takes to double. At 8%, doubling takes roughly 72 / 8 = 9 years. It is an approximation, not a replacement for the full compound interest formula, but it is useful for comparing rates quickly."}}, {"@type": "Question", "name": "What is Effective Annual Rate and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "Effective Annual Rate, or EAR, converts a nominal annual rate and compounding frequency into the true one-year return. Two products can advertise the same nominal rate but compound at different intervals. EAR makes those offers comparable because it includes the effect of compounding. For borrowers, a higher EAR means a higher true cost; for savers, it means a higher true return."}}, {"@type": "Question", "name": "How do I calculate compound interest manually without a calculator?", "acceptedAnswer": {"@type": "Answer", "text": "Write down P, r, n, and t, convert the percentage rate to a decimal, divide r by n, add 1, raise that result to n times t, and multiply by P. Subtract P from the final amount to get interest. Keep several decimals in intermediate steps because rounding too early can create a visible difference in the final answer."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Compound Interest Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter your starting principal exactly as it appears in your bank statement, quote, invoice, or planning sheet. Use the same currency throughout the calculator."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the annual interest rate as a plain number, not as a fraction or text label. Percent fields should use 8 for 8%, not 0.08."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Complete the remaining fields for the time period and compounding frequency and check units such as years, months, per-unit price, or number of people before calculating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select Calculate to produce final amount, total interest, interest percent, and effective annual rate. The result cards separate the main answer from supporting figures so the calculation is easier to audit."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review the formula, worked example, and reference table before using the result in a financial decision, quotation, or repayment plan."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -34,11 +83,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -63,7 +116,18 @@
     <div class="calc-input-group"><label for="freq">Compounding frequency</label><select id="freq"><option value="1">Annually</option><option value="2">Semi-annually</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option><option value="365">Daily</option></select></div>
   </div>
   <button class="calc-btn" type="button" id="calculate">Calculate</button>
-  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
+  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
   <div class="chart-container"><canvas id="calc-chart"></canvas></div>
 </section>
     
@@ -88,6 +152,7 @@
   </article>
   
 <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card">
     <h3>Related calculators</h3>
     <ul>
@@ -168,8 +233,8 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatCurrency(value) {

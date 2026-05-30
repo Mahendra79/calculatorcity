@@ -47,9 +47,9 @@
   color: var(--text-secondary);
 }
 
-.badge-hot { background: #fee2e2; color: var(--danger); }
-.badge-high { background: #dcfce7; color: var(--success); }
-.badge-med { background: #fef3c7; color: var(--warning); }
+.badge-hot { background: rgba(220,38,38,0.12); color: var(--danger); }
+.badge-high { background: rgba(22,163,74,0.12); color: var(--success); }
+.badge-med { background: rgba(217,119,6,0.12); color: var(--warning); }
 .badge-india { background: var(--india-light); color: var(--india); }
 
 .category-grid {
@@ -349,7 +349,7 @@
 
 .india-section {
   background: var(--india-light);
-  border: 1px solid #fed7aa;
+  border: 1px solid rgba(249,115,22,0.3);
   border-radius: var(--radius-xl);
   padding: 2rem;
 }

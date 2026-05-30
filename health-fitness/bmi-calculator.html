@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>BMI Calculator — Body Mass Index Calculator Free | Calculatorcity</title>
   <meta name="description" content="Free BMI calculator to find your Body Mass Index. Supports metric (kg/cm) and imperial (lbs/ft). Instantly shows BMI category and healthy weight range.">
-  <link rel="canonical" href="https://calculatorcity.in/health-fitness/bmi-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="BMI Calculator — Body Mass Index Calculator Free | Calculatorcity">
+  <meta property="og:description" content="Free BMI calculator to find your Body Mass Index. Supports metric (kg/cm) and imperial (lbs/ft). Instantly shows BMI category and healthy weight range.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/health-fitness/bmi-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BMI Calculator — Body Mass Index Calculator Free | Calculatorcity">
+  <meta name="twitter:description" content="Free BMI calculator to find your Body Mass Index. Supports metric (kg/cm) and imperial (lbs/ft). Instantly shows BMI category and healthy weight range.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/health-fitness/bmi-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,12 +30,68 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator","url":"https://calculatorcity.in/health-fitness/bmi-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator","url":"https://mahendra79.github.io/calculatorcity/health-fitness/bmi-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is BMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BMI stands for body mass index. It is a number calculated from weight and height that helps classify adults into broad weight categories. BMI is useful as a quick screening tool because it is easy to calculate and compare, but it does not directly measure body fat, muscle mass, bone density, or overall fitness."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a healthy BMI range?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most adults, a BMI from 18.5 to 24.9 is considered the normal or healthy weight range. A BMI below 18.5 is classified as underweight, while 25.0 to 29.9 is overweight. A BMI of 30 or above is classified as obesity. Individual health risk should be assessed with other medical factors too."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is BMI accurate for everyone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BMI is not equally accurate for every person. It can overestimate body fat in athletes or muscular people and underestimate risk in people with low muscle mass. It also does not account for waist size, age, sex, ethnicity, pregnancy, or medical conditions. Use BMI as a screening number, not a diagnosis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the BMI formula?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In metric units, BMI equals weight in kilograms divided by height in meters squared. The formula is BMI = kg / m². In imperial units, BMI equals weight in pounds divided by height in inches squared, multiplied by 703. Both formulas produce the same body mass index scale."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I lower my BMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lowering BMI usually means reducing body weight relative to height through sustainable nutrition, regular physical activity, better sleep, and consistent habits. Small calorie deficits, strength training, and walking can help many people. If your BMI is very high or you have medical conditions, speak with a qualified healthcare professional before starting major changes."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ Calculatorcity</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
-      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
+      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
 
   <main id="main" class="page-container two-col-layout">
     <article class="calc-main">
@@ -52,7 +124,18 @@
             <text x="0" y="76" font-size="14">10</text><text x="155" y="76" font-size="14">18.5</text><text x="288" y="76" font-size="14">25</text><text x="390" y="76" font-size="14">30</text><text x="490" y="76" font-size="14">35</text><text x="574" y="76" font-size="14">40</text>
             <text x="4" y="100" font-size="12">Underweight</text><text x="190" y="100" font-size="12">Normal weight</text><text x="315" y="100" font-size="12">Overweight</text><text x="410" y="100" font-size="12">Obese I</text><text x="512" y="100" font-size="12">Obese II+</text>
           </svg>
-        </div>
+        
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
 
       <section class="content-section"><h2>BMI Categories</h2><table class="reference-table"><thead><tr><th>BMI Range</th><th>Category</th><th>Health Risk</th></tr></thead><tbody><tr><td>Below 18.5</td><td>Underweight</td><td>Malnutrition risk</td></tr><tr><td>18.5 - 24.9</td><td>Normal weight</td><td>Low risk</td></tr><tr><td>25.0 - 29.9</td><td>Overweight</td><td>Moderate risk</td></tr><tr><td>30.0 - 34.9</td><td>Obese Class I</td><td>High risk</td></tr><tr><td>35.0 - 39.9</td><td>Obese Class II</td><td>Very high risk</td></tr><tr><td>40+</td><td>Obese Class III</td><td>Extremely high risk</td></tr></tbody></table></section>
@@ -65,7 +148,8 @@
         <div class="faq-item"><h3 class="faq-question">How do I lower my BMI?</h3><div class="faq-answer"><p>Lowering BMI usually means reducing body weight relative to height through sustainable nutrition, regular physical activity, better sleep, and consistent habits. Small calorie deficits, strength training, and walking can help many people. If your BMI is very high or you have medical conditions, speak with a qualified healthcare professional before starting major changes.</p></div></div>
       </section>
     </article>
-    <aside class="calc-sidebar"><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/calorie-calculator.html">BMR</a></li><li><a href="../health-fitness/ideal-weight-calculator.html">Ideal Weight</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li></ul></div></aside>
+    <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../health-fitness/calorie-calculator.html">Calorie</a></li><li><a href="../health-fitness/body-fat-calculator.html">Body Fat</a></li><li><a href="../health-fitness/calorie-calculator.html">BMR</a></li><li><a href="../health-fitness/ideal-weight-calculator.html">Ideal Weight</a></li><li><a href="../health-fitness/water-intake-calculator.html">Water Intake</a></li></ul></div></aside>
   </main>
 
   <hr class="footer-separator" aria-hidden="true">
@@ -133,7 +217,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
     let bmiUnit = "metric";
     document.querySelectorAll(".toggle-btn").forEach((btn) => btn.addEventListener("click", () => {

@@ -1,22 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><title>Quadratic Solver ? Roots, Vertex and Graph | Calculatorcity</title>
+  <meta charset="UTF-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script"><title>Quadratic Solver ? Roots, Vertex and Graph | Calculatorcity</title>
   <meta name="description" content="Solve quadratic equations online with discriminant, real or complex roots, vertex coordinates, axis of symmetry and a live parabola graph with markers.">
-  <link rel="canonical" href="https://calculatorcity.in/maths/quadratic-equation-solver.html"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Quadratic Solver ? Roots, Vertex and Graph | Calculatorcity">
+  <meta property="og:description" content="Solve quadratic equations online with discriminant, real or complex roots, vertex coordinates, axis of symmetry and a live parabola graph with markers.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/maths/quadratic-equation-solver.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quadratic Solver ? Roots, Vertex and Graph | Calculatorcity">
+  <meta name="twitter:description" content="Solve quadratic equations online with discriminant, real or complex roots, vertex coordinates, axis of symmetry and a live parabola graph with markers.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/maths/quadratic-equation-solver.html"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/base.css"><link rel="stylesheet" href="../assets/css/layout.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Quadratic Equation Solver","url":"https://calculatorcity.in/maths/quadratic-equation-solver.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Quadratic Equation Solver","url":"https://mahendra79.github.io/calculatorcity/maths/quadratic-equation-solver.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a quadratic equation",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A quadratic equation is a polynomial equation whose highest power of the variable is two. Its standard form is ax² + bx + c = 0, where a, b, and c are constants and a is not zero. The graph of a quadratic is a parabola. Quadratics appear in projectile motion, area problems, revenue models, optimization, geometry, and algebra. Solving a quadratic means finding the x-values where the equation equals zero, which are also the graph's x-intercepts when real roots exist."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the discriminant",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The discriminant is the expression b² - 4ac inside the square root of the quadratic formula. It tells what kind of roots the equation has before the roots are fully calculated. A positive discriminant means two distinct real roots. A zero discriminant means one repeated real root. A negative discriminant means two complex roots because the square root of a negative number is not real. The discriminant is also connected to how the parabola intersects the x-axis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are complex roots",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Complex roots occur when the discriminant is negative. In that case, the quadratic formula requires the square root of a negative number, which is written using i, where i² = -1. Complex roots appear as a pair: p + qi and p - qi. They are not visible as x-axis crossings on a real-number graph, but they are valid algebraic solutions. A parabola with complex roots stays entirely above or below the x-axis, depending on the sign of a and the vertex location."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the vertex of a parabola",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The vertex is the turning point of a parabola. If the parabola opens upward, the vertex is the minimum point. If it opens downward, the vertex is the maximum point. The x-coordinate of the vertex is -b/(2a). After finding that value, substitute it into ax² + bx + c to get the y-coordinate. The vertex is useful in optimization problems, such as finding maximum profit, minimum cost, highest projectile height, or the lowest point of a curve."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I use the quadratic formula",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the quadratic formula when factoring is difficult, when roots are decimals, or when roots may be complex. Factoring is faster for simple equations such as x² - 5x + 6 = 0, but it does not always work cleanly. Completing the square is useful for deriving the formula and understanding vertex form, but it can take longer. The quadratic formula works for every quadratic equation with a nonzero a value, making it the most reliable general method."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Quadratic Equation Solver",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Rewrite your equation in standard form ax² + bx + c = 0 before entering values."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the coefficient of x² as a. This value cannot be zero, because a zero value makes the equation linear rather than quadratic."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter b, the coefficient of x, including a negative sign when the equation subtracts the x term."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter c, the constant term. The equation preview updates as you type so you can catch sign mistakes."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Solve Quadratic and review the discriminant, roots, vertex, and graph. Complex roots appear in a ± bi form when the parabola does not cross the x-axis."
+      }
+    ]
+  }
+  </script>
 </head>
 <body><a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">? Calculatorcity</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
-      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>?</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">???? India</a></nav></header>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
+      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>?</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">???? India</a></nav></header>
   <main id="main" class="page-container two-col-layout" role="main"><article class="calc-main">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>Quadratic Equation Solver</span></nav>
     <h1>Quadratic Equation Solver</h1>
     <p>The quadratic equation solver finds the roots of any equation in the form ax&sup2; + bx + c = 0 using the quadratic formula. It shows the discriminant to tell you whether the roots are real and distinct, real and equal, or complex. The parabola is graphed so you can see where the roots fall on the x-axis, and the vertex coordinates show the turning point.</p>
-    <section class="calc-widget"><div class="result-grid"><div class="calc-input-group"><label for="a">a coefficient (x&sup2;)</label><input id="a" type="number" value="1" step="any"></div><div class="calc-input-group"><label for="b">b coefficient (x)</label><input id="b" type="number" value="-5" step="any"></div><div class="calc-input-group"><label for="c">c constant</label><input id="c" type="number" value="6" step="any"></div></div><div class="formula-box">Equation preview: <strong id="equation-preview">x&sup2; - 5x + 6 = 0</strong></div><button class="calc-btn" id="calculate-quadratic" type="button">Solve Quadratic</button><div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div><p id="quad-steps" style="margin-top:1rem;"></p></div></section>
+    <section class="calc-widget"><div class="result-grid"><div class="calc-input-group"><label for="a">a coefficient (x&sup2;)</label><input id="a" type="number" value="1" step="any"></div><div class="calc-input-group"><label for="b">b coefficient (x)</label><input id="b" type="number" value="-5" step="any"></div><div class="calc-input-group"><label for="c">c constant</label><input id="c" type="number" value="6" step="any"></div></div><div class="formula-box">Equation preview: <strong id="equation-preview">x&sup2; - 5x + 6 = 0</strong></div><button class="calc-btn" id="calculate-quadratic" type="button">Solve Quadratic</button><div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div><p id="quad-steps" style="margin-top:1rem;"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div></section>
     <section class="content-section"><h2>Parabola Graph</h2><div class="chart-container"><canvas id="quadratic-chart"></canvas></div></section>
     <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Rewrite your equation in standard form ax&sup2; + bx + c = 0 before entering values.</li><li>Enter the coefficient of x&sup2; as a. This value cannot be zero, because a zero value makes the equation linear rather than quadratic.</li><li>Enter b, the coefficient of x, including a negative sign when the equation subtracts the x term.</li><li>Enter c, the constant term. The equation preview updates as you type so you can catch sign mistakes.</li><li>Click Solve Quadratic and review the discriminant, roots, vertex, and graph. Complex roots appear in a &plusmn; bi form when the parabola does not cross the x-axis.</li></ol></section>
     <section class="content-section"><h2>Quadratic Formula</h2><div class="formula-box">x = (-b &plusmn; &radic;(b&sup2; - 4ac)) / 2a<br>Discriminant D = b&sup2; - 4ac<br>Vertex x = -b / 2a, y = f(x)</div><p>A quadratic equation has degree two, meaning the highest power of x is x&sup2;. The coefficient a controls the width and direction of the parabola. If a is positive, the parabola opens upward; if a is negative, it opens downward. The coefficient b shifts the axis of symmetry and affects the root positions. The constant c is the y-intercept, where the graph crosses the y-axis. The discriminant D = b&sup2; - 4ac determines the root type. When D is positive, there are two real roots. When D is zero, both roots are equal and the parabola touches the x-axis once. When D is negative, there are two complex roots and no real x-axis crossing. The vertex formula gives the turning point of the parabola.</p></section>
@@ -24,7 +136,8 @@
     <section class="content-section"><h2>Reading the Graph</h2><p>The graph helps connect the algebraic solution with the shape of the equation. Real roots are x-values where the curve crosses the x-axis. If the discriminant is zero, the graph touches the x-axis exactly at the vertex and turns around. If the roots are complex, the curve never crosses the x-axis, even though the equation still has valid complex solutions. The vertex marker is useful because it shows the minimum value for an upward-opening parabola or the maximum value for a downward-opening parabola.</p></section>
     <section class="content-section"><h2>Quadratic Special Cases</h2><table class="reference-table"><thead><tr><th>Case</th><th>Example</th><th>Meaning</th></tr></thead><tbody><tr><td>Two real roots</td><td>x&sup2; - 5x + 6</td><td>D &gt; 0</td></tr><tr><td>Repeated root</td><td>x&sup2; - 4x + 4</td><td>D = 0</td></tr><tr><td>Complex roots</td><td>x&sup2; + 4</td><td>D &lt; 0</td></tr><tr><td>Perfect square trinomial</td><td>x&sup2; + 6x + 9</td><td>(x + 3)&sup2;</td></tr><tr><td>Difference of squares</td><td>x&sup2; - 25</td><td>(x - 5)(x + 5)</td></tr><tr><td>No x term</td><td>x&sup2; - 16</td><td>b = 0</td></tr><tr><td>No constant</td><td>x&sup2; - 3x</td><td>Factor out x</td></tr><tr><td>Opens downward</td><td>-x&sup2; + 4</td><td>a &lt; 0</td></tr></tbody></table></section>
     <section class="content-section"><h2>Quadratic Solver FAQ</h2><div class="faq-item"><h3 class="faq-question">What is a quadratic equation</h3><div class="faq-answer"><p>A quadratic equation is a polynomial equation whose highest power of the variable is two. Its standard form is ax&sup2; + bx + c = 0, where a, b, and c are constants and a is not zero. The graph of a quadratic is a parabola. Quadratics appear in projectile motion, area problems, revenue models, optimization, geometry, and algebra. Solving a quadratic means finding the x-values where the equation equals zero, which are also the graph's x-intercepts when real roots exist.</p></div></div><div class="faq-item"><h3 class="faq-question">What is the discriminant</h3><div class="faq-answer"><p>The discriminant is the expression b&sup2; - 4ac inside the square root of the quadratic formula. It tells what kind of roots the equation has before the roots are fully calculated. A positive discriminant means two distinct real roots. A zero discriminant means one repeated real root. A negative discriminant means two complex roots because the square root of a negative number is not real. The discriminant is also connected to how the parabola intersects the x-axis.</p></div></div><div class="faq-item"><h3 class="faq-question">What are complex roots</h3><div class="faq-answer"><p>Complex roots occur when the discriminant is negative. In that case, the quadratic formula requires the square root of a negative number, which is written using i, where i&sup2; = -1. Complex roots appear as a pair: p + qi and p - qi. They are not visible as x-axis crossings on a real-number graph, but they are valid algebraic solutions. A parabola with complex roots stays entirely above or below the x-axis, depending on the sign of a and the vertex location.</p></div></div><div class="faq-item"><h3 class="faq-question">What is the vertex of a parabola</h3><div class="faq-answer"><p>The vertex is the turning point of a parabola. If the parabola opens upward, the vertex is the minimum point. If it opens downward, the vertex is the maximum point. The x-coordinate of the vertex is -b/(2a). After finding that value, substitute it into ax&sup2; + bx + c to get the y-coordinate. The vertex is useful in optimization problems, such as finding maximum profit, minimum cost, highest projectile height, or the lowest point of a curve.</p></div></div><div class="faq-item"><h3 class="faq-question">When should I use the quadratic formula</h3><div class="faq-answer"><p>Use the quadratic formula when factoring is difficult, when roots are decimals, or when roots may be complex. Factoring is faster for simple equations such as x&sup2; - 5x + 6 = 0, but it does not always work cleanly. Completing the square is useful for deriving the formula and understanding vertex form, but it can take longer. The quadratic formula works for every quadratic equation with a nonzero a value, making it the most reliable general method.</p></div></div></section>
-  </article><aside class="calc-sidebar"><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/square-root-calculator.html">Square Root Calculator</a></li><li><a href="../maths/exponent-calculator.html">Exponent Calculator</a></li><li><a href="../maths/scientific-calculator.html">Scientific Calculator</a></li><li><a href="../maths/fraction-calculator.html">Fraction Calculator</a></li><li><a href="../science-other/grade-calculator.html">Grade Calculator</a></li></ul></div></aside></main>
+  </article><aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/square-root-calculator.html">Square Root Calculator</a></li><li><a href="../maths/exponent-calculator.html">Exponent Calculator</a></li><li><a href="../maths/scientific-calculator.html">Scientific Calculator</a></li><li><a href="../maths/fraction-calculator.html">Fraction Calculator</a></li><li><a href="../science-other/grade-calculator.html">Grade Calculator</a></li></ul></div></aside></main>
   <hr class="footer-separator" aria-hidden="true">
 <footer class="site-footer">
   <div class="footer-inner">
@@ -90,7 +203,7 @@
     </div>
   </div>
 </footer>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
   <script src="../assets/js/main.js" defer></script>
   <script>
     (function() {

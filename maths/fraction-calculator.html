@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Fraction Calculator ? Add and Simplify with Steps | Calculatorcity</title>
   <meta name="description" content="Free fraction calculator to add, subtract, multiply and divide fractions with step-by-step working, lowest-term simplification, mixed numbers and decimals.">
-  <link rel="canonical" href="https://calculatorcity.in/maths/fraction-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Fraction Calculator ? Add and Simplify with Steps | Calculatorcity">
+  <meta property="og:description" content="Free fraction calculator to add, subtract, multiply and divide fractions with step-by-step working, lowest-term simplification, mixed numbers and decimals.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/maths/fraction-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fraction Calculator ? Add and Simplify with Steps | Calculatorcity">
+  <meta name="twitter:description" content="Free fraction calculator to add, subtract, multiply and divide fractions with step-by-step working, lowest-term simplification, mixed numbers and decimals.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/maths/fraction-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,18 +30,103 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     @media (max-width: 520px) {
       .fraction-grid { grid-template-columns: 1fr !important; }
       #op-symbol { justify-content: center; padding: 0.25rem !important; }
     }
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Fraction Calculator","url":"https://calculatorcity.in/maths/fraction-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Fraction Calculator","url":"https://mahendra79.github.io/calculatorcity/maths/fraction-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a fraction",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A fraction represents part of a whole or a ratio between two quantities. The top number is the numerator, which tells how many parts are being considered. The bottom number is the denominator, which tells how many equal parts make up the whole. For example, 3/4 means three parts out of four equal parts. A proper fraction has a numerator smaller than the denominator, such as 2/5. An improper fraction has a numerator equal to or larger than the denominator, such as 7/4. A mixed number combines a whole number and a fraction, such as 1 3/4."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you add fractions with different denominators",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To add fractions with different denominators, first find a common denominator. The most efficient common denominator is usually the least common multiple of the two denominators. Convert each fraction to an equivalent fraction using that denominator, then add only the numerators. For example, to add 1/4 and 1/6, the LCM of 4 and 6 is 12. Convert 1/4 to 3/12 and 1/6 to 2/12. Then add 3 + 2 to get 5/12. The denominator stays 12 because the parts are now the same size."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a simplified or reduced fraction",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A simplified fraction is a fraction written in lowest terms. That means the numerator and denominator have no common factor greater than 1. For example, 12/18 can be reduced because both numbers are divisible by 6. Dividing 12 and 18 by 6 gives 2/3, which is the simplified form. Simplifying does not change the value of the fraction; it only writes the same value more clearly. This is why school answers, recipe adjustments, and algebra steps usually expect simplified fractions. The calculator uses the greatest common divisor to reduce answers automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you divide fractions",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dividing fractions uses the reciprocal rule, often remembered as “keep, change, flip.” Keep the first fraction, change division to multiplication, and flip the second fraction. For example, 3/4 ÷ 2/5 becomes 3/4 × 5/2. Then multiply the numerators to get 15 and the denominators to get 8, so the result is 15/8. The reciprocal works because dividing by a fraction asks how many groups of that fractional size fit into the first quantity. Division by a zero numerator is not allowed because it would mean dividing by zero."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a proper fraction and an improper fraction",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A proper fraction is less than one whole because its numerator is smaller than its denominator. Examples include 1/2, 3/5, and 7/10. An improper fraction is equal to or greater than one because its numerator is at least as large as its denominator. Examples include 5/4, 9/8, and 12/6. Improper fractions are often converted into mixed numbers for readability. For example, 17/12 is the same as 1 5/12. Both forms are mathematically correct, but improper fractions are often easier in algebra while mixed numbers are easier in everyday measurement."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Fraction Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Select the operation tab — Add, Subtract, Multiply, or Divide — at the top of the calculator. The operator symbol between the fractions updates automatically, so you can confirm the selected operation before entering values."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the numerator and denominator for the first fraction on the left. The numerator is the top number, and the denominator is the bottom number. Negative numerators are allowed for values such as -3/4."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the numerator and denominator for the second fraction on the right. Denominators cannot be zero because division by zero is undefined in arithmetic."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate, or edit any field to update automatically. The result appears as an unsimplified fraction, simplified fraction, decimal, and mixed number when applicable."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Read the step-by-step working box below the result. It shows the LCM method for addition and subtraction, direct multiplication for products, and the reciprocal rule for division."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ Calculatorcity</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
-      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
+      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
 
   <main id="main" class="page-container two-col-layout" role="main">
     <article class="calc-main">
@@ -54,7 +155,18 @@
           </div>
         </div>
         <button class="calc-btn" id="calc-btn" type="button">Calculate</button>
-        <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
+        <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         <div class="formula-box" id="steps" style="margin-top:1rem; display:none;"></div>
       </section>
 
@@ -128,6 +240,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/percentage-calculator.html">Percentage Calculator</a></li><li><a href="../maths/average-calculator.html">Average Calculator</a></li><li><a href="../maths/ratio-calculator.html">Ratio Calculator</a></li><li><a href="../maths/lcm-hcf-calculator.html">LCM and HCF Calculator</a></li><li><a href="../finance/discount-calculator.html">Discount Calculator</a></li></ul></div>
     </aside>
   </main>

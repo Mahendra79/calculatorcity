@@ -301,13 +301,13 @@
     const meta = byId("page-meta");
     if (meta) meta.setAttribute("content", state.seo.description);
     const canonical = byId("page-canonical");
-    if (canonical) canonical.setAttribute("href", "https://calculatorcity.in" + stateCanonicalPath(state.slug));
+    if (canonical) canonical.setAttribute("href", "https://mahendra79.github.io/calculatorcity" + stateCanonicalPath(state.slug));
     const ogTitle = byId("og-title");
     if (ogTitle) ogTitle.setAttribute("content", state.seo.title);
     const ogDescription = byId("og-description");
     if (ogDescription) ogDescription.setAttribute("content", state.seo.description);
     const ogUrl = byId("og-url");
-    if (ogUrl) ogUrl.setAttribute("content", "https://calculatorcity.in" + stateCanonicalPath(state.slug));
+    if (ogUrl) ogUrl.setAttribute("content", "https://mahendra79.github.io/calculatorcity" + stateCanonicalPath(state.slug));
     updateFaqSchema(state.content.faq);
   }
 

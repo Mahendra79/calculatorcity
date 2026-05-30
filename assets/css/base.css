@@ -81,3 +81,22 @@ li { margin-bottom: 0.35rem; }
   transition: top 0.2s;
 }
 .skip-link:focus { top: 1rem; }
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --border: #334155;
+    --border-hover: #475569;
+    --text: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --primary-light: #1e3a5f;
+    --india-light: #431407;
+    --shadow: 0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.35), 0 2px 4px rgba(0,0,0,0.25);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.4), 0 4px 6px rgba(0,0,0,0.3);
+  }
+}

@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Fuel Efficiency Calculator &mdash; Mileage and Fuel Cost | Calculatorcity</title>
   <meta name="description" content="Calculate vehicle mileage in km/L, L/100km and mpg. Estimate trip fuel cost in rupees. Supports both metric and imperial units. Indian vehicle mileage reference included.">
-  <link rel="canonical" href="https://calculatorcity.in/science-other/fuel-efficiency-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Fuel Efficiency Calculator — Mileage and Fuel Cost | Calculatorcity">
+  <meta property="og:description" content="Calculate vehicle mileage in km/L, L/100km and mpg. Estimate trip fuel cost in rupees. Supports both metric and imperial units. Indian vehicle mileage reference included.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/science-other/fuel-efficiency-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fuel Efficiency Calculator — Mileage and Fuel Cost | Calculatorcity">
+  <meta name="twitter:description" content="Calculate vehicle mileage in km/L, L/100km and mpg. Estimate trip fuel cost in rupees. Supports both metric and imperial units. Indian vehicle mileage reference included.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/science-other/fuel-efficiency-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,26 +30,111 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .calc-tabs.two-tabs{grid-template-columns:repeat(2,1fr)}.mode-panel[hidden]{display:none}.unit-row{display:grid;grid-template-columns:2fr 1fr;gap:.75rem}.note{color:var(--text-secondary);font-size:.95rem;margin-top:1rem}.table-wrap{overflow-x:auto}@media(max-width:767px){.calc-tabs.two-tabs,.unit-row{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Fuel Efficiency Calculator","url":"https://calculatorcity.in/science-other/fuel-efficiency-calculator.html","description":"Calculate vehicle mileage in km/L, L/100km, mpg, and estimate trip fuel cost in rupees.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Fuel Efficiency Calculator","url":"https://mahendra79.github.io/calculatorcity/science-other/fuel-efficiency-calculator.html","description":"Calculate vehicle mileage in km/L, L/100km, mpg, and estimate trip fuel cost in rupees.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is good mileage for a car in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Good mileage depends on vehicle type, fuel, transmission, route, and driving style. For small petrol hatchbacks, 16 to 22 km/L in mixed use is generally good. For compact SUVs, 12 to 18 km/L can be reasonable. Diesel cars often return higher highway mileage but may have higher purchase and maintenance considerations. CNG vehicles can be very economical, but fuel is usually measured in km/kg rather than km/L. The best comparison is against similar vehicles driven in similar traffic, not against a very different segment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my bike's mileage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the full-tank method. Fill the bike to a consistent level, reset the trip meter, ride normally, and refill to the same level. Note the kilometres travelled and the litres added. Mileage = kilometres travelled divided by litres filled. For example, if you ride 310 km and refill 6.2 litres, mileage is 310 / 6.2 = 50 km/L. Repeat the measurement over several refills because traffic, riding style, tyre pressure, and pump cut-off can change the result from one tank to another."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is ARAI mileage different from real mileage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ARAI mileage is measured under standardized test conditions so vehicles can be compared consistently. Real roads are not standardized. City traffic, idling, aggressive acceleration, air conditioning, short trips, hills, tyre pressure, fuel quality, and passenger load all affect consumption. ARAI figures are therefore best treated as laboratory comparison numbers, not guaranteed daily mileage. Your own measured mileage is more useful for budgeting. If real mileage falls suddenly, check tyre pressure, air filter, wheel alignment, fuel quality, spark plugs, brakes, and driving pattern before assuming the vehicle is defective."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I improve fuel efficiency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Drive smoothly, avoid harsh acceleration, maintain steady speeds, keep tyres inflated to the recommended pressure, remove unnecessary weight, use air conditioning sensibly, and service the vehicle on schedule. In manual vehicles, shift gears at appropriate engine speeds without lugging the engine. Avoid long idling and plan routes to reduce stop-start traffic where possible. Roof racks and open windows at highway speeds can increase drag. Good maintenance matters too: clogged filters, dragging brakes, poor alignment, and old spark plugs can all reduce mileage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is L/100km and how do I convert it to km/L?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L/100km means litres used to travel 100 kilometres. It is common in Europe and many international specifications. Lower values are better because they mean less fuel is consumed. To convert km/L to L/100km, divide 100 by km/L. For example, 20 km/L becomes 100 / 20 = 5 L/100km. To convert L/100km back to km/L, divide 100 by L/100km. For example, 6.67 L/100km becomes 100 / 6.67 = about 15 km/L."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Fuel Efficiency Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Select Calculate Mileage when you know distance driven and fuel used."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the distance and choose kilometres or miles, then enter fuel and choose litres or US gallons."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate Mileage to see km/L, L/100km, and mpg."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select Estimate Trip Cost when you know the trip distance, vehicle mileage, and fuel price per litre."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Estimate Trip Cost to see litres needed, total fuel cost in rupees, and cost per kilometre."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health &amp; Fitness</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science &amp; Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -61,7 +162,18 @@
             <div class="calc-input-group"><label for="fuel-unit">Fuel unit</label><select id="fuel-unit"><option value="litres" selected>litres</option><option value="gallons">US gallons</option></select></div>
           </div>
           <button class="calc-btn" type="button" id="calc-mileage">Calculate Mileage</button>
-          <div class="calc-result" id="mileage-result-box" aria-live="polite"><div class="result-grid" id="mileage-result"></div><p class="note" id="mileage-note"></p></div>
+          <div class="calc-result" id="mileage-result-box" aria-live="polite"><div class="result-grid" id="mileage-result"></div><p class="note" id="mileage-note"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         </div>
 
         <div class="mode-panel" data-panel="trip" hidden>
@@ -71,7 +183,18 @@
             <div class="calc-input-group"><label for="fuel-price">Fuel price per litre (&#8377;)</label><input type="number" id="fuel-price" value="100" min="0" step="any"></div>
           </div>
           <button class="calc-btn" type="button" id="calc-trip">Estimate Trip Cost</button>
-          <div class="calc-result" id="trip-result-box" aria-live="polite"><div class="result-grid" id="trip-result"></div><p class="note" id="trip-note"></p></div>
+          <div class="calc-result" id="trip-result-box" aria-live="polite"><div class="result-grid" id="trip-result"></div><p class="note" id="trip-note"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         </div>
       </section>
 
@@ -137,6 +260,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law</a></li><li><a href="../science-other/gpa-calculator.html">GPA</a></li><li><a href="../science-other/grade-calculator.html">Grade</a></li><li><a href="../science-other/password-generator.html">Password Generator</a></li><li><a href="../science-other/electricity-cost-calculator.html">Electricity Cost</a></li></ul></div>
       <div class="card sidebar-card"><h3>Mileage tips</h3><ul><li>Measure over several tanks.</li><li>Keep tyre pressure correct.</li><li>Compare similar route types.</li></ul></div>
     </aside>
@@ -206,7 +330,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
 (function() {
   let mode = 'mileage';

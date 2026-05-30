@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Inflation Calculator — Find Real Value of Money Over Time | Calculatorcity</title>
   <meta name="description" content="Free inflation calculator. Find the inflation-adjusted value of money over any time period using a custom average inflation rate. Shows purchasing power change.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Inflation Calculator — Find Real Value of Money Over Time | Calculatorcity">
+  <meta property="og:description" content="Free inflation calculator. Find the inflation-adjusted value of money over any time period using a custom average inflation rate. Shows purchasing power change.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/finance/inflation-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inflation Calculator — Find Real Value of Money Over Time | Calculatorcity">
+  <meta name="twitter:description" content="Free inflation calculator. Find the inflation-adjusted value of money over any time period using a custom average inflation rate. Shows purchasing power change.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/finance/inflation-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/finance/inflation-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +30,48 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Inflation Calculator", "url": "https://calculatorcity.in/finance/inflation-calculator.html", "description": "Free inflation calculator. Find the inflation-adjusted value of money over any time period using a custom average inflation rate. Shows purchasing power change.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Inflation Calculator", "url": "https://mahendra79.github.io/calculatorcity/finance/inflation-calculator.html", "description": "Free inflation calculator. Find the inflation-adjusted value of money over any time period using a custom average inflation rate. Shows purchasing power change.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is inflation?", "acceptedAnswer": {"@type": "Answer", "text": "Inflation is the general rise in prices over time. When inflation occurs, the same amount of money buys fewer goods and services. A 6% inflation rate does not mean every item rises exactly 6%; it means a representative basket rose by that average. Personal inflation can differ from official inflation depending on spending patterns."}}, {"@type": "Question", "name": "Why does inflation erode purchasing power?", "acceptedAnswer": {"@type": "Answer", "text": "Money loses purchasing power when prices rise faster than the amount of money you hold. If prices double but your cash stays the same, your cash buys about half as much. That is why long-term goals such as education, retirement, and healthcare need inflation-adjusted planning rather than today's prices alone."}}, {"@type": "Question", "name": "What is real vs nominal value?", "acceptedAnswer": {"@type": "Answer", "text": "Nominal value is the rupee or dollar amount shown at the time. Real value adjusts for inflation so amounts from different years can be compared more fairly. A salary may rise in nominal terms but still fall in real terms if prices rise faster. Investors use real returns to measure growth after inflation."}}, {"@type": "Question", "name": "What is a good hedge against inflation?", "acceptedAnswer": {"@type": "Answer", "text": "Inflation hedges can include diversified equities, inflation-linked bonds, real estate, commodities, and businesses with pricing power. No hedge works perfectly in every period. The right choice depends on time horizon, risk tolerance, liquidity needs, and whether the inflation shock is temporary or persistent."}}, {"@type": "Question", "name": "What is India's average inflation rate?", "acceptedAnswer": {"@type": "Answer", "text": "India's average inflation rate varies by period and index used. CPI inflation has often been near the mid-single digits in recent years, but some years were much higher. For planning, many people test scenarios such as 5%, 6%, and 7% rather than relying on one exact historical average."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Inflation Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the original amount exactly as it appears in your bank statement, quote, invoice, or planning sheet. Use the same currency throughout the calculator."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the average inflation rate as a plain number, not as a fraction or text label. Percent fields should use 8 for 8%, not 0.08."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Complete the remaining fields for the start and end years and check units such as years, months, per-unit price, or number of people before calculating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select Calculate to produce adjusted value, total inflation, and purchasing power change. The result cards separate the main answer from supporting figures so the calculation is easier to audit."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review the formula, worked example, and reference table before using the result in a financial decision, quotation, or repayment plan."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -34,11 +83,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -62,7 +115,18 @@
     <div class="calc-input-group"><label for="rate">Average annual inflation rate (%)</label><input id="rate" type="number" min="-50" max="100" step="0.01" value="6"></div>
   </div>
   <button class="calc-btn" type="button" id="calculate">Calculate</button>
-  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div></div>
+  <div class="calc-result" id="calc-result" aria-live="polite"><div class="result-grid" id="result-grid"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
   <div class="chart-container"><canvas id="calc-chart"></canvas></div>
 </section>
     
@@ -87,6 +151,7 @@
   </article>
   
 <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card">
     <h3>Related calculators</h3>
     <ul>
@@ -167,8 +232,8 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatCurrency(value) {

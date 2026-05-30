@@ -84,8 +84,8 @@
     to right,
     var(--primary) 0%,
     var(--primary) var(--range-progress),
-    #e2e8f0 var(--range-progress),
-    #e2e8f0 100%
+    var(--border) var(--range-progress),
+    var(--border) 100%
   );
 }
 
@@ -108,7 +108,7 @@
 .calc-input-group input[type="range"]::-moz-range-track {
   height: 8px;
   border-radius: 999px;
-  background: #e2e8f0;
+  background: var(--border);
 }
 
 .calc-input-group input[type="range"]::-moz-range-progress {
@@ -218,7 +218,7 @@
 
 .result-card.highlight {
   border-color: #fdba74;
-  background: #fffbeb;
+  background: var(--india-light);
 }
 
 .better-badge {
@@ -244,7 +244,7 @@
   padding: 1rem;
   border: 1px solid #fed7aa;
   border-radius: var(--radius-lg);
-  background: #fffaf5;
+  background: var(--india-light);
 }
 
 .summary-list {
@@ -328,7 +328,7 @@
   width: 100%;
   min-height: 14px;
   overflow: hidden;
-  background: #dbeafe;
+  background: var(--primary-light);
   border-radius: 999px;
   margin-top: 1rem;
 }

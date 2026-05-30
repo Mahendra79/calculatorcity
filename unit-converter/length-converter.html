@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Length Converter — km, m, cm, miles, feet, inches | Calculatorcity</title>
   <meta name="description" content="Free length converter for kilometres, metres, centimetres, millimetres, miles, yards, feet, inches and nautical miles. Live conversion with visual scale comparison.">
-  <link rel="canonical" href="https://calculatorcity.in/unit-converter/length-converter.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Length Converter — km, m, cm, miles, feet, inches | Calculatorcity">
+  <meta property="og:description" content="Free length converter for kilometres, metres, centimetres, millimetres, miles, yards, feet, inches and nautical miles. Live conversion with visual scale comparison.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/unit-converter/length-converter.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Length Converter — km, m, cm, miles, feet, inches | Calculatorcity">
+  <meta name="twitter:description" content="Free length converter for kilometres, metres, centimetres, millimetres, miles, yards, feet, inches and nautical miles. Live conversion with visual scale comparison.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/unit-converter/length-converter.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +30,7 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .unit-select-row { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: end; }
     #result-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
@@ -35,22 +52,106 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Length Converter","url":"https://calculatorcity.in/unit-converter/length-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Length Converter","url":"https://mahendra79.github.io/calculatorcity/unit-converter/length-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many centimetres are in an inch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There are exactly 2.54 centimetres in one inch. This is a defined relationship, not a rounded estimate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a mile and a nautical mile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A land mile is 1609.344 metres. A nautical mile is 1852 metres and is based on latitude, so it is used in aviation and shipping."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you convert height from feet and inches to centimetres?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Convert feet to centimetres by multiplying by 30.48, convert inches by multiplying by 2.54, then add the two results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the metric system and why does it use powers of 10?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The metric system is a decimal measurement system. Prefixes such as kilo, centi and milli represent powers of 10, which makes conversion easy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many metres are in a kilometre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There are 1000 metres in one kilometre."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Length Converter",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Type the number you want to convert in the Value field at the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you are converting FROM in the left dropdown — for example kilometres."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you want to convert TO in the right dropdown — for example miles."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The result appears instantly below without needing to click any button."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click the ↔ Swap button to reverse the direction and convert back immediately."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -78,7 +179,18 @@
         <div class="calc-result show" id="calc-result" aria-live="polite">
           <div class="result-grid" id="result-grid"></div>
           <p id="conversion-factor" style="margin-top:.75rem; font-size:.875rem; color:var(--text-secondary);"></p>
-        </div>
+        
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
       <section class="unit-visual" aria-label="Length scale comparison"><h2>Visual Scale Comparison</h2><svg viewBox="0 0 720 250" role="img" aria-label="Horizontal bars comparing one inch, one foot, one metre, one yard and one kilometre"><text x="20" y="30" font-size="18" font-weight="700" fill="#0f172a">Relative length reference</text><rect x="170" y="52" width="16" height="18" rx="4" fill="#2563eb"/><text x="20" y="67" font-size="14" fill="#0f172a">1 inch = 2.54 cm</text><rect x="170" y="84" width="102" height="18" rx="4" fill="#16a34a"/><text x="20" y="99" font-size="14" fill="#0f172a">1 foot = 30.48 cm</text><rect x="170" y="116" width="304" height="18" rx="4" fill="#d97706"/><text x="20" y="131" font-size="14" fill="#0f172a">1 yard = 91.44 cm</text><rect x="170" y="148" width="333" height="18" rx="4" fill="#9333ea"/><text x="20" y="163" font-size="14" fill="#0f172a">1 metre = 100 cm</text><rect x="170" y="180" width="470" height="18" rx="4" fill="#dc2626"/><path d="M640 189h42m-12-10 12 10-12 10" stroke="#dc2626" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="20" y="195" font-size="14" fill="#0f172a">1 km = 100000 cm (truncated)</text></svg></section>
       <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Type the number you want to convert in the Value field at the top.</li><li>Select the unit you are converting FROM in the left dropdown — for example kilometres.</li><li>Select the unit you want to convert TO in the right dropdown — for example miles.</li><li>The result appears instantly below without needing to click any button.</li><li>Click the ↔ Swap button to reverse the direction and convert back immediately.</li></ol></section><section class="content-section"><h2>Formula</h2><div class="formula-box"><p>All length conversions work by first converting to the base unit (metre), then dividing by the target unit's factor.</p><p><strong>Result = (Input × from_factor) / to_factor</strong></p><p>For example: 5 miles to km<br>5 × 1609.344 / 1000 = 8.047 km</p><p>Key exact conversion facts: 1 inch = 2.54 cm, 1 foot = 12 inches = 30.48 cm, 1 yard = 3 feet = 91.44 cm, 1 mile = 1760 yards = 1609.344 m, and 1 nautical mile = 1852 m. Metric units use powers of 10, so conversion is a simple multiply or divide by 10, 100, 1000, and so on.</p></div></section><section class="content-section"><h2>Worked Example</h2><div class="example-box"><p>Convert 26.2 miles, a marathon distance, to kilometres.</p><p>26.2 miles × 1609.344 m/mile = 42164.8 m<br>42164.8 m ÷ 1000 = 42.165 km</p><p>A modern marathon is officially 42.195 km, so this rounded mile value is very close.</p><p>Convert 5 feet 11 inches to centimetres: 5 feet = 5 × 30.48 = 152.4 cm, and 11 inches = 11 × 2.54 = 27.94 cm. Total height = 180.34 cm.</p></div></section><section class="content-section">
@@ -90,6 +202,7 @@
       </section>
     </article>
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related converters</h3><ul><li><a href="../unit-converter/length-converter.html">Length</a></li><li><a href="../unit-converter/weight-converter.html">Weight</a></li><li><a href="../unit-converter/temperature-converter.html">Temperature</a></li><li><a href="../unit-converter/area-converter.html">Area</a></li><li><a href="../unit-converter/volume-converter.html">Volume</a></li></ul></div>
     </aside>
   </main>
@@ -158,7 +271,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
 <script>
 (function() {
   // Conversion rates relative to base unit

@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Speed Converter — km/h, mph, m/s, knots, Mach | Calculatorcity</title>
   <meta name="description" content="Free speed converter for kilometres per hour, miles per hour, metres per second, knots, feet per second and Mach number. Live results with real-world speed references.">
-  <link rel="canonical" href="https://calculatorcity.in/unit-converter/speed-converter.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Speed Converter — km/h, mph, m/s, knots, Mach | Calculatorcity">
+  <meta property="og:description" content="Free speed converter for kilometres per hour, miles per hour, metres per second, knots, feet per second and Mach number. Live results with real-world speed references.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/unit-converter/speed-converter.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Speed Converter — km/h, mph, m/s, knots, Mach | Calculatorcity">
+  <meta name="twitter:description" content="Free speed converter for kilometres per hour, miles per hour, metres per second, knots, feet per second and Mach number. Live results with real-world speed references.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/unit-converter/speed-converter.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +30,7 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .unit-select-row { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: end; }
     #result-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
@@ -35,22 +52,106 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Speed Converter","url":"https://calculatorcity.in/unit-converter/speed-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Speed Converter","url":"https://mahendra79.github.io/calculatorcity/unit-converter/speed-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between speed and velocity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Speed is how fast something moves. Velocity includes both speed and direction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Mach 1 mean and how fast is it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mach 1 is the speed of sound. This converter uses 343 m/s, approximately 1235 km/h at sea level near 20°C."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a knot and why is it used in aviation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A knot is one nautical mile per hour. It is used in aviation and marine navigation because distances are often based on nautical miles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you convert km/h to m/s?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide kilometres per hour by 3.6 to get metres per second."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the speed of sound in air?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At sea level around 20°C, the speed of sound in air is about 343 m/s."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Speed Converter",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Type the number you want to convert in the Value field at the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you are converting from in the left dropdown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you want to convert to in the right dropdown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Read the live result below; there is no calculate button."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the Swap button to reverse the conversion direction instantly."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -78,7 +179,18 @@
         <div class="calc-result show" id="calc-result" aria-live="polite">
           <div class="result-grid" id="result-grid"></div>
           <p id="conversion-factor" style="margin-top:.75rem; font-size:.875rem; color:var(--text-secondary);"></p>
-        </div>
+        
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
       <section class="unit-visual" aria-label="Speedometer"><h2>Speedometer</h2><svg viewBox="0 0 360 210" role="img" aria-label="Speedometer dial from 0 to 300 kilometres per hour"><path d="M60 160 A120 120 0 0 1 300 160" fill="none" stroke="#e2e8f0" stroke-width="22" stroke-linecap="round"/><path d="M60 160 A120 120 0 0 1 300 160" fill="none" stroke="#2563eb" stroke-width="10" stroke-linecap="round"/><text x="52" y="180" font-size="14">0</text><text x="169" y="42" font-size="14">150</text><text x="292" y="180" font-size="14">300</text><line id="speed-needle" x1="180" y1="160" x2="180" y2="62" stroke="#dc2626" stroke-width="5" stroke-linecap="round" style="transform-origin:180px 160px; transition:transform .35s ease"/><circle cx="180" cy="160" r="10" fill="#0f172a"/><text id="speed-label" x="180" y="200" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">0 km/h</text></svg></section>
       <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Type the number you want to convert in the Value field at the top.</li><li>Select the unit you are converting from in the left dropdown.</li><li>Select the unit you want to convert to in the right dropdown.</li><li>Read the live result below; there is no calculate button.</li><li>Use the Swap button to reverse the conversion direction instantly.</li></ol></section><section class="content-section">
@@ -90,6 +202,7 @@
       </section>
     </article>
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related converters</h3><ul><li><a href="../unit-converter/length-converter.html">Length</a></li><li><a href="../unit-converter/weight-converter.html">Weight</a></li><li><a href="../unit-converter/temperature-converter.html">Temperature</a></li><li><a href="../unit-converter/area-converter.html">Area</a></li><li><a href="../unit-converter/volume-converter.html">Volume</a></li></ul></div>
     </aside>
   </main>
@@ -158,7 +271,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
 <script>
 (function() {
   // Conversion rates relative to base unit

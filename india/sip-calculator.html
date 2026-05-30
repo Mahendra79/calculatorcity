@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>SIP Calculator — Mutual Fund Returns Calculator | Calculatorcity</title>
   <meta name="description" content="Free SIP calculator to estimate mutual fund returns. Calculate wealth growth for monthly SIP investments. Shows invested amount vs estimated returns over time.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="SIP Calculator — Mutual Fund Returns Calculator | Calculatorcity">
+  <meta property="og:description" content="Free SIP calculator to estimate mutual fund returns. Calculate wealth growth for monthly SIP investments. Shows invested amount vs estimated returns over time.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/sip-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SIP Calculator — Mutual Fund Returns Calculator | Calculatorcity">
+  <meta name="twitter:description" content="Free SIP calculator to estimate mutual fund returns. Calculate wealth growth for monthly SIP investments. Shows invested amount vs estimated returns over time.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/sip-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/sip-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +30,95 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "SIP Calculator (Systematic Investment Plan)", "url": "https://calculatorcity.in/india/sip-calculator.html", "description": "Free SIP calculator to estimate mutual fund returns. Calculate wealth growth for monthly SIP investments. Shows invested amount vs estimated returns over time.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "SIP Calculator (Systematic Investment Plan)", "item": "https://calculatorcity.in/india/sip-calculator.html"}]}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "SIP Calculator (Systematic Investment Plan)", "url": "https://mahendra79.github.io/calculatorcity/india/sip-calculator.html", "description": "Free SIP calculator to estimate mutual fund returns. Calculate wealth growth for monthly SIP investments. Shows invested amount vs estimated returns over time.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "SIP Calculator (Systematic Investment Plan)", "item": "https://mahendra79.github.io/calculatorcity/india/sip-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is SIP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SIP is a systematic way to invest a fixed amount in a mutual fund at regular intervals, usually every month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is SIP safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SIP reduces timing risk but does not remove market risk. Safety depends on the mutual fund category, portfolio, time horizon, and investor behavior."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much SIP to become crorepati?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At 12% annual return, a ₹10,109 monthly SIP for 20 years or about ₹19,816 for 15 years can target ₹1 crore before taxes and charges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I stop SIP midway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, most SIP mandates can be paused or stopped, but the process and timeline depend on the AMC, platform, and bank mandate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is XIRR in SIP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "XIRR is the annualized return for investments made on different dates. It is useful for SIPs because every instalment has a different investment date."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the SIP Calculator (Systematic Investment Plan)",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the amount you plan to invest every month through SIP."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose an expected annual return; use conservative assumptions for planning and higher figures only for scenario testing."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Set the number of years you will keep investing."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select Calculate SIP returns to see invested amount, gain, maturity value, and return percentage."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the year-wise table and chart to see how compounding becomes stronger in later years."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,11 +130,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -52,6 +153,11 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#india">India Calculators</a></span><span>SIP Calculator (Systematic Investment Plan)</span></nav>
     <p><span class="badge badge-india">🇮🇳 India</span></p>
     <h1>SIP Calculator (Systematic Investment Plan)</h1>
+<p class="mini-note" style="margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;">
+  <i class="ti ti-clock" aria-hidden="true" style="font-size:1rem"></i>
+  Rates last verified: <strong>April 2025 (FY 2025-26)</strong>.
+  Always confirm with the official government portal before filing.
+</p>
     <p>The SIP calculator estimates the future value of monthly mutual fund investments in India. Enter your monthly SIP, expected annual return, and investment period to see invested amount, estimated gain, maturity value, and absolute return. The stacked chart separates your contributions from market returns year by year, making it easier to understand compounding, long-term discipline, and the journey from lakhs to crores.</p>
     <section class="calc-widget">
       <div class="field-grid">
@@ -61,7 +167,18 @@
         <div class="calc-input-group"><label for="breakdown">Breakdown</label><select id="breakdown"><option value="year" selected>Year-wise</option><option value="month">Month-wise summary</option></select></div>
       </div>
       <button class="calc-btn" id="calculate" type="button">Calculate SIP returns</button>
-      <div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="invested">₹0.00</span><span class="result-label">Invested amount</span></div><div class="result-card"><span class="result-value" id="gain">₹0.00</span><span class="result-label">Estimated returns</span></div><div class="result-card highlight"><span class="result-value" id="future-value">₹0.00</span><span class="result-label">Total value</span></div><div class="result-card"><span class="result-value" id="absolute-return">0%</span><span class="result-label">Absolute return</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><div id="sip-table" class="amortization-table"></div></div>
+      <div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="invested">₹0.00</span><span class="result-label">Invested amount</span></div><div class="result-card"><span class="result-value" id="gain">₹0.00</span><span class="result-label">Estimated returns</span></div><div class="result-card highlight"><span class="result-value" id="future-value">₹0.00</span><span class="result-label">Total value</span></div><div class="result-card"><span class="result-value" id="absolute-return">0%</span><span class="result-label">Absolute return</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><div id="sip-table" class="amortization-table"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
     </section>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter the amount you plan to invest every month through SIP.</li><li>Choose an expected annual return; use conservative assumptions for planning and higher figures only for scenario testing.</li><li>Set the number of years you will keep investing.</li><li>Select Calculate SIP returns to see invested amount, gain, maturity value, and return percentage.</li><li>Use the year-wise table and chart to see how compounding becomes stronger in later years.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">FV = P × {[(1 + r)<sup>n</sup> − 1] / r} × (1 + r)<br>P = monthly SIP, r = monthly return, n = number of months</div><p>SIP future value assumes that the same amount is invested at the start or end of each monthly period and grows at a constant monthly rate. The annual expected return is divided by 12 and converted to a decimal. The formula adds the compounded value of every monthly instalment. Early instalments remain invested longer, so they contribute more to the final corpus than later instalments.</p><p>Actual mutual fund returns are market-linked and never move in a straight line. Equity SIPs can show negative returns over short periods, while long holding periods may reduce but not remove volatility. The calculator is best used for goal planning: retirement, children’s education, house down payment, or wealth targets such as ₹1 crore. It does not include expense ratio changes, exit load, capital gains tax, STT, or changes in SIP amount.</p></section>
@@ -84,6 +201,7 @@
     <section class="content-section"><h2>Important notes for India</h2><ul class="summary-list"><li>Mutual fund investments are subject to market risk; expected return is only an assumption.</li><li>Equity fund gains are taxed based on holding period and current capital gains rules, which can change.</li><li>Each SIP instalment has its own purchase date for exit load and capital gains holding period.</li><li>Use direct plans, expense ratios, asset allocation, and goal horizon while choosing schemes, not only past returns.</li></ul></section>
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li><li><a href="../india/hra-exemption-calculator.html">HRA Exemption</a></li></ul></div>
 </aside>
 </main>
@@ -152,8 +270,8 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatIndianNumber(n) {

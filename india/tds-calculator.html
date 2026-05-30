@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>TDS Calculator India — Tax Deducted at Source | Calculatorcity</title>
   <meta name="description" content="Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="TDS Calculator India — Tax Deducted at Source | Calculatorcity">
+  <meta property="og:description" content="Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/tds-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TDS Calculator India — Tax Deducted at Source | Calculatorcity">
+  <meta name="twitter:description" content="Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/tds-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/tds-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +30,95 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "TDS Calculator India", "url": "https://calculatorcity.in/india/tds-calculator.html", "description": "Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "TDS Calculator India", "item": "https://calculatorcity.in/india/tds-calculator.html"}]}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "TDS Calculator India", "url": "https://mahendra79.github.io/calculatorcity/india/tds-calculator.html", "description": "Free TDS calculator India. Calculate TDS on salary, rent, professional fees, and contracts. Shows TDS rates under all major sections.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "TDS Calculator India", "item": "https://mahendra79.github.io/calculatorcity/india/tds-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is TDS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TDS is tax deducted at source from specified payments and deposited with the government by the deductor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is TDS final tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. It is a tax credit. Final tax depends on total income and return calculation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if PAN is not available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A higher rate, often 20%, may apply under Section 206AA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is TDS deducted on rent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if rent crosses applicable thresholds and conditions under 194I or 194IB apply."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I claim TDS credit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Report income and claim TDS credit in the income tax return using Form 26AS/AIS and TDS certificates."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the TDS Calculator India",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Select the payment category and Income-tax section."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter gross payment amount in rupees."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose whether valid PAN is available."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For contractor payments, select individual/HUF or company/other recipient."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Calculate TDS amount and net payable amount before accounting entry or payment."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,11 +130,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -52,8 +153,24 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#india">India Calculators</a></span><span>TDS Calculator India</span></nav>
     <p><span class="badge badge-india">🇮🇳 India</span></p>
     <h1>TDS Calculator India</h1>
+<p class="mini-note" style="margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;">
+  <i class="ti ti-clock" aria-hidden="true" style="font-size:1rem"></i>
+  Rates last verified: <strong>April 2025 (FY 2025-26)</strong>.
+  Always confirm with the official government portal before filing.
+</p>
     <p>The TDS calculator estimates tax deducted at source in India for salary, rent, professional fees, contractor payments, FD interest, commission, and property purchase. Select payment type, amount, PAN availability, and recipient type where relevant to see TDS rate, section number, TDS amount, and net payment. It includes important thresholds and current rate notes for common FY 2024-25 and later compliance use cases.</p>
-    <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="payment-type">Payment type</label><select id="payment-type"><option value="salary">Salary - Section 192</option><option value="rent">Rent above threshold - Section 194IB</option><option value="professional">Professional fees - Section 194J</option><option value="contractor">Contractor payment - Section 194C</option><option value="fd">Interest on FD - Section 194A</option><option value="commission">Commission - Section 194H</option><option value="property">Property purchase - Section 194IA</option></select></div><div class="calc-input-group"><label for="amount">Payment amount (₹)</label><div class="input-prefix"><span>₹</span><input id="amount" type="number" value="100000"></div></div><div class="calc-input-group"><label for="pan">PAN</label><select id="pan"><option value="yes" selected>Available</option><option value="no">Not available</option></select></div><div class="calc-input-group"><label for="recipient">Contractor recipient type</label><select id="recipient"><option value="individual">Individual / HUF</option><option value="company">Company / others</option></select></div></div><button class="calc-btn" id="calculate" type="button">Calculate TDS</button><div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="section">-</span><span class="result-label">Section number</span></div><div class="result-card"><span class="result-value" id="rate">0%</span><span class="result-label">TDS rate used</span></div><div class="result-card highlight"><span class="result-value" id="tds">₹0.00</span><span class="result-label">TDS amount</span></div><div class="result-card"><span class="result-value" id="net">₹0.00</span><span class="result-label">Net payment after TDS</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><p class="mini-note" id="tds-note"></p></div></section>
+    <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="payment-type">Payment type</label><select id="payment-type"><option value="salary">Salary - Section 192</option><option value="rent">Rent above threshold - Section 194IB</option><option value="professional">Professional fees - Section 194J</option><option value="contractor">Contractor payment - Section 194C</option><option value="fd">Interest on FD - Section 194A</option><option value="commission">Commission - Section 194H</option><option value="property">Property purchase - Section 194IA</option></select></div><div class="calc-input-group"><label for="amount">Payment amount (₹)</label><div class="input-prefix"><span>₹</span><input id="amount" type="number" value="100000"></div></div><div class="calc-input-group"><label for="pan">PAN</label><select id="pan"><option value="yes" selected>Available</option><option value="no">Not available</option></select></div><div class="calc-input-group"><label for="recipient">Contractor recipient type</label><select id="recipient"><option value="individual">Individual / HUF</option><option value="company">Company / others</option></select></div></div><button class="calc-btn" id="calculate" type="button">Calculate TDS</button><div class="calc-result show"><div class="result-grid"><div class="result-card"><span class="result-value" id="section">-</span><span class="result-label">Section number</span></div><div class="result-card"><span class="result-value" id="rate">0%</span><span class="result-label">TDS rate used</span></div><div class="result-card highlight"><span class="result-value" id="tds">₹0.00</span><span class="result-label">TDS amount</span></div><div class="result-card"><span class="result-value" id="net">₹0.00</span><span class="result-label">Net payment after TDS</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><p class="mini-note" id="tds-note"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div></section>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Select the payment category and Income-tax section.</li><li>Enter gross payment amount in rupees.</li><li>Choose whether valid PAN is available.</li><li>For contractor payments, select individual/HUF or company/other recipient.</li><li>Calculate TDS amount and net payable amount before accounting entry or payment.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">TDS = Payment amount × TDS rate<br>Net payment = Payment amount − TDS<br>No PAN: higher of applicable rate, rate in force, or 20% in many cases</div><p>TDS is deducted at the time of credit or payment depending on the section. Each section has its own rate, threshold, deductor category, and timing rule. For example, professional fees under Section 194J commonly use 10%, contractor payments under Section 194C use 1% for individual/HUF and 2% for others, and property purchase under Section 194IA uses 1% when consideration crosses ₹50,00,000.</p><p>If PAN is not furnished, Section 206AA can require deduction at a higher rate, commonly 20%, subject to section-specific limits. Salary TDS under Section 192 is not a flat rate; it is based on estimated annual tax after deductions and regime selection. This calculator uses simplified current-rate assumptions for planning and should be cross-checked with the Income-tax Act, rules, and latest Finance Act changes before filing returns.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>A company pays professional fees of ₹1,00,000 to a resident consultant with PAN.</p><p>Section 194J TDS at 10% is ₹10,000, so net payment is ₹90,000.</p><p><strong>If PAN is not available, the calculator applies 20% and TDS becomes ₹20,000.</strong></p></div></section>
@@ -73,6 +190,7 @@
     <section class="content-section"><h2>Important notes for India</h2><ul class="summary-list"><li>Section 194IB rate was reduced from 5% to 2% with effect from 1 October 2024; check payment period.</li><li>No-PAN higher deduction can apply under Section 206AA.</li><li>Thresholds and rates can change through Finance Acts, so verify for the exact financial year.</li><li>TDS credit depends on correct PAN, TAN, challan, return filing, and statement matching.</li></ul></section>
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
 </aside>
 </main>
@@ -141,8 +259,8 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatIndianNumber(n) {

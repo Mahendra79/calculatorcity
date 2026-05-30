@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>EPF Calculator — PF Balance and Retirement Corpus | Calculatorcity</title>
   <meta name="description" content="Free EPF/PF calculator India. Calculate monthly PF contribution, total corpus at retirement and year-wise growth. Based on current EPFO interest rate of 8.25%.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="EPF Calculator — PF Balance and Retirement Corpus | Calculatorcity">
+  <meta property="og:description" content="Free EPF/PF calculator India. Calculate monthly PF contribution, total corpus at retirement and year-wise growth. Based on current EPFO interest rate of 8.25%.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/pf-epf-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EPF Calculator — PF Balance and Retirement Corpus | Calculatorcity">
+  <meta name="twitter:description" content="Free EPF/PF calculator India. Calculate monthly PF contribution, total corpus at retirement and year-wise growth. Based on current EPFO interest rate of 8.25%.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/pf-epf-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/pf-epf-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +30,19 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "EPF / PF Calculator (Employee Provident Fund)", "url": "https://calculatorcity.in/india/pf-epf-calculator.html", "description": "Free EPF/PF calculator India. Calculate monthly PF contribution, total corpus at retirement and year-wise growth. Based on current EPFO interest rate of 8.25%.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "EPF / PF Calculator (Employee Provident Fund)", "url": "https://mahendra79.github.io/calculatorcity/india/pf-epf-calculator.html", "description": "Free EPF/PF calculator India. Calculate monthly PF contribution, total corpus at retirement and year-wise growth. Based on current EPFO interest rate of 8.25%.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the current EPF interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator uses 8.25% as the default EPF interest rate, matching the rate announced for recent EPFO calculations. EPF interest is declared by EPFO and credited after government approval, so the rate can change for future financial years. Use the editable interest-rate field if EPFO notifies a different rate or if you want to compare conservative and optimistic scenarios. The declared rate is annual, but interest is generally calculated on the monthly running balance and credited annually. For final balance, always compare the calculator with your EPFO passbook."}}, {"@type": "Question", "name": "What is the difference between EPF and EPS?", "acceptedAnswer": {"@type": "Answer", "text": "EPF is the provident fund savings account where employee contribution and part of employer contribution accumulate with interest. EPS is the Employees’ Pension Scheme, funded from the employer contribution, and it is meant to provide pension benefits subject to eligibility rules. For most employees, 12% of Basic + DA is deducted from salary as employee EPF contribution. The employer also contributes 12%, but 8.33% goes to EPS and 3.67% goes to EPF, subject to wage ceiling rules. This calculator shows EPF corpus and an approximate EPS pension estimate separately."}}, {"@type": "Question", "name": "Can I withdraw EPF before retirement?", "acceptedAnswer": {"@type": "Answer", "text": "EPF is designed for retirement, but partial withdrawals are permitted for specific reasons such as housing, illness, education, marriage, unemployment, and certain emergencies, subject to EPFO rules and service conditions. Full withdrawal is generally allowed after retirement or after a qualifying period of unemployment. Frequent withdrawals reduce compounding and can sharply reduce retirement corpus. Before withdrawing, check whether a loan, emergency fund, or partial claim is more appropriate. Use this calculator to see the future cost of taking money out early, then verify eligibility on the EPFO portal."}}, {"@type": "Question", "name": "Is EPF interest taxable?", "acceptedAnswer": {"@type": "Answer", "text": "EPF usually has EEE-style tax treatment for many employees: contribution can qualify for deduction under Section 80C, interest is generally tax-free within applicable limits, and withdrawal after five years of continuous service is usually tax-free. However, tax rules changed for high employee contributions; interest on employee contribution above specified annual limits can become taxable. Employer contribution above prescribed limits can also have tax implications. If you are a high-income employee, contribute heavily through VPF, or have job changes and withdrawals before five years, check with a tax professional."}}, {"@type": "Question", "name": "How do I check my EPF balance online?", "acceptedAnswer": {"@type": "Answer", "text": "You can check EPF balance through the EPFO member passbook portal, UMANG app, SMS, missed call facility, or through employer-provided payroll records. You generally need an activated UAN linked with Aadhaar, PAN, mobile number, and bank details for smooth access and claims. The EPFO passbook shows employee contribution, employer EPF contribution, pension contribution, interest credit, transfers, and withdrawals. This calculator is useful for projection, but your passbook is the official record. Reconcile your salary slips with passbook entries at least once or twice a year."}}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "EPF / PF Calculator (Employee Provident Fund)", "item": "https://calculatorcity.in/india/pf-epf-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "EPF / PF Calculator (Employee Provident Fund)", "item": "https://mahendra79.github.io/calculatorcity/india/pf-epf-calculator.html"}]}</script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -34,11 +54,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -53,6 +77,11 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#india">India Calculators</a></span><span>EPF / PF Calculator (Employee Provident Fund)</span></nav>
     <p><span class="badge badge-india">🇮🇳 India</span></p>
     <h1>EPF / PF Calculator (Employee Provident Fund)</h1>
+<p class="mini-note" style="margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;">
+  <i class="ti ti-clock" aria-hidden="true" style="font-size:1rem"></i>
+  Rates last verified: <strong>April 2025 (FY 2025-26)</strong>.
+  Always confirm with the official government portal before filing.
+</p>
     <p>The EPF calculator estimates your provident fund corpus at retirement using monthly Basic + DA salary, employee contribution, employer EPF contribution, expected salary increment, current EPF balance, and EPFO interest rate. It separates EPF and EPS, shows the monthly deduction and employer split, and builds a year-wise table so you can see how compounding works over time. Use it to test retirement scenarios before changing jobs, increasing VPF, or withdrawing PF early.</p>
 
     <section class="calc-widget" style="border-color:#f97316;">
@@ -65,7 +94,18 @@
         <div class="calc-input-group"><label for="interest-rate">EPF interest rate (%)</label><input id="interest-rate" type="number" step="0.01" value="8.25"></div>
       </div>
       <button class="calc-btn" id="calculate" style="background:#f97316;">Calculate EPF corpus</button>
-      <div class="calc-result show" id="epf-results"></div>
+      <div class="calc-result show" id="epf-results">
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       <div class="chart-container"><canvas id="epf-chart"></canvas></div>
     </section>
     <section class="content-section"><h2>Compare EPF contribution scenarios</h2><p style="color:var(--text-secondary);">Use this table to see how salary increment and interest assumptions change the retirement corpus. It keeps the same current age, retirement age, salary, and opening balance.</p><div style="overflow-x:auto;"><table class="reference-table"><thead><tr><th>Scenario</th><th>Increment</th><th>Interest rate</th><th>Projected corpus</th></tr></thead><tbody id="scenario-body"></tbody></table></div></section>
@@ -84,6 +124,7 @@
 
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/hra-exemption-calculator.html">HRA Exemption</a></li></ul></div>
 </aside>
 </main>
@@ -152,8 +193,8 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 

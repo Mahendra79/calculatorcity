@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Gratuity Calculator India — Gratuity Amount as per Act | Calculatorcity</title>
   <meta name="description" content="Free gratuity calculator India. Calculate gratuity amount as per Payment of Gratuity Act 1972. Shows eligibility, tax exemption limit and formula with examples.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Gratuity Calculator India — Gratuity Amount as per Act | Calculatorcity">
+  <meta property="og:description" content="Free gratuity calculator India. Calculate gratuity amount as per Payment of Gratuity Act 1972. Shows eligibility, tax exemption limit and formula with examples.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/gratuity-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gratuity Calculator India — Gratuity Amount as per Act | Calculatorcity">
+  <meta name="twitter:description" content="Free gratuity calculator India. Calculate gratuity amount as per Payment of Gratuity Act 1972. Shows eligibility, tax exemption limit and formula with examples.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/gratuity-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/gratuity-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +30,48 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Gratuity Calculator India", "url": "https://calculatorcity.in/india/gratuity-calculator.html", "description": "Free gratuity calculator India. Calculate gratuity amount as per Payment of Gratuity Act 1972. Shows eligibility, tax exemption limit and formula with examples.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Gratuity Calculator India", "url": "https://mahendra79.github.io/calculatorcity/india/gratuity-calculator.html", "description": "Free gratuity calculator India. Calculate gratuity amount as per Payment of Gratuity Act 1972. Shows eligibility, tax exemption limit and formula with examples.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is gratuity and who is eligible?", "acceptedAnswer": {"@type": "Answer", "text": "Gratuity is a lump-sum benefit paid by an employer as a reward for long service. In the private sector, eligibility generally starts after five years of continuous service under the Payment of Gratuity Act, 1972, unless death or disability applies. The amount is based on last drawn Basic + DA and completed years of service. It is separate from PF, bonus, leave encashment, and notice pay. Employees in factories, shops, establishments, mines, ports, plantations, oilfields, railway companies, and other covered organisations may be eligible when the Act applies."}}, {"@type": "Question", "name": "What is the minimum service period for gratuity?", "acceptedAnswer": {"@type": "Answer", "text": "The normal minimum service period is five years of continuous service for employees covered under the Payment of Gratuity Act. A commonly discussed exception applies when employment ends due to death or disablement; in such cases, the five-year condition does not apply. Courts and employers may also consider specific interpretations for service beyond four years and 240 days, but payroll departments often follow conservative internal rules. The safest approach is to check your appointment terms, HR policy, and the Act. This calculator shows a not-eligible message when service is below five years for non-government cases."}}, {"@type": "Question", "name": "What is the maximum gratuity amount in India?", "acceptedAnswer": {"@type": "Answer", "text": "For many non-government employees, the tax-exempt gratuity limit is ₹20 lakh. The statutory ceiling under the Act has also been aligned around this level for covered employees. If an employer pays more, the excess may be taxable depending on employee category, organisation type, and tax rules. Government employees can have separate rules and often receive different retirement benefit treatment. This calculator applies a ₹20 lakh cap for the displayed payable amount and tax-exempt amount for private-sector planning. For senior roles with high salary and long tenure, consult payroll or a tax adviser."}}, {"@type": "Question", "name": "Is gratuity taxable in India?", "acceptedAnswer": {"@type": "Answer", "text": "Gratuity taxation depends on whether the employee is a government employee, covered by the Payment of Gratuity Act, or not covered. Government gratuity can be fully exempt under specific rules. For private employees, exemption is generally limited to the least of actual gratuity received, the statutory/tax exemption limit, and the formula-based amount. Amounts above the exempt limit can be taxable as salary income. This calculator highlights the ₹20 lakh planning threshold, but final tax treatment should be checked with payroll, Form 16, and a qualified tax professional before filing the return."}}, {"@type": "Question", "name": "What happens to gratuity if an employee dies or is disabled?", "acceptedAnswer": {"@type": "Answer", "text": "If an employee dies or becomes disabled due to accident or disease, gratuity can become payable even if five years of service have not been completed. The amount is usually paid to the nominee or legal heir in case of death. Employers may need nomination records, death certificate, disability documentation, bank details, and claim forms. This exception exists because gratuity is a social security benefit, not merely a voluntary reward. The exact process depends on employer records and applicable law. Families should contact HR quickly and keep all employment documents available."}}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "Gratuity Calculator India", "item": "https://calculatorcity.in/india/gratuity-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "Gratuity Calculator India", "item": "https://mahendra79.github.io/calculatorcity/india/gratuity-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Gratuity Calculator India",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter your last drawn monthly Basic + DA, not gross CTC."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter completed years of continuous service, using decimals if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select whether your organisation is covered under the Act, not covered, or government."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Press calculate to view gratuity, tax-exempt amount, taxable amount, and formula."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the projection table to compare service lengths such as 5, 10, 15, 20, and 30 years."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -34,11 +83,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -62,7 +115,18 @@
         <div class="calc-input-group"><label for="org-type">Organisation type</label><select id="org-type"><option value="covered">Covered under Gratuity Act</option><option value="not-covered">Not covered under Gratuity Act</option><option value="govt">Government employee</option></select></div>
       </div>
       <button class="calc-btn" id="calculate" style="background:#f97316;">Calculate gratuity</button>
-      <div class="calc-result show" id="gratuity-results"></div>
+      <div class="calc-result show" id="gratuity-results">
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       <p id="result-note" class="small-note" style="margin-top:1rem;"></p>
     </section>
     <section class="content-section"><h2>How gratuity changes with years of service</h2><p style="color:var(--text-secondary);">The table updates from your salary input and shows how service length changes the payout. This helps employees decide whether another year of service meaningfully changes the benefit.</p><div style="overflow-x:auto;"><table class="reference-table"><thead><tr><th>Service</th><th>Projected gratuity</th></tr></thead><tbody id="projection-body"></tbody></table></div></section>
@@ -80,6 +144,7 @@
 
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
 </aside>
 </main>
@@ -148,7 +213,7 @@
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 

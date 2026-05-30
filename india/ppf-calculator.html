@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>PPF Calculator — Public Provident Fund Maturity | Calculatorcity</title>
   <meta name="description" content="Free PPF calculator India. Calculate your Public Provident Fund maturity amount. Shows year-wise balance for 15-year PPF account.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="PPF Calculator — Public Provident Fund Maturity | Calculatorcity">
+  <meta property="og:description" content="Free PPF calculator India. Calculate your Public Provident Fund maturity amount. Shows year-wise balance for 15-year PPF account.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/ppf-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PPF Calculator — Public Provident Fund Maturity | Calculatorcity">
+  <meta name="twitter:description" content="Free PPF calculator India. Calculate your Public Provident Fund maturity amount. Shows year-wise balance for 15-year PPF account.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/ppf-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/ppf-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +30,95 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "PPF Calculator (Public Provident Fund)", "url": "https://calculatorcity.in/india/ppf-calculator.html", "description": "Free PPF calculator India. Calculate your Public Provident Fund maturity amount. Shows year-wise balance for 15-year PPF account.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "PPF Calculator (Public Provident Fund)", "item": "https://calculatorcity.in/india/ppf-calculator.html"}]}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "PPF Calculator (Public Provident Fund)", "url": "https://mahendra79.github.io/calculatorcity/india/ppf-calculator.html", "description": "Free PPF calculator India. Calculate your Public Provident Fund maturity amount. Shows year-wise balance for 15-year PPF account.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "PPF Calculator (Public Provident Fund)", "item": "https://mahendra79.github.io/calculatorcity/india/ppf-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is PPF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PPF is Public Provident Fund, a government-backed long-term savings scheme with tax benefits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the current PPF interest rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The rate is notified quarterly by the government; this calculator defaults to 7.1% and lets you edit it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I withdraw PPF before 15 years?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Partial withdrawals and loans are allowed only under specified rules after certain years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is PPF interest taxable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PPF interest is tax-free under current rules."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I open PPF for my child?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A parent or guardian can open a PPF account for a minor, subject to combined contribution rules."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the PPF Calculator (Public Provident Fund)",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter annual deposit between ₹500 and ₹1,50,000."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the current PPF rate or edit it for scenario planning."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select whether deposits are made at the beginning or end of each year."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Calculate maturity value, total deposits, interest, and indicative tax saving."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Review all 15 yearly rows to understand compounding and lock-in behavior."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,11 +130,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -52,8 +153,24 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#india">India Calculators</a></span><span>PPF Calculator (Public Provident Fund)</span></nav>
     <p><span class="badge badge-india">🇮🇳 India</span></p>
     <h1>PPF Calculator (Public Provident Fund)</h1>
+<p class="mini-note" style="margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;">
+  <i class="ti ti-clock" aria-hidden="true" style="font-size:1rem"></i>
+  Rates last verified: <strong>April 2025 (FY 2025-26)</strong>.
+  Always confirm with the official government portal before filing.
+</p>
     <p>The PPF calculator estimates maturity value for a 15-year Public Provident Fund account in India. Enter yearly investment, interest rate, and deposit timing to see total deposits, interest earned, maturity amount, and estimated 80C tax saving. The year-wise table shows opening balance, deposit, annual interest, and closing balance so you can understand how a safe government-backed savings account compounds over time.</p>
-    <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="investment">Yearly investment amount (₹)</label><div class="input-prefix"><span>₹</span><input id="investment" type="number" min="500" max="150000" value="150000"></div></div><div class="calc-input-group"><label for="rate">PPF interest rate (%)</label><input id="rate" type="number" step="0.1" value="7.1"></div><div class="calc-input-group"><label for="timing">Investment timing</label><select id="timing"><option value="beginning" selected>Beginning of year</option><option value="end">End of year</option></select></div></div><button class="calc-btn" id="calculate" type="button">Calculate PPF maturity</button><div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="maturity">₹0.00</span><span class="result-label">Maturity amount at 15 years</span></div><div class="result-card"><span class="result-value" id="invested">₹0.00</span><span class="result-label">Total invested</span></div><div class="result-card"><span class="result-value" id="interest">₹0.00</span><span class="result-label">Interest earned</span></div><div class="result-card"><span class="result-value" id="tax-saving">₹0.00</span><span class="result-label">80C tax saved at 30%</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><div id="year-table" class="amortization-table"></div></div></section>
+    <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="investment">Yearly investment amount (₹)</label><div class="input-prefix"><span>₹</span><input id="investment" type="number" min="500" max="150000" value="150000"></div></div><div class="calc-input-group"><label for="rate">PPF interest rate (%)</label><input id="rate" type="number" step="0.1" value="7.1"></div><div class="calc-input-group"><label for="timing">Investment timing</label><select id="timing"><option value="beginning" selected>Beginning of year</option><option value="end">End of year</option></select></div></div><button class="calc-btn" id="calculate" type="button">Calculate PPF maturity</button><div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="maturity">₹0.00</span><span class="result-label">Maturity amount at 15 years</span></div><div class="result-card"><span class="result-value" id="invested">₹0.00</span><span class="result-label">Total invested</span></div><div class="result-card"><span class="result-value" id="interest">₹0.00</span><span class="result-label">Interest earned</span></div><div class="result-card"><span class="result-value" id="tax-saving">₹0.00</span><span class="result-label">80C tax saved at 30%</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div><div id="year-table" class="amortization-table"></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div></section>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter annual deposit between ₹500 and ₹1,50,000.</li><li>Use the current PPF rate or edit it for scenario planning.</li><li>Select whether deposits are made at the beginning or end of each year.</li><li>Calculate maturity value, total deposits, interest, and indicative tax saving.</li><li>Review all 15 yearly rows to understand compounding and lock-in behavior.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">Opening balance + deposit earns annual PPF interest when deposited at year beginning.<br>Closing balance = Opening balance + deposit + interest</div><p>PPF interest is notified by the Government of India and compounded annually. In practical account calculations, monthly balances and deposit dates can matter, but for planning a yearly calculator is easier to understand. If investment timing is set to beginning of year, the annual deposit is added before interest. If timing is end of year, interest is calculated on the opening balance and the deposit is added after interest.</p><p>The account has a 15-year lock-in, but loan and partial withdrawal facilities become available after specified years. PPF follows EEE tax treatment: eligible contribution can qualify for Section 80C under the old regime, interest is tax-free, and maturity proceeds are tax-free. The calculator caps yearly investment at ₹1,50,000 because that is the normal annual deposit ceiling.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>Investing ₹1,50,000 every year for 15 years at 7.1% from the beginning of each year deposits ₹22,50,000.</p><p>The estimated maturity amount is about ₹42,58,000, with interest of about ₹20,08,000.</p><p><strong>At a 30% tax slab, the annual 80C benefit can be worth up to ₹45,000 if the old regime is used.</strong></p></div></section>
@@ -74,6 +191,7 @@
     <section class="content-section"><h2>Important notes for India</h2><ul class="summary-list"><li>PPF rates are revised by government notification and can change every quarter.</li><li>The annual deposit limit is ₹1,50,000 across accounts where applicable.</li><li>80C benefit matters only if you use the old tax regime and have available limit.</li><li>Deposit timing affects actual interest; early financial-year deposits usually earn more.</li></ul></section>
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
 </aside>
 </main>
@@ -142,8 +260,8 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatIndianNumber(n) {

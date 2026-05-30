@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Speed Distance Time Calculator &mdash; SDT Formula | Calculatorcity</title>
   <meta name="description" content="Calculate speed, distance or time from any two known values. Supports km/h, mph, m/s, km, miles and hours, minutes, seconds. Shows step-by-step working.">
-  <link rel="canonical" href="https://calculatorcity.in/science-other/speed-distance-time-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Speed Distance Time Calculator — SDT Formula | Calculatorcity">
+  <meta property="og:description" content="Calculate speed, distance or time from any two known values. Supports km/h, mph, m/s, km, miles and hours, minutes, seconds. Shows step-by-step working.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/science-other/speed-distance-time-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Speed Distance Time Calculator — SDT Formula | Calculatorcity">
+  <meta name="twitter:description" content="Calculate speed, distance or time from any two known values. Supports km/h, mph, m/s, km, miles and hours, minutes, seconds. Shows step-by-step working.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/science-other/speed-distance-time-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,26 +30,111 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .mode-panel[hidden]{display:none}.unit-row{display:grid;grid-template-columns:2fr 1fr;gap:.75rem}.note{color:var(--text-secondary);font-size:.95rem;margin-top:1rem}.table-wrap{overflow-x:auto}@media(max-width:767px){.unit-row{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Speed Distance Time Calculator","url":"https://calculatorcity.in/science-other/speed-distance-time-calculator.html","description":"Solve speed, distance, or time with unit conversion for m/s, km/h, mph, knots, metres, kilometres, miles, feet, seconds, minutes, and hours.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Speed Distance Time Calculator","url":"https://mahendra79.github.io/calculatorcity/science-other/speed-distance-time-calculator.html","description":"Solve speed, distance, or time with unit conversion for m/s, km/h, mph, knots, metres, kilometres, miles, feet, seconds, minutes, and hours.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the formula for speed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The formula for speed is speed = distance divided by time. If a vehicle travels 120 kilometres in 2 hours, its average speed is 120 / 2 = 60 km/h. The same formula works in any unit system if the units match. Metres divided by seconds gives m/s, kilometres divided by hours gives km/h, and miles divided by hours gives mph. When units are mixed, convert them first or use a calculator that converts internally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between speed and velocity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Speed is a scalar quantity, meaning it has magnitude only. Velocity is a vector quantity, meaning it has both magnitude and direction. A car moving at 60 km/h has a speed of 60 km/h. If it is moving 60 km/h north, that is a velocity. In everyday travel, speed is often enough. In physics, direction matters because turning around, moving in circles, or changing direction can change velocity even when the speedometer reading stays the same."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is average speed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Average speed is total distance divided by total elapsed time. It smooths out faster and slower parts of a journey into one value. If you drive 50 km in the first hour and 100 km in the second hour, your average speed over the two hours is 150 / 2 = 75 km/h. Average speed is useful for trip planning, race summaries, and comparing journeys. It does not tell you the highest speed reached or how speed changed during the trip."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert km/h to m/s?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To convert kilometres per hour to metres per second, divide by 3.6. This works because one kilometre is 1000 metres and one hour is 3600 seconds, so 1 km/h = 1000 / 3600 m/s = 0.27778 m/s. For example, 90 km/h divided by 3.6 equals 25 m/s. To convert m/s back to km/h, multiply by 3.6. This conversion is common in physics, road safety, sports timing, and engineering calculations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is acceleration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Acceleration is the rate at which velocity changes with time. If speed increases, decreases, or changes direction, acceleration is present. The common unit is m/s^2, meaning metres per second per second. A car that goes from 0 to 100 km/h in 10 seconds has positive acceleration. Braking produces negative acceleration, often called deceleration. Acceleration is related to speed but is not the same formula as speed distance time. The SDT calculator assumes average speed over a time interval, not changing speed under acceleration."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Speed Distance Time Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Select Find Speed, Find Distance, or Find Time according to the unknown value."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the two known values in the labelled fields for the active mode."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose the correct unit beside each input before calculating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the result unit you want, such as km/h for road speed or m/s for physics work."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate and read the main result plus the step note showing which formula was used."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health &amp; Fitness</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science &amp; Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -89,7 +190,18 @@
         </div>
 
         <button class="calc-btn" type="button" id="calc-sdt">Calculate</button>
-        <div class="calc-result" id="sdt-result-box" aria-live="polite"><div class="result-grid" id="sdt-result"></div><p class="note" id="sdt-note"></p></div>
+        <div class="calc-result" id="sdt-result-box" aria-live="polite"><div class="result-grid" id="sdt-result"></div><p class="note" id="sdt-note"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
 
       <section class="content-section">
@@ -156,6 +268,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law</a></li><li><a href="../science-other/gpa-calculator.html">GPA</a></li><li><a href="../science-other/grade-calculator.html">Grade</a></li><li><a href="../science-other/password-generator.html">Password Generator</a></li><li><a href="../science-other/electricity-cost-calculator.html">Electricity Cost</a></li></ul></div>
       <div class="card sidebar-card"><h3>Conversion tips</h3><ul><li>km/h to m/s: divide by 3.6.</li><li>m/s to km/h: multiply by 3.6.</li><li>1 knot = 1 nautical mile per hour.</li></ul></div>
     </aside>
@@ -225,7 +338,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
 (function() {
   const speedToMps = {mps: 1, kmh: 1000 / 3600, mph: 1609.344 / 3600, knots: 1852 / 3600};

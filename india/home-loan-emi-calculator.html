@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Home Loan EMI Calculator — Monthly EMI & Total Interest | Calculatorcity</title>
   <meta name="description" content="Free home loan EMI calculator India. Calculate monthly EMI, total interest, and amortization schedule. Supports all loan amounts and tenures.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Home Loan EMI Calculator — Monthly EMI &amp; Total Interest | Calculatorcity">
+  <meta property="og:description" content="Free home loan EMI calculator India. Calculate monthly EMI, total interest, and amortization schedule. Supports all loan amounts and tenures.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/home-loan-emi-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Home Loan EMI Calculator — Monthly EMI &amp; Total Interest | Calculatorcity">
+  <meta name="twitter:description" content="Free home loan EMI calculator India. Calculate monthly EMI, total interest, and amortization schedule. Supports all loan amounts and tenures.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/home-loan-emi-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/home-loan-emi-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +30,95 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Home Loan EMI Calculator", "url": "https://calculatorcity.in/india/home-loan-emi-calculator.html", "description": "Free home loan EMI calculator India. Calculate monthly EMI, total interest, and amortization schedule. Supports all loan amounts and tenures.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "Home Loan EMI Calculator", "item": "https://calculatorcity.in/india/home-loan-emi-calculator.html"}]}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Home Loan EMI Calculator", "url": "https://mahendra79.github.io/calculatorcity/india/home-loan-emi-calculator.html", "description": "Free home loan EMI calculator India. Calculate monthly EMI, total interest, and amortization schedule. Supports all loan amounts and tenures.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "Home Loan EMI Calculator", "item": "https://mahendra79.github.io/calculatorcity/india/home-loan-emi-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is home loan EMI calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EMI is calculated using principal, monthly interest rate, and number of monthly instalments. The formula keeps the EMI fixed while the interest and principal split changes each month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is prepayment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prepayment is an extra amount paid toward the outstanding loan principal. It usually reduces total interest and can reduce either tenure or EMI depending on the lender’s option."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the maximum home loan tenure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many Indian lenders offer home loan tenures up to 30 years, subject to age, retirement, income, property type, and credit policy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does interest rate affect EMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A higher rate increases EMI and total interest. Long tenures magnify the impact because interest is charged over more months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documents are needed for a home loan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common documents include identity proof, address proof, PAN, income proof, bank statements, property papers, sale agreement, and title documents."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Home Loan EMI Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the home loan amount you expect the bank or housing finance company to disburse."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Set the annual floating or fixed interest rate quoted by the lender."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose tenure in years or months and include processing fee if you want a fuller cost estimate."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate EMI to view EMI, total interest, total repayment, fee, and effective cost."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Read the amortization table to see opening balance, principal paid, interest paid, and closing balance year by year."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,11 +130,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -52,6 +153,11 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#india">India Calculators</a></span><span>Home Loan EMI Calculator</span></nav>
     <p><span class="badge badge-india">🇮🇳 India</span></p>
     <h1>Home Loan EMI Calculator</h1>
+<p class="mini-note" style="margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;">
+  <i class="ti ti-clock" aria-hidden="true" style="font-size:1rem"></i>
+  Rates last verified: <strong>April 2025 (FY 2025-26)</strong>.
+  Always confirm with the official government portal before filing.
+</p>
     <p>The home loan EMI calculator estimates monthly instalments for Indian housing loans, including total interest, total repayment, processing fee, and year-wise balance reduction. Use it for apartment purchases, resale property, plot-plus-construction loans, or balance-transfer comparisons. The calculator supports rupee loan amounts from lakhs to crores, flexible tenures in years or months, and an amortization schedule that shows how principal repayment accelerates over time.</p>
     <section class="calc-widget">
       <div class="field-grid">
@@ -62,7 +168,18 @@
         <div class="calc-input-group"><label for="processing-fee">Processing fee (%)</label><input id="processing-fee" type="number" step="0.05" value="0.5"></div>
       </div>
       <button class="calc-btn" id="calculate" type="button">Calculate EMI</button>
-      <div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="emi">₹0.00</span><span class="result-label">Monthly EMI</span></div><div class="result-card"><span class="result-value" id="total-interest">₹0.00</span><span class="result-label">Total interest payable</span></div><div class="result-card"><span class="result-value" id="total-payment">₹0.00</span><span class="result-label">Total amount payable</span></div><div class="result-card"><span class="result-value" id="fee-out">₹0.00</span><span class="result-label">Processing fee</span></div><div class="result-card"><span class="result-value" id="effective-rate">0%</span><span class="result-label">Approx. effective annual cost</span></div></div><div class="field-grid"><div class="chart-container"><canvas id="emi-pie"></canvas></div><div class="chart-container"><canvas id="balance-line"></canvas></div></div><div id="amortization" class="amortization-table"></div><button class="btn btn-secondary" type="button" id="toggle-amortization">Show all years</button></div>
+      <div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="emi">₹0.00</span><span class="result-label">Monthly EMI</span></div><div class="result-card"><span class="result-value" id="total-interest">₹0.00</span><span class="result-label">Total interest payable</span></div><div class="result-card"><span class="result-value" id="total-payment">₹0.00</span><span class="result-label">Total amount payable</span></div><div class="result-card"><span class="result-value" id="fee-out">₹0.00</span><span class="result-label">Processing fee</span></div><div class="result-card"><span class="result-value" id="effective-rate">0%</span><span class="result-label">Approx. effective annual cost</span></div></div><div class="field-grid"><div class="chart-container"><canvas id="emi-pie"></canvas></div><div class="chart-container"><canvas id="balance-line"></canvas></div></div><div id="amortization" class="amortization-table"></div><button class="btn btn-secondary" type="button" id="toggle-amortization">Show all years</button>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
     </section>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter the home loan amount you expect the bank or housing finance company to disburse.</li><li>Set the annual floating or fixed interest rate quoted by the lender.</li><li>Choose tenure in years or months and include processing fee if you want a fuller cost estimate.</li><li>Click Calculate EMI to view EMI, total interest, total repayment, fee, and effective cost.</li><li>Read the amortization table to see opening balance, principal paid, interest paid, and closing balance year by year.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">EMI = P × r × (1 + r)<sup>n</sup> / ((1 + r)<sup>n</sup> − 1)<br>P = principal, r = monthly interest rate, n = months</div><p>Home loan EMI is based on the standard amortizing loan formula. The annual interest rate is divided by 12 and by 100 to get the monthly decimal rate. The tenure is converted into months. The formula produces one fixed instalment that covers that month’s interest and repays part of the principal. In early years, the outstanding principal is high, so a larger share of each EMI goes toward interest. Later, more of the same EMI reduces principal.</p><p>If the interest rate is zero, the EMI is simply principal divided by months. Real Indian home loans can change because floating rates reset, lenders alter the remaining tenure, borrowers prepay principal, or fees are charged separately. This calculator treats the rate and EMI as constant so that the base repayment structure is easy to audit before comparing bank offers.</p></section>
@@ -83,6 +200,7 @@
     <section class="content-section"><h2>Important notes for India</h2><ul class="summary-list"><li>Floating-rate home loan EMIs can change when the external benchmark or lender spread changes.</li><li>Section 24(b) interest deduction and principal repayment deduction under 80C are old-regime tax concepts and have eligibility conditions.</li><li>Stamp duty, registration, legal charges, interiors, maintenance deposits, and GST on under-construction property are not part of bank EMI.</li><li>For RERA projects, verify project registration, title, approvals, and possession timelines before committing funds.</li></ul></section>
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li><li><a href="../india/hra-exemption-calculator.html">HRA Exemption</a></li></ul></div>
 </aside>
 </main>
@@ -151,8 +269,8 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatIndianNumber(n) {

@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Percentage Calculator — Find %, Increase/Decrease | Calculatorcity</title>
   <meta name="description" content="Free percentage calculator to find what percent of a number is, calculate percentage increase or decrease, and find percentage change. Fast, accurate, mobile-friendly.">
-  <link rel="canonical" href="https://calculatorcity.in/maths/percentage-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Percentage Calculator — Find %, Increase/Decrease | Calculatorcity">
+  <meta property="og:description" content="Free percentage calculator to find what percent of a number is, calculate percentage increase or decrease, and find percentage change. Fast, accurate, mobile-friendly.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/maths/percentage-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Percentage Calculator — Find %, Increase/Decrease | Calculatorcity">
+  <meta name="twitter:description" content="Free percentage calculator to find what percent of a number is, calculate percentage increase or decrease, and find percentage change. Fast, accurate, mobile-friendly.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/maths/percentage-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,23 +30,104 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Percentage Calculator","url":"https://calculatorcity.in/maths/percentage-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Percentage Calculator","url":"https://mahendra79.github.io/calculatorcity/maths/percentage-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a percentage",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A percentage is a way to express a number as a fraction of 100. The word means “per hundred,” so 25% means 25 out of every 100. Percentages make comparisons easier because they convert different totals to the same scale. For example, 45 out of 60 and 75 out of 100 are both 75%, even though the original totals are different."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate percentage manually",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To calculate a percentage manually, divide the part by the total and multiply the answer by 100. If you scored 36 marks out of 48, calculate 36 ÷ 48 = 0.75, then multiply by 100 to get 75%. For finding a percentage of a number, divide the percentage by 100 and multiply by the total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the formula for percentage increase",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The percentage increase formula is ((New value - Original value) ÷ Original value) × 100. It measures how much a value has grown compared with where it started. If a price rises from 500 to 600, the increase is 100. Divide 100 by 500 and multiply by 100 to get a 20% increase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I find what percent one number is of another",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide the first number by the second number, then multiply by 100. The first number is the part, and the second number is the total. For example, if 18 students in a class of 30 passed an exam, calculate 18 ÷ 30 × 100. The result is 60%, so 18 is 60 percent of 30."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between percentage and percentile",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A percentage shows a value out of 100. A percentile shows position compared with a group. If you score 80%, you answered 80 out of 100 marks correctly. If you are in the 80th percentile, you performed better than 80 percent of the comparison group. Percentile depends on other people’s scores, while percentage depends on your own total."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Percentage Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Choose the tab that matches the question you want to answer. Use the first tab to find a percentage of a number, the second to find what percentage one value represents, and the third to calculate percentage change."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the required values in the input fields. Use plain numbers without percent signs or commas."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select Calculate to see the result, short explanation, and visual progress bar."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For percentage change, positive results mean an increase and negative results mean a decrease."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a>
     </nav>
   </header>
@@ -66,7 +163,18 @@
           <span class="result-value" id="percentage-value">0</span>
           <span class="result-label" id="percentage-explanation">Enter values and calculate.</span>
           <div class="progress-bar-container" aria-hidden="true"><div class="progress-bar-fill" id="percentage-progress"></div></div>
-        </div>
+        
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
 
       <section class="content-section">
@@ -120,6 +228,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/fraction-calculator.html">Fraction</a></li><li><a href="../maths/average-calculator.html">Average</a></li><li><a href="../maths/ratio-calculator.html">Ratio</a></li><li><a href="../finance/discount-calculator.html">Discount</a></li><li><a href="../india/gst-calculator.html">GST</a></li></ul></div>
       <div class="card sidebar-card"><h3>Quick facts</h3><ul><li>100% = the whole</li><li>Per cent means per hundred</li><li>Percentage was first used in Ancient Rome</li></ul></div>
     </aside>
@@ -190,7 +299,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
     let activeMode = "of";
     document.querySelectorAll(".calc-tab").forEach((tab) => {

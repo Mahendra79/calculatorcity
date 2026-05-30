@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>NPS Calculator — National Pension Scheme Returns | Calculatorcity</title>
   <meta name="description" content="Free NPS calculator India. Calculate National Pension Scheme corpus and monthly pension at retirement. Shows expected annuity and lump sum.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="NPS Calculator — National Pension Scheme Returns | Calculatorcity">
+  <meta property="og:description" content="Free NPS calculator India. Calculate National Pension Scheme corpus and monthly pension at retirement. Shows expected annuity and lump sum.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/nps-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NPS Calculator — National Pension Scheme Returns | Calculatorcity">
+  <meta name="twitter:description" content="Free NPS calculator India. Calculate National Pension Scheme corpus and monthly pension at retirement. Shows expected annuity and lump sum.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/nps-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/nps-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +30,95 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "NPS Calculator (National Pension Scheme)", "url": "https://calculatorcity.in/india/nps-calculator.html", "description": "Free NPS calculator India. Calculate National Pension Scheme corpus and monthly pension at retirement. Shows expected annuity and lump sum.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "NPS Calculator (National Pension Scheme)", "item": "https://calculatorcity.in/india/nps-calculator.html"}]}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "NPS Calculator (National Pension Scheme)", "url": "https://mahendra79.github.io/calculatorcity/india/nps-calculator.html", "description": "Free NPS calculator India. Calculate National Pension Scheme corpus and monthly pension at retirement. Shows expected annuity and lump sum.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "NPS Calculator (National Pension Scheme)", "item": "https://mahendra79.github.io/calculatorcity/india/nps-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is NPS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NPS is the National Pension System, a regulated retirement savings framework in India."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the tax benefit on NPS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Old-regime taxpayers may use 80CCD deductions, including an additional ₹50,000 under 80CCD(1B)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When can I withdraw NPS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Normal exit is at retirement age, with partial and premature withdrawal rules subject to PFRDA regulations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is annuity in NPS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An annuity is a pension product bought with part of the corpus to provide periodic pension."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is NPS safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NPS is regulated, but returns are market-linked and depend on asset allocation and pension fund performance."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the NPS Calculator (National Pension Scheme)",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter current age and planned retirement age."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter monthly NPS contribution."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Set expected annual return based on asset allocation assumptions."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Set annuity rate and annuity purchase percentage."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Calculate retirement corpus, lump sum, annuity purchase amount, and monthly pension."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,11 +130,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -52,8 +153,24 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#india">India Calculators</a></span><span>NPS Calculator (National Pension Scheme)</span></nav>
     <p><span class="badge badge-india">🇮🇳 India</span></p>
     <h1>NPS Calculator (National Pension Scheme)</h1>
+<p class="mini-note" style="margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;">
+  <i class="ti ti-clock" aria-hidden="true" style="font-size:1rem"></i>
+  Rates last verified: <strong>April 2025 (FY 2025-26)</strong>.
+  Always confirm with the official government portal before filing.
+</p>
     <p>The NPS calculator estimates retirement corpus and monthly pension from National Pension System contributions in India. Enter current age, retirement age, monthly contribution, expected return, annuity rate, and annuity purchase percentage to see total corpus, compulsory annuity amount, lump sum withdrawal, and monthly pension. It helps compare NPS with EPF, PPF, and mutual fund SIPs for long-term retirement planning.</p>
-    <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="age">Current age</label><input id="age" type="number" value="30"></div><div class="calc-input-group"><label for="retirement">Retirement age</label><input id="retirement" type="number" value="60"></div><div class="calc-input-group"><label for="contribution">Monthly NPS contribution (₹)</label><div class="input-prefix"><span>₹</span><input id="contribution" type="number" value="10000"></div></div><div class="calc-input-group"><label for="return">Expected annual return (%)</label><input id="return" type="number" step="0.1" value="10"></div><div class="calc-input-group"><label for="annuity-rate">Annuity rate (%)</label><input id="annuity-rate" type="number" step="0.1" value="6"></div><div class="calc-input-group"><label for="annuity-percent">Annuity purchase (%)</label><input id="annuity-percent" type="number" value="40"></div></div><button class="calc-btn" id="calculate" type="button">Calculate NPS corpus</button><div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="corpus">₹0.00</span><span class="result-label">Corpus at retirement</span></div><div class="result-card"><span class="result-value" id="annuity">₹0.00</span><span class="result-label">Amount for annuity</span></div><div class="result-card"><span class="result-value" id="lump">₹0.00</span><span class="result-label">Lump sum withdrawal</span></div><div class="result-card"><span class="result-value" id="pension">₹0.00</span><span class="result-label">Monthly pension</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div></div></section>
+    <section class="calc-widget"><div class="field-grid"><div class="calc-input-group"><label for="age">Current age</label><input id="age" type="number" value="30"></div><div class="calc-input-group"><label for="retirement">Retirement age</label><input id="retirement" type="number" value="60"></div><div class="calc-input-group"><label for="contribution">Monthly NPS contribution (₹)</label><div class="input-prefix"><span>₹</span><input id="contribution" type="number" value="10000"></div></div><div class="calc-input-group"><label for="return">Expected annual return (%)</label><input id="return" type="number" step="0.1" value="10"></div><div class="calc-input-group"><label for="annuity-rate">Annuity rate (%)</label><input id="annuity-rate" type="number" step="0.1" value="6"></div><div class="calc-input-group"><label for="annuity-percent">Annuity purchase (%)</label><input id="annuity-percent" type="number" value="40"></div></div><button class="calc-btn" id="calculate" type="button">Calculate NPS corpus</button><div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="corpus">₹0.00</span><span class="result-label">Corpus at retirement</span></div><div class="result-card"><span class="result-value" id="annuity">₹0.00</span><span class="result-label">Amount for annuity</span></div><div class="result-card"><span class="result-value" id="lump">₹0.00</span><span class="result-label">Lump sum withdrawal</span></div><div class="result-card"><span class="result-value" id="pension">₹0.00</span><span class="result-label">Monthly pension</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div></section>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter current age and planned retirement age.</li><li>Enter monthly NPS contribution.</li><li>Set expected annual return based on asset allocation assumptions.</li><li>Set annuity rate and annuity purchase percentage.</li><li>Calculate retirement corpus, lump sum, annuity purchase amount, and monthly pension.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">NPS corpus = monthly contribution future value<br>Annuity amount = corpus × annuity percentage<br>Monthly pension = annuity amount × annuity rate / 12</div><p>NPS accumulation works like a market-linked monthly investment. Contributions are invested into pension fund schemes based on chosen asset allocation, and returns compound until retirement. The calculator converts annual return to a monthly rate and compounds every monthly contribution to retirement age. It then splits the final corpus into annuity purchase and lump sum withdrawal based on the selected annuity percentage.</p><p>At normal exit, many NPS subscribers must use at least 40% of accumulated corpus to buy an annuity, while the remaining amount can be withdrawn as lump sum subject to prevailing rules. The annuity rate is not guaranteed by NPS during accumulation; it depends on annuity providers and product options at retirement. Pension received from annuity is generally taxable in the year of receipt.</p></section>
     <section class="content-section"><h2>Worked example</h2><div class="example-box"><p>A 30-year-old investing ₹10,000 per month until age 60 at 10% expected return can build a corpus of about ₹2.28 crore.</p><p>If 40% is used for annuity at 6%, monthly pension is about ₹45,600 and lump sum is about ₹1.37 crore.</p><p><strong>Changing return or annuity rate materially changes the pension estimate.</strong></p></div></section>
@@ -74,6 +191,7 @@
     <section class="content-section"><h2>Important notes for India</h2><ul class="summary-list"><li>NPS rules on annuity percentage and exit can be updated by PFRDA; verify before retirement decisions.</li><li>Monthly pension depends on annuity rates available at retirement, not only NPS returns.</li><li>Section 80CCD benefits depend on tax regime and contribution type.</li><li>Equity allocation, age, and active/auto choice affect return volatility.</li></ul></section>
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/fd-calculator.html">FD Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li></ul></div>
 </aside>
 </main>
@@ -142,8 +260,8 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatIndianNumber(n) {

@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Energy Converter — Joules, Calories, kWh, BTU | Calculatorcity</title>
   <meta name="description" content="Free energy converter for joules, kilojoules, calories, food kilocalories, watt-hours, kilowatt-hours, BTU and electron volts. Includes food energy reference guide.">
-  <link rel="canonical" href="https://calculatorcity.in/unit-converter/energy-converter.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Energy Converter — Joules, Calories, kWh, BTU | Calculatorcity">
+  <meta property="og:description" content="Free energy converter for joules, kilojoules, calories, food kilocalories, watt-hours, kilowatt-hours, BTU and electron volts. Includes food energy reference guide.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/unit-converter/energy-converter.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Energy Converter — Joules, Calories, kWh, BTU | Calculatorcity">
+  <meta name="twitter:description" content="Free energy converter for joules, kilojoules, calories, food kilocalories, watt-hours, kilowatt-hours, BTU and electron volts. Includes food energy reference guide.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/unit-converter/energy-converter.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +30,7 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .unit-select-row { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: end; }
     #result-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
@@ -35,22 +52,106 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Energy Converter","url":"https://calculatorcity.in/unit-converter/energy-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Energy Converter","url":"https://mahendra79.github.io/calculatorcity/unit-converter/energy-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between a calorie (cal) and a food Calorie (kcal)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One food Calorie is one kilocalorie, equal to 1000 small calories or 4184 joules."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a kilowatt-hour and how is it used for electricity bills?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A kilowatt-hour is the energy used by 1000 watts running for one hour. Electricity bills commonly charge per kWh."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a BTU and where is it used?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BTU stands for British thermal unit and is often used for air conditioners, heaters and fuel energy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many joules are in a kilocalorie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One kilocalorie equals 4184 joules."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between energy and power?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Energy is the total amount of work or heat. Power is the rate at which energy is used or produced."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Energy Converter",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Type the number you want to convert in the Value field at the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you are converting from in the left dropdown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you want to convert to in the right dropdown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Read the live result below; there is no calculate button."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the Swap button to reverse the conversion direction instantly."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -78,7 +179,18 @@
         <div class="calc-result show" id="calc-result" aria-live="polite">
           <div class="result-grid" id="result-grid"></div>
           <p id="conversion-factor" style="margin-top:.75rem; font-size:.875rem; color:var(--text-secondary);"></p>
-        </div>
+        
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
       <section class="unit-visual" aria-label="Energy scale"><h2>Energy Scale</h2><svg viewBox="0 0 680 180" role="img" aria-label="Energy examples from food to electricity"><rect x="40" y="95" width="80" height="38" rx="8" fill="#16a34a"/><text x="50" y="118" font-size="13" fill="#fff">60 kcal</text><rect x="150" y="75" width="120" height="58" rx="8" fill="#f97316"/><text x="166" y="108" font-size="13" fill="#fff">1 hour walk</text><rect x="300" y="55" width="130" height="78" rx="8" fill="#2563eb"/><text x="322" y="98" font-size="13" fill="#fff">1 kWh</text><rect x="460" y="30" width="160" height="103" rx="8" fill="#dc2626"/><text x="490" y="86" font-size="13" fill="#fff">1 litre petrol</text></svg></section>
       <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Type the number you want to convert in the Value field at the top.</li><li>Select the unit you are converting from in the left dropdown.</li><li>Select the unit you want to convert to in the right dropdown.</li><li>Read the live result below; there is no calculate button.</li><li>Use the Swap button to reverse the conversion direction instantly.</li></ol></section><section class="content-section">
@@ -90,6 +202,7 @@
       </section>
     </article>
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related converters</h3><ul><li><a href="../unit-converter/length-converter.html">Length</a></li><li><a href="../unit-converter/weight-converter.html">Weight</a></li><li><a href="../unit-converter/temperature-converter.html">Temperature</a></li><li><a href="../unit-converter/area-converter.html">Area</a></li><li><a href="../unit-converter/volume-converter.html">Volume</a></li></ul></div>
     </aside>
   </main>
@@ -158,7 +271,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
 <script>
 (function() {
   // Conversion rates relative to base unit

@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Density Calculator &mdash; Mass, Volume and Density | Calculatorcity</title>
   <meta name="description" content="Calculate density from mass and volume, or find mass or volume when density is known. Supports multiple units. Includes density table for 15 common materials.">
-  <link rel="canonical" href="https://calculatorcity.in/science-other/density-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Density Calculator — Mass, Volume and Density | Calculatorcity">
+  <meta property="og:description" content="Calculate density from mass and volume, or find mass or volume when density is known. Supports multiple units. Includes density table for 15 common materials.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/science-other/density-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Density Calculator — Mass, Volume and Density | Calculatorcity">
+  <meta name="twitter:description" content="Calculate density from mass and volume, or find mass or volume when density is known. Supports multiple units. Includes density table for 15 common materials.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/science-other/density-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,26 +30,111 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .mode-panel[hidden]{display:none}.unit-row{display:grid;grid-template-columns:2fr 1fr;gap:.75rem}.table-wrap{overflow-x:auto}.note{color:var(--text-secondary);font-size:.95rem}@media(max-width:767px){.unit-row{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Density Calculator","url":"https://calculatorcity.in/science-other/density-calculator.html","description":"Calculate density, mass, or volume with mass and volume unit conversions.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Density Calculator","url":"https://mahendra79.github.io/calculatorcity/science-other/density-calculator.html","description":"Calculate density, mass, or volume with mass and volume unit conversions.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is density and how is it measured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Density is mass per unit volume. It tells you how much matter is packed into a particular space. Common units are kg/m^3 in SI work and g/cm^3 in laboratory tables. To measure density, measure the mass with a balance and measure the volume by dimensions, displacement, or a calibrated container. Then divide mass by volume. For regular solids, volume can be calculated from length, width, and height. For irregular solids, water displacement is often easier if the material does not dissolve or absorb water."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does oil float on water?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oil floats on water because most common oils have lower density than water and do not mix well with it. Water is about 1.0 g/cm^3, while many cooking oils are around 0.90 to 0.93 g/cm^3. The less dense liquid rises above the denser one under gravity. Surface tension and viscosity can affect how the layers look, but density is the main reason the oil layer stays on top. If a liquid is denser than water, such as mercury, it settles below water instead."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is specific gravity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Specific gravity is the ratio of a material's density to the density of a reference substance. For liquids and solids, the reference is usually water. A specific gravity of 1 means the material has the same density as water. A value less than 1 means it is less dense and may float; a value greater than 1 means it is denser and may sink. Because it is a ratio, specific gravity has no unit. It is widely used in battery testing, brewing, geology, and fluid quality checks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the densest element?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Osmium is commonly listed as the densest naturally occurring element, with a density around 22.59 g/cm^3 at room temperature. Iridium is very close and may vary slightly depending on measurement conditions and crystal structure. Both are much denser than lead, gold, or platinum. Density values can change with temperature, pressure, purity, and material form, so reference tables give standard-condition values. For everyday comparison, osmium is about 22 times denser than water and much heavier than a similar-sized piece of steel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is density used in material science?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Material scientists use density to compare materials for strength, weight, processing, and performance. Aerospace parts need high strength with low density, so aluminium, titanium, and composites are often preferred over heavier metals. Civil engineers consider concrete density for structural loads. Battery researchers care about energy density because it affects how much energy can be stored in a given mass or volume. Density also helps identify porosity, defects, alloy composition, and whether a manufactured part matches specification. It is a simple measurement with wide engineering value."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Density Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Select Find Density, Find Mass, or Find Volume depending on the unknown quantity."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the known values using the labels shown in the active panel."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose the correct mass, volume, or density units before calculating."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate to convert values to base units and solve the formula."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the secondary result cards to compare common units such as g/cm^3, kg/m^3, litres, kilograms, and pounds."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health &amp; Fitness</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science &amp; Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -86,7 +187,18 @@
         </div>
 
         <button class="calc-btn" type="button" id="calc-density">Calculate</button>
-        <div class="calc-result" id="density-result-box" aria-live="polite"><div class="result-grid" id="density-result"></div><p class="note" id="density-note"></p></div>
+        <div class="calc-result" id="density-result-box" aria-live="polite"><div class="result-grid" id="density-result"></div><p class="note" id="density-note"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
 
       <section class="content-section">
@@ -158,6 +270,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law</a></li><li><a href="../science-other/gpa-calculator.html">GPA</a></li><li><a href="../science-other/grade-calculator.html">Grade</a></li><li><a href="../science-other/password-generator.html">Password Generator</a></li><li><a href="../science-other/electricity-cost-calculator.html">Electricity Cost</a></li></ul></div>
       <div class="card sidebar-card"><h3>Unit reminders</h3><ul><li>1 g/cm^3 = 1000 kg/m^3.</li><li>1 mL = 1 cm^3.</li><li>Water is about 1 g/cm^3.</li></ul></div>
     </aside>
@@ -227,7 +340,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
 (function() {
   const massToKg = {kg: 1, g: 0.001, mg: 0.000001, lb: 0.45359237, oz: 0.028349523125};

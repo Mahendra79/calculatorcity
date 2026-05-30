@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><title>Scientific Calculator ? Trig, Logs and Powers | Calculatorcity</title>
+  <meta charset="UTF-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script"><title>Scientific Calculator ? Trig, Logs and Powers | Calculatorcity</title>
   <meta name="description" content="Use a free scientific calculator for trig, inverse trig, logs, roots, powers, factorials, constants, keyboard entry, DEG/RAD mode and saved history now.">
-  <link rel="canonical" href="https://calculatorcity.in/maths/scientific-calculator.html"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Scientific Calculator ? Trig, Logs and Powers | Calculatorcity">
+  <meta property="og:description" content="Use a free scientific calculator for trig, inverse trig, logs, roots, powers, factorials, constants, keyboard entry, DEG/RAD mode and saved history now.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/maths/scientific-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scientific Calculator ? Trig, Logs and Powers | Calculatorcity">
+  <meta name="twitter:description" content="Use a free scientific calculator for trig, inverse trig, logs, roots, powers, factorials, constants, keyboard entry, DEG/RAD mode and saved history now.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/maths/scientific-calculator.html"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/base.css"><link rel="stylesheet" href="../assets/css/layout.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     #keys { gap: 0.4rem; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
     #keys .btn { min-width: 0; padding: 0.65rem 0.35rem; }
@@ -15,11 +32,95 @@
       #display { font-size: 1.55rem; overflow-wrap: anywhere; }
     }
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Scientific Calculator","url":"https://calculatorcity.in/maths/scientific-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Scientific Calculator","url":"https://mahendra79.github.io/calculatorcity/maths/scientific-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a scientific calculator",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A scientific calculator is a calculator designed for mathematics beyond basic arithmetic. It includes functions for powers, roots, logarithms, trigonometry, inverse trigonometry, constants, factorials, reciprocals, percentages, and parentheses. These functions are needed in algebra, geometry, trigonometry, physics, statistics, engineering, and finance. Unlike a basic calculator, a scientific calculator can evaluate expressions with operation precedence and nested functions. This online version also keeps history and supports keyboard input, making it useful for homework, checking formulas, and quick technical calculations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use degrees or radians",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use degrees when your angle is measured in degrees, such as 30°, 45°, or 90°. This is common in school geometry, surveying, navigation, and many everyday angle problems. Use radians when working in calculus, advanced trigonometry, circular motion formulas, or expressions involving π as an angle. JavaScript and most programming languages calculate trig functions in radians internally, so this calculator converts degree inputs when DEG mode is selected. If a trigonometric answer looks wrong, the angle mode is the first setting to check."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between log and ln",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Log usually means base-10 logarithm on calculators, while ln means natural logarithm with base e. A logarithm answers the question “what exponent produces this number” Because 10² = 100, log(100) = 2. Because e¹ is e, ln(e) = 1. Base-10 logs are common in scientific notation, pH, decibels, and orders of magnitude. Natural logs are common in calculus, continuous growth, compound interest, radioactive decay, and differential equations. Both are inverse operations for exponential functions, but they use different bases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does factorial work",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Factorial, written n!, multiplies every positive whole number from n down to 1. For example, 5! = 5 × 4 × 3 × 2 × 1 = 120. Factorials are used in counting arrangements, combinations, permutations, probability, and series expansions. Factorial is defined for non-negative integers in this calculator. The value grows extremely quickly: 10! is 3,628,800 and 20! is already more than 2 quintillion. Because of that rapid growth, very large factorials may exceed ordinary display ranges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is eval safe in this calculator",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This calculator restricts expression input before evaluation by allowing only numbers, operators, parentheses, decimal points, Math constants, and mapped Math functions. It does not accept arbitrary words from the page UI. That said, the calculation runs locally in your browser and is intended for mathematical expressions, not for processing untrusted code. The safest practice is to use the on-screen buttons or normal math keyboard input. The page does not send expressions to a server, and calculation history stays in the current browser session only."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Scientific Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Type numbers and operators directly on your keyboard or use the on-screen button grid."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose DEG or RAD before using trigonometric functions. DEG is common in school geometry; RAD is common in calculus."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use parentheses around grouped operations to control order, especially for powers, roots, and logarithms."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Press Enter or the equals button to calculate. Press Escape or C to clear the expression."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Check the history list after each calculation. It stores the last five expressions so you can compare repeated attempts."
+      }
+    ]
+  }
+  </script>
 </head>
 <body><a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ Calculatorcity</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
-      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
+      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
   <main id="main" class="page-container two-col-layout" role="main"><article class="calc-main">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>Scientific Calculator</span></nav><h1>Scientific Calculator</h1>
     <p>This online scientific calculator provides the full function set of a physical scientific calculator — including trigonometric functions, inverse trig, logarithms, natural log, powers, roots, factorials, and mathematical constants. It supports keyboard input so you can type expressions naturally, stores the last five calculations as history, and includes a Degrees/Radians toggle for trigonometric work. Suitable for students from Class 8 upward through university level mathematics.</p>
@@ -31,7 +132,8 @@
     <section class="content-section"><h2>Input Safety and Order</h2><p>Scientific expressions depend heavily on order of operations. Parentheses are the safest way to make intent clear, especially around negative numbers, powers, logarithms, and trigonometric functions. The calculator maps button presses to JavaScript Math functions, then evaluates the mathematical expression locally. It limits accepted characters to ordinary mathematical syntax and known function names. If a result is unexpected, check three things first: whether the angle mode is correct, whether parentheses are balanced, and whether multiplication signs were entered explicitly. For example, write 2*(3+4), not 2(3+4). Also remember that squaring a negative number needs parentheses: (-3)^2 is 9, while -3^2 is commonly interpreted as -9.</p></section>
     <section class="content-section"><h2>Common Trig Values</h2><table class="reference-table"><thead><tr><th>Angle</th><th>sin</th><th>cos</th><th>tan</th></tr></thead><tbody><tr><td>0°</td><td>0</td><td>1</td><td>0</td></tr><tr><td>30°</td><td>1/2</td><td>√3/2</td><td>1/√3</td></tr><tr><td>45°</td><td>√2/2</td><td>√2/2</td><td>1</td></tr><tr><td>60°</td><td>√3/2</td><td>1/2</td><td>√3</td></tr><tr><td>90°</td><td>1</td><td>0</td><td>undefined</td></tr><tr><td>180°</td><td>0</td><td>-1</td><td>0</td></tr><tr><td>270°</td><td>-1</td><td>0</td><td>undefined</td></tr><tr><td>360°</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></section>
     <section class="content-section"><h2>Scientific Calculator FAQ</h2><div class="faq-item"><h3 class="faq-question">What is a scientific calculator</h3><div class="faq-answer"><p>A scientific calculator is a calculator designed for mathematics beyond basic arithmetic. It includes functions for powers, roots, logarithms, trigonometry, inverse trigonometry, constants, factorials, reciprocals, percentages, and parentheses. These functions are needed in algebra, geometry, trigonometry, physics, statistics, engineering, and finance. Unlike a basic calculator, a scientific calculator can evaluate expressions with operation precedence and nested functions. This online version also keeps history and supports keyboard input, making it useful for homework, checking formulas, and quick technical calculations.</p></div></div><div class="faq-item"><h3 class="faq-question">Should I use degrees or radians</h3><div class="faq-answer"><p>Use degrees when your angle is measured in degrees, such as 30°, 45°, or 90°. This is common in school geometry, surveying, navigation, and many everyday angle problems. Use radians when working in calculus, advanced trigonometry, circular motion formulas, or expressions involving π as an angle. JavaScript and most programming languages calculate trig functions in radians internally, so this calculator converts degree inputs when DEG mode is selected. If a trigonometric answer looks wrong, the angle mode is the first setting to check.</p></div></div><div class="faq-item"><h3 class="faq-question">What is the difference between log and ln</h3><div class="faq-answer"><p>Log usually means base-10 logarithm on calculators, while ln means natural logarithm with base e. A logarithm answers the question “what exponent produces this number” Because 10² = 100, log(100) = 2. Because e¹ is e, ln(e) = 1. Base-10 logs are common in scientific notation, pH, decibels, and orders of magnitude. Natural logs are common in calculus, continuous growth, compound interest, radioactive decay, and differential equations. Both are inverse operations for exponential functions, but they use different bases.</p></div></div><div class="faq-item"><h3 class="faq-question">How does factorial work</h3><div class="faq-answer"><p>Factorial, written n!, multiplies every positive whole number from n down to 1. For example, 5! = 5 × 4 × 3 × 2 × 1 = 120. Factorials are used in counting arrangements, combinations, permutations, probability, and series expansions. Factorial is defined for non-negative integers in this calculator. The value grows extremely quickly: 10! is 3,628,800 and 20! is already more than 2 quintillion. Because of that rapid growth, very large factorials may exceed ordinary display ranges.</p></div></div><div class="faq-item"><h3 class="faq-question">Is eval safe in this calculator</h3><div class="faq-answer"><p>This calculator restricts expression input before evaluation by allowing only numbers, operators, parentheses, decimal points, Math constants, and mapped Math functions. It does not accept arbitrary words from the page UI. That said, the calculation runs locally in your browser and is intended for mathematical expressions, not for processing untrusted code. The safest practice is to use the on-screen buttons or normal math keyboard input. The page does not send expressions to a server, and calculation history stays in the current browser session only.</p></div></div></section>
-  </article><aside class="calc-sidebar"><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/square-root-calculator.html">Square Root Calculator</a></li><li><a href="../maths/exponent-calculator.html">Exponent Calculator</a></li><li><a href="../maths/quadratic-equation-solver.html">Quadratic Solver</a></li><li><a href="../maths/probability-calculator.html">Probability Calculator</a></li><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law Calculator</a></li></ul></div></aside></main>
+  </article><aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/square-root-calculator.html">Square Root Calculator</a></li><li><a href="../maths/exponent-calculator.html">Exponent Calculator</a></li><li><a href="../maths/quadratic-equation-solver.html">Quadratic Solver</a></li><li><a href="../maths/probability-calculator.html">Probability Calculator</a></li><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law Calculator</a></li></ul></div></aside></main>
   <hr class="footer-separator" aria-hidden="true">
 <footer class="site-footer">
   <div class="footer-inner">

@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Ohm's Law Calculator &mdash; Voltage, Current, Resistance, Power | Calculatorcity</title>
   <meta name="description" content="Free Ohm's Law calculator. Enter any two of voltage, current, resistance or power to calculate the other two. Shows all four electrical formulas.">
-  <link rel="canonical" href="https://calculatorcity.in/science-other/ohms-law-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Ohm&#x27;s Law Calculator — Voltage, Current, Resistance, Power | Calculatorcity">
+  <meta property="og:description" content="Free Ohm&#x27;s Law calculator. Enter any two of voltage, current, resistance or power to calculate the other two. Shows all four electrical formulas.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/science-other/ohms-law-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ohm&#x27;s Law Calculator — Voltage, Current, Resistance, Power | Calculatorcity">
+  <meta name="twitter:description" content="Free Ohm&#x27;s Law calculator. Enter any two of voltage, current, resistance or power to calculate the other two. Shows all four electrical formulas.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/science-other/ohms-law-calculator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,26 +30,111 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .hint{color:var(--text-secondary);margin-bottom:1rem}.result-card--calculated{border-color:var(--primary);background:var(--primary-light)}.visual-box{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1rem;margin-top:1rem}.table-wrap{overflow-x:auto}.formula-list{display:grid;gap:.5rem}.formula-list code{font-size:1rem}@media(max-width:767px){.visual-box{padding:.5rem}.visual-box svg{min-width:520px}.visual-scroll{overflow-x:auto}}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Ohm's Law Calculator","url":"https://calculatorcity.in/science-other/ohms-law-calculator.html","description":"Calculate voltage, current, resistance and power from any two known electrical values.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Ohm's Law Calculator","url":"https://mahendra79.github.io/calculatorcity/science-other/ohms-law-calculator.html","description":"Calculate voltage, current, resistance and power from any two known electrical values.","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Ohm's Law and who discovered it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ohm's Law is the relationship between voltage, current, and resistance in an ohmic conductor: voltage equals current multiplied by resistance. It is named after Georg Simon Ohm, the German physicist who published the relationship in the nineteenth century after studying how electric current changed through different conductors. The law became one of the foundations of circuit analysis because it lets you calculate one electrical quantity from the other two. It applies best to components with a nearly constant resistance over the operating range, such as fixed resistors and many metal conductors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between voltage, current, and resistance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Voltage is electrical potential difference, often described as the push that drives charge through a circuit. Current is the rate of flow of electric charge, measured in amperes. Resistance is opposition to that flow, measured in ohms. A simple water analogy is pressure, flow, and pipe restriction: higher pressure can drive more flow, while a narrow pipe reduces flow. The analogy is imperfect, but it helps beginners see why increasing voltage raises current when resistance is fixed, and why increasing resistance lowers current when voltage is fixed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is electrical power and how is it measured in watts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Electrical power is the rate at which electrical energy is converted into heat, light, motion, sound, or another form of energy. It is measured in watts. In direct current circuits, power is voltage multiplied by current, so a device drawing 2 A from a 12 V supply consumes 24 W. Power matters because it determines battery drain, heat generation, appliance running cost, and component safety. A resistor, wire, switch, relay, or power supply may fail if the wattage or current rating is exceeded even when the voltage looks acceptable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do some devices not follow Ohm's Law?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Some devices are non-ohmic because their current is not proportional to voltage. LEDs, diodes, transistors, lamps, motors, batteries, and many sensors change behavior with temperature, operating point, chemistry, or semiconductor junction effects. An LED, for example, does not act like a fixed resistor; below its forward voltage it passes little current, and above that point current can rise sharply. A filament bulb has low resistance when cold and higher resistance when hot. For these devices, Ohm's Law may still help analyze a small part of the circuit, but the device data sheet and ratings are essential."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I use Ohm's Law to choose the right resistor for an LED?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with the supply voltage, subtract the LED forward voltage, and divide the remaining voltage by the desired LED current. For a 5 V supply, a red LED with about 2 V forward voltage, and a target current of 20 mA, the resistor is (5 - 2) / 0.02 = 150 Ω. Then calculate resistor power: P = I^2 x R = 0.02^2 x 150 = 0.06 W. A common quarter-watt resistor has enough margin. If the supply voltage or LED current changes, repeat the calculation instead of reusing the same resistor blindly."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Ohm's Law Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter any two of the four electrical values: Voltage, Current, Resistance, or Power."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Leave the remaining two fields blank. Those blank quantities are the unknowns the calculator will solve."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate to find the two unknown values using Ohm's Law and the power formula."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "The result cards show all four values, separating the values you entered from the two that were calculated."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "For example, enter Voltage = 12 V and Current = 2 A to get Resistance = 6 Ω and Power = 24 W."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health &amp; Fitness</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science &amp; Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -67,7 +168,18 @@
         <button class="calc-btn" type="button" id="calc-btn">Calculate</button>
         <div class="calc-result" id="calc-result" aria-live="polite">
           <div class="result-grid" id="result-grid"></div>
-        </div>
+        
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         <div class="visual-box visual-scroll">
           <svg viewBox="0 0 720 300" role="img" aria-label="Simple circuit showing a voltage source, resistor, current direction, and Ohm's Law formulas" style="width:100%;height:auto">
             <rect x="18" y="18" width="684" height="264" rx="18" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
@@ -157,6 +269,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law</a></li><li><a href="../science-other/gpa-calculator.html">GPA</a></li><li><a href="../science-other/grade-calculator.html">Grade</a></li><li><a href="../science-other/password-generator.html">Password Generator</a></li><li><a href="../science-other/electricity-cost-calculator.html">Electricity Cost</a></li></ul></div>
       <div class="card sidebar-card"><h3>Quick checks</h3><ul><li>Use consistent units.</li><li>Confirm wattage ratings.</li><li>Non-ohmic parts need data sheets.</li></ul></div>
     </aside>
@@ -227,7 +340,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
 (function() {
   function calculate() {

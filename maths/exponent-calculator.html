@@ -1,22 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><title>Exponent Calculator ? Powers with Working | Calculatorcity</title>
+  <meta charset="UTF-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script"><title>Exponent Calculator ? Powers with Working | Calculatorcity</title>
   <meta name="description" content="Calculate powers and exponents online, including negative, zero and fractional exponents, with expanded working, reciprocal notes and scientific notation.">
-  <link rel="canonical" href="https://calculatorcity.in/maths/exponent-calculator.html"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Exponent Calculator ? Powers with Working | Calculatorcity">
+  <meta property="og:description" content="Calculate powers and exponents online, including negative, zero and fractional exponents, with expanded working, reciprocal notes and scientific notation.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/maths/exponent-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Exponent Calculator ? Powers with Working | Calculatorcity">
+  <meta name="twitter:description" content="Calculate powers and exponents online, including negative, zero and fractional exponents, with expanded working, reciprocal notes and scientific notation.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/maths/exponent-calculator.html"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/base.css"><link rel="stylesheet" href="../assets/css/layout.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Exponent Calculator","url":"https://calculatorcity.in/maths/exponent-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Exponent Calculator","url":"https://mahendra79.github.io/calculatorcity/maths/exponent-calculator.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an exponent",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An exponent is a small raised number that tells how a base is being powered. In 3⁴, the base is 3 and the exponent is 4. That means 3 is used as a factor four times: 3 × 3 × 3 × 3 = 81. Exponents are shorthand for repeated multiplication, but they also extend to zero, negative, and fractional powers. They are used in algebra, scientific notation, compound interest, computer storage, geometry, and physics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does a negative exponent mean",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A negative exponent means reciprocal. For example, 2⁻³ equals 1/2³, which is 1/8 or 0.125. The negative sign does not make the result negative by itself; it moves the power to the denominator. This rule comes from exponent division: 2² / 2⁵ = 2^(2-5) = 2⁻³, and the same division is 4/32 = 1/8. Negative exponents are common in scientific notation for very small quantities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is any nonzero number to the power zero equal to 1",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The zero exponent rule follows from the pattern of dividing powers with the same base. For example, 5³ / 5³ equals 1 because any nonzero number divided by itself is 1. Using exponent rules, 5³ / 5³ also equals 5^(3-3), or 5⁰. Since both expressions describe the same value, 5⁰ must be 1. The rule applies to every nonzero base. Zero to the zero power is a special indeterminate case in many contexts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a fractional exponent",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A fractional exponent represents a root, and sometimes a power combined with a root. The exponent 1/2 means square root, so 9^(1/2) = 3. The exponent 1/3 means cube root, so 8^(1/3) = 2. An exponent like 2/3 can be read as cube root first and then square, or square first and then cube root when the values are real and valid. Fractional exponents are useful in algebra because they let roots follow the same power rules as other exponents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are exponents used in scientific notation",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Scientific notation writes very large or very small numbers using powers of ten. A number such as 4,500,000 becomes 4.5 × 10⁶ because the decimal point moved six places left. A small number such as 0.00032 becomes 3.2 × 10⁻⁴ because the decimal point moved four places right. Positive powers of ten represent large values; negative powers represent small values. This makes measurements in astronomy, chemistry, electronics, and finance much easier to read and compare."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Exponent Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the base number. This is the number that will be multiplied repeatedly or inverted for a negative exponent."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter the exponent. Whole positive exponents produce repeated multiplication, zero gives 1 for any nonzero base, and negative exponents create reciprocals."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use decimal or fractional exponents when you need roots, such as 8^(1/3) for the cube root of 8."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Click Calculate Power. The result cards show the ordinary result, scientific notation, expanded form when practical, and reciprocal explanation when needed."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Read the notes below the result to understand special cases such as zero exponent, negative exponent, and fractional exponent behavior."
+      }
+    ]
+  }
+  </script>
 </head>
 <body><a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">⌗ Calculatorcity</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
-      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
+  <header class="site-header"><div class="header-inner"><a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
+      <a class="nav-india" href="../index.html#india">India</a></nav><div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button></div><nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div><a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">🇮🇳 India</a></nav></header>
   <main id="main" class="page-container two-col-layout" role="main"><article class="calc-main">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#math">Maths</a></span><span>Exponent Calculator</span></nav>
     <h1>Exponent Calculator</h1>
     <p>The exponent calculator raises any base number to any power — including negative exponents, fractional exponents, and zero exponents. It shows the result as a standard number, in scientific notation for very large or small values, and as an expanded multiplication so you can see how the exponent was applied step by step. Useful for scientific notation conversions, compound growth calculations, and algebraic simplification.</p>
-    <section class="calc-widget"><div class="calc-input-group"><label for="base">Base (b)</label><input id="base" type="number" value="2" step="any"></div><div class="calc-input-group"><label for="power">Exponent (n)</label><input id="power" type="number" value="5" step="any"></div><button class="calc-btn" id="calculate-exponent" type="button">Calculate Power</button><div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div><p id="steps" style="margin-top:1rem;"></p></div></section>
+    <section class="calc-widget"><div class="calc-input-group"><label for="base">Base (b)</label><input id="base" type="number" value="2" step="any"></div><div class="calc-input-group"><label for="power">Exponent (n)</label><input id="power" type="number" value="5" step="any"></div><button class="calc-btn" id="calculate-exponent" type="button">Calculate Power</button><div class="calc-result" id="calc-result"><div class="result-grid" id="result-grid"></div><p id="steps" style="margin-top:1rem;"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div></section>
     <section class="content-section"><h2>Exponent Visual</h2><div class="formula-box"><svg viewBox="0 0 640 130" style="width:100%;height:auto"><text x="30" y="35" font-size="18" fill="#0f172a">Repeated multiplication model</text><rect x="30" y="58" width="80" height="38" rx="8" fill="#2563eb"/><text x="58" y="82" fill="#fff">b</text><text x="125" y="82">×</text><rect x="150" y="58" width="80" height="38" rx="8" fill="#2563eb"/><text x="178" y="82" fill="#fff">b</text><text x="245" y="82">× ... ×</text><rect x="330" y="58" width="80" height="38" rx="8" fill="#2563eb"/><text x="358" y="82" fill="#fff">b</text><text x="430" y="82">= bⁿ</text></svg></div></section>
     <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Enter the base number. This is the number that will be multiplied repeatedly or inverted for a negative exponent.</li><li>Enter the exponent. Whole positive exponents produce repeated multiplication, zero gives 1 for any nonzero base, and negative exponents create reciprocals.</li><li>Use decimal or fractional exponents when you need roots, such as 8^(1/3) for the cube root of 8.</li><li>Click Calculate Power. The result cards show the ordinary result, scientific notation, expanded form when practical, and reciprocal explanation when needed.</li><li>Read the notes below the result to understand special cases such as zero exponent, negative exponent, and fractional exponent behavior.</li></ol></section>
     <section class="content-section"><h2>Exponent Formula</h2><div class="formula-box">bⁿ = b × b × ... × b (n times)<br>b⁰ = 1 when b ≠ 0<br>b⁻ⁿ = 1 / bⁿ<br>b^(1/n) = ⁿ√b</div><p>An exponent tells how many times the base is used as a factor. In bⁿ, b is the base and n is the exponent. If n is a positive whole number, the operation is repeated multiplication. For example, 2⁵ means 2 × 2 × 2 × 2 × 2. If n is zero, the result is 1 for any nonzero base because division rules require bⁿ / bⁿ to equal b⁰ and also equal 1. If n is negative, the expression becomes a reciprocal: b⁻³ equals 1/b³. Fractional exponents connect powers and roots. The exponent 1/2 means square root, 1/3 means cube root, and 2/3 means square after taking a cube root. These rules allow exponents to describe growth, decay, area, volume, scientific notation, and algebraic transformations.</p></section>
@@ -24,7 +136,8 @@
     <section class="content-section"><h2>Practical Notes</h2><p>Exponent answers can grow or shrink very quickly, so context matters when reading the result. A base greater than one with a positive exponent grows larger as the exponent increases. A base between zero and one becomes smaller with positive powers because repeated multiplication keeps reducing the value. Negative bases need special care: whole-number exponents are predictable, but fractional exponents of negative bases may not be real numbers. Scientific notation is included because ordinary decimal display becomes hard to read for values such as 10¹² or 10⁻⁹. When using exponents in finance or science, keep units consistent. Squaring metres gives square metres, cubing centimetres gives cubic centimetres, and compound growth rates must use matching time periods. For checking, compare nearby powers. Since 2¹⁰ is 1024, any answer for 2⁹ should be half of that, and any answer for 2¹¹ should be double. This quick doubling pattern is especially helpful in binary and storage problems.</p></section>
     <section class="content-section"><h2>Powers Reference</h2><table class="reference-table"><thead><tr><th>Expression</th><th>Value</th><th>Use</th></tr></thead><tbody><tr><td>2⁰</td><td>1</td><td>Zero exponent rule</td></tr><tr><td>2¹</td><td>2</td><td>Identity power</td></tr><tr><td>2²</td><td>4</td><td>Square</td></tr><tr><td>2³</td><td>8</td><td>Cube</td></tr><tr><td>2⁴</td><td>16</td><td>Binary storage</td></tr><tr><td>2⁵</td><td>32</td><td>Computer science</td></tr><tr><td>2¹⁰</td><td>1024</td><td>Approx. kilo in binary</td></tr><tr><td>10²</td><td>100</td><td>Percent base</td></tr><tr><td>10³</td><td>1000</td><td>Metric kilo</td></tr><tr><td>10⁶</td><td>1,000,000</td><td>Million</td></tr></tbody></table></section>
     <section class="content-section"><h2>Exponent Calculator FAQ</h2><div class="faq-item"><h3 class="faq-question">What is an exponent</h3><div class="faq-answer"><p>An exponent is a small raised number that tells how a base is being powered. In 3⁴, the base is 3 and the exponent is 4. That means 3 is used as a factor four times: 3 × 3 × 3 × 3 = 81. Exponents are shorthand for repeated multiplication, but they also extend to zero, negative, and fractional powers. They are used in algebra, scientific notation, compound interest, computer storage, geometry, and physics.</p></div></div><div class="faq-item"><h3 class="faq-question">What does a negative exponent mean</h3><div class="faq-answer"><p>A negative exponent means reciprocal. For example, 2⁻³ equals 1/2³, which is 1/8 or 0.125. The negative sign does not make the result negative by itself; it moves the power to the denominator. This rule comes from exponent division: 2² / 2⁵ = 2^(2-5) = 2⁻³, and the same division is 4/32 = 1/8. Negative exponents are common in scientific notation for very small quantities.</p></div></div><div class="faq-item"><h3 class="faq-question">Why is any nonzero number to the power zero equal to 1</h3><div class="faq-answer"><p>The zero exponent rule follows from the pattern of dividing powers with the same base. For example, 5³ / 5³ equals 1 because any nonzero number divided by itself is 1. Using exponent rules, 5³ / 5³ also equals 5^(3-3), or 5⁰. Since both expressions describe the same value, 5⁰ must be 1. The rule applies to every nonzero base. Zero to the zero power is a special indeterminate case in many contexts.</p></div></div><div class="faq-item"><h3 class="faq-question">What is a fractional exponent</h3><div class="faq-answer"><p>A fractional exponent represents a root, and sometimes a power combined with a root. The exponent 1/2 means square root, so 9^(1/2) = 3. The exponent 1/3 means cube root, so 8^(1/3) = 2. An exponent like 2/3 can be read as cube root first and then square, or square first and then cube root when the values are real and valid. Fractional exponents are useful in algebra because they let roots follow the same power rules as other exponents.</p></div></div><div class="faq-item"><h3 class="faq-question">How are exponents used in scientific notation</h3><div class="faq-answer"><p>Scientific notation writes very large or very small numbers using powers of ten. A number such as 4,500,000 becomes 4.5 × 10⁶ because the decimal point moved six places left. A small number such as 0.00032 becomes 3.2 × 10⁻⁴ because the decimal point moved four places right. Positive powers of ten represent large values; negative powers represent small values. This makes measurements in astronomy, chemistry, electronics, and finance much easier to read and compare.</p></div></div></section>
-  </article><aside class="calc-sidebar"><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/square-root-calculator.html">Square Root Calculator</a></li><li><a href="../maths/scientific-calculator.html">Scientific Calculator</a></li><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../maths/quadratic-equation-solver.html">Quadratic Solver</a></li><li><a href="../unit-converter/data-storage-converter.html">Data Storage Converter</a></li></ul></div></aside></main>
+  </article><aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div><div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../maths/square-root-calculator.html">Square Root Calculator</a></li><li><a href="../maths/scientific-calculator.html">Scientific Calculator</a></li><li><a href="../finance/compound-interest-calculator.html">Compound Interest</a></li><li><a href="../maths/quadratic-equation-solver.html">Quadratic Solver</a></li><li><a href="../unit-converter/data-storage-converter.html">Data Storage Converter</a></li></ul></div></aside></main>
   <hr class="footer-separator" aria-hidden="true">
 <footer class="site-footer">
   <div class="footer-inner">

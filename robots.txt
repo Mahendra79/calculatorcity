@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://calculatorcity.in/sitemap.xml
+Disallow: /calculatorcity/.git/
 
+Sitemap: https://mahendra79.github.io/calculatorcity/sitemap.xml

@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Random Number Generator &mdash; Numbers, Dice and Coin Flip | Calculatorcity</title>
   <meta name="description" content="Free random number generator. Generate single numbers, lists without repeats, roll dice and flip coins. Perfect for games, decisions, sampling and probability experiments.">
-  <link rel="canonical" href="https://calculatorcity.in/science-other/random-number-generator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Random Number Generator — Numbers, Dice and Coin Flip | Calculatorcity">
+  <meta property="og:description" content="Free random number generator. Generate single numbers, lists without repeats, roll dice and flip coins. Perfect for games, decisions, sampling and probability experiments.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/science-other/random-number-generator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Random Number Generator — Numbers, Dice and Coin Flip | Calculatorcity">
+  <meta name="twitter:description" content="Free random number generator. Generate single numbers, lists without repeats, roll dice and flip coins. Perfect for games, decisions, sampling and probability experiments.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/science-other/random-number-generator.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,26 +30,111 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .tool-panel{border:1px solid var(--border);border-radius:var(--radius-lg);padding:1rem;margin:1rem 0;background:var(--bg)}.tool-panel h2{margin-bottom:.75rem}.inline-options{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin:.5rem 0 1rem}.big-random{font-size:clamp(2rem,9vw,4rem);font-weight:800;color:var(--primary);word-break:break-all}.link-button{border:0;background:transparent;color:var(--primary);font:inherit;font-weight:700;cursor:pointer;padding:.25rem 0}.dice-grid{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}.die-face{width:64px;aspect-ratio:1;border-radius:8px;background:var(--primary);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:800;box-shadow:var(--shadow)}.coin-result{font-size:2.5rem;font-weight:800;transition:transform .25s ease}.coin-result.flipping{transform:rotateX(180deg)}.copy-note{color:var(--text-secondary);font-size:.9rem;margin-top:.5rem}.table-wrap{overflow-x:auto}@media(max-width:767px){.inline-options{align-items:flex-start;flex-direction:column}.die-face{width:54px}}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Random Number Generator","url":"https://calculatorcity.in/science-other/random-number-generator.html","description":"Generate secure random numbers, unique lists, dice rolls, and coin flips in the browser.","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Random Number Generator","url":"https://mahendra79.github.io/calculatorcity/science-other/random-number-generator.html","description":"Generate secure random numbers, unique lists, dice rolls, and coin flips in the browser.","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are computer random numbers truly random?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many computer random numbers are pseudo-random, which means they are produced by an algorithm from an internal state. They can look random and pass statistical tests, but if the state is known, future values may be predictable. Modern browsers also provide crypto.getRandomValues(), which draws from operating-system randomness sources designed for security. This is much stronger than basic Math.random() and is suitable for unpredictable browser-side draws. For games, classroom selections, and everyday choices, browser secure randomness is more than adequate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a seed in random number generation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A seed is the starting value used by a pseudo-random number generator. The same seed usually produces the same sequence, which is useful for simulations, testing, games, and reproducible research. If you want a random-looking but repeatable world map, shuffled deck, or experiment, a seed is helpful. Secure random APIs normally hide seed handling because predictability would be a weakness. This page does not expose a seed; it focuses on unpredictable draws from the browser where available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between random and pseudorandom?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Randomness means outcomes are not predictable from a pattern. Pseudorandomness means an algorithm produces values that behave statistically like random values, even though the sequence is deterministic internally. Good pseudorandom generators are excellent for simulations and games. Cryptographic random generators go further by making prediction extremely difficult, even for an attacker who observes many previous values. The difference matters most for security. For picking a class volunteer, both can work; for generating passwords, use cryptographic randomness."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a dice roller work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A dice roller maps a random number to an integer from 1 to the number of sides on the die. For a six-sided die, each result from 1 through 6 should have equal probability. Rolling multiple dice repeats the process independently and adds the results for the total. The distribution of totals is not uniform for multiple dice. With two six-sided dice, 7 is more common than 2 or 12 because there are more combinations that sum to 7. The calculator shows each die separately and the total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the fairest way to flip a coin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The fairest physical coin flip uses a balanced coin, a consistent flipping motion, enough spin, and a neutral landing surface. In software, a fair coin flip maps a random value to two equal outcomes. This page treats values above 0.5 as heads and values at or below 0.5 as tails. With a continuous random source, exactly 0.5 is effectively negligible. Short streaks are normal. A fair method does not guarantee alternating results; it guarantees equal probability before each independent flip."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Random Number Generator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Use Single Random Number when you need one integer or decimal between a minimum and maximum value."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use Random Number List when you need several draws, such as lottery picks, samples, team numbers, or classroom selections."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Turn on Unique numbers only when repeats are not allowed; the generator will sample without replacement from the range."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use Dice Roller for board games, tabletop role-playing games, probability demonstrations, or quick simulations."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use Coin Flipper for two-choice decisions and track the running tally to see how randomness balances over many flips."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>&#9776;</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health &amp; Fitness</a><a href="../index.html#datetime">Date &amp; Time</a><a href="../index.html#science">Science &amp; Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -53,7 +154,18 @@
           </div>
           <label class="inline-options"><input id="decimal-toggle" type="checkbox"> Generate decimal number instead of integer</label>
           <button class="calc-btn" type="button" id="gen-single">Generate Number</button>
-          <div class="calc-result show" aria-live="polite"><span class="big-random" id="single-result">--</span><br><button class="link-button" type="button" id="gen-single-again">Generate Again</button></div>
+          <div class="calc-result show" aria-live="polite"><span class="big-random" id="single-result">--</span><br><button class="link-button" type="button" id="gen-single-again">Generate Again</button>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         </section>
 
         <section class="tool-panel" aria-labelledby="list-heading">
@@ -68,7 +180,18 @@
             <label><input id="sort-toggle" type="checkbox"> Sort results ascending</label>
           </div>
           <button class="calc-btn" type="button" id="gen-list">Generate List</button>
-          <div class="calc-result show" aria-live="polite"><p id="list-result" style="font-size:1.25rem;font-weight:700">--</p><button class="btn btn-secondary" type="button" id="copy-list">Copy list</button><p class="copy-note" id="copy-list-note"></p></div>
+          <div class="calc-result show" aria-live="polite"><p id="list-result" style="font-size:1.25rem;font-weight:700">--</p><button class="btn btn-secondary" type="button" id="copy-list">Copy list</button><p class="copy-note" id="copy-list-note"></p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         </section>
 
         <section class="tool-panel" aria-labelledby="dice-heading">
@@ -78,13 +201,35 @@
             <div class="calc-input-group"><label for="dice-sides">Sides per die</label><select id="dice-sides"><option value="4">4 sides</option><option value="6" selected>6 sides</option><option value="8">8 sides</option><option value="10">10 sides</option><option value="12">12 sides</option><option value="20">20 sides</option></select></div>
           </div>
           <button class="calc-btn" type="button" id="roll-dice">Roll Dice</button>
-          <div class="calc-result show" aria-live="polite"><div class="dice-grid" id="dice-result"></div><p class="result-label" id="dice-total">Total: --</p></div>
+          <div class="calc-result show" aria-live="polite"><div class="dice-grid" id="dice-result"></div><p class="result-label" id="dice-total">Total: --</p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         </section>
 
         <section class="tool-panel" aria-labelledby="coin-heading">
           <h2 id="coin-heading">Coin Flipper</h2>
           <button class="calc-btn" type="button" id="flip-coin">Flip Coin</button>
-          <div class="calc-result show" aria-live="polite"><div class="coin-result" id="coin-result">--</div><p id="coin-stats" class="result-label">Heads: 0 | Tails: 0 | Total: 0 | Heads: 0.0%</p></div>
+          <div class="calc-result show" aria-live="polite"><div class="coin-result" id="coin-result">--</div><p id="coin-stats" class="result-label">Heads: 0 | Tails: 0 | Total: 0 | Heads: 0.0%</p>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
         </section>
       </section>
 
@@ -142,6 +287,7 @@
     </article>
 
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related calculators</h3><ul><li><a href="../science-other/ohms-law-calculator.html">Ohm's Law</a></li><li><a href="../science-other/gpa-calculator.html">GPA</a></li><li><a href="../science-other/grade-calculator.html">Grade</a></li><li><a href="../science-other/password-generator.html">Password Generator</a></li><li><a href="../science-other/electricity-cost-calculator.html">Electricity Cost</a></li></ul></div>
       <div class="card sidebar-card"><h3>Random tips</h3><ul><li>Use unique lists for draws without replacement.</li><li>Use dice for tabletop probabilities.</li><li>Small samples can have streaks.</li></ul></div>
     </aside>
@@ -211,7 +357,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
   <script>
 function secureRandom() {
   const arr = new Uint32Array(1);

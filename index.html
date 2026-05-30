@@ -2,15 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="assets/css/base.css" as="style">
+  <link rel="preload" href="assets/js/main.js" as="script">
   <title>Free Online Calculators — Math, Finance, Health & Indian Calculators</title>
   <meta name="description" content="Free online calculators for math, finance, health, unit conversion, date & time and Indian calculators including GST, EMI, income tax, SIP. 80+ calculators, no signup needed.">
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Online Calculators — Math, Finance, Health &amp; Indian Calculators">
+  <meta name="twitter:description" content="Free online calculators for math, finance, health, unit conversion, date &amp; time and Indian calculators including GST, EMI, income tax, SIP. 80+ calculators, no signup needed.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="keywords" content="online calculator, GST calculator, EMI calculator, BMI calculator, percentage calculator, income tax calculator India">
-  <link rel="canonical" href="https://calculatorcity.in/">
-  <meta property="og:title" content="Free Online Calculators — 80+ Tools">
-  <meta property="og:description" content="80+ free calculators for math, finance, health and Indian tax calculations. No signup needed.">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/">
+  <meta property="og:title" content="Free Online Calculators — Math, Finance, Health &amp; Indian Calculators">
+  <meta property="og:description" content="Free online calculators for math, finance, health, unit conversion, date &amp; time and Indian calculators including GST, EMI, income tax, SIP. 80+ calculators, no signup needed.">
   <meta property="og:type" content="website">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,17 +31,18 @@
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <link rel="manifest" href="manifest.json">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Calculatorcity — Free Online Calculators",
-    "url": "https://calculatorcity.in",
+    "url": "https://mahendra79.github.io/calculatorcity",
     "description": "Free online calculators for math, finance, health and Indian calculations",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://calculatorcity.in/?search={search_term_string}",
+      "target": "https://mahendra79.github.io/calculatorcity/?search={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -38,7 +52,10 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="index.html">⌗ Calculatorcity</a>
+      <a class="logo" href="index.html">
+  <img src="assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#math">Math</a>
         <a href="#finance">Finance</a>
@@ -50,11 +67,15 @@
       </nav>
       <div class="header-search">
         <label class="sr-only" for="header-search">Search calculators</label>
-        <input id="header-search" class="search-input" type="search" data-search-input>
+        <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
       </div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="#math">Math</a>
       <a href="#finance">Finance</a>
       <a href="#unit">Unit Converter</a>
@@ -72,7 +93,7 @@
         <p class="hero-subtitle">80+ calculators for math, finance, health and Indian calculations. No signup. No downloads. 100% free.</p>
         <div class="hero-search">
           <label class="sr-only" for="hero-search">Search calculators</label>
-          <input id="hero-search" class="search-input" type="search" data-search-input>
+          <input id="hero-search" class="search-input" type="search" data-search-input placeholder="e.g. GST, EMI, BMI, SIP...">
         </div>
         <div class="badge-row" aria-label="Calculator category counts">
           <span class="badge">Math 10</span>
@@ -112,6 +133,7 @@
               <li><a href="maths/fraction-calculator.html">Fraction</a></li>
               <li><a href="maths/average-calculator.html">Average</a></li>
             </ul>
+            <a href="#math-all" style="display:inline-block;margin-top:0.75rem;font-size:0.85rem;font-weight:600;color:var(--cat-maths)">See all 10 Math calculators →</a>
           </article>
           <article id="finance" class="card category-card cat-finance">
             <h3>Finance</h3>
@@ -121,6 +143,7 @@
               <li><a href="finance/loan-emi-calculator.html">EMI</a></li>
               <li><a href="finance/discount-calculator.html">Discount</a></li>
             </ul>
+            <a href="#finance-all" style="display:inline-block;margin-top:0.75rem;font-size:0.85rem;font-weight:600;color:var(--cat-finance)">See all 10 Finance calculators →</a>
           </article>
           <article id="unit" class="card category-card cat-unit">
             <h3>Unit Converter</h3>
@@ -130,6 +153,7 @@
               <li><a href="unit-converter/weight-converter.html">Weight</a></li>
               <li><a href="unit-converter/temperature-converter.html">Temperature</a></li>
             </ul>
+            <a href="#unit-all" style="display:inline-block;margin-top:0.75rem;font-size:0.85rem;font-weight:600;color:var(--cat-unit)">See all 10 Unit converters →</a>
           </article>
           <article id="health" class="card category-card cat-health">
             <h3>Health & Fitness</h3>
@@ -139,6 +163,7 @@
               <li><a href="health-fitness/calorie-calculator.html">Calorie</a></li>
               <li><a href="health-fitness/body-fat-calculator.html">Body Fat</a></li>
             </ul>
+            <a href="#health-all" style="display:inline-block;margin-top:0.75rem;font-size:0.85rem;font-weight:600;color:var(--cat-health)">See all 10 Health calculators →</a>
           </article>
           <article id="datetime" class="card category-card cat-datetime">
             <h3>Date & Time</h3>
@@ -148,6 +173,7 @@
               <li><a href="date-time/date-difference-calculator.html">Date Difference</a></li>
               <li><a href="date-time/time-zone-converter.html">Time Zone</a></li>
             </ul>
+            <a href="#datetime-all" style="display:inline-block;margin-top:0.75rem;font-size:0.85rem;font-weight:600;color:var(--cat-datetime)">See all 10 Date &amp; Time calculators →</a>
           </article>
           <article id="science" class="card category-card cat-science">
             <h3>Science & Other</h3>
@@ -157,6 +183,7 @@
               <li><a href="science-other/grade-calculator.html">Grade</a></li>
               <li><a href="science-other/password-generator.html">Password Generator</a></li>
             </ul>
+            <a href="#science-all" style="display:inline-block;margin-top:0.75rem;font-size:0.85rem;font-weight:600;color:var(--cat-science)">See all 10 Science calculators →</a>
           </article>
           <article class="card category-card cat-india">
             <h3>🇮🇳 India</h3>
@@ -166,6 +193,7 @@
               <li><a href="india/income-tax-calculator.html">Income Tax</a></li>
               <li><a href="india/electricity/index.html">Electricity Bill</a></li>
             </ul>
+            <a href="#india" style="display:inline-block;margin-top:0.75rem;font-size:0.85rem;font-weight:600;color:var(--cat-india)">See all 21+ India calculators →</a>
           </article>
         </div>
       </div>
@@ -178,7 +206,7 @@
           <p>Browse every calculator page currently available on Calculatorcity.</p>
         </div>
 
-        <div class="content-section">
+        <div class="content-section" id="math-all">
           <h3>Math Calculators</h3>
           <div class="link-grid">
             <a href="maths/percentage-calculator.html">Percentage Calculator</a>
@@ -194,7 +222,7 @@
           </div>
         </div>
 
-        <div class="content-section">
+        <div class="content-section" id="finance-all">
           <h3>Finance Calculators</h3>
           <div class="link-grid">
             <a href="finance/compound-interest-calculator.html">Compound Interest Calculator</a>
@@ -210,7 +238,7 @@
           </div>
         </div>
 
-        <div class="content-section">
+        <div class="content-section" id="unit-all">
           <h3>Unit Converters</h3>
           <div class="link-grid">
             <a href="unit-converter/length-converter.html">Length Converter</a>
@@ -226,7 +254,7 @@
           </div>
         </div>
 
-        <div class="content-section">
+        <div class="content-section" id="health-all">
           <h3>Health & Fitness Calculators</h3>
           <div class="link-grid">
             <a href="health-fitness/bmi-calculator.html">BMI Calculator</a>
@@ -242,7 +270,7 @@
           </div>
         </div>
 
-        <div class="content-section">
+        <div class="content-section" id="datetime-all">
           <h3>Date & Time Calculators</h3>
           <div class="link-grid">
             <a href="date-time/age-calculator.html">Age Calculator</a>
@@ -258,7 +286,7 @@
           </div>
         </div>
 
-        <div class="content-section">
+        <div class="content-section" id="science-all">
           <h3>Science & Other Calculators</h3>
           <div class="link-grid">
             <a href="science-other/ohms-law-calculator.html">Ohm's Law Calculator</a>
@@ -412,8 +440,7 @@
     </div>
   </div>
 </footer>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
-
 

@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>Pressure Converter — Pascal, Bar, PSI, atm | Calculatorcity</title>
   <meta name="description" content="Free pressure converter for pascal, kilopascal, megapascal, bar, millibar, atmosphere, psi, mmHg and inHg. Includes tyre pressure and blood pressure references.">
-  <link rel="canonical" href="https://calculatorcity.in/unit-converter/pressure-converter.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="Pressure Converter — Pascal, Bar, PSI, atm | Calculatorcity">
+  <meta property="og:description" content="Free pressure converter for pascal, kilopascal, megapascal, bar, millibar, atmosphere, psi, mmHg and inHg. Includes tyre pressure and blood pressure references.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/unit-converter/pressure-converter.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pressure Converter — Pascal, Bar, PSI, atm | Calculatorcity">
+  <meta name="twitter:description" content="Free pressure converter for pascal, kilopascal, megapascal, bar, millibar, atmosphere, psi, mmHg and inHg. Includes tyre pressure and blood pressure references.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/unit-converter/pressure-converter.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +30,7 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     .unit-select-row { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: end; }
     #result-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
@@ -35,22 +52,106 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Pressure Converter","url":"https://calculatorcity.in/unit-converter/pressure-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Pressure Converter","url":"https://mahendra79.github.io/calculatorcity/unit-converter/pressure-converter.html","applicationCategory":"CalculatorApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is pressure and how is it measured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pressure is force applied per unit area. The SI unit is the pascal, equal to one newton per square metre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the correct tyre pressure for a car?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many passenger cars use around 32 to 35 psi, but the correct value is the one printed on the vehicle placard or manual."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does blood pressure 120/80 mmHg mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It means systolic pressure is 120 mmHg and diastolic pressure is 80 mmHg."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between psi and bar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PSI means pounds per square inch. Bar is a metric pressure unit equal to 100,000 Pa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is atmospheric pressure and why does it change with altitude?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Atmospheric pressure is the weight of air above a point. It decreases with altitude because there is less air above you."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Pressure Converter",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Type the number you want to convert in the Value field at the top."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you are converting from in the left dropdown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select the unit you want to convert to in the right dropdown."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Read the live result below; there is no calculate button."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Use the Swap button to reverse the conversion direction instantly."
+      }
+    ]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html">Calculatorcity</a>
+      <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit</a><a href="../index.html#health">Health</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science</a>
       <a class="nav-india" href="../index.html#india">India</a>
       </nav>
-      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input></div>
+      <div class="header-search"><label class="sr-only" for="header-search">Search calculators</label><input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators..."></div>
       <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
       <a href="../index.html#math">Math</a><a href="../index.html#finance">Finance</a><a href="../index.html#unit">Unit Converter</a><a href="../index.html#health">Health & Fitness</a><a href="../index.html#datetime">Date & Time</a><a href="../index.html#science">Science & Other</a><a href="../index.html#india">India</a>
     </nav>
   </header>
@@ -78,7 +179,18 @@
         <div class="calc-result show" id="calc-result" aria-live="polite">
           <div class="result-grid" id="result-grid"></div>
           <p id="conversion-factor" style="margin-top:.75rem; font-size:.875rem; color:var(--text-secondary);"></p>
-        </div>
+        
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
       </section>
       <section class="unit-visual" aria-label="Pressure gauge"><h2>Pressure Gauge</h2><svg viewBox="0 0 360 220" role="img" aria-label="Pressure gauge"><circle cx="180" cy="120" r="86" fill="#fff" stroke="#cbd5e1" stroke-width="12"/><path d="M104 145 A82 82 0 0 1 256 145" fill="none" stroke="#2563eb" stroke-width="14" stroke-linecap="round"/><line x1="180" y1="120" x2="235" y2="85" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/><circle cx="180" cy="120" r="8" fill="#0f172a"/><text x="180" y="182" text-anchor="middle" font-size="16" font-weight="700">Pressure reference</text></svg></section>
       <section class="content-section"><h2>How to Use</h2><ol class="how-to-steps"><li>Type the number you want to convert in the Value field at the top.</li><li>Select the unit you are converting from in the left dropdown.</li><li>Select the unit you want to convert to in the right dropdown.</li><li>Read the live result below; there is no calculate button.</li><li>Use the Swap button to reverse the conversion direction instantly.</li></ol></section><section class="content-section">
@@ -90,6 +202,7 @@
       </section>
     </article>
     <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
       <div class="card sidebar-card"><h3>Related converters</h3><ul><li><a href="../unit-converter/length-converter.html">Length</a></li><li><a href="../unit-converter/weight-converter.html">Weight</a></li><li><a href="../unit-converter/temperature-converter.html">Temperature</a></li><li><a href="../unit-converter/area-converter.html">Area</a></li><li><a href="../unit-converter/volume-converter.html">Volume</a></li></ul></div>
     </aside>
   </main>
@@ -158,7 +271,7 @@
     </div>
   </div>
 </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js" defer></script>
 <script>
 (function() {
   // Conversion rates relative to base unit

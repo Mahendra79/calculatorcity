@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="../assets/css/base.css" as="style">
+  <link rel="preload" href="../assets/js/main.js" as="script">
   <title>FD Calculator — Fixed Deposit Maturity Amount | Calculatorcity</title>
   <meta name="description" content="Free FD calculator India. Calculate fixed deposit maturity amount and interest earned. Compare simple and compound interest. Supports quarterly compounding.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculatorcity">
+  <meta property="og:title" content="FD Calculator — Fixed Deposit Maturity Amount | Calculatorcity">
+  <meta property="og:description" content="Free FD calculator India. Calculate fixed deposit maturity amount and interest earned. Compare simple and compound interest. Supports quarterly compounding.">
+  <meta property="og:url" content="https://mahendra79.github.io/calculatorcity/india/fd-calculator.html">
+  <meta property="og:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FD Calculator — Fixed Deposit Maturity Amount | Calculatorcity">
+  <meta name="twitter:description" content="Free FD calculator India. Calculate fixed deposit maturity amount and interest earned. Compare simple and compound interest. Supports quarterly compounding.">
+  <meta name="twitter:image" content="https://mahendra79.github.io/calculatorcity/assets/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://calculatorcity.in/india/fd-calculator.html">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mahendra79.github.io/calculatorcity/india/fd-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +30,95 @@
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/calculator.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Fixed Deposit (FD) Calculator", "url": "https://calculatorcity.in/india/fd-calculator.html", "description": "Free FD calculator India. Calculate fixed deposit maturity amount and interest earned. Compare simple and compound interest. Supports quarterly compounding.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calculatorcity.in/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://calculatorcity.in/#india"}, {"@type": "ListItem", "position": 3, "name": "Fixed Deposit (FD) Calculator", "item": "https://calculatorcity.in/india/fd-calculator.html"}]}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Fixed Deposit (FD) Calculator", "url": "https://mahendra79.github.io/calculatorcity/india/fd-calculator.html", "description": "Free FD calculator India. Calculate fixed deposit maturity amount and interest earned. Compare simple and compound interest. Supports quarterly compounding.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mahendra79.github.io/calculatorcity/"}, {"@type": "ListItem", "position": 2, "name": "India Calculators", "item": "https://mahendra79.github.io/calculatorcity/#india"}, {"@type": "ListItem", "position": 3, "name": "Fixed Deposit (FD) Calculator", "item": "https://mahendra79.github.io/calculatorcity/india/fd-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is FD interest calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cumulative FD interest is usually compounded quarterly in India. The rate is applied periodically and added to principal until maturity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is FD interest taxable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. FD interest is added to your income and taxed at your slab rate, even when the bank has already deducted TDS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is TDS on FD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TDS is tax deducted by the bank when interest crosses threshold limits. For many resident individuals it is 10% if PAN is available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is cumulative vs non-cumulative FD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cumulative FDs pay principal plus compounded interest at maturity. Non-cumulative FDs pay interest monthly, quarterly, half-yearly, or annually."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is FD safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bank FDs are relatively low-risk, and deposits are insured by DICGC up to the applicable limit per depositor per bank, but interest-rate and inflation risk remain."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to use the Fixed Deposit (FD) Calculator",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Enter the deposit amount you plan to place in the FD."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Type the annual FD interest rate quoted by the bank or NBFC."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Enter tenure using years and months together."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Choose quarterly compounding for most Indian cumulative bank FDs, or simple interest for payout-style comparison."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Select whether TDS should be estimated and review maturity amount, interest, post-TDS interest, and yield."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="india-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">⌗ Calculatorcity</a>
+    <a class="logo" href="../index.html">
+  <img src="../assets/icons/favicon.svg" width="26" height="26" alt="" aria-hidden="true" style="border-radius:4px">
+  Calculatorcity
+</a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="../index.html#math">Math</a>
       <a href="../index.html#finance">Finance</a>
@@ -33,11 +130,15 @@
     </nav>
     <div class="header-search">
       <label class="sr-only" for="header-search">Search calculators</label>
-      <input id="header-search" class="search-input" type="search" data-search-input>
+      <input id="header-search" class="search-input" type="search" data-search-input placeholder="Search calculators...">
     </div>
     <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-btn>☰</button>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+  <div style="padding:0.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0.5rem;">
+    <label class="sr-only" for="mobile-nav-search">Search calculators</label>
+    <input id="mobile-nav-search" class="search-input" type="search" placeholder="Search calculators..." data-search-input>
+  </div>
     <a href="../index.html#math">Math</a>
     <a href="../index.html#finance">Finance</a>
     <a href="../index.html#unit">Unit Converter</a>
@@ -52,6 +153,11 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span><a href="../index.html#india">India Calculators</a></span><span>Fixed Deposit (FD) Calculator</span></nav>
     <p><span class="badge badge-india">🇮🇳 India</span></p>
     <h1>Fixed Deposit (FD) Calculator</h1>
+<p class="mini-note" style="margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem;">
+  <i class="ti ti-clock" aria-hidden="true" style="font-size:1rem"></i>
+  Rates last verified: <strong>April 2025 (FY 2025-26)</strong>.
+  Always confirm with the official government portal before filing.
+</p>
     <p>The FD calculator estimates fixed deposit maturity amount, interest earned, post-TDS interest, and effective annual yield for Indian bank deposits. Enter principal, interest rate, tenure, compounding frequency, and TDS preference to compare cumulative and simple-interest outcomes. The chart compares FD growth with an assumed 6% inflation line so you can judge both nominal safety and real purchasing power over the deposit period.</p>
     <section class="calc-widget">
       <div class="field-grid">
@@ -63,7 +169,18 @@
         <div class="calc-input-group"><label for="tds">Tax deducted at source</label><select id="tds"><option value="yes" selected>Yes, 10% TDS if applicable</option><option value="no">No / Form 15G or 15H</option></select></div>
       </div>
       <button class="calc-btn" id="calculate" type="button">Calculate FD maturity</button>
-      <div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="maturity">₹0.00</span><span class="result-label">Maturity amount</span></div><div class="result-card"><span class="result-value" id="interest">₹0.00</span><span class="result-label">Total interest</span></div><div class="result-card"><span class="result-value" id="post-tds">₹0.00</span><span class="result-label">Post-TDS interest</span></div><div class="result-card"><span class="result-value" id="yield">0%</span><span class="result-label">Effective annual yield</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div></div>
+      <div class="calc-result show"><div class="result-grid"><div class="result-card highlight"><span class="result-value" id="maturity">₹0.00</span><span class="result-label">Maturity amount</span></div><div class="result-card"><span class="result-value" id="interest">₹0.00</span><span class="result-label">Total interest</span></div><div class="result-card"><span class="result-value" id="post-tds">₹0.00</span><span class="result-label">Post-TDS interest</span></div><div class="result-card"><span class="result-value" id="yield">0%</span><span class="result-label">Effective annual yield</span></div></div><div class="chart-container"><canvas id="calc-chart"></canvas></div>
+<div style="display:flex;gap:0.6rem;margin-top:1.25rem;flex-wrap:wrap;" class="result-share-row">
+  <button class="btn btn-secondary" onclick="_copyResult(this)"
+    style="flex:1;min-width:130px;font-size:0.9rem">
+    <i class="ti ti-copy" aria-hidden="true"></i> Copy Result
+  </button>
+  <a id="wa-share-btn" class="btn btn-secondary"
+    style="flex:1;min-width:130px;font-size:0.9rem;background:#25D366;color:#fff;border-color:#25D366;text-align:center"
+    href="#" target="_blank" rel="noopener noreferrer">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Share
+  </a>
+</div></div>
     </section>
     <section class="content-section"><h2>How to use</h2><ol class="how-to-steps"><li>Enter the deposit amount you plan to place in the FD.</li><li>Type the annual FD interest rate quoted by the bank or NBFC.</li><li>Enter tenure using years and months together.</li><li>Choose quarterly compounding for most Indian cumulative bank FDs, or simple interest for payout-style comparison.</li><li>Select whether TDS should be estimated and review maturity amount, interest, post-TDS interest, and yield.</li></ol></section>
     <section class="content-section"><h2>Formula</h2><div class="formula-box">Compound FD: A = P × (1 + r/m)<sup>m×t</sup><br>Simple FD: Interest = P × r × t<br>Effective yield = (A / P)<sup>1/t</sup> − 1</div><p>For a cumulative fixed deposit, interest is added back to the deposit at the chosen compounding frequency. Quarterly compounding is common for Indian bank FDs, so the annual rate is divided by four and applied for each completed quarter-equivalent period. Monthly, half-yearly, and annual compounding follow the same structure with different compounding counts. Simple interest does not add interest back to principal and is useful for comparing payout deposits.</p><p>The calculator estimates TDS at 10% when total interest crosses the common non-senior threshold of ₹40,000 in a financial year. TDS is not the final tax. FD interest is added to income and taxed at the slab rate, so a person in the 20% or 30% slab may owe additional tax after TDS, while a person below taxable income may submit Form 15G or 15H if eligible.</p></section>
@@ -85,6 +202,7 @@
     <section class="content-section"><h2>Important notes for India</h2><ul class="summary-list"><li>FD rate cards change often; verify the rate on the bank website before booking.</li><li>Senior citizen thresholds and TDS rules can differ from non-senior depositors.</li><li>TDS is not final tax; report FD interest in your income tax return.</li><li>Premature withdrawal may reduce the contracted rate and add a penalty.</li></ul></section>
   </article>
   <aside class="calc-sidebar">
+  <div class="card sidebar-card" id="calc-history" style="display:none;"></div>
   <div class="card sidebar-card"><h3>Related Indian calculators</h3><ul><li><a href="../india/gst-calculator.html">GST Calculator</a></li><li><a href="../india/income-tax-calculator.html">Income Tax</a></li><li><a href="../india/home-loan-emi-calculator.html">Home Loan EMI</a></li><li><a href="../india/sip-calculator.html">SIP Calculator</a></li><li><a href="../india/ctc-salary-calculator.html">CTC Salary</a></li><li><a href="../india/pf-epf-calculator.html">EPF / PF</a></li><li><a href="../india/hra-exemption-calculator.html">HRA Exemption</a></li></ul></div>
 </aside>
 </main>
@@ -153,8 +271,8 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 <script>
 
 function formatIndianNumber(n) {

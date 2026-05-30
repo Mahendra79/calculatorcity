@@ -1,12 +1,15 @@
 {
   "name": "Calculatorcity — Free Online Calculators",
-  "short_name": "Calculatorcity",
-  "description": "80+ free online calculators",
-  "start_url": "/",
+  "short_name": "CalcCity",
+  "description": "80+ free online calculators for math, finance, health and Indian calculations",
+  "start_url": "/calculatorcity/",
+  "scope": "/calculatorcity/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
-  "icons": [{"src": "/assets/icons/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]
+  "icons": [
+    { "src": "/calculatorcity/assets/icons/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/calculatorcity/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/calculatorcity/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
 }
-
-

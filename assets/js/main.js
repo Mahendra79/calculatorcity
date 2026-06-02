@@ -1041,7 +1041,7 @@ function _collectResultText() {
 function _shareTextFromResults() {
   const title = document.querySelector('h1');
   const vals = _collectResultText();
-  return (title ? title.textContent.trim() : document.title) + (vals ? '\n' + vals : '') + '\n\ncalculatorcity.in';
+  return (title ? title.textContent.trim() : document.title) + (vals ? '\n' + vals : '') + '\n\nhttps://mahendra79.github.io/calculatorcity/';
 }
 function _updateWAShare() {
   const links = document.querySelectorAll('#wa-share-btn');

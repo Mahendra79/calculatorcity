@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect x="60" y="60" width="1080" height="510" rx="24" fill="#1e293b"/>
+  <text x="600" y="200" text-anchor="middle" font-family="system-ui,sans-serif"
+    font-size="80" font-weight="700" fill="#2563eb">⌗ Calculatorcity</text>
+  <text x="600" y="290" text-anchor="middle" font-family="system-ui,sans-serif"
+    font-size="38" fill="#94a3b8">80+ Free Calculators · No Signup · India-First</text>
+  <text x="600" y="420" text-anchor="middle" font-family="system-ui,sans-serif"
+    font-size="28" fill="#475569">GST · EMI · Income Tax · SIP · BMI · Stamp Duty</text>
+  <text x="600" y="530" text-anchor="middle" font-family="system-ui,sans-serif"
+    font-size="22" fill="#334155">mahendra79.github.io/calculatorcity</text>
+</svg>
